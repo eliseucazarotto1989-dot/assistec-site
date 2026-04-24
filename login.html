@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Assistec Cavaletti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">A</span>
+                    <div class="logo-text">
+                        <strong>ASSISTEC</strong>
+                        <small>Revendedor Cavaletti</small>
+                    </div>
+                </a>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Entrar</button>
+                <button class="auth-tab" data-tab="register">Cadastrar</button>
+            </div>
+
+            <div class="auth-body">
+                <div id="authMessage" class="auth-message"></div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" id="loginPassword" placeholder="Sua senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label>Nome completo *</label>
+                        <input type="text" id="regNome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <input type="text" id="regEmpresa" placeholder="Nome da empresa">
+                        </div>
+                        <div class="form-group">
+                            <label>CPF / CNPJ</label>
+                            <input type="text" id="regCpfCnpj" placeholder="000.000.000-00">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone *</label>
+                        <input type="tel" id="regTelefone" placeholder="(55) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail *</label>
+                        <input type="email" id="regEmail" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha *</label>
+                        <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres" minlength="6" required>
+                    </div>
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="regAcceptTerms" required>
+                        <span class="form-checkbox-label">Li e concordo com a <a href="privacidade.html" target="_blank">Política de Privacidade</a> e os <a href="termos.html" target="_blank">Termos de Uso</a>.</span>
+                    </label>
+                    <button type="submit" class="btn btn-primary btn-full">Criar Conta</button>
+                </form>
+            </div>
+
+            <div class="auth-footer">
+                <a href="index.html">&larr; Voltar ao site</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner de Cookies LGPD -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-inner">
+            <div class="cookie-banner-text">
+                Este site utiliza armazenamento local para salvar suas preferências e dados de sessão.
+                Ao continuar navegando, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.
+            </div>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn-decline" onclick="declineCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookieBanner').classList.remove('show');}
+    function declineCookies(){localStorage.setItem('cookie_consent','declined');document.getElementById('cookieBanner').classList.remove('show');}
+    if(!localStorage.getItem('cookie_consent')){document.getElementById('cookieBanner').classList.add('show');}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Tabs
+        document.querySelectorAll('.auth-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab === 'login' ? 'loginForm' : 'registerForm').classList.add('active');
+                hideMessage();
+            });
+        });
+
+        function showMessage(text, type) {
+            const msg = document.getElementById('authMessage');
+            msg.textContent = text;
+            msg.className = 'auth-message ' + type;
+        }
+
+        function hideMessage() {
+            const msg = document.getElementById('authMessage');
+            msg.className = 'auth-message';
+            msg.textContent = '';
+        }
+
+        // Se ja esta logado, redireciona
+        Auth.getUser().then(user => {
+            if (user) {
+                Auth.isAdmin().then(admin => {
+                    if (admin) {
+                        window.location.href = 'admin.html';
+                    } else {
+                        window.location.href = 'catalogo.html';
+                    }
+                });
+            }
+        });
+
+        // Login
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            showMessage('Entrando...', 'info');
+
+            const { data, error } = await Auth.signIn(email, password);
+
+            if (error) {
+                showMessage(error.message === 'Invalid login credentials'
+                    ? 'E-mail ou senha incorretos.'
+                    : error.message, 'error');
+                return;
+            }
+
+            // Verificar se eh admin
+            const isAdmin = await Auth.isAdmin();
+            if (isAdmin) {
+                window.location.href = 'admin.html';
+            } else {
+                window.location.href = 'catalogo.html';
+            }
+        });
+
+        // Register
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const nome = document.getElementById('regNome').value;
+            const empresa = document.getElementById('regEmpresa').value;
+            const cpf_cnpj = document.getElementById('regCpfCnpj').value;
+            const telefone = document.getElementById('regTelefone').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+
+            if (password.length < 6) {
+                showMessage('A senha deve ter no mínimo 6 caracteres.', 'error');
+                return;
+            }
+
+            if (!document.getElementById('regAcceptTerms').checked) {
+                showMessage('Você precisa aceitar a Política de Privacidade e os Termos de Uso.', 'error');
+                return;
+            }
+
+            showMessage('Criando conta...', 'info');
+
+            const { data, error } = await Auth.signUp(email, password, {
+                nome, empresa, cpf_cnpj, telefone
+            });
+
+            if (error) {
+                showMessage(error.message, 'error');
+                return;
+            }
+
+            showMessage('Cadastro realizado com sucesso! Aguarde a aprovação do administrador para acessar o catálogo.', 'success');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

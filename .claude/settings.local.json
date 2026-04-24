@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.assistecrb.net)",
+      "Bash(wget --version)",
+      "Bash(curl --version)",
+      "Bash(curl -sS -L -o index.html https://www.assistecrb.net/)",
+      "Bash(curl -sS -L -o catalogo.html https://www.assistecrb.net/catalogo.html)",
+      "Read(//c/c/Users/Canais Dark/Desktop/MINHAS CRIAÇÕES/**)",
+      "Bash(node -e \"const d=require\\('./catalog-data.json'\\); console.log\\('products:', d.products?.length, 'keys:', Object.keys\\(d\\)\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(python -c ' *)",
+      "Bash(node -e \"const d=require\\('./product-images.json'\\); console.log\\('chaves:', Object.keys\\(d\\).length\\); console.log\\('1ª chave sample:', Object.keys\\(d\\)[0]\\)\")",
+      "Bash(curl -sI https://www.assistecrb.net/)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(curl -sI https://assistecrb.net/)",
+      "Bash(nslookup:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)"
+    ]
+  }
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Cavaletti - Assistec</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner Construção -->
+    <div class="construction-banner" id="constructionBanner">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Site em construção — algumas informações podem conter erros ou estar incompletas.
+        <button class="cb-close" onclick="this.parentElement.remove()" title="Fechar">&times;</button>
+    </div>
+
+    <!-- GP Top Bar -->
+    <div class="gp-topbar">
+        <div class="container gp-topbar-inner">
+            <div class="gp-topbar-left">
+                <span class="gp-topbar-text">Atendimento ao Cliente</span>
+                <a href="tel:+555537981003">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    (55) 3798-1003
+                </a>
+                <a href="https://wa.me/5537981003" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+            <div class="gp-topbar-right">
+                <a href="https://www.instagram.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                <a href="https://www.facebook.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GP Header -->
+    <header class="gp-header" id="header">
+        <div class="container gp-header-inner">
+            <button class="gp-hamburger" id="menuToggle" onclick="document.getElementById('gpNav').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="gp-logo">
+                <img src="logo-white.svg" alt="Assistec">
+            </a>
+            <div class="gp-search-bar">
+                <input type="text" placeholder="O que você procura?" id="headerSearch">
+                <button type="button" onclick="document.getElementById('searchInput').value=document.getElementById('headerSearch').value;document.getElementById('searchInput').dispatchEvent(new Event('input'))">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </button>
+            </div>
+            <div class="gp-header-icons">
+                <button class="gp-icon-btn" id="favoritesBtn" title="Favoritos" onclick="alert('Seus favoritos: ' + Favorites.count() + ' produtos')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="gp-badge gp-fav-count" style="display:none;">0</span>
+                </button>
+                <button class="gp-icon-btn" id="quoteListBtn" title="Lista de Orçamento" onclick="toggleQuotePanel()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="gp-badge gp-quote-count" style="display:none;">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="gp-nav" id="gpNav">
+            <div class="container">
+                <ul class="gp-nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="gp-has-mega">
+                        <a href="catalogo.html" class="active">Cavaletti Modelos</a>
+                        <div class="gp-mega-menu" id="megaMenu"></div>
+                    </li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Cavaletti -->
+    <section class="catalog-banner">
+        <div class="catalog-banner-content">
+            <h1>CAVALETTI MODELOS</h1>
+            <p id="bannerSubtitle">Carregando produtos...</p>
+            <span class="badge-revendedor">Revenda Autorizada</span>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="catalog-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <strong id="breadcrumbText">Catálogo Cavaletti</strong>
+    </div>
+
+    <!-- Layout Principal -->
+    <div class="catalog-layout">
+        <!-- Sidebar -->
+        <aside class="catalog-sidebar" id="catalogSidebar">
+            <!-- Busca -->
+            <div class="sidebar-section">
+                <h3>Buscar Produto</h3>
+                <div class="sidebar-search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <input type="text" id="searchInput" placeholder="Digite o nome do produto...">
+                </div>
+            </div>
+
+            <!-- Limpar filtros -->
+            <div class="sidebar-section" id="clearFiltersSection" style="display:none;">
+                <button class="btn-clear-filters" id="clearAllFilters">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    Limpar Todos os Filtros
+                </button>
+            </div>
+
+            <!-- Categorias (checkboxes) -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-toggle" onclick="this.classList.toggle('collapsed');this.nextElementSibling.classList.toggle('collapsed')">
+                    Categorias
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </h3>
+                <div class="sidebar-collapse-body" id="categoryList"></div>
+            </div>
+
+            <!-- Linhas (checkboxes) -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-toggle" onclick="this.classList.toggle('collapsed');this.nextElementSibling.classList.toggle('collapsed')">
+                    Linhas Cavaletti
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </h3>
+                <div class="sidebar-collapse-body" id="lineList"></div>
+            </div>
+
+            <!-- Marca -->
+            <div class="sidebar-section">
+                <h3>Marca</h3>
+                <label class="sidebar-checkbox">
+                    <input type="checkbox" checked disabled>
+                    <span class="cb-name">Cavaletti</span>
+                </label>
+            </div>
+
+            <!-- Garantia -->
+            <div class="sidebar-section">
+                <div class="sidebar-warranty">
+                    <div class="warranty-years">✓</div>
+                    <div class="warranty-text">Garantia<br>Cavaletti</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Overlay mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Conteúdo Principal -->
+        <main class="catalog-main">
+            <!-- Botão filtros mobile -->
+            <button class="filter-toggle-btn" id="filterToggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+                Filtros e Categorias
+            </button>
+
+            <!-- Toolbar -->
+            <div class="catalog-toolbar">
+                <div class="toolbar-results" id="toolbarResults">Carregando...</div>
+                <div class="toolbar-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid" title="Grade" onclick="setView('grid')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                        </button>
+                        <button class="view-btn" data-view="list" title="Lista" onclick="setView('list')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                        </button>
+                    </div>
+                    <select id="sortSelect">
+                        <option value="relevant">Mais Relevantes</option>
+                        <option value="name-asc">A → Z</option>
+                        <option value="name-desc">Z → A</option>
+                        <option value="line">Por Linha</option>
+                    </select>
+                    <select id="perPageSelect">
+                        <option value="24">24 por página</option>
+                        <option value="48">48 por página</option>
+                        <option value="96">96 por página</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="catalog-grid" id="productGrid">
+                <div class="loading"><div class="spinner"></div></div>
+            </div>
+
+            <!-- Paginação -->
+            <div class="catalog-pagination" id="pagination"></div>
+        </main>
+    </div>
+
+    <!-- Quote Panel (slide-out) -->
+    <div class="gp-quote-overlay" id="quoteOverlay" onclick="toggleQuotePanel()"></div>
+    <div class="gp-quote-panel" id="quotePanel">
+        <div class="gp-quote-panel-header">
+            <h3>Lista de Orçamento</h3>
+            <button class="gp-quote-panel-close" onclick="toggleQuotePanel()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="gp-quote-panel-body" id="quotePanelBody"></div>
+        <div class="gp-quote-panel-footer" id="quotePanelFooter"></div>
+    </div>
+
+    <!-- GP Footer -->
+    <footer class="gp-footer">
+        <div class="container">
+            <div class="gp-footer-grid">
+                <div class="gp-footer-col">
+                    <img src="logo-white.svg" alt="Assistec" class="gp-footer-logo">
+                    <p class="gp-footer-desc">Assistência técnica em informática, venda de equipamentos e revenda autorizada Cavaletti em Santa Rosa-RS.</p>
+                    <div class="gp-footer-socials">
+                        <a href="https://www.instagram.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="https://www.facebook.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    </div>
+                </div>
+                <div class="gp-footer-col">
+                    <h4>A Empresa</h4>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                    <a href="catalogo.html">Catálogo Cavaletti</a>
+                    <a href="index.html#servicos">Serviços</a>
+                </div>
+                <div class="gp-footer-col">
+                    <h4>Atendimento</h4>
+                    <a href="https://wa.me/5537981003" target="_blank">WhatsApp</a>
+                    <a href="mailto:contato@assistecrb.net">E-mail</a>
+                    <a href="tel:+555537981003">(55) 3798-1003</a>
+                </div>
+                <div class="gp-footer-col">
+                    <h4>Informações</h4>
+                    <a href="#">Garantia Cavaletti</a>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+        <div class="gp-footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Assistec Informática. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Banner de Cookies LGPD -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-inner">
+            <div class="cookie-banner-text">
+                Este site utiliza armazenamento local para salvar suas preferências, favoritos e lista de orçamento.
+                Ao continuar navegando, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.
+            </div>
+            <div class="cookie-banner-actions">
+                <button class="cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn-decline" onclick="declineCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookieBanner').classList.remove('show');}
+    function declineCookies(){localStorage.setItem('cookie_consent','declined');document.getElementById('cookieBanner').classList.remove('show');}
+    if(!localStorage.getItem('cookie_consent')){document.getElementById('cookieBanner').classList.add('show');}
+    </script>
+
+    <script src="orcamento.js"></script>
+    <script src="color-data.js"></script>
+    <script>
+    (async function() {
+        // Atualizar badges
+        Favorites.updateBadges();
+        QuoteList.updateBadges();
+
+        // ===== Estado =====
+        let allProducts = [];
+        let filteredProducts = [];
+        let currentPage = 1;
+        let perPage = 24;
+        let selectedCategories = [];
+        let selectedLines = [];
+        let searchQuery = '';
+        let sortBy = 'relevant';
+        let viewMode = 'grid';
+
+        // ===== Carregar dados =====
+        try {
+            const res = await fetch('catalog-data.json');
+            const data = await res.json();
+            allProducts = data.products;
+
+            // Mesclar overrides do Supabase (edições do admin)
+            try {
+                const ovRes = await fetch('https://lhnlwlelabgdgdhozhpe.supabase.co/rest/v1/product_overrides?select=*', {
+                    headers: { 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxobmx3bGVsYWJnZGdkaG96aHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzNTc1NDUsImV4cCI6MjA4ODkzMzU0NX0.K0IWRdkpFyY_zbIzoBNSgJK8wPUO_DqEUam7U35lDC0' }
+                });
+                if (ovRes.ok) {
+                    const overrides = await ovRes.json();
+                    const overrideMap = {};
+                    for (const o of overrides) overrideMap[o.product_id] = o;
+                    for (const p of allProducts) {
+                        const ov = overrideMap[p.id];
+                        if (ov) {
+                            if (ov.name) p.name = ov.name;
+                            if (ov.image) p.image = ov.image;
+                            if (ov.category) p.category = ov.category;
+                        }
+                    }
+                }
+            } catch (e) { /* Supabase offline - usa dados base */ }
+
+            // Carregar overrides do localStorage (fallback)
+            try {
+                const localOverrides = JSON.parse(localStorage.getItem('product_overrides') || '{}');
+                for (const p of allProducts) {
+                    const ov = localOverrides[p.id];
+                    if (ov) {
+                        if (ov.name) p.name = ov.name;
+                        if (ov.image) p.image = ov.image;
+                        if (ov.category) p.category = ov.category;
+                    }
+                }
+            } catch (e) {}
+
+            // Remover produtos excluídos pelo admin
+            try {
+                const removedProducts = JSON.parse(localStorage.getItem('removed_products') || '[]');
+                if (removedProducts.length > 0) {
+                    const removedSet = new Set(removedProducts);
+                    allProducts = allProducts.filter(p => !removedSet.has(p.id));
+                }
+            } catch (e) {}
+
+            // Adicionar produtos customizados (criados pelo admin)
+            try {
+                const customProducts = JSON.parse(localStorage.getItem('custom_products') || '[]');
+                for (const cp of customProducts) {
+                    allProducts.unshift(cp);
+                }
+            } catch (e) {}
+
+            init();
+        } catch (err) {
+            document.getElementById('productGrid').innerHTML =
+                '<div class="no-results"><p>Erro ao carregar catálogo. Tente novamente.</p></div>';
+        }
+
+        function init() {
+            buildCategoryList();
+            buildLineList();
+            buildMegaMenu();
+            applyFilters();
+            setupEvents();
+        }
+
+        // ===== Construir lista de categorias (checkboxes) =====
+        function buildCategoryList() {
+            const cats = {};
+            allProducts.forEach(p => { cats[p.category] = (cats[p.category] || 0) + 1; });
+            const sorted = Object.entries(cats).sort((a, b) => b[1] - a[1]);
+            const el = document.getElementById('categoryList');
+            el.innerHTML = sorted.map(([cat, count]) => `
+                <label class="sidebar-checkbox">
+                    <input type="checkbox" data-category="${esc(cat)}">
+                    <span class="cb-name">${esc(cat)}</span>
+                    <span class="cat-count">${count}</span>
+                </label>
+            `).join('');
+        }
+
+        // ===== Construir lista de linhas (checkboxes) =====
+        function buildLineList() {
+            const lines = {};
+            allProducts.forEach(p => { lines[p.line] = (lines[p.line] || 0) + 1; });
+            const sorted = Object.entries(lines).sort((a, b) => a[0].localeCompare(b[0]));
+            const el = document.getElementById('lineList');
+            el.innerHTML = sorted.map(([line, count]) => `
+                <label class="sidebar-checkbox">
+                    <input type="checkbox" data-line="${esc(line)}">
+                    <span class="cb-name">${esc(line)}</span>
+                    <span class="cat-count">${count}</span>
+                </label>
+            `).join('');
+        }
+
+        // ===== Mega menu =====
+        function buildMegaMenu() {
+            const cats = {};
+            allProducts.forEach(p => { cats[p.category] = (cats[p.category] || 0) + 1; });
+            const sorted = Object.entries(cats).sort((a, b) => b[1] - a[1]);
+            document.getElementById('megaMenu').innerHTML = sorted.map(([cat, count]) =>
+                `<a href="#" onclick="event.preventDefault();selectMegaCategory('${esc(cat)}')">${esc(cat)} <span class="mega-count">${count}</span></a>`
+            ).join('');
+        }
+
+        // ===== Filtrar e ordenar =====
+        function applyFilters() {
+            let results = allProducts;
+
+            if (selectedCategories.length > 0) {
+                results = results.filter(p => selectedCategories.includes(p.category));
+            }
+            if (selectedLines.length > 0) {
+                results = results.filter(p => selectedLines.includes(p.line));
+            }
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                results = results.filter(p =>
+                    p.name.toLowerCase().includes(q) ||
+                    p.line.toLowerCase().includes(q) ||
+                    (p.code && p.code.toLowerCase().includes(q)) ||
+                    p.type.toLowerCase().includes(q) ||
+                    p.category.toLowerCase().includes(q)
+                );
+            }
+
+            results.sort((a, b) => {
+                if (sortBy === 'name-asc') return a.name.localeCompare(b.name);
+                if (sortBy === 'name-desc') return b.name.localeCompare(a.name);
+                if (sortBy === 'line') return a.line.localeCompare(b.line) || a.name.localeCompare(b.name);
+                return 0; // relevant = original order
+            });
+
+            filteredProducts = results;
+            currentPage = 1;
+            renderProducts();
+            renderPagination();
+            updateToolbar();
+            updateBreadcrumb();
+            updateClearBtn();
+        }
+
+        // ===== Renderizar produtos =====
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const start = (currentPage - 1) * perPage;
+            const end = start + perPage;
+            const pageProducts = filteredProducts.slice(start, end);
+
+            if (pageProducts.length === 0) {
+                grid.innerHTML = `<div class="no-results">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <p>Nenhum produto encontrado</p>
+                </div>`;
+                return;
+            }
+
+            grid.innerHTML = pageProducts.map(p => {
+                const hasFab = CavalettiFabrics.hasFabrics(p.category);
+                const mats = CavalettiFabrics.getMaterialsForCategory(p.category);
+                const defaultMat = mats.length > 0 ? mats[0] : null;
+                const colors = defaultMat ? CavalettiFabrics.getColorsForMaterial(defaultMat) : [];
+                const isFav = Favorites.isFavorite(p.id);
+                const fallbackImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23f3f4f6' width='200' height='200'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='14' fill='%236b7280' text-anchor='middle' dy='.3em'%3ESem Imagem%3C/text%3E%3C/svg%3E";
+
+                return `<div class="product-card" data-id="${p.id}">
+                    <div class="product-card-img">
+                        
+                        <button class="product-favorite ${isFav ? 'active' : ''}" onclick="toggleFav('${p.id}', this)" title="Favoritar">
+                            <svg viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </button>
+                        <a href="produto.html?id=${encodeURIComponent(p.id)}">
+                            <img src="${p.image}" alt="${esc(p.name)}" loading="lazy" onerror="this.src='${fallbackImg}'" style="cursor:pointer">
+                        </a>
+                    </div>
+                    <div class="product-card-body">
+                        <span class="product-brand">Cavaletti</span>
+                        <h3>${esc(p.name)}</h3>
+                        <span class="product-sku">${p.code ? 'SKU: ' + esc(p.code) : 'Linha ' + esc(p.line)}</span>
+                        ${hasFab ? `
+                        <div class="product-customization">
+                            <div class="custom-row">
+                                <label>Revestimento:</label>
+                                <select class="material-select" onchange="updateSwatches(this)">
+                                    ${mats.map((m, i) => `<option value="${m}" ${i===0?'selected':''}>${CavalettiFabrics.materials.find(x=>x.id===m).name}</option>`).join('')}
+                                </select>
+                            </div>
+                            <div class="color-swatches">
+                                ${colors.slice(0, 14).map((c, i) => `<span class="swatch ${i===0?'active':''}" style="background:${c.hex}" title="${c.name}" data-color="${c.id}" onclick="selectSwatch(this)"></span>`).join('')}
+                            </div>
+                        </div>` : ''}
+                        <div class="product-card-actions">
+                            <button class="btn-solicitar" onclick="addToQuote('${p.id}')">Adicionar à Lista</button>
+                            <a href="produto.html?id=${encodeURIComponent(p.id)}" class="btn-ver-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        // ===== Paginação =====
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredProducts.length / perPage);
+            const pag = document.getElementById('pagination');
+            if (totalPages <= 1) { pag.innerHTML = ''; return; }
+
+            let html = `<button ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">‹</button>`;
+            const maxV = 7;
+            let startP = Math.max(1, currentPage - 3);
+            let endP = Math.min(totalPages, startP + maxV - 1);
+            if (endP - startP < maxV - 1) startP = Math.max(1, endP - maxV + 1);
+
+            if (startP > 1) {
+                html += `<button onclick="goToPage(1)">1</button>`;
+                if (startP > 2) html += `<button disabled>...</button>`;
+            }
+            for (let i = startP; i <= endP; i++) {
+                html += `<button class="${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+            }
+            if (endP < totalPages) {
+                if (endP < totalPages - 1) html += `<button disabled>...</button>`;
+                html += `<button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+            html += `<button ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">›</button>`;
+            pag.innerHTML = html;
+        }
+
+        function updateToolbar() {
+            const total = filteredProducts.length;
+            const start = Math.min((currentPage - 1) * perPage + 1, total);
+            const end = Math.min(currentPage * perPage, total);
+            document.getElementById('toolbarResults').innerHTML =
+                `Mostrando <strong>${start}-${end}</strong> de <strong>${total}</strong> resultados`;
+            document.getElementById('bannerSubtitle').textContent =
+                `${allProducts.length} produtos Cavaletti disponíveis para orçamento`;
+        }
+
+        function updateBreadcrumb() {
+            const parts = ['Catálogo Cavaletti'];
+            if (selectedCategories.length === 1) parts.push(selectedCategories[0]);
+            else if (selectedCategories.length > 1) parts.push(selectedCategories.length + ' categorias');
+            if (selectedLines.length === 1) parts.push('Linha ' + selectedLines[0]);
+            else if (selectedLines.length > 1) parts.push(selectedLines.length + ' linhas');
+            document.getElementById('breadcrumbText').textContent = parts.join(' › ');
+        }
+
+        function updateClearBtn() {
+            const hasFilters = selectedCategories.length > 0 || selectedLines.length > 0 || searchQuery;
+            document.getElementById('clearFiltersSection').style.display = hasFilters ? 'block' : 'none';
+        }
+
+        // ===== Eventos =====
+        function setupEvents() {
+            // Category checkboxes
+            document.getElementById('categoryList').addEventListener('change', (e) => {
+                if (e.target.type !== 'checkbox') return;
+                const cat = e.target.dataset.category;
+                if (e.target.checked) { if (!selectedCategories.includes(cat)) selectedCategories.push(cat); }
+                else { selectedCategories = selectedCategories.filter(c => c !== cat); }
+                applyFilters();
+            });
+
+            // Line checkboxes
+            document.getElementById('lineList').addEventListener('change', (e) => {
+                if (e.target.type !== 'checkbox') return;
+                const line = e.target.dataset.line;
+                if (e.target.checked) { if (!selectedLines.includes(line)) selectedLines.push(line); }
+                else { selectedLines = selectedLines.filter(l => l !== line); }
+                applyFilters();
+            });
+
+            // Clear filters
+            document.getElementById('clearAllFilters').addEventListener('click', () => {
+                selectedCategories = [];
+                selectedLines = [];
+                searchQuery = '';
+                document.getElementById('searchInput').value = '';
+                document.getElementById('headerSearch').value = '';
+                document.querySelectorAll('#categoryList input, #lineList input').forEach(cb => cb.checked = false);
+                applyFilters();
+            });
+
+            // Busca
+            let searchTimer;
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(() => { searchQuery = e.target.value.trim(); applyFilters(); }, 300);
+            });
+
+            // Ordenação
+            document.getElementById('sortSelect').addEventListener('change', (e) => { sortBy = e.target.value; applyFilters(); });
+            document.getElementById('perPageSelect').addEventListener('change', (e) => { perPage = parseInt(e.target.value); applyFilters(); });
+
+            // Filtros mobile
+            document.getElementById('filterToggle').addEventListener('click', () => {
+                document.getElementById('catalogSidebar').classList.toggle('open');
+                document.getElementById('sidebarOverlay').classList.toggle('open');
+            });
+            document.getElementById('sidebarOverlay').addEventListener('click', () => {
+                document.getElementById('catalogSidebar').classList.remove('open');
+                document.getElementById('sidebarOverlay').classList.remove('open');
+            });
+        }
+
+        // ===== Funções globais =====
+        window.goToPage = function(page) {
+            const totalPages = Math.ceil(filteredProducts.length / perPage);
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderProducts();
+            renderPagination();
+            updateToolbar();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.setView = function(mode) {
+            viewMode = mode;
+            const grid = document.getElementById('productGrid');
+            grid.classList.toggle('list-view', mode === 'list');
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === mode));
+        };
+
+        window.toggleFav = function(id, btn) {
+            const added = Favorites.toggle(id);
+            btn.classList.toggle('active', added);
+            btn.querySelector('svg').setAttribute('fill', added ? 'currentColor' : 'none');
+        };
+
+        window.selectSwatch = function(el) {
+            el.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+            el.classList.add('active');
+        };
+
+        window.updateSwatches = function(select) {
+            const materialId = select.value;
+            const colors = CavalettiFabrics.getColorsForMaterial(materialId);
+            const container = select.closest('.product-customization').querySelector('.color-swatches');
+            container.innerHTML = colors.slice(0, 14).map((c, i) =>
+                `<span class="swatch ${i===0?'active':''}" style="background:${c.hex}" title="${c.name}" data-color="${c.id}" onclick="selectSwatch(this)"></span>`
+            ).join('');
+        };
+
+        window.addToQuote = function(productId) {
+            const p = allProducts.find(x => x.id === productId);
+            if (!p) return;
+            const card = document.querySelector(`.product-card[data-id="${productId}"]`);
+            let material = '', color = '';
+            if (card) {
+                const matSelect = card.querySelector('.material-select');
+                const activeSwatch = card.querySelector('.swatch.active');
+                if (matSelect) material = CavalettiFabrics.materials.find(m => m.id === matSelect.value)?.name || '';
+                if (activeSwatch) color = activeSwatch.title;
+            }
+            const added = QuoteList.add({ id: p.id, name: p.name, code: p.code, line: p.line, image: p.image, material, color });
+            if (added) {
+                renderQuotePanel();
+                toggleQuotePanel(true);
+            }
+        };
+
+        window.selectMegaCategory = function(cat) {
+            selectedCategories = [cat];
+            document.querySelectorAll('#categoryList input').forEach(cb => {
+                cb.checked = cb.dataset.category === cat;
+            });
+            applyFilters();
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+
+        window.toggleQuotePanel = function(forceOpen) {
+            const panel = document.getElementById('quotePanel');
+            const overlay = document.getElementById('quoteOverlay');
+            if (forceOpen === true || !panel.classList.contains('open')) {
+                renderQuotePanel();
+                panel.classList.add('open');
+                overlay.classList.add('open');
+            } else {
+                panel.classList.remove('open');
+                overlay.classList.remove('open');
+            }
+        };
+
+        window.renderQuotePanel = function() {
+            const items = QuoteList.getAll();
+            const body = document.getElementById('quotePanelBody');
+            const footer = document.getElementById('quotePanelFooter');
+            if (items.length === 0) {
+                body.innerHTML = '<div class="gp-quote-empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg><p>Sua lista de orçamento está vazia</p></div>';
+                footer.innerHTML = '';
+                return;
+            }
+            body.innerHTML = items.map((item, i) => `
+                <div class="gp-quote-item">
+                    <div class="gp-quote-item-img"><img src="${item.image || ''}" alt="" onerror="this.style.display='none'"></div>
+                    <div class="gp-quote-item-info">
+                        <h4>${esc(item.name)}</h4>
+                        <span>Linha ${esc(item.line)}${item.material ? ' | ' + esc(item.material) : ''}${item.color ? ' - ' + esc(item.color) : ''}</span>
+                    </div>
+                    <button class="gp-quote-item-remove" onclick="QuoteList.remove(${i});renderQuotePanel();QuoteList.updateBadges()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>`).join('');
+            footer.innerHTML = `
+                <button class="btn-send-whatsapp" onclick="QuoteList.sendWhatsApp()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Enviar Orçamento via WhatsApp (${items.length})
+                </button>
+                <button class="btn-clear-list" onclick="QuoteList.clear();renderQuotePanel();QuoteList.updateBadges()">Limpar Lista</button>
+                <a href="catalogo.html" class="btn-voltar-catalogo" onclick="toggleQuotePanel()" style="display:block;width:100%;padding:10px;text-align:center;background:none;border:1px solid var(--primary);border-radius:6px;color:var(--primary);text-decoration:none;margin-top:8px;font-weight:600;cursor:pointer;">&#8592; Voltar ao Catálogo</a>`;
+        };
+
+        function esc(text) {
+            const div = document.createElement('div');
+            div.textContent = text || '';
+            return div.innerHTML;
+        }
+    })();
+    </script>
+</body>
+</html>

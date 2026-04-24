@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Assistec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .admin-card-remove {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: none;
+            background: #dc2626;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            z-index: 2;
+        }
+        .admin-product-card:hover .admin-card-remove { opacity: 1; }
+        .admin-card-remove:hover { background: #b91c1c; transform: scale(1.1); }
+        .admin-product-img { position: relative; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">A</span>
+                <div class="logo-text">
+                    <strong>ASSISTEC</strong>
+                    <small>Painel Admin</small>
+                </div>
+            </a>
+            <div class="page-header-actions">
+                <a href="catalogo.html" class="btn-logout" style="padding:8px 16px;font-size:13px;border:1px solid var(--gray-300);border-radius:var(--radius-sm);color:var(--gray-700);">Ver Catálogo</a>
+                <div class="user-menu">
+                    <span id="adminName"></span>
+                    <button class="btn-logout" onclick="Auth.signOut()">Sair</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loading -->
+    <div id="loadingState" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Admin Content -->
+    <div id="adminContent" class="admin-page" style="display:none;">
+        <div class="container">
+            <!-- Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab" data-panel="products">
+                    Produtos <span id="productsCount"></span>
+                </button>
+                <button class="admin-tab active" data-panel="users">
+                    Cadastros <span id="pendingCount"></span>
+                </button>
+                <button class="admin-tab" data-panel="orders">
+                    Pedidos <span id="ordersCount"></span>
+                </button>
+            </div>
+
+            <!-- Products Panel -->
+            <div id="productsPanel" class="admin-panel">
+                <div class="admin-products-toolbar">
+                    <div class="admin-search-box">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="text" id="adminProductSearch" placeholder="Buscar por nome, codigo ou linha..." oninput="filterAdminProducts()">
+                    </div>
+                    <div class="admin-filter-row">
+                        <select id="adminLineFilter" onchange="filterAdminProducts()">
+                            <option value="">Todas as Linhas</option>
+                        </select>
+                        <select id="adminCategoryFilter" onchange="filterAdminProducts()">
+                            <option value="">Todas as Categorias</option>
+                        </select>
+                        <button class="btn-small btn-outline" onclick="clearAdminFilters()" id="adminClearFilters" style="display:none;">Limpar Filtros</button>
+                    </div>
+                    <div class="admin-products-info">
+                        <span id="adminProductsShowing"></span>
+                        <button class="btn-small btn-primary" onclick="openNewProductModal()" style="margin-left:auto;">+ Novo Produto</button>
+                    </div>
+                </div>
+                <div id="adminActiveFilters" class="admin-active-filters"></div>
+                <div id="adminProductGrid" class="admin-product-grid"></div>
+                <div id="adminProductPagination" class="admin-pagination"></div>
+            </div>
+
+            <!-- Users Panel -->
+            <div id="usersPanel" class="admin-panel active">
+                <div id="usersList"></div>
+            </div>
+
+            <!-- Orders Panel -->
+            <div id="ordersPanel" class="admin-panel">
+                <div id="ordersList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Edit Modal -->
+    <div class="admin-modal-overlay" id="productModalOverlay" style="display:none;" onclick="if(event.target===this)closeProductModal()">
+        <div class="admin-modal">
+            <div class="admin-modal-header">
+                <h3 id="modalProductTitle">Editar Produto</h3>
+                <button class="admin-modal-close" onclick="closeProductModal()">&times;</button>
+            </div>
+            <div class="admin-modal-body">
+                <!-- Primary Image -->
+                <div class="edit-image-section">
+                    <img id="editPrimaryImage" src="" alt="Preview" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect fill=%22%23f3f4f6%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2214%22 fill=%22%236b7280%22 text-anchor=%22middle%22 dy=%22.3em%22%3ESem Imagem%3C/text%3E%3C/svg%3E'">
+                    <div class="edit-image-actions">
+                        <input type="text" id="editImageUrl" placeholder="Cole a URL da nova imagem..." oninput="previewImageUrl()">
+                        <div class="edit-image-buttons">
+                            <button class="btn-small btn-primary" onclick="document.getElementById('editImageFile').click()">Upload Foto</button>
+                            <button class="btn-small btn-outline" onclick="applyImageUrl()">Aplicar URL</button>
+                        </div>
+                        <input type="file" id="editImageFile" accept="image/*" style="display:none" onchange="handleImageUpload(this)">
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <div class="edit-field">
+                    <label>Nome do Produto</label>
+                    <input type="text" id="editProductName" placeholder="Nome do produto...">
+                </div>
+
+                <!-- Code, Line, Category -->
+                <div class="edit-field-row">
+                    <div class="edit-field">
+                        <label>Codigo</label>
+                        <input type="text" id="editProductCode" placeholder="Ex: 27.001">
+                    </div>
+                    <div class="edit-field">
+                        <label>Linha</label>
+                        <input type="text" id="editProductLine" placeholder="Ex: Air">
+                    </div>
+                    <div class="edit-field">
+                        <label>Categoria</label>
+                        <select id="editProductCategory">
+                            <option value="">Selecione...</option>
+                            <option value="Cadeiras Giratória">Cadeiras Giratória</option>
+                            <option value="Cadeiras Operacional">Cadeiras Operacional</option>
+                            <option value="Cadeiras Executiva">Cadeiras Executiva</option>
+                            <option value="Cadeiras Presidente">Cadeiras Presidente</option>
+                            <option value="Cadeiras Diretor">Cadeiras Diretor</option>
+                            <option value="Cadeiras de Aproximação">Cadeiras de Aproximação</option>
+                            <option value="Cadeiras Fixas">Cadeiras Fixas</option>
+                            <option value="Poltronas">Poltronas</option>
+                            <option value="Poltronas de Espera">Poltronas de Espera</option>
+                            <option value="Poltronas Auditório">Poltronas Auditório</option>
+                            <option value="Sofás e Lounges">Sofás e Lounges</option>
+                            <option value="Longarinas">Longarinas</option>
+                            <option value="Mesas">Mesas</option>
+                            <option value="Banquetas e Mochos">Banquetas e Mochos</option>
+                            <option value="Complementos">Complementos</option>
+                            <option value="Gamer Way">Gamer Way</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Available Photos (from product-images.json) -->
+                <div class="edit-field">
+                    <label>Fotos Disponíveis <small>(clique em uma para definir como principal)</small></label>
+                    <div id="editAvailablePhotos" class="edit-gallery"></div>
+                </div>
+
+                <!-- Additional Images (Supabase) -->
+                <div class="edit-field">
+                    <label>Fotos Adicionais <small>(aparecem na galeria do produto)</small></label>
+                    <div id="editAdditionalImages" class="edit-gallery"></div>
+                    <div class="edit-add-image">
+                        <input type="text" id="addImageUrl" placeholder="URL da foto adicional...">
+                        <button class="btn-small btn-primary" onclick="document.getElementById('addImageFile').click()">Upload</button>
+                        <button class="btn-small btn-outline" onclick="addAdditionalImageUrl()">Adicionar URL</button>
+                        <input type="file" id="addImageFile" accept="image/*" style="display:none" onchange="handleAdditionalUpload(this)">
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div id="editStatus" class="edit-status"></div>
+            </div>
+            <div class="admin-modal-footer">
+                <button class="btn-approve" onclick="saveProductEdits()">Salvar Alteracoes</button>
+                <button class="btn-reject" onclick="closeProductModal()">Cancelar</button>
+                <button id="btnRemoveProduct" class="btn-small" style="margin-left:auto;background:#dc2626;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;" onclick="removeProduct()">Remover Produto</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+    <script>
+        // Verificar se eh admin
+        (async () => {
+            await Auth.requireAdmin();
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('adminContent').style.display = 'block';
+
+            const profile = await Auth.getProfile();
+            if (profile) {
+                document.getElementById('adminName').textContent = profile.nome;
+            }
+
+            loadUsers();
+            loadOrders();
+        })();
+
+        // Tabs
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.admin-panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.panel + 'Panel').classList.add('active');
+            });
+        });
+
+        // Carregar usuarios
+        async function loadUsers() {
+            const profiles = await Auth.getAllProfiles();
+            const pendingCount = profiles.filter(p => p.status === 'pendente').length;
+            document.getElementById('pendingCount').textContent = pendingCount > 0 ? `(${pendingCount})` : '';
+
+            const container = document.getElementById('usersList');
+
+            if (profiles.length === 0) {
+                container.innerHTML = '<div class="cart-empty"><p>Nenhum cadastro encontrado.</p></div>';
+                return;
+            }
+
+            container.innerHTML = profiles.map(p => `
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h4>${p.nome || 'Sem nome'}</h4>
+                        <span class="badge badge-${p.status}">${p.status.charAt(0).toUpperCase() + p.status.slice(1)}</span>
+                    </div>
+                    <div class="admin-card-body">
+                        <p><strong>Empresa:</strong> ${p.empresa || '-'}</p>
+                        <p><strong>CPF/CNPJ:</strong> ${p.cpf_cnpj || '-'}</p>
+                        <p><strong>Telefone:</strong> ${p.telefone || '-'}</p>
+                        <p><strong>E-mail:</strong> ${p.email}</p>
+                        <p><strong>Cadastro:</strong> ${new Date(p.created_at).toLocaleDateString('pt-BR')}</p>
+                    </div>
+                    ${p.status === 'pendente' ? `
+                    <div class="admin-card-actions">
+                        <button class="btn-approve" onclick="updateStatus('${p.id}', 'aprovado')">Aprovar</button>
+                        <button class="btn-reject" onclick="updateStatus('${p.id}', 'rejeitado')">Rejeitar</button>
+                    </div>` : p.status === 'rejeitado' ? `
+                    <div class="admin-card-actions">
+                        <button class="btn-approve" onclick="updateStatus('${p.id}', 'aprovado')">Aprovar</button>
+                    </div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        // Atualizar status do usuario
+        async function updateStatus(userId, status) {
+            await Auth.updateProfileStatus(userId, status);
+            loadUsers();
+        }
+
+        // Carregar pedidos
+        async function loadOrders() {
+            const orders = await Auth.getAllOrders();
+            document.getElementById('ordersCount').textContent = orders.length > 0 ? `(${orders.length})` : '';
+
+            const container = document.getElementById('ordersList');
+
+            if (orders.length === 0) {
+                container.innerHTML = '<div class="cart-empty"><p>Nenhum pedido recebido.</p></div>';
+                return;
+            }
+
+            container.innerHTML = orders.map(order => {
+                const items = order.items || [];
+                const totals = order.totals || {};
+                const profile = order.profiles || {};
+
+                return `
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h4>Pedido de ${profile.nome || 'Desconhecido'}</h4>
+                        <span class="badge badge-novo">${order.status}</span>
+                    </div>
+                    <div class="admin-card-body">
+                        <p><strong>Cliente:</strong> ${profile.nome || '-'} (${profile.empresa || '-'})</p>
+                        <p><strong>Telefone:</strong> ${profile.telefone || '-'}</p>
+                        <p><strong>Data:</strong> ${new Date(order.created_at).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
+                        <p><strong>Itens:</strong></p>
+                        <ul style="margin-left:16px;margin-bottom:8px;">
+                            ${items.map(item => `<li>${item.quantidade}x ${item.descricao} (${item.linha}) - ${formatPrice(item.preco * item.quantidade)}</li>`).join('')}
+                        </ul>
+                        <p><strong>Subtotal:</strong> ${formatPrice(totals.subtotal || 0)}</p>
+                        <p><strong>Frete:</strong> ${formatPrice(totals.freight || 0)}</p>
+                        <p><strong>Total:</strong> ${formatPrice(totals.total || 0)}</p>
+                        ${order.notes ? `<p><strong>Obs:</strong> ${order.notes}</p>` : ''}
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function formatPrice(value) {
+            return Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        // =============================================================
+        // Gerenciamento de Produtos
+        // =============================================================
+
+        let adminProducts = [];
+        let adminOverrides = {};
+        let adminFiltered = [];
+        let adminPage = 1;
+        const ADMIN_PER_PAGE = 24;
+        let currentEditProduct = null;
+        let currentExtraImages = [];
+        let allProductImages = {}; // product-images.json
+        let isNewProductMode = false; // true when creating new product
+
+        async function loadAdminProducts() {
+            try {
+                const res = await fetch('catalog-data.json');
+                const data = await res.json();
+                adminProducts = data.products;
+
+                // Load product-images.json
+                try {
+                    const imgRes = await fetch('product-images.json');
+                    if (imgRes.ok) allProductImages = await imgRes.json();
+                } catch(e) { console.log('product-images.json não encontrado'); }
+
+                // Load overrides from Supabase + localStorage fallback
+                adminOverrides = {};
+                try {
+                    const overrides = await Auth.getProductOverrides();
+                    for (const ov of overrides) {
+                        adminOverrides[ov.product_id] = ov;
+                    }
+                } catch(e) {
+                    console.log('Supabase overrides indisponível:', e.message);
+                }
+                // Merge localStorage overrides (fallback)
+                const localOverrides = JSON.parse(localStorage.getItem('product_overrides') || '{}');
+                for (const [id, ov] of Object.entries(localOverrides)) {
+                    if (!adminOverrides[id]) adminOverrides[id] = ov;
+                }
+
+                // Merge overrides
+                adminProducts = adminProducts.map(p => {
+                    const ov = adminOverrides[p.id];
+                    if (!ov) return p;
+                    return { ...p, name: ov.name || p.name, image: ov.image || p.image, category: ov.category || p.category, _hasOverride: true };
+                });
+
+                // Remove excluded products
+                const removedProducts = JSON.parse(localStorage.getItem('removed_products') || '[]');
+                if (removedProducts.length > 0) {
+                    const removedSet = new Set(removedProducts);
+                    adminProducts = adminProducts.filter(p => !removedSet.has(p.id));
+                }
+
+                // Add custom products (created via admin)
+                const customProducts = JSON.parse(localStorage.getItem('custom_products') || '[]');
+                for (const cp of customProducts) {
+                    cp._isCustom = true;
+                    cp._hasOverride = true;
+                    adminProducts.unshift(cp);
+                }
+
+                document.getElementById('productsCount').textContent = `(${adminProducts.length})`;
+
+                // Populate line and category dropdowns
+                const lines = [...new Set(adminProducts.map(p => p.line).filter(Boolean))].sort();
+                const cats = [...new Set(adminProducts.map(p => p.category).filter(Boolean))].sort();
+                const lineSelect = document.getElementById('adminLineFilter');
+                lineSelect.innerHTML = '<option value="">Todas as Linhas (' + lines.length + ')</option>' +
+                    lines.map(l => {
+                        const count = adminProducts.filter(p => p.line === l).length;
+                        return `<option value="${esc(l)}">${esc(l)} (${count})</option>`;
+                    }).join('');
+                const catSelect = document.getElementById('adminCategoryFilter');
+                catSelect.innerHTML = '<option value="">Todas as Categorias (' + cats.length + ')</option>' +
+                    cats.map(c => {
+                        const count = adminProducts.filter(p => p.category === c).length;
+                        return `<option value="${esc(c)}">${esc(c)} (${count})</option>`;
+                    }).join('');
+
+                adminFiltered = adminProducts;
+                adminPage = 1;
+                renderAdminProducts();
+            } catch (e) {
+                console.error('Erro ao carregar produtos:', e);
+            }
+        }
+
+        function filterAdminProducts() {
+            const q = document.getElementById('adminProductSearch').value.toLowerCase().trim();
+            const selectedLine = document.getElementById('adminLineFilter').value;
+            const selectedCat = document.getElementById('adminCategoryFilter').value;
+
+            adminFiltered = adminProducts;
+
+            if (selectedLine) {
+                adminFiltered = adminFiltered.filter(p => p.line === selectedLine);
+            }
+            if (selectedCat) {
+                adminFiltered = adminFiltered.filter(p => p.category === selectedCat);
+            }
+            if (q) {
+                adminFiltered = adminFiltered.filter(p =>
+                    p.name.toLowerCase().includes(q) ||
+                    (p.code && p.code.toLowerCase().includes(q)) ||
+                    (p.line && p.line.toLowerCase().includes(q)) ||
+                    (p.category && p.category.toLowerCase().includes(q))
+                );
+            }
+
+            // Show/hide clear button and active filters
+            const hasFilter = selectedLine || selectedCat || q;
+            document.getElementById('adminClearFilters').style.display = hasFilter ? 'inline-block' : 'none';
+
+            // Active filters chips
+            const chips = [];
+            if (selectedLine) chips.push(`<span class="admin-filter-chip">Linha: ${esc(selectedLine)} <button onclick="document.getElementById('adminLineFilter').value='';filterAdminProducts()">&times;</button></span>`);
+            if (selectedCat) chips.push(`<span class="admin-filter-chip">Categoria: ${esc(selectedCat)} <button onclick="document.getElementById('adminCategoryFilter').value='';filterAdminProducts()">&times;</button></span>`);
+            if (q) chips.push(`<span class="admin-filter-chip">Busca: "${esc(q)}" <button onclick="document.getElementById('adminProductSearch').value='';filterAdminProducts()">&times;</button></span>`);
+            document.getElementById('adminActiveFilters').innerHTML = chips.join('');
+
+            adminPage = 1;
+            renderAdminProducts();
+        }
+
+        function clearAdminFilters() {
+            document.getElementById('adminProductSearch').value = '';
+            document.getElementById('adminLineFilter').value = '';
+            document.getElementById('adminCategoryFilter').value = '';
+            filterAdminProducts();
+        }
+
+        function renderAdminProducts() {
+            const start = (adminPage - 1) * ADMIN_PER_PAGE;
+            const end = start + ADMIN_PER_PAGE;
+            const page = adminFiltered.slice(start, end);
+            const total = adminFiltered.length;
+
+            document.getElementById('adminProductsShowing').textContent =
+                `Mostrando ${start + 1}-${Math.min(end, total)} de ${total}`;
+
+            const fallback = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect fill='%23f3f4f6' width='120' height='120'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='11' fill='%236b7280' text-anchor='middle' dy='.3em'%3ESem Img%3C/text%3E%3C/svg%3E";
+
+            document.getElementById('adminProductGrid').innerHTML = page.map(p => `
+                <div class="admin-product-card${p._hasOverride ? ' edited' : ''}" onclick="openProductModal('${p.id}')">
+                    <div class="admin-product-img">
+                        <img src="${p.image || fallback}" alt="${esc(p.name)}" loading="lazy" onerror="this.src='${fallback}'">
+                        ${p._hasOverride ? '<span class="edit-badge">editado</span>' : ''}
+                        <button class="admin-card-remove" onclick="event.stopPropagation();quickRemoveProduct('${p.id}')" title="Remover produto">&times;</button>
+                    </div>
+                    <div class="admin-product-info">
+                        <strong>${esc(p.name.length > 50 ? p.name.slice(0, 47) + '...' : p.name)}</strong>
+                        <small>${p.code || ''} | ${p.line || ''}</small>
+                    </div>
+                </div>
+            `).join('');
+
+            // Pagination
+            const totalPages = Math.ceil(total / ADMIN_PER_PAGE);
+            if (totalPages > 1) {
+                let pag = '<div class="admin-pagination">';
+                if (adminPage > 1) pag += `<button onclick="adminPage=${adminPage - 1};renderAdminProducts()">Anterior</button>`;
+                pag += `<span>Pagina ${adminPage} de ${totalPages}</span>`;
+                if (adminPage < totalPages) pag += `<button onclick="adminPage=${adminPage + 1};renderAdminProducts()">Proxima</button>`;
+                pag += '</div>';
+                document.getElementById('adminProductPagination').innerHTML = pag;
+            } else {
+                document.getElementById('adminProductPagination').innerHTML = '';
+            }
+        }
+
+        function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+        function openNewProductModal() {
+            isNewProductMode = true;
+            currentEditProduct = { id: '', code: '', name: '', line: '', lineSlug: '', category: '', type: '', image: '' };
+
+            document.getElementById('modalProductTitle').textContent = 'Novo Produto';
+            document.getElementById('editPrimaryImage').src = '';
+            document.getElementById('editImageUrl').value = '';
+            document.getElementById('editProductName').value = '';
+            document.getElementById('editProductCode').value = '';
+            document.getElementById('editProductLine').value = '';
+            document.getElementById('editProductCategory').value = '';
+            document.getElementById('editStatus').textContent = '';
+
+            // Fields are editable for new products
+            document.getElementById('editProductCode').readOnly = false;
+            document.getElementById('editProductLine').readOnly = false;
+
+            // Hide available photos and extra images sections for new product
+            document.getElementById('editAvailablePhotos').innerHTML = '<p style="color:#888;font-size:13px;">Salve o produto primeiro para gerenciar fotos.</p>';
+            document.getElementById('editAdditionalImages').innerHTML = '<p style="color:#888;font-size:13px;">Salve o produto primeiro para adicionar fotos extras.</p>';
+            currentExtraImages = [];
+
+            // Hide remove button for new products
+            document.getElementById('btnRemoveProduct').style.display = 'none';
+
+            document.getElementById('productModalOverlay').style.display = 'flex';
+        }
+
+        async function openProductModal(productId) {
+            isNewProductMode = false;
+            currentEditProduct = adminProducts.find(p => p.id === productId);
+            if (!currentEditProduct) return;
+
+            document.getElementById('modalProductTitle').textContent = 'Editar: ' + currentEditProduct.name.slice(0, 40);
+            document.getElementById('editPrimaryImage').src = currentEditProduct.image || '';
+            document.getElementById('editImageUrl').value = '';
+            document.getElementById('editProductName').value = currentEditProduct.name;
+            document.getElementById('editProductCode').value = currentEditProduct.code || '';
+            document.getElementById('editProductLine').value = currentEditProduct.line || '';
+            document.getElementById('editProductCategory').value = currentEditProduct.category || '';
+            document.getElementById('editStatus').textContent = '';
+
+            // Fields are read-only for existing products
+            document.getElementById('editProductCode').readOnly = true;
+            document.getElementById('editProductLine').readOnly = true;
+
+            // Show remove button
+            document.getElementById('btnRemoveProduct').style.display = 'inline-block';
+
+            // Load extra images from Supabase
+            currentExtraImages = await Auth.getProductImages(productId);
+            renderExtraImages();
+
+            // Load available photos from product-images.json
+            renderAvailablePhotos();
+
+            document.getElementById('productModalOverlay').style.display = 'flex';
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModalOverlay').style.display = 'none';
+            currentEditProduct = null;
+        }
+
+        function previewImageUrl() {
+            const url = document.getElementById('editImageUrl').value.trim();
+            if (url) document.getElementById('editPrimaryImage').src = url;
+        }
+
+        function applyImageUrl() {
+            const url = document.getElementById('editImageUrl').value.trim();
+            if (url) {
+                document.getElementById('editPrimaryImage').src = url;
+                showEditStatus('URL aplicada. Clique "Salvar" para confirmar.', 'info');
+            }
+        }
+
+        async function handleImageUpload(input) {
+            if (!input.files || !input.files[0] || !currentEditProduct) return;
+            const file = input.files[0];
+            if (file.size > 2 * 1024 * 1024) {
+                showEditStatus('Arquivo muito grande (max 2MB)', 'error');
+                return;
+            }
+            showEditStatus('Enviando imagem...', 'info');
+            const url = await Auth.uploadProductImage(file, currentEditProduct.id);
+            if (url) {
+                document.getElementById('editPrimaryImage').src = url;
+                document.getElementById('editImageUrl').value = url;
+                showEditStatus('Upload concluido. Clique "Salvar" para confirmar.', 'success');
+            } else {
+                showEditStatus('Erro no upload. Verifique se o bucket existe no Supabase.', 'error');
+            }
+            input.value = '';
+        }
+
+        async function saveProductEdits() {
+            if (!currentEditProduct) return;
+
+            if (isNewProductMode) {
+                // === CRIAR NOVO PRODUTO ===
+                const name = document.getElementById('editProductName').value.trim();
+                const code = document.getElementById('editProductCode').value.trim();
+                const line = document.getElementById('editProductLine').value.trim();
+                const category = document.getElementById('editProductCategory').value;
+                const image = document.getElementById('editImageUrl').value.trim() ||
+                              document.getElementById('editPrimaryImage').src;
+
+                if (!name) { showEditStatus('Preencha o nome do produto.', 'error'); return; }
+                if (!code) { showEditStatus('Preencha o código do produto.', 'error'); return; }
+                if (!line) { showEditStatus('Preencha a linha do produto.', 'error'); return; }
+                if (!category) { showEditStatus('Selecione a categoria.', 'error'); return; }
+
+                showEditStatus('Criando produto...', 'info');
+
+                const lineSlug = line.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                const codeSlug = code.replace('.', '');
+                let id = `${lineSlug}-${codeSlug}`;
+
+                // Ensure unique ID
+                const existingIds = new Set(adminProducts.map(p => p.id));
+                if (existingIds.has(id)) {
+                    let n = 2;
+                    while (existingIds.has(`${id}-v${n}`)) n++;
+                    id = `${id}-v${n}`;
+                }
+
+                const newProduct = {
+                    id,
+                    code,
+                    name,
+                    line,
+                    lineSlug,
+                    category,
+                    type: category.split(' ').pop(),
+                    image: (image && !image.startsWith('data:')) ? image : '',
+                    _isCustom: true,
+                    _hasOverride: true
+                };
+
+                // Save to localStorage
+                const customProducts = JSON.parse(localStorage.getItem('custom_products') || '[]');
+                customProducts.push(newProduct);
+                localStorage.setItem('custom_products', JSON.stringify(customProducts));
+
+                // Add to current list
+                adminProducts.unshift(newProduct);
+                document.getElementById('productsCount').textContent = `(${adminProducts.length})`;
+
+                showEditStatus('Produto criado com sucesso!', 'success');
+                filterAdminProducts();
+                setTimeout(() => closeProductModal(), 1000);
+                return;
+            }
+
+            // === EDITAR PRODUTO EXISTENTE ===
+            showEditStatus('Salvando...', 'info');
+
+            const newName = document.getElementById('editProductName').value.trim();
+            const newImage = document.getElementById('editImageUrl').value.trim() ||
+                             document.getElementById('editPrimaryImage').src;
+            const newCategory = document.getElementById('editProductCategory').value;
+
+            const fields = {};
+            if (newName && newName !== currentEditProduct.name) fields.name = newName;
+            if (newCategory && newCategory !== currentEditProduct.category) fields.category = newCategory;
+
+            // Check if image changed (not the fallback SVG)
+            if (newImage && !newImage.startsWith('data:') && newImage !== currentEditProduct.image) {
+                fields.image = newImage;
+            }
+
+            if (Object.keys(fields).length === 0) {
+                showEditStatus('Nenhuma alteracao detectada.', 'info');
+                return;
+            }
+
+            // Try Supabase first, fallback to localStorage
+            let saved = false;
+            try {
+                const result = await Auth.upsertProductOverride(currentEditProduct.id, fields);
+                if (result.error) throw new Error(result.error.message);
+                adminOverrides[currentEditProduct.id] = result.data;
+                saved = true;
+            } catch(e) {
+                console.log('Supabase indisponível, salvando em localStorage:', e.message);
+                const localOverrides = JSON.parse(localStorage.getItem('product_overrides') || '{}');
+                localOverrides[currentEditProduct.id] = {
+                    ...localOverrides[currentEditProduct.id],
+                    ...fields,
+                    product_id: currentEditProduct.id,
+                    updated_at: new Date().toISOString()
+                };
+                localStorage.setItem('product_overrides', JSON.stringify(localOverrides));
+                adminOverrides[currentEditProduct.id] = localOverrides[currentEditProduct.id];
+                saved = true;
+            }
+
+            if (!saved) {
+                showEditStatus('Erro ao salvar.', 'error');
+                return;
+            }
+
+            // Update local data
+            if (fields.name) currentEditProduct.name = fields.name;
+            if (fields.image) currentEditProduct.image = fields.image;
+            if (fields.category) currentEditProduct.category = fields.category;
+            currentEditProduct._hasOverride = true;
+
+            showEditStatus('Salvo com sucesso!', 'success');
+            renderAdminProducts();
+
+            setTimeout(() => closeProductModal(), 1000);
+        }
+
+        async function removeProduct() {
+            if (!currentEditProduct) return;
+
+            const confirmMsg = `Tem certeza que deseja remover o produto "${currentEditProduct.name.slice(0, 50)}"?\n\nEsta ação pode ser desfeita removendo da lista de exclusões.`;
+            if (!confirm(confirmMsg)) return;
+
+            showEditStatus('Removendo...', 'info');
+
+            const productId = currentEditProduct.id;
+
+            // Check if it's a custom product (created via admin)
+            if (currentEditProduct._isCustom) {
+                // Remove from custom_products localStorage
+                const customProducts = JSON.parse(localStorage.getItem('custom_products') || '[]');
+                const filtered = customProducts.filter(p => p.id !== productId);
+                localStorage.setItem('custom_products', JSON.stringify(filtered));
+            } else {
+                // Add to removed_products list in localStorage
+                const removed = JSON.parse(localStorage.getItem('removed_products') || '[]');
+                if (!removed.includes(productId)) {
+                    removed.push(productId);
+                    localStorage.setItem('removed_products', JSON.stringify(removed));
+                }
+            }
+
+            // Remove from current list
+            adminProducts = adminProducts.filter(p => p.id !== productId);
+            document.getElementById('productsCount').textContent = `(${adminProducts.length})`;
+
+            showEditStatus('Produto removido!', 'success');
+            filterAdminProducts();
+            setTimeout(() => closeProductModal(), 500);
+        }
+
+        function renderExtraImages() {
+            const container = document.getElementById('editAdditionalImages');
+            if (currentExtraImages.length === 0) {
+                container.innerHTML = '<p style="color:#888;font-size:13px;">Nenhuma foto adicional.</p>';
+                return;
+            }
+            container.innerHTML = currentExtraImages.map(img => `
+                <div class="edit-gallery-item">
+                    <img src="${img.image_url}" alt="Extra" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22%3E%3Crect fill=%22%23fee2e2%22 width=%2280%22 height=%2280%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2210%22 fill=%22%23dc2626%22 text-anchor=%22middle%22 dy=%22.3em%22%3EErro%3C/text%3E%3C/svg%3E'">
+                    <button class="edit-gallery-remove" onclick="removeExtraImage('${img.id}')" title="Remover">&times;</button>
+                </div>
+            `).join('');
+        }
+
+        function renderAvailablePhotos() {
+            const container = document.getElementById('editAvailablePhotos');
+            if (!currentEditProduct) return;
+
+            const photos = allProductImages[currentEditProduct.id] || [];
+            const currentImg = currentEditProduct.image || '';
+
+            if (photos.length === 0) {
+                container.innerHTML = '<p style="color:#888;font-size:13px;">Nenhuma foto disponível no banco de imagens.</p>';
+                return;
+            }
+
+            container.innerHTML = photos.map((url, i) => {
+                const isCurrent = currentImg === url;
+                return `
+                <div class="edit-gallery-item ${isCurrent ? 'is-primary' : ''}" title="${isCurrent ? 'Foto principal atual' : 'Clique para usar como principal'}">
+                    <img src="${url}" alt="Foto ${i+1}" onerror="this.parentElement.style.display='none'">
+                    ${isCurrent
+                        ? '<span class="edit-gallery-badge">PRINCIPAL</span>'
+                        : `<button class="edit-gallery-set-primary" onclick="setAsPrimaryPhoto('${url.replace(/'/g, "\\'")}')">Usar como Principal</button>`
+                    }
+                </div>`;
+            }).join('');
+        }
+
+        function setAsPrimaryPhoto(url) {
+            if (!currentEditProduct) return;
+            document.getElementById('editPrimaryImage').src = url;
+            document.getElementById('editImageUrl').value = url;
+            showEditStatus('Foto selecionada como principal. Clique "Salvar" para confirmar.', 'info');
+            // Update gallery to show badge on selected photo
+            document.querySelectorAll('#editAvailablePhotos .edit-gallery-item').forEach(item => {
+                const img = item.querySelector('img');
+                if (img && img.src === url) {
+                    item.className = 'edit-gallery-item is-primary';
+                    item.innerHTML = img.outerHTML + '<span class="edit-gallery-badge">PRINCIPAL</span>';
+                } else {
+                    item.classList.remove('is-primary');
+                    const badge = item.querySelector('.edit-gallery-badge');
+                    if (badge) badge.remove();
+                    // Re-add button if missing
+                    if (!item.querySelector('.edit-gallery-set-primary') && img) {
+                        const btn = document.createElement('button');
+                        btn.className = 'edit-gallery-set-primary';
+                        btn.textContent = 'Usar como Principal';
+                        btn.onclick = () => setAsPrimaryPhoto(img.src);
+                        item.appendChild(btn);
+                    }
+                }
+            });
+        }
+
+        async function addAdditionalImageUrl() {
+            const url = document.getElementById('addImageUrl').value.trim();
+            if (!url || !currentEditProduct) return;
+            showEditStatus('Adicionando foto...', 'info');
+            const result = await Auth.addProductImage(currentEditProduct.id, url, currentExtraImages.length);
+            if (result.error) {
+                showEditStatus('Erro: ' + result.error.message, 'error');
+                return;
+            }
+            currentExtraImages.push(result.data);
+            renderExtraImages();
+            document.getElementById('addImageUrl').value = '';
+            showEditStatus('Foto adicionada!', 'success');
+        }
+
+        async function handleAdditionalUpload(input) {
+            if (!input.files || !input.files[0] || !currentEditProduct) return;
+            const file = input.files[0];
+            if (file.size > 2 * 1024 * 1024) {
+                showEditStatus('Arquivo muito grande (max 2MB)', 'error');
+                return;
+            }
+            showEditStatus('Enviando foto adicional...', 'info');
+            const url = await Auth.uploadProductImage(file, currentEditProduct.id);
+            if (url) {
+                const result = await Auth.addProductImage(currentEditProduct.id, url, currentExtraImages.length);
+                if (result.data) {
+                    currentExtraImages.push(result.data);
+                    renderExtraImages();
+                    showEditStatus('Foto adicionada!', 'success');
+                }
+            } else {
+                showEditStatus('Erro no upload.', 'error');
+            }
+            input.value = '';
+        }
+
+        async function removeExtraImage(imageId) {
+            showEditStatus('Removendo...', 'info');
+            await Auth.removeProductImage(imageId);
+            currentExtraImages = currentExtraImages.filter(i => i.id !== imageId);
+            renderExtraImages();
+            showEditStatus('Foto removida.', 'success');
+        }
+
+        function quickRemoveProduct(productId) {
+            const prod = adminProducts.find(p => p.id === productId);
+            if (!prod) return;
+            const name = prod.name.length > 50 ? prod.name.slice(0, 47) + '...' : prod.name;
+            if (!confirm(`Remover "${name}"?`)) return;
+
+            if (prod._isCustom) {
+                const custom = JSON.parse(localStorage.getItem('custom_products') || '[]');
+                localStorage.setItem('custom_products', JSON.stringify(custom.filter(p => p.id !== productId)));
+            } else {
+                const removed = JSON.parse(localStorage.getItem('removed_products') || '[]');
+                if (!removed.includes(productId)) {
+                    removed.push(productId);
+                    localStorage.setItem('removed_products', JSON.stringify(removed));
+                }
+            }
+
+            adminProducts = adminProducts.filter(p => p.id !== productId);
+            document.getElementById('productsCount').textContent = `(${adminProducts.length})`;
+            filterAdminProducts();
+        }
+
+        function showEditStatus(msg, type) {
+            const el = document.getElementById('editStatus');
+            el.textContent = msg;
+            el.className = 'edit-status edit-status-' + type;
+        }
+
+        // Load products when Products tab is clicked
+        let productsLoaded = false;
+        document.querySelector('[data-panel="products"]').addEventListener('click', () => {
+            if (!productsLoaded) { loadAdminProducts(); productsLoaded = true; }
+        });
+    </script>
+</body>
+</html>
