@@ -14,6 +14,9 @@ URL: www.assistecrb.net
 | `produto.html` | Pagina de detalhes de um produto individual Cavaletti |
 | `login.html` | Pagina de login/cadastro de usuarios |
 | `admin.html` | Painel administrativo (gerenciamento de produtos) |
+| `tecnico.html` | Painel tecnico interno (base de conhecimento para tecnicos) |
+| `privacidade.html` | Politica de Privacidade (LGPD) |
+| `termos.html` | Termos de Uso |
 
 ### Estilos
 | Arquivo | O que e |

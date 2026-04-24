@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Técnico - Assistec</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="tech-header">
+        <div class="container tech-header-inner">
+            <a href="index.html" class="tech-logo">
+                <span class="tech-logo-icon">A</span>
+                <div>
+                    <strong>ASSISTEC</strong>
+                    <small>Painel Técnico</small>
+                </div>
+            </a>
+            <div class="tech-header-actions">
+                <a href="admin.html" class="tech-header-link">Admin</a>
+                <button class="tech-header-link" onclick="Auth.signOut()">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loading -->
+    <div id="loadingState" class="loading"><div class="spinner"></div></div>
+
+    <!-- Conteúdo Principal -->
+    <div id="techContent" style="display:none;">
+
+        <!-- Busca -->
+        <div class="tech-search-section">
+            <div class="container">
+                <h1 class="tech-title">Base de Conhecimento</h1>
+                <p class="tech-subtitle">Busque soluções, comandos e procedimentos técnicos</p>
+                <div class="tech-search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="techSearch" placeholder="Buscar... ex: tela azul, sfc, impressora travada" oninput="filterArticles()" autofocus>
+                    <span class="tech-search-count" id="searchCount"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorias -->
+        <div class="tech-categories">
+            <div class="container">
+                <div class="tech-cat-chips" id="catChips">
+                    <button class="tech-chip active" onclick="selectCategory('todos', this)">Todos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artigos -->
+        <div class="tech-articles">
+            <div class="container">
+                <div id="articlesList"></div>
+                <div id="noResults" class="tech-no-results" style="display:none;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <p>Nenhum procedimento encontrado.</p>
+                    <small>Tente buscar com outras palavras</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+    <script>
+    // ===== Proteger página - só aprovados =====
+    (async () => {
+        const user = await Auth.getUser();
+        if (!user) { window.location.href = 'login.html'; return; }
+        const profile = await Auth.getProfile();
+        if (!profile || profile.status !== 'aprovado') { window.location.href = 'login.html'; return; }
+        document.getElementById('loadingState').style.display = 'none';
+        document.getElementById('techContent').style.display = 'block';
+        initTechPanel();
+    })();
+
+    // ===== DADOS: Procedimentos Técnicos =====
+    const PROCEDURES = [
+        // ── WINDOWS - REPARO ──
+        {
+            id: 1,
+            title: "Verificar e Reparar Arquivos do Sistema (SFC)",
+            category: "Windows - Reparo",
+            difficulty: "basico",
+            tags: ["sfc", "scannow", "arquivo corrompido", "reparo", "sistema"],
+            description: "Verifica a integridade dos arquivos do Windows e repara automaticamente os corrompidos.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador (clique direito no menu Iniciar)" },
+                { text: "Execute o comando:", cmd: "sfc /scannow" },
+                { text: "Aguarde a verificação (pode levar 15-30 minutos)" },
+                { text: "Se encontrar erros que não conseguiu reparar, execute o DISM primeiro (veja procedimento DISM) e depois rode o SFC novamente" }
+            ],
+            notes: "Se o Windows não iniciar, execute pelo Modo de Recuperação: Prompt de Comando e use `sfc /scannow /offbootdir=C:\\ /offwindir=C:\\Windows`"
+        },
+        {
+            id: 2,
+            title: "Reparar Imagem do Windows (DISM)",
+            category: "Windows - Reparo",
+            difficulty: "intermediario",
+            tags: ["dism", "imagem", "componentes", "reparo", "windows update"],
+            description: "Repara a imagem do Windows quando o SFC não consegue corrigir os problemas. Deve ser executado ANTES do SFC.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador" },
+                { text: "Verifique a saúde da imagem:", cmd: "DISM /Online /Cleanup-Image /CheckHealth" },
+                { text: "Escaneie a imagem:", cmd: "DISM /Online /Cleanup-Image /ScanHealth" },
+                { text: "Repare a imagem (requer internet):", cmd: "DISM /Online /Cleanup-Image /RestoreHealth" },
+                { text: "Aguarde (pode levar 20-40 minutos)" },
+                { text: "Após concluir, execute o SFC:", cmd: "sfc /scannow" },
+                { text: "Reinicie o computador" }
+            ],
+            notes: "Se não tiver internet, pode usar uma ISO do Windows como fonte: DISM /Online /Cleanup-Image /RestoreHealth /Source:D:\\Sources\\install.wim"
+        },
+        {
+            id: 3,
+            title: "Verificar e Reparar Disco (CHKDSK)",
+            category: "Windows - Reparo",
+            difficulty: "basico",
+            tags: ["chkdsk", "disco", "hd", "ssd", "setor defeituoso", "bad block", "erro disco"],
+            description: "Verifica e corrige erros no disco rígido, incluindo setores defeituosos.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador" },
+                { text: "Para verificar sem corrigir:", cmd: "chkdsk C:" },
+                { text: "Para verificar E corrigir erros:", cmd: "chkdsk C: /f" },
+                { text: "Para verificar, corrigir e localizar setores defeituosos:", cmd: "chkdsk C: /f /r" },
+                { text: "Se for o disco do sistema, vai pedir para agendar na próxima reinicialização - digite S e reinicie" }
+            ],
+            notes: "Em SSDs, use apenas /f (sem /r). O /r é para HDs com suspeita de setores defeituosos físicos."
+        },
+        {
+            id: 4,
+            title: "Reparar Boot do Windows (BOOTREC)",
+            category: "Windows - Reparo",
+            difficulty: "avancado",
+            tags: ["boot", "bootrec", "mbr", "bcd", "nao inicia", "reparo inicializacao", "grub"],
+            description: "Repara o setor de inicialização quando o Windows não inicia. Execute pelo Modo de Recuperação.",
+            steps: [
+                { text: "Entre no Modo de Recuperação (F8 na inicialização ou boot pelo pendrive de instalação)" },
+                { text: "Vá em Solução de Problemas > Prompt de Comando" },
+                { text: "Repare o MBR (Master Boot Record):", cmd: "bootrec /fixmbr" },
+                { text: "Repare o setor de boot:", cmd: "bootrec /fixboot" },
+                { text: "Se der erro de acesso negado no fixboot:", cmd: "bootsect /nt60 sys" },
+                { text: "Reconstrua o BCD (banco de dados de boot):", cmd: "bootrec /rebuildbcd" },
+                { text: "Se pedir para adicionar a instalação, digite S" },
+                { text: "Reinicie o computador" }
+            ],
+            notes: "Para UEFI/GPT, se o BCD não reconstruir:\nbcdboot C:\\Windows /s S: /f UEFI\n(onde S: é a partição EFI - use diskpart para identificar)"
+        },
+        {
+            id: 5,
+            title: "Reparo Automático em Loop - Solução",
+            category: "Windows - Reparo",
+            difficulty: "avancado",
+            tags: ["reparo automatico", "loop", "nao inicia", "preparando reparo", "diagnosticando"],
+            description: "Quando o Windows fica preso no loop de 'Preparando Reparo Automático' sem nunca iniciar.",
+            steps: [
+                { text: "Force o desligamento 3x seguidas durante o boot para entrar no Modo de Recuperação" },
+                { text: "Vá em Solução de Problemas > Prompt de Comando" },
+                { text: "Desative o reparo automático:", cmd: "bcdedit /set {default} recoveryenabled No" },
+                { text: "Tente o reparo manual - SFC:", cmd: "sfc /scannow" },
+                { text: "Se o SFC falhar, tente o DISM offline:", cmd: "DISM /Image:C:\\ /Cleanup-Image /RestoreHealth" },
+                { text: "Se nada funcionar, tente a restauração do sistema:", cmd: "rstrui.exe" },
+                { text: "Último recurso - resetar mantendo arquivos:", text2: "Solução de Problemas > Restaurar este PC > Manter meus arquivos" }
+            ],
+            notes: "Verifique se a letra do disco é realmente C: dentro do recovery. Use 'dir C:' para confirmar. Às vezes fica em D: no ambiente de recuperação."
+        },
+        // ── WINDOWS - ATIVAÇÃO ──
+        {
+            id: 6,
+            title: "Verificar Status da Ativação do Windows",
+            category: "Windows - Ativação",
+            difficulty: "basico",
+            tags: ["ativacao", "licenca", "chave", "serial", "slmgr", "status"],
+            description: "Comandos para verificar o status da ativação e informações da licença do Windows.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador" },
+                { text: "Ver status detalhado da ativação:", cmd: "slmgr /dlv" },
+                { text: "Ver status resumido:", cmd: "slmgr /xpr" },
+                { text: "Ver a chave parcial instalada:", cmd: "slmgr /dli" },
+                { text: "Ver chave completa do BIOS (OEM):", cmd: "wmic path softwarelicensingservice get OA3xOriginalProductKey" }
+            ],
+            notes: "Se o PC veio com Windows original, a chave OEM está gravada no BIOS/UEFI e ativa automaticamente ao reinstalar a mesma edição."
+        },
+        {
+            id: 7,
+            title: "Reativar Windows após Troca de Hardware",
+            category: "Windows - Ativação",
+            difficulty: "intermediario",
+            tags: ["ativacao", "hardware", "placa mae", "reativar", "licenca digital"],
+            description: "Quando o Windows desativa após troca de placa-mãe ou hardware significativo.",
+            steps: [
+                { text: "Vá em Configurações > Sistema > Ativação" },
+                { text: "Clique em 'Solução de problemas' na ativação" },
+                { text: "Se a licença estava vinculada a uma conta Microsoft, clique em 'Alterei o hardware neste dispositivo recentemente'" },
+                { text: "Faça login com a conta Microsoft que estava vinculada" },
+                { text: "Selecione o dispositivo na lista e ative" },
+                { text: "Se não funcionar, tente forçar reativação via CMD:", cmd: "slmgr /rearm" },
+                { text: "Reinicie o computador" }
+            ],
+            notes: "Licenças OEM (que vieram com o PC) são vinculadas à placa-mãe original e NÃO podem ser transferidas. Apenas licenças Retail ou digitais vinculadas à conta Microsoft."
+        },
+        // ── REDE E INTERNET ──
+        {
+            id: 8,
+            title: "Resetar Configurações de Rede Completa",
+            category: "Rede",
+            difficulty: "basico",
+            tags: ["rede", "internet", "wifi", "tcp/ip", "dns", "winsock", "nao conecta", "sem internet"],
+            description: "Reset completo das configurações de rede. Resolve a maioria dos problemas de conexão.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador" },
+                { text: "Limpe o cache DNS:", cmd: "ipconfig /flushdns" },
+                { text: "Libere o IP atual:", cmd: "ipconfig /release" },
+                { text: "Renove o IP:", cmd: "ipconfig /renew" },
+                { text: "Resete o Winsock:", cmd: "netsh winsock reset" },
+                { text: "Resete o TCP/IP:", cmd: "netsh int ip reset" },
+                { text: "Resete o Firewall:", cmd: "netsh advfirewall reset" },
+                { text: "Reinicie o computador" }
+            ],
+            notes: "Após o reset, configurações de proxy e VPN serão perdidas. Se o cliente usa VPN corporativa, anotar dados antes."
+        },
+        {
+            id: 9,
+            title: "Configurar DNS Manual (Google/Cloudflare)",
+            category: "Rede",
+            difficulty: "basico",
+            tags: ["dns", "google", "cloudflare", "lento", "site nao abre", "resolucao dns"],
+            description: "Configura DNS público para resolver problemas de sites que não abrem ou internet lenta.",
+            steps: [
+                { text: "Via CMD - Configurar DNS Google:", cmd: "netsh interface ip set dns \"Wi-Fi\" static 8.8.8.8" },
+                { text: "Adicionar DNS secundário Google:", cmd: "netsh interface ip add dns \"Wi-Fi\" 8.8.4.4 index=2" },
+                { text: "Ou via CMD - DNS Cloudflare (mais rápido):", cmd: "netsh interface ip set dns \"Wi-Fi\" static 1.1.1.1" },
+                { text: "DNS secundário Cloudflare:", cmd: "netsh interface ip add dns \"Wi-Fi\" 1.0.0.1 index=2" },
+                { text: "Limpe o cache DNS:", cmd: "ipconfig /flushdns" },
+                { text: "Teste:", cmd: "nslookup google.com" }
+            ],
+            notes: "Substitua \"Wi-Fi\" pelo nome correto da interface. Para ver o nome use: netsh interface show interface\nPara Ethernet normalmente é \"Ethernet\"."
+        },
+        {
+            id: 10,
+            title: "Diagnosticar Problemas de Rede",
+            category: "Rede",
+            difficulty: "intermediario",
+            tags: ["ping", "tracert", "diagnostico", "rede", "lento", "perda pacote", "latencia"],
+            description: "Comandos para diagnosticar onde está o problema de rede.",
+            steps: [
+                { text: "Ver configuração de rede atual:", cmd: "ipconfig /all" },
+                { text: "Testar conexão com o roteador (gateway):", cmd: "ping 192.168.1.1" },
+                { text: "Testar conexão com a internet:", cmd: "ping 8.8.8.8" },
+                { text: "Testar resolução de DNS:", cmd: "ping google.com" },
+                { text: "Rastrear rota até o destino:", cmd: "tracert google.com" },
+                { text: "Ver conexões ativas e portas:", cmd: "netstat -an" },
+                { text: "Ver tabela ARP (dispositivos na rede):", cmd: "arp -a" }
+            ],
+            notes: "Se o ping no gateway falha = problema local (cabo/Wi-Fi/placa). Se ping 8.8.8.8 funciona mas google.com não = problema de DNS. Se tudo funciona mas está lento = verificar tracert para gargalos."
+        },
+        // ── IMPRESSORAS ──
+        {
+            id: 11,
+            title: "Limpar Fila de Impressão Travada",
+            category: "Impressoras",
+            difficulty: "basico",
+            tags: ["impressora", "fila", "travada", "spooler", "nao imprime", "limpar fila"],
+            description: "Resolve quando a impressora trava e não imprime, com documentos presos na fila.",
+            steps: [
+                { text: "Abra o Prompt de Comando como Administrador" },
+                { text: "Pare o serviço de impressão:", cmd: "net stop spooler" },
+                { text: "Limpe os arquivos da fila:", cmd: "del /Q /F /S \"%systemroot%\\System32\\spool\\PRINTERS\\*.*\"" },
+                { text: "Reinicie o serviço:", cmd: "net start spooler" },
+                { text: "Tente imprimir novamente" }
+            ],
+            notes: "Se o problema persistir, remova a impressora e adicione novamente. Pode ser driver corrompido."
+        },
+        {
+            id: 12,
+            title: "Reinstalar Driver de Impressora Completo",
+            category: "Impressoras",
+            difficulty: "intermediario",
+            tags: ["impressora", "driver", "instalar", "remover", "reinstalar", "nao reconhece"],
+            description: "Remoção completa e reinstalação limpa do driver da impressora.",
+            steps: [
+                { text: "Pare o spooler:", cmd: "net stop spooler" },
+                { text: "Abra Configurações > Dispositivos > Impressoras e remova a impressora" },
+                { text: "Abra Gerenciador de Dispositivos e remova o driver (se aparecer)" },
+                { text: "Abra o Gerenciamento de Impressão:", cmd: "printmanagement.msc" },
+                { text: "Vá em Drivers > clique direito no driver > Remover pacote de driver" },
+                { text: "Reinicie o spooler:", cmd: "net start spooler" },
+                { text: "Reinicie o computador" },
+                { text: "Instale o driver novo baixado do site do fabricante" }
+            ],
+            notes: "Para HP: hp.com/drivers | Para Epson: epson.com.br/suporte | Para Brother: brother.com.br/suporte\nSempre baixar do site oficial do fabricante."
+        },
+        // ── HARDWARE ──
+        {
+            id: 13,
+            title: "Teste de Memória RAM",
+            category: "Hardware",
+            difficulty: "basico",
+            tags: ["ram", "memoria", "teste", "tela azul", "bsod", "travamento", "reiniciando sozinho"],
+            description: "Testa a memória RAM para identificar problemas que causam tela azul e travamentos.",
+            steps: [
+                { text: "Método 1 - Ferramenta do Windows:", cmd: "mdsched.exe" },
+                { text: "Selecione 'Reiniciar agora e verificar problemas'" },
+                { text: "O PC reinicia e faz o teste (demora 10-20 min)" },
+                { text: "Método 2 - Via CMD (verificar resultado do último teste):", cmd: "wevtutil qe System /q:\"*[System[Provider[@Name='Microsoft-Windows-MemoryDiagnostics-Results']]]\" /f:text /c:1" },
+                { text: "Se encontrar erros: testar pente por pente, trocando de slot" }
+            ],
+            notes: "Sintomas de RAM defeituosa: telas azuis aleatórias (especialmente IRQL_NOT_LESS_OR_EQUAL, PAGE_FAULT_IN_NONPAGED_AREA), travamentos, reinicializações espontâneas."
+        },
+        {
+            id: 14,
+            title: "Verificar Saúde do HD/SSD (SMART)",
+            category: "Hardware",
+            difficulty: "intermediario",
+            tags: ["hd", "ssd", "smart", "saude", "disco", "lento", "barulho", "clicando"],
+            description: "Verifica a saúde do disco usando dados SMART para prever falhas.",
+            steps: [
+                { text: "Ver status básico via CMD:", cmd: "wmic diskdrive get status,model,size" },
+                { text: "Ver dados SMART detalhados:", cmd: "wmic /namespace:\\\\root\\wmi path MSStorageDriver_FailurePredictStatus get Active,PredictFailure,Reason" },
+                { text: "Ver informações do disco:", cmd: "wmic diskdrive get model,serialNumber,firmwareRevision,status" },
+                { text: "Verificar com PowerShell (mais detalhado):", cmd: "Get-PhysicalDisk | Select FriendlyName,MediaType,HealthStatus,OperationalStatus" },
+                { text: "Para SSDs NVMe, ver desgaste:", cmd: "Get-PhysicalDisk | Get-StorageReliabilityCounter | Select DeviceId,Wear,ReadErrorsTotal,WriteErrorsTotal" }
+            ],
+            notes: "Se PredictFailure = TRUE, o disco está prestes a falhar - FAÇA BACKUP IMEDIATO.\nPara análise mais completa, use CrystalDiskInfo (gratuito)."
+        },
+        {
+            id: 15,
+            title: "Informações Completas do Sistema",
+            category: "Hardware",
+            difficulty: "basico",
+            tags: ["sistema", "informacoes", "specs", "modelo", "serial", "bios", "hardware"],
+            description: "Comandos rápidos para obter todas as informações do hardware e sistema.",
+            steps: [
+                { text: "Informação completa do sistema:", cmd: "systeminfo" },
+                { text: "Modelo e fabricante do PC:", cmd: "wmic computersystem get model,manufacturer,systemtype" },
+                { text: "Número de série:", cmd: "wmic bios get serialnumber" },
+                { text: "Versão da BIOS:", cmd: "wmic bios get smbiosbiosversion,releasedate" },
+                { text: "Processador:", cmd: "wmic cpu get name,numberofcores,maxclockspeed" },
+                { text: "Memória RAM total e por pente:", cmd: "wmic memorychip get capacity,speed,manufacturer,partnumber" },
+                { text: "Discos:", cmd: "wmic diskdrive get model,size,interfacetype" },
+                { text: "Placa de vídeo:", cmd: "wmic path win32_videocontroller get name,driverversion,adapterram" }
+            ],
+            notes: "Salvar relatório completo em arquivo: systeminfo > C:\\info.txt"
+        },
+        // ── SEGURANÇA ──
+        {
+            id: 16,
+            title: "Remover Vírus/Malware - Procedimento Completo",
+            category: "Segurança",
+            difficulty: "intermediario",
+            tags: ["virus", "malware", "lento", "popup", "adware", "trojan", "remover", "limpar"],
+            description: "Procedimento completo para limpeza de malware em máquinas infectadas.",
+            steps: [
+                { text: "Desconecte da internet (cabo e Wi-Fi)" },
+                { text: "Entre no Modo de Segurança com Rede (msconfig > Boot > Safe Boot)" },
+                { text: "Execute verificação rápida do Defender:", cmd: "MpCmdRun.exe -Scan -ScanType 1" },
+                { text: "Execute verificação completa:", cmd: "MpCmdRun.exe -Scan -ScanType 2" },
+                { text: "Atualize as definições do Defender:", cmd: "MpCmdRun.exe -SignatureUpdate" },
+                { text: "Execute verificação offline (reinicia o PC):", cmd: "MpCmdRun.exe -Scan -ScanType 3" },
+                { text: "Verifique programas instalados recentemente e remova suspeitos" },
+                { text: "Verifique extensões do navegador e remova desconhecidas" },
+                { text: "Verifique a inicialização:", cmd: "msconfig" },
+                { text: "Limpe arquivos temporários:", cmd: "cleanmgr /d C:" }
+            ],
+            notes: "Ferramentas adicionais recomendadas:\n- Malwarebytes (malwarebytes.com) - scan grátis\n- AdwCleaner (da Malwarebytes) - remove adware\n- ESET Online Scanner - segunda opinião"
+        },
+        {
+            id: 17,
+            title: "Resetar Senha de Usuário Local",
+            category: "Segurança",
+            difficulty: "intermediario",
+            tags: ["senha", "esqueceu", "resetar", "usuario", "login", "acesso"],
+            description: "Resetar a senha de um usuário local do Windows quando o cliente esqueceu.",
+            steps: [
+                { text: "Se tiver outro admin no PC, abra CMD como admin:", cmd: "net user" },
+                { text: "Ver todos os usuários:", cmd: "net user" },
+                { text: "Resetar a senha de um usuário:", cmd: "net user NomeDoUsuario NovaSenha123" },
+                { text: "Se não tiver acesso admin, entre pelo Modo de Recuperação" },
+                { text: "No Prompt de Comando do Recovery, ative o admin oculto:", cmd: "net user administrador /active:yes" },
+                { text: "Reinicie, entre com 'Administrador' (sem senha) e resete a senha do usuário" },
+                { text: "Depois desative o admin oculto:", cmd: "net user administrador /active:no" }
+            ],
+            notes: "Para contas Microsoft, o reset é pelo site account.live.com/password/reset\nEste procedimento funciona APENAS para contas locais."
+        },
+        // ── FORMATAÇÃO ──
+        {
+            id: 18,
+            title: "Checklist Pós-Formatação Windows",
+            category: "Formatação",
+            difficulty: "basico",
+            tags: ["formatacao", "instalacao", "pos instalacao", "checklist", "configuracao", "drivers"],
+            description: "Lista completa do que fazer após uma formatação/instalação limpa do Windows.",
+            steps: [
+                { text: "Conectar à internet e rodar Windows Update até não ter mais atualizações" },
+                { text: "Instalar drivers do fabricante (chipset, vídeo, áudio, rede, etc.)" },
+                { text: "Ativar o Windows (verificar):", cmd: "slmgr /xpr" },
+                { text: "Configurar energia: desativar suspensão se for desktop" },
+                { text: "Desativar inicialização rápida:", text2: "Painel de Controle > Opções de Energia > Escolher a função dos botões > Desativar Inicialização Rápida" },
+                { text: "Instalar navegador (Chrome/Firefox)" },
+                { text: "Instalar antivírus (se necessário) ou verificar Windows Defender" },
+                { text: "Instalar programas do cliente (Office, Adobe Reader, WinRAR, etc.)" },
+                { text: "Configurar impressora" },
+                { text: "Restaurar backup do cliente (documentos, fotos, favoritos)" },
+                { text: "Criar ponto de restauração:", cmd: "wmic.exe /Namespace:\\\\root\\default Path SystemRestore Call CreateRestorePoint \"Pos-Formatacao\", 100, 12" },
+                { text: "Testar tudo: som, vídeo, USB, Wi-Fi, impressora" }
+            ],
+            notes: "Sempre verificar se todos os dispositivos estão sem exclamação amarela no Gerenciador de Dispositivos (devmgmt.msc)."
+        },
+        {
+            id: 19,
+            title: "Criar Pendrive Bootável do Windows",
+            category: "Formatação",
+            difficulty: "basico",
+            tags: ["pendrive", "bootavel", "usb", "instalacao", "windows", "iso", "media creation"],
+            description: "Como criar um pendrive de instalação do Windows.",
+            steps: [
+                { text: "Baixe a Media Creation Tool do site oficial da Microsoft" },
+                { text: "Execute a ferramenta e aceite os termos" },
+                { text: "Selecione 'Criar mídia de instalação para outro computador'" },
+                { text: "Escolha: Idioma, Edição e Arquitetura (64 bits)" },
+                { text: "Selecione 'Unidade flash USB'" },
+                { text: "Escolha o pendrive (mínimo 8GB) - SERÁ FORMATADO" },
+                { text: "Aguarde o download e criação (20-40 min dependendo da internet)" },
+                { text: "Alternativa via CMD - baixar ISO e gravar com:", cmd: "DISM /Apply-Image /ImageFile:D:\\sources\\install.wim /Index:1 /ApplyDir:C:\\" }
+            ],
+            notes: "Pendrive mínimo de 8GB. Todo conteúdo será apagado.\nPara Windows 10: microsoft.com/software-download/windows10\nPara Windows 11: microsoft.com/software-download/windows11"
+        },
+        // ── OTIMIZAÇÃO ──
+        {
+            id: 20,
+            title: "PC Lento - Diagnóstico e Otimização",
+            category: "Otimização",
+            difficulty: "basico",
+            tags: ["lento", "devagar", "travando", "otimizar", "rapido", "desempenho", "inicializacao"],
+            description: "Procedimento completo para diagnosticar e resolver lentidão no PC.",
+            steps: [
+                { text: "Verificar uso de CPU/RAM/Disco no Gerenciador de Tarefas:", cmd: "taskmgr" },
+                { text: "Desativar programas da inicialização desnecessários:", cmd: "msconfig" },
+                { text: "Ou via PowerShell - ver programas de inicialização:", cmd: "Get-CimInstance Win32_StartupCommand | Select Name,Command,Location | Format-Table -AutoSize" },
+                { text: "Limpar arquivos temporários:", cmd: "cleanmgr /d C:" },
+                { text: "Limpar prefetch:", cmd: "del /Q /S C:\\Windows\\Prefetch\\*.*" },
+                { text: "Limpar temp do usuário:", cmd: "del /Q /S \"%temp%\\*.*\"" },
+                { text: "Verificar espaço em disco:", cmd: "wmic logicaldisk get size,freespace,caption" },
+                { text: "Verificar saúde do disco (ver procedimento SMART)" },
+                { text: "Se for HDD, considerar upgrade para SSD (maior impacto em performance)" },
+                { text: "Verificar se há vírus (ver procedimento de remoção)" }
+            ],
+            notes: "Causas mais comuns de lentidão:\n1. Disco HDD (trocar por SSD resolve 90%)\n2. Pouca RAM (mínimo 8GB hoje)\n3. Muitos programas na inicialização\n4. Vírus/malware\n5. Windows desatualizado"
+        },
+        // ── AUTOMAÇÃO COMERCIAL ──
+        {
+            id: 21,
+            title: "Impressora Não Fiscal - Problemas Comuns",
+            category: "Automação Comercial",
+            difficulty: "intermediario",
+            tags: ["pdv", "impressora", "termica", "cupom", "nao imprime", "automacao", "comercial"],
+            description: "Solução para problemas com impressoras térmicas de cupom (não fiscal).",
+            steps: [
+                { text: "Verifique se a impressora está ligada e com papel" },
+                { text: "Verifique a conexão USB/Serial/Rede" },
+                { text: "Pare e reinicie o spooler:", cmd: "net stop spooler && net start spooler" },
+                { text: "Verifique se a porta COM está correta:", cmd: "mode" },
+                { text: "Para impressoras USB, verifique no Gerenciador de Dispositivos:", cmd: "devmgmt.msc" },
+                { text: "Teste a impressora com o bloco de notas (imprimir texto simples)" },
+                { text: "Verifique se o driver genérico 'Generic/Text Only' está instalado" },
+                { text: "Para impressoras de rede, teste o ping:", cmd: "ping 192.168.1.100" }
+            ],
+            notes: "Marcas comuns: Epson TM-T20, Bematech MP-4200, Elgin i9.\nSe for serial (COM), verificar: velocidade 9600/115200, bits de dados 8, paridade nenhuma, bit de parada 1."
+        },
+        {
+            id: 22,
+            title: "Windows - Desativar Atualizações Automáticas",
+            category: "Otimização",
+            difficulty: "intermediario",
+            tags: ["update", "atualizacao", "desativar", "pausar", "windows update", "reiniciando"],
+            description: "Pausar ou desativar atualizações automáticas do Windows (útil para máquinas de PDV e servidores).",
+            steps: [
+                { text: "Pausar por 35 dias (método mais seguro):", text2: "Configurações > Windows Update > Pausar atualizações" },
+                { text: "Desativar o serviço temporariamente:", cmd: "net stop wuauserv" },
+                { text: "Desativar permanentemente (não recomendado para uso geral):", cmd: "sc config wuauserv start= disabled" },
+                { text: "Para reativar:", cmd: "sc config wuauserv start= auto && net start wuauserv" },
+                { text: "Via registro - bloquear reinicialização automática:", cmd: "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU\" /v NoAutoRebootWithLoggedOnUsers /t REG_DWORD /d 1 /f" }
+            ],
+            notes: "IMPORTANTE: Desativar atualizações permanentemente compromete a segurança. Use apenas em máquinas de PDV ou quando o update está causando problemas. Para PCs normais, apenas pause temporariamente."
+        }
+    ];
+
+    // ===== CATEGORIAS =====
+    const CATEGORIES = [...new Set(PROCEDURES.map(p => p.category))];
+    let selectedCategory = 'todos';
+    let searchQuery = '';
+
+    // ===== INICIALIZAR =====
+    function initTechPanel() {
+        // Render category chips
+        const chipsContainer = document.getElementById('catChips');
+        CATEGORIES.forEach(cat => {
+            const count = PROCEDURES.filter(p => p.category === cat).length;
+            const btn = document.createElement('button');
+            btn.className = 'tech-chip';
+            btn.textContent = cat + ' (' + count + ')';
+            btn.onclick = function() { selectCategory(cat, this); };
+            chipsContainer.appendChild(btn);
+        });
+
+        renderArticles(PROCEDURES);
+    }
+
+    function selectCategory(cat, btn) {
+        selectedCategory = cat;
+        document.querySelectorAll('.tech-chip').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        filterArticles();
+    }
+
+    function filterArticles() {
+        searchQuery = document.getElementById('techSearch').value.toLowerCase().trim();
+        let filtered = PROCEDURES;
+
+        if (selectedCategory !== 'todos') {
+            filtered = filtered.filter(p => p.category === selectedCategory);
+        }
+
+        if (searchQuery) {
+            filtered = filtered.filter(p => {
+                const haystack = [
+                    p.title, p.description, p.category,
+                    p.notes || '',
+                    ...p.tags,
+                    ...p.steps.map(s => s.text + ' ' + (s.cmd || '') + ' ' + (s.text2 || ''))
+                ].join(' ').toLowerCase();
+                return searchQuery.split(' ').every(word => haystack.includes(word));
+            });
+        }
+
+        document.getElementById('searchCount').textContent = filtered.length + ' resultado' + (filtered.length !== 1 ? 's' : '');
+        renderArticles(filtered);
+    }
+
+    function renderArticles(articles) {
+        const container = document.getElementById('articlesList');
+        const noResults = document.getElementById('noResults');
+
+        if (articles.length === 0) {
+            container.innerHTML = '';
+            noResults.style.display = 'block';
+            return;
+        }
+
+        noResults.style.display = 'none';
+
+        container.innerHTML = articles.map(p => {
+            const diffLabel = { basico: 'Básico', intermediario: 'Intermediário', avancado: 'Avançado' };
+            const diffClass = { basico: 'easy', intermediario: 'medium', avancado: 'hard' };
+
+            return `
+            <div class="tech-article" id="article-${p.id}">
+                <div class="tech-article-header" onclick="toggleArticle(${p.id})">
+                    <div class="tech-article-info">
+                        <span class="tech-article-cat">${esc(p.category)}</span>
+                        <span class="tech-diff tech-diff-${diffClass[p.difficulty]}">${diffLabel[p.difficulty]}</span>
+                    </div>
+                    <h3 class="tech-article-title">${highlightSearch(esc(p.title))}</h3>
+                    <p class="tech-article-desc">${highlightSearch(esc(p.description))}</p>
+                    <div class="tech-article-tags">
+                        ${p.tags.slice(0, 5).map(t => '<span class="tech-tag">' + esc(t) + '</span>').join('')}
+                    </div>
+                    <svg class="tech-article-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="tech-article-body" id="body-${p.id}">
+                    <ol class="tech-steps">
+                        ${p.steps.map((s, i) => `
+                            <li class="tech-step">
+                                <div class="tech-step-text">${highlightSearch(esc(s.text))}</div>
+                                ${s.cmd ? `
+                                <div class="tech-cmd">
+                                    <code>${esc(s.cmd)}</code>
+                                    <button class="tech-cmd-copy" onclick="copyCmd(this, '${esc(s.cmd).replace(/'/g, "\\'")}')">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                        Copiar
+                                    </button>
+                                </div>` : ''}
+                                ${s.text2 ? `<div class="tech-step-detail">${highlightSearch(esc(s.text2))}</div>` : ''}
+                            </li>
+                        `).join('')}
+                    </ol>
+                    ${p.notes ? `
+                    <div class="tech-notes">
+                        <strong>Observações:</strong>
+                        <pre>${highlightSearch(esc(p.notes))}</pre>
+                    </div>` : ''}
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    function toggleArticle(id) {
+        const article = document.getElementById('article-' + id);
+        article.classList.toggle('open');
+    }
+
+    function copyCmd(btn, cmd) {
+        navigator.clipboard.writeText(cmd).then(() => {
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
+            btn.classList.add('copied');
+            setTimeout(() => { btn.innerHTML = originalHTML; btn.classList.remove('copied'); }, 2000);
+        });
+    }
+
+    function highlightSearch(text) {
+        if (!searchQuery) return text;
+        const words = searchQuery.split(' ').filter(w => w.length > 1);
+        let result = text;
+        words.forEach(word => {
+            const regex = new RegExp('(' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            result = result.replace(regex, '<mark>$1</mark>');
+        });
+        return result;
+    }
+
+    function esc(text) {
+        const div = document.createElement('div');
+        div.textContent = text || '';
+        return div.innerHTML;
+    }
+    </script>
+</body>
+</html>
