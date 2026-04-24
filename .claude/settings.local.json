@@ -17,7 +17,8 @@
       "Bash(curl -sI https://assistecrb.net/)",
       "Bash(nslookup:*)",
       "Bash(gh auth:*)",
-      "Bash(gh repo:*)"
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)"
     ]
   }
 }

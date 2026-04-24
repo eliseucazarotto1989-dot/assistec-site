@@ -1581,7 +1581,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     height: 72px;
     gap: 30px;
 }
-.gp-logo img { height: 40px; width: auto; }
+.gp-logo img { height: 44px; width: auto; border-radius: 6px; }
 .gp-search-bar {
     flex: 1;
     max-width: 520px;
@@ -1736,7 +1736,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     gap: 40px;
     padding-bottom: 40px;
 }
-.gp-footer-logo { height: 36px; width: auto; margin-bottom: 16px; }
+.gp-footer-logo { height: 50px; width: auto; margin-bottom: 16px; border-radius: 6px; }
 .gp-footer-desc { margin-bottom: 20px; color: #666; }
 .gp-footer-socials { display: flex; gap: 10px; }
 .gp-footer-socials a {
