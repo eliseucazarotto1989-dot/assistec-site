@@ -18,7 +18,8 @@
       "Bash(nslookup:*)",
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "WebFetch(domain:assistecrb.net)"
     ]
   }
 }
