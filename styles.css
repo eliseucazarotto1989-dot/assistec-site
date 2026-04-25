@@ -1618,11 +1618,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .gp-header-inner {
     display: flex;
     align-items: center;
-    height: 72px;
+    height: 85px;
     gap: 30px;
 }
 .gp-logo { margin-right: auto; }
-.gp-logo img { height: 52px; width: auto; }
+.gp-logo img { height: 70px; width: auto; }
 .gp-search-bar {
     flex: 1;
     max-width: 520px;
@@ -1777,7 +1777,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     gap: 40px;
     padding-bottom: 40px;
 }
-.gp-footer-logo { height: 50px; width: auto; margin-bottom: 16px; }
+.gp-footer-logo { height: 60px; width: auto; margin-bottom: 16px; }
 .gp-footer-desc { margin-bottom: 20px; color: rgba(255,255,255,0.5); }
 .gp-footer-socials { display: flex; gap: 10px; }
 .gp-footer-socials a {
