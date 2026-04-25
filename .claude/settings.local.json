@@ -19,7 +19,8 @@
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
       "Bash(gh api:*)",
-      "WebFetch(domain:assistecrb.net)"
+      "WebFetch(domain:assistecrb.net)",
+      "WebFetch(domain:fonts.google.com)"
     ]
   }
 }

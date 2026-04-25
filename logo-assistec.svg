@@ -1,39 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
     </style>
   </defs>
 
-  <!-- Globe with arrows -->
-  <g transform="translate(8, 6)">
-    <!-- Globe body -->
-    <circle cx="34" cy="34" r="30" stroke="white" stroke-width="2.5" fill="none"/>
-    <!-- Vertical meridian -->
-    <ellipse cx="34" cy="34" rx="13" ry="30" stroke="white" stroke-width="1.8" fill="none"/>
-    <!-- Equator -->
-    <line x1="4" y1="34" x2="64" y2="34" stroke="white" stroke-width="1.8"/>
+  <!-- Globe icon - faithful recreation -->
+  <g transform="translate(6, 4)">
+    <!-- Globe main circle -->
+    <ellipse cx="36" cy="36" rx="28" ry="30" stroke="white" stroke-width="2.8" fill="none"/>
+
+    <!-- Vertical meridian (curved for 3D effect) -->
+    <ellipse cx="30" cy="36" rx="12" ry="30" stroke="white" stroke-width="1.8" fill="none"/>
+
+    <!-- Horizontal equator -->
+    <path d="M8,36 Q36,30 64,36" stroke="white" stroke-width="1.6" fill="none"/>
+
     <!-- Upper latitude -->
-    <ellipse cx="34" cy="21" rx="24" ry="3.5" stroke="white" stroke-width="1.2" fill="none" opacity="0.45"/>
+    <path d="M12,22 Q36,17 60,22" stroke="white" stroke-width="1.1" fill="none" opacity="0.5"/>
+
     <!-- Lower latitude -->
-    <ellipse cx="34" cy="47" rx="24" ry="3.5" stroke="white" stroke-width="1.2" fill="none" opacity="0.45"/>
+    <path d="M12,50 Q36,45 60,50" stroke="white" stroke-width="1.1" fill="none" opacity="0.5"/>
 
-    <!-- Arrow top-right (pointing right) -->
-    <path d="M52,8 L52,4 L66,13 L52,22 L52,18 L42,18 L42,14 L44,12 L52,12 Z" fill="white" opacity="0.95"/>
+    <!-- Shadow crescent on left -->
+    <path d="M14,10 Q6,36 14,62" stroke="white" stroke-width="1.2" fill="none" opacity="0.3"/>
 
-    <!-- Arrow bottom-left (pointing left) -->
-    <path d="M16,48 L16,44 L26,44 L26,46 L24,48 L16,48 Z M16,52 L16,56 L2,47 L16,38 L16,42 L26,42 L26,38 L24,40 Z" fill="white" opacity="0.00"/>
-    <path d="M16,60 L16,56 L2,47 L16,38 L16,42 L28,42 L28,46 L26,48 L16,48 Z" fill="white" opacity="0.7"/>
+    <!-- Top-right arrow (flowing curve going right) -->
+    <path d="M40,8 C48,6 56,8 62,14 L60,10 L66,16 L58,16 L56,12 C52,8 46,6 40,8 Z" fill="white" opacity="0.95"/>
+    <!-- Arrow head extension -->
+    <path d="M58,4 L68,14 L62,16 L54,8 Z" fill="white" opacity="0.95"/>
 
-    <!-- Center dot -->
-    <circle cx="34" cy="34" r="3" fill="white"/>
+    <!-- Bottom-left arrow (flowing curve going left) -->
+    <path d="M32,64 C24,66 16,64 10,58 L12,62 L6,56 L14,56 L16,60 C20,64 26,66 32,64 Z" fill="white" opacity="0.75"/>
+    <!-- Arrow head extension -->
+    <path d="M14,68 L4,58 L10,56 L18,64 Z" fill="white" opacity="0.75"/>
   </g>
 
-  <!-- ASSISTEC text - small caps style (first letter taller) -->
-  <text x="82" y="42" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" fill="white" letter-spacing="1">
-    <tspan font-size="40">A</tspan><tspan font-size="30" dy="0">SSISTEC</tspan>
+  <!-- ASSISTEC text - small caps (A and I taller) -->
+  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" fill="white" letter-spacing="0.5">
+    <tspan x="82" y="38" font-size="38">A</tspan><tspan font-size="29">SSISTEC</tspan>
   </text>
 
-  <!-- INFORMÁTICA text -->
-  <text x="84" y="64" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="22" font-weight="800" fill="white" letter-spacing="1.5">I<tspan font-size="17">NFORMÁTICA</tspan></text>
+  <!-- INFORMÁTICA text - small caps -->
+  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" fill="white" letter-spacing="1.5">
+    <tspan x="84" y="62" font-size="28">I</tspan><tspan font-size="21">NFORMÁTICA</tspan>
+  </text>
 </svg>
