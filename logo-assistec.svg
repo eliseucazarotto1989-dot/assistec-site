@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" fill="none">
+  <!-- Globe -->
+  <g transform="translate(10, 6)">
+    <!-- Outer circle -->
+    <circle cx="34" cy="34" r="32" stroke="white" stroke-width="2.2" fill="none"/>
+    <!-- Vertical meridian -->
+    <ellipse cx="34" cy="34" rx="14" ry="32" stroke="white" stroke-width="1.5" fill="none"/>
+    <!-- Horizontal equator -->
+    <line x1="2" y1="34" x2="66" y2="34" stroke="white" stroke-width="1.5"/>
+    <!-- Upper latitude line -->
+    <ellipse cx="34" cy="20" rx="26" ry="4" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- Lower latitude line -->
+    <ellipse cx="34" cy="48" rx="26" ry="4" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+
+    <!-- Arrow 1 - top right (going right) -->
+    <g transform="translate(46, 6)">
+      <path d="M0 7 L8 0 L8 4 L18 4 L18 10 L8 10 L8 14 Z" fill="white" opacity="0.95"/>
+    </g>
+
+    <!-- Arrow 2 - bottom left (going left) -->
+    <g transform="translate(2, 44)">
+      <path d="M18 7 L10 0 L10 4 L0 4 L0 10 L10 10 L10 14 Z" fill="white" opacity="0.7"/>
+    </g>
+
+    <!-- Center dot -->
+    <circle cx="34" cy="34" r="3.5" fill="white"/>
+    <circle cx="34" cy="34" r="1.5" fill="#0050A0"/>
+  </g>
+
+  <!-- Text: ASSISTEC -->
+  <text x="88" y="40" font-family="'Montserrat', 'Arial Black', 'Segoe UI', sans-serif" font-size="34" font-weight="900" letter-spacing="3" fill="white">ASSISTEC</text>
+
+  <!-- Text: INFORMÁTICA -->
+  <text x="90" y="60" font-family="'Montserrat', 'Arial', 'Segoe UI', sans-serif" font-size="14.5" font-weight="600" letter-spacing="5" fill="rgba(255,255,255,0.75)">INFORMÁTICA</text>
+</svg>
