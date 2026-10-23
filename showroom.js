@@ -204,7 +204,7 @@
         <section class="secao fundo-marinho">
             <div class="wrap">
                 <div class="secao-cab surge">
-                    <div><span class="rotulo claro">Pedido por ambiente</span><h2 class="display">Monte a sala. A gente orça o todo.</h2></div>
+                    <div><span class="rotulo claro">Pedido por ambiente</span><h2 class="display">Monte cada ambiente.<br><em>Receba tudo em um só orçamento.</em></h2></div>
                     <p>Em vez de pedir item por item, você organiza o pedido por ambiente — do jeito que vai ser usado.</p>
                 </div>
                 <div class="passos surge">

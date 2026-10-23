@@ -546,3 +546,6 @@ body.tem-toast .whats-flutuante { opacity: 0; pointer-events: none; }
 @media (max-width: 860px) { .placar-item { padding: 18px 22px; } .placar-trilho { animation-duration: 55s; } }
 /* com "reduzir animações" ligado no aparelho o letreiro continua, bem mais lento (e para ao passar o mouse) */
 @media (prefers-reduced-motion: reduce) { .placar-trilho { animation-duration: 160s; } }
+
+/* título da seção de pedido: segunda frase em ciano */
+.fundo-marinho .secao-cab h2 em { font-style: normal; color: var(--ciano); }
