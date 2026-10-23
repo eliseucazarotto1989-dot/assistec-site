@@ -9,9 +9,10 @@ URL: www.assistecrb.net
 ### Paginas HTML
 | Arquivo | O que e |
 |---------|---------|
-| `index.html` | Pagina inicial do site (home) - apresentacao da empresa, servicos, contato |
-| `catalogo.html` | Catalogo de cadeiras Cavaletti - listagem de produtos com filtros |
-| `produto.html` | Pagina de detalhes de um produto individual Cavaletti |
+| `index.html` | Pagina inicial (showroom): destaques, ambientes, colecoes, orcamento como projeto, informatica |
+| `catalogo.html` | Colecoes e busca. `?linha=yon`, `?ambiente=trabalho`, `?ver=ambientes`, `?q=47301`, `&cat=` filtra categoria |
+| `produto.html` | Modelo Cavaletti (`?id=`): fotos, configurador (configuracao, estrutura, revestimento, cor, encosto) e "Adicionar ao projeto" |
+| `projeto.html` | Projeto de orcamento por ambiente (guardado no navegador): envia pelo WhatsApp ou gera PDF |
 | `login.html` | Pagina de login/cadastro de usuarios |
 | `admin.html` | Painel administrativo (gerenciamento de produtos) |
 | `tecnico.html` | Painel tecnico interno (base de conhecimento para tecnicos) |
@@ -21,14 +22,14 @@ URL: www.assistecrb.net
 ### Estilos
 | Arquivo | O que e |
 |---------|---------|
-| `styles.css` | Toda a aparencia visual do site (cores, fontes, layout, responsividade) |
+| `showroom.css` | Aparencia das paginas publicas (Identidade 2026: marinho #0A1F44, azul #0057D9, ciano #00B4F0, fonte Saira) |
+| `styles.css` | Aparencia antiga, so para login.html, tecnico.html e admin.html (internas) |
 
 ### JavaScript
 | Arquivo | O que e |
 |---------|---------|
 | `auth.js` | Sistema de autenticacao (login, cadastro, sessao do usuario) |
-| `orcamento.js` | Logica para solicitar orcamentos de produtos |
-| `color-data.js` | Dados de cores disponiveis para cadeiras Cavaletti |
+| `showroom.js` | Todas as telas publicas: le catalog-data.json, busca, configurador, projeto, mensagem do WhatsApp. Fotos de clientes: lista FOTOS_CLIENTES no topo |
 
 ### Dados
 | Arquivo | O que e |
@@ -46,8 +47,8 @@ A Cavaletti nao permite precos no site: nenhum valor e publicado.
 ### Imagens
 | Arquivo | O que e |
 |---------|---------|
-| `logo.svg` | Logo da Assistec (versao escura) |
-| `logo-white.svg` | Logo da Assistec (versao branca para fundo escuro) |
+| `img/marca/` | Logos da Identidade 2026 (horizontal, vertical, simbolo; cor, azul, branco, preto) |
+| `fonts/Saira-VF.ttf` | Fonte da marca (licenca OFL em fonts/OFL.txt) |
 
 ## Como Pedir Mudancas (exemplos)
 

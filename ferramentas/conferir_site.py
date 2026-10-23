@@ -76,7 +76,7 @@ def main():
                 erros.append(f"{p['id']}: {r} não é aceito pela linha {p['line']} no catálogo")
 
     # 5) nenhum preço nos arquivos públicos
-    publicos = ['catalog-data.json', 'product-images.json', 'index.html', 'catalogo.html', 'produto.html', 'color-data.js', 'orcamento.js']
+    publicos = ['catalog-data.json', 'product-images.json', 'index.html', 'catalogo.html', 'produto.html', 'projeto.html', 'showroom.js']
     for arq in publicos:
         txt = open(os.path.join(SITE, arq), encoding='utf-8').read()
         if arq.endswith('.json'):
