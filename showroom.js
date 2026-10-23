@@ -152,7 +152,10 @@
         <section class="hero">
             <div class="wrap">
                 <div class="surge">
-                    <span class="rotulo">Revenda autorizada Cavaletti · Rodeio Bonito/RS</span>
+                    <div class="selo-cavaletti">
+                        <img src="img/cavaletti/marca/cavaletti-logo.png" alt="Cavaletti — Cadeiras Profissionais" width="62" height="58">
+                        <div><b>Revenda autorizada Cavaletti</b><span>Rodeio Bonito/RS e região</span></div>
+                    </div>
                     <h1 class="display">Ambientes que <em>trabalham</em> com você.</h1>
                     <p class="lead">Mais de ${Math.floor(P.length / 100) * 100} modelos de cadeiras, sofás e mesas Cavaletti. Monte o pedido de cada sala e receba o orçamento pelo WhatsApp — sem compromisso.</p>
                     <div class="hero-acoes">
@@ -279,7 +282,8 @@
             'Uma das principais marcas da <b>América Latina</b>',
             '“Fazer bem feito, <b>sempre</b>.”',
         ];
-        const grupo = frases.map(f => `<span class="placar-item">${f}</span><span class="seta" aria-hidden="true"></span>`).join('');
+        const grupo = '<img class="placar-logo" src="img/cavaletti/marca/cavaletti-logo-branco.png" alt="" width="54" height="50">' +
+            frases.map(f => `<span class="placar-item">${f}</span><span class="seta" aria-hidden="true"></span>`).join('');
         const texto = frases.map(f => f.replace(/<[^>]+>/g, '')).join('. ');
         return `<section class="placar" aria-label="${esc(texto)}">
             <div class="placar-trilho" aria-hidden="true"><div class="placar-grupo">${grupo}</div><div class="placar-grupo">${grupo}</div></div>
@@ -385,6 +389,7 @@
                     <span class="rotulo">Linha ${esc(p.line)}</span>
                     <h1 class="display">${esc(titulo(p))}</h1>
                     <div class="meta"><span>Modelo <b>${esc(p.code || '—')}</b></span><span>${esc(p.category)}</span><span>${plural(p.variacoes.length, 'configuração', 'configurações')}</span></div>
+                    <div class="original"><img src="img/cavaletti/marca/cavaletti-logo.png" alt="Cavaletti" width="38" height="35"><span><b>Produto original Cavaletti</b> com garantia de fábrica, vendido por revenda autorizada.</span></div>
                     <div id="conf"></div>
                     <div class="adicionar">
                         <label class="campo"><span>Para qual ambiente?</span>

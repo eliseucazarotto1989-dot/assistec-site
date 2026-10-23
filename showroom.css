@@ -549,3 +549,17 @@ body.tem-toast .whats-flutuante { opacity: 0; pointer-events: none; }
 
 /* título da seção de pedido: segunda frase em ciano */
 .fundo-marinho .secao-cab h2 em { font-style: normal; color: var(--ciano); }
+
+/* ---------- Marca Cavaletti (revenda autorizada) ---------- */
+.selo-cavaletti { display: inline-flex; align-items: center; gap: 14px; padding: 8px 18px 8px 8px; border: 1px solid var(--linha); border-radius: 16px; background: #fff; }
+.selo-cavaletti img { width: 62px; height: auto; }
+.selo-cavaletti b { display: block; font-size: 13px; font-weight: 650; letter-spacing: .22em; text-transform: uppercase; color: var(--marinho); }
+.selo-cavaletti span { display: block; font-size: 14px; color: var(--grafite); margin-top: 2px; }
+.placar-logo { height: 50px; width: auto; margin: 0 34px; flex-shrink: 0; }
+.original { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--linha); font-size: 15px; color: var(--grafite); }
+.original img { width: 38px; height: auto; flex-shrink: 0; }
+.original b { color: var(--marinho); font-weight: 600; }
+.rodape-cavaletti { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
+.rodape-cavaletti img { width: 60px; height: auto; margin: 0; }
+.rodape-cavaletti span { font-size: 13px; line-height: 1.35; }
+@media (max-width: 860px) { .selo-cavaletti b { font-size: 11px; letter-spacing: .16em; } .selo-cavaletti img { width: 50px; } .placar-logo { height: 40px; margin: 0 22px; } }
