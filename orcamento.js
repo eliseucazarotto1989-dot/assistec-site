@@ -4,7 +4,7 @@
 // =============================================================
 
 (function () {
-    const WHATSAPP_NUMBER = '5537981003';
+    const WHATSAPP_NUMBER = '555537981003';
 
     /**
      * Solicita orçamento de um produto via WhatsApp

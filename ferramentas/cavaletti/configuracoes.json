@@ -1,0 +1,5296 @@
+{
+ "origem": "https://www.cavaletti.com.br",
+ "baixadoEm": "2026-10-23 16:18",
+ "linhas": {
+  "air": [
+   {
+    "id": 1,
+    "codigo": "27.001",
+    "imagem": "linhas-componentes/May2025/6ApO1n858ilb9Tb4Tls9.jpg",
+    "descricao": "Poltrona Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Apoio Lombar Regulável / Braço 3D / Base Alumínio",
+    "arquivo": "img/cavaletti/air/6ApO1n858ilb9Tb4Tls9.jpg"
+   },
+   {
+    "id": 2,
+    "codigo": "27.001",
+    "imagem": "linhas-componentes/May2025/x6uFpZFC01SUQkAoZSAG.jpg",
+    "descricao": "Poltrona Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Apoio Lombar Regulável / Braço 3D / Base Nylon",
+    "arquivo": "img/cavaletti/air/x6uFpZFC01SUQkAoZSAG.jpg"
+   },
+   {
+    "id": 3,
+    "codigo": "27.006 SI",
+    "imagem": "linhas-componentes/May2025/7a46hGidnrDYAI1L7KYj.jpg",
+    "descricao": "Poltrona Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados / Tela cor Preto",
+    "arquivo": "img/cavaletti/air/7a46hGidnrDYAI1L7KYj.jpg"
+   },
+   {
+    "id": 4,
+    "codigo": "27.006 SI",
+    "imagem": "linhas-componentes/May2025/jjjjhXNnx0cMvMHOrkPK.jpg",
+    "descricao": "Poltrona Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados / Tela cor Cinza",
+    "arquivo": "img/cavaletti/air/jjjjhXNnx0cMvMHOrkPK.jpg"
+   }
+  ],
+  "artis": [
+   {
+    "id": 528,
+    "codigo": "50.101",
+    "imagem": "linhas-componentes/October2025/2rIETn4au1wqmez5M7nf.jpg",
+    "descricao": "Encosto Plástico",
+    "url_pinterest": null,
+    "observacao": "Syncron Autoajustável / Braço INC / Base UP 65 / Mocca - Lâmina Latte Macchiato 127 e Assento Grid Bege Marfim 360",
+    "arquivo": "img/cavaletti/artis/2rIETn4au1wqmez5M7nf.jpg"
+   },
+   {
+    "id": 529,
+    "codigo": "50.201",
+    "imagem": "linhas-componentes/October2025/5Pw3smIn335RQiNuxbtL.jpg",
+    "descricao": "Encosto Revestido",
+    "url_pinterest": null,
+    "observacao": "Syncron Autoajustável / Braço INC / Base UP 65 / Mocca - Lâmina Revestida e Assento Grid Bege Marfim 360\n\n",
+    "arquivo": "img/cavaletti/artis/5Pw3smIn335RQiNuxbtL.jpg"
+   },
+   {
+    "id": 530,
+    "codigo": "50.301",
+    "imagem": "linhas-componentes/October2025/jQIpr46oiFloaf525cx9.jpg",
+    "descricao": "Encosto Revestido Tramma",
+    "url_pinterest": null,
+    "observacao": "Syncron Autoajustável / Braço INC / Base UP 65 / Mocca - Tramma Latte 616",
+    "arquivo": "img/cavaletti/artis/jQIpr46oiFloaf525cx9.jpg"
+   }
+  ],
+  "aura": [
+   {
+    "id": 5,
+    "codigo": "44.101",
+    "imagem": "linhas-componentes/May2025/mS2VzD0shW2XnjETcQP4.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tecido / Base Alumínio Polido",
+    "arquivo": "img/cavaletti/aura/mS2VzD0shW2XnjETcQP4.jpg"
+   },
+   {
+    "id": 6,
+    "codigo": "44.101",
+    "imagem": "linhas-componentes/May2025/v4xrc9Se1gtiGcO2l6L7.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tela Preta / Base Preta",
+    "arquivo": "img/cavaletti/aura/v4xrc9Se1gtiGcO2l6L7.jpg"
+   },
+   {
+    "id": 7,
+    "codigo": "44.101",
+    "imagem": "linhas-componentes/May2025/Q7N6v1mXX0y12Vtjhkom.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tela Cinza / Base Cinza",
+    "arquivo": "img/cavaletti/aura/Q7N6v1mXX0y12Vtjhkom.jpg"
+   },
+   {
+    "id": 8,
+    "codigo": "44.102",
+    "imagem": "linhas-componentes/May2025/NLvVMbQNDHV90u117Gvu.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tecido / Base Alumínio Polido",
+    "arquivo": "img/cavaletti/aura/NLvVMbQNDHV90u117Gvu.jpg"
+   },
+   {
+    "id": 9,
+    "codigo": "44.102",
+    "imagem": "linhas-componentes/May2025/3i90l8o9QBA6HDIZrvwu.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tela Preta / Base Preta",
+    "arquivo": "img/cavaletti/aura/3i90l8o9QBA6HDIZrvwu.jpg"
+   },
+   {
+    "id": 10,
+    "codigo": "44.102",
+    "imagem": "linhas-componentes/May2025/VsmAlDdBJCFAmuMiSV5t.jpg",
+    "descricao": "Giratória Multitask  ",
+    "url_pinterest": null,
+    "observacao": "Tela Cinza / Base Cinza",
+    "arquivo": "img/cavaletti/aura/VsmAlDdBJCFAmuMiSV5t.jpg"
+   }
+  ],
+  "bee": [
+   {
+    "id": 535,
+    "codigo": "36.704",
+    "imagem": "linhas-componentes/November2025/2h8oEXRf7lTAmSyjjK3M.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Nylon 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/2h8oEXRf7lTAmSyjjK3M.jpg"
+   },
+   {
+    "id": 536,
+    "codigo": "36.704",
+    "imagem": "linhas-componentes/November2025/l9niVvZHUM7XhE8aaBld.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Alumínio 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/l9niVvZHUM7XhE8aaBld.jpg"
+   },
+   {
+    "id": 537,
+    "codigo": "36.704",
+    "imagem": "linhas-componentes/November2025/MtdPOIPbmoNWdiOUSvvz.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "BG UP 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/MtdPOIPbmoNWdiOUSvvz.jpg"
+   },
+   {
+    "id": 538,
+    "codigo": "36.706",
+    "imagem": "linhas-componentes/November2025/v0mPGU4wlkyadXNw8GGl.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Madeira / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/v0mPGU4wlkyadXNw8GGl.jpg"
+   },
+   {
+    "id": 539,
+    "codigo": "36.707",
+    "imagem": "linhas-componentes/November2025/1C5L6ufNkfWfYCjrPqYG.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/1C5L6ufNkfWfYCjrPqYG.jpg"
+   },
+   {
+    "id": 540,
+    "codigo": "36.708",
+    "imagem": "linhas-componentes/November2025/74aR5CvmCFsDFa7e5U2t.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Giratória Elíptica / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/74aR5CvmCFsDFa7e5U2t.jpg"
+   },
+   {
+    "id": 541,
+    "codigo": "36.702",
+    "imagem": "linhas-componentes/November2025/NLID6WBePCRuXJTkJ1T0.jpg",
+    "descricao": "Poltrona Extra",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / 140kg / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/NLID6WBePCRuXJTkJ1T0.jpg"
+   },
+   {
+    "id": 542,
+    "codigo": "36.703*",
+    "imagem": "linhas-componentes/November2025/IEw71TmLJMOhJTQnVoX7.jpg",
+    "descricao": "Poltrona Obeso",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / 250kg / Em Grid Verde Floresta 357 e estrutura Preto Universal 101 / *Poltrona em conformidade com a NBR 9050",
+    "arquivo": "img/cavaletti/bee/IEw71TmLJMOhJTQnVoX7.jpg"
+   },
+   {
+    "id": 543,
+    "codigo": "36.710",
+    "imagem": "linhas-componentes/November2025/FEUtMczYTdnPWuvk6XPM.jpg",
+    "descricao": "Longarina",
+    "url_pinterest": null,
+    "observacao": "Sapata traseira com regulagem / Disponível com 2, 3, 4 ou 5 lugares / Em Grid Verde Floresta 357 e estrutura Preto Universal 101",
+    "arquivo": "img/cavaletti/bee/FEUtMczYTdnPWuvk6XPM.jpg"
+   },
+   {
+    "id": 544,
+    "codigo": "36.722",
+    "imagem": "linhas-componentes/November2025/llwCOC1q5bKwXeZ2x8GD.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/llwCOC1q5bKwXeZ2x8GD.jpg"
+   },
+   {
+    "id": 588,
+    "codigo": "36.772",
+    "imagem": "linhas-componentes/March2026/gWdQGIBrGEEi9gsaqba5.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "650mm / Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/gWdQGIBrGEEi9gsaqba5.jpg"
+   },
+   {
+    "id": 630,
+    "codigo": "36.764",
+    "imagem": "linhas-componentes/May2026/BFir5ro7i2AyYbWGWMrO.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Nylon 65PU / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/BFir5ro7i2AyYbWGWMrO.jpg"
+   },
+   {
+    "id": 631,
+    "codigo": "36.764",
+    "imagem": "linhas-componentes/May2026/r3S2YNO9TRIZnGpWrmSQ.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Alumínio 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/r3S2YNO9TRIZnGpWrmSQ.jpg"
+   },
+   {
+    "id": 632,
+    "codigo": "36.764",
+    "imagem": "linhas-componentes/May2026/kVHpzLRmeUwgEkvzwJPf.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "BG UP 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/kVHpzLRmeUwgEkvzwJPf.jpg"
+   },
+   {
+    "id": 633,
+    "codigo": "36.736",
+    "imagem": "linhas-componentes/May2026/9EyaFvyp1oi6vjq3pNtH.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Madeira Envernizada / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/9EyaFvyp1oi6vjq3pNtH.jpg"
+   },
+   {
+    "id": 634,
+    "codigo": "36.744",
+    "imagem": "linhas-componentes/May2026/0qM9KebHEgNeMpGxD9X5.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Nylon 65PU / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/0qM9KebHEgNeMpGxD9X5.jpg"
+   },
+   {
+    "id": 635,
+    "codigo": "36.744",
+    "imagem": "linhas-componentes/May2026/EzaYbqS1rAuIzu0dIQ0T.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Relax Alumínio 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/EzaYbqS1rAuIzu0dIQ0T.jpg"
+   },
+   {
+    "id": 636,
+    "codigo": "36.744",
+    "imagem": "linhas-componentes/May2026/UVQmVbli6PvN2mfnFdko.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "BG UP 65 / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/UVQmVbli6PvN2mfnFdko.jpg"
+   },
+   {
+    "id": 637,
+    "codigo": "36.746",
+    "imagem": "linhas-componentes/May2026/21VX3xZQ3dXXZ21VAnHP.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Madeira Envernizada / Em Grid Verde Floresta 357",
+    "arquivo": "img/cavaletti/bee/21VX3xZQ3dXXZ21VAnHP.jpg"
+   },
+   {
+    "id": 638,
+    "codigo": "36.747",
+    "imagem": "linhas-componentes/May2026/CEJnUOxWBHlrG8A2nSzI.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/CEJnUOxWBHlrG8A2nSzI.jpg"
+   },
+   {
+    "id": 639,
+    "codigo": "36.748",
+    "imagem": "linhas-componentes/May2026/AalhpKxFaodzZJPqOuX4.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Giratória Elíptica / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/AalhpKxFaodzZJPqOuX4.jpg"
+   },
+   {
+    "id": 640,
+    "codigo": "36.750",
+    "imagem": "linhas-componentes/May2026/QJP5d52D6Ty2SwisKsA7.jpg",
+    "descricao": "Longarina",
+    "url_pinterest": null,
+    "observacao": "Sapata traseira com regulagem / Disponível com 2, 3, 4 ou 5 lugares / Em Grid Verde Floresta 357 e estrutura Preto Universal 101",
+    "arquivo": "img/cavaletti/bee/QJP5d52D6Ty2SwisKsA7.jpg"
+   },
+   {
+    "id": 641,
+    "codigo": "36.762",
+    "imagem": "linhas-componentes/May2026/cMFzk0UlbkJahPVViSHV.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/cMFzk0UlbkJahPVViSHV.jpg"
+   },
+   {
+    "id": 642,
+    "codigo": "36.782",
+    "imagem": "linhas-componentes/May2026/8BTcvEWCxLpoFIpqtA78.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "650mm / Fixa Pé Metal / Em Grid Verde Floresta 357 e estrutura Oliva 82",
+    "arquivo": "img/cavaletti/bee/8BTcvEWCxLpoFIpqtA78.jpg"
+   }
+  ],
+  "blokz": [
+   {
+    "id": 487,
+    "codigo": "26.201",
+    "imagem": "linhas-componentes/February2026/wZWfbMsJAz02HrzWk8Z4.jpg",
+    "descricao": "Sofá Modular Braço",
+    "url_pinterest": null,
+    "observacao": "L300 x P750 x A550 / Elemento de Ligação / Em Strati Azul Oceano 383",
+    "arquivo": "img/cavaletti/blokz/wZWfbMsJAz02HrzWk8Z4.jpg"
+   },
+   {
+    "id": 488,
+    "codigo": "26.211",
+    "imagem": "linhas-componentes/February2026/ZcMtCbHo6fEeUeAmZ1HE.jpg",
+    "descricao": "Sofá Modular Assento 1L",
+    "url_pinterest": null,
+    "observacao": "L750 x P500 x A440 / Em Strati Verde Turmalina 381",
+    "arquivo": "img/cavaletti/blokz/ZcMtCbHo6fEeUeAmZ1HE.jpg"
+   },
+   {
+    "id": 489,
+    "codigo": "26.212",
+    "imagem": "linhas-componentes/February2026/lXa0M3EvMaSJLzrpnRTb.jpg",
+    "descricao": "Sofá Modular Assento 2L",
+    "url_pinterest": null,
+    "observacao": "L1300 x P500 x A440 / Em Strati Azul Aqua 382",
+    "arquivo": "img/cavaletti/blokz/lXa0M3EvMaSJLzrpnRTb.jpg"
+   },
+   {
+    "id": 490,
+    "codigo": "26.221",
+    "imagem": "linhas-componentes/February2026/vvmyCAxBVYkqiL4HaOuk.jpg",
+    "descricao": "Sofá Modular Assento 1L",
+    "url_pinterest": null,
+    "observacao": "L750 x P800 x A440 / Em Strati Nude Travertino 378",
+    "arquivo": "img/cavaletti/blokz/vvmyCAxBVYkqiL4HaOuk.jpg"
+   },
+   {
+    "id": 491,
+    "codigo": "26.222",
+    "imagem": "linhas-componentes/February2026/bAUNj9MZOi1LCmK46x6a.jpg",
+    "descricao": "Sofá Modular Assento 2L",
+    "url_pinterest": null,
+    "observacao": "L1300 x P800 x A440 / Em Strati Bege Mascavo 377",
+    "arquivo": "img/cavaletti/blokz/bAUNj9MZOi1LCmK46x6a.jpg"
+   },
+   {
+    "id": 492,
+    "codigo": "26.227",
+    "imagem": "linhas-componentes/February2026/Xu1fBorhp8zW19wv5riH.jpg",
+    "descricao": "Sofá Modular Assento Ponta",
+    "url_pinterest": null,
+    "observacao": "L1280 x P650 x A440 / Em Strati Vermelho Alga 375",
+    "arquivo": "img/cavaletti/blokz/Xu1fBorhp8zW19wv5riH.jpg"
+   },
+   {
+    "id": 493,
+    "codigo": "26.231",
+    "imagem": "linhas-componentes/February2026/F0Jv5MHMVaZpQwWNvVxu.jpg",
+    "descricao": "Sofá Encosto Modular 1L",
+    "url_pinterest": null,
+    "observacao": "L750 x P300 x A720 / Elemento de ligação / Em Strati Amarelo Frésia 379",
+    "arquivo": "img/cavaletti/blokz/F0Jv5MHMVaZpQwWNvVxu.jpg"
+   },
+   {
+    "id": 494,
+    "codigo": "26.232",
+    "imagem": "linhas-componentes/February2026/CryKGiKn3N2bLQF5UhPU.jpg",
+    "descricao": "Sofá Modular Encosto 2L",
+    "url_pinterest": null,
+    "observacao": "L1300 x P300 x A720 / Elemento de ligação / Em Strati Rosa Maré 376",
+    "arquivo": "img/cavaletti/blokz/CryKGiKn3N2bLQF5UhPU.jpg"
+   }
+  ],
+  "boldy": [
+   {
+    "id": 19,
+    "codigo": "31.115",
+    "imagem": "linhas-componentes/May2025/2J0PA7RvjFsiGwEPQzYr.jpg",
+    "descricao": "Banco 1L",
+    "url_pinterest": null,
+    "observacao": "Sem encosto / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/2J0PA7RvjFsiGwEPQzYr.jpg"
+   },
+   {
+    "id": 20,
+    "codigo": "31.116",
+    "imagem": "linhas-componentes/May2025/SZypUxzmtH8wFJ7VUkVU.jpg",
+    "descricao": "Sofá 1L",
+    "url_pinterest": null,
+    "observacao": "Sem braço / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/SZypUxzmtH8wFJ7VUkVU.jpg"
+   },
+   {
+    "id": 21,
+    "codigo": "31.117",
+    "imagem": "linhas-componentes/May2025/RksVfSx9jFjAn9M8KnhW.jpg",
+    "descricao": "Sofá 1L ",
+    "url_pinterest": null,
+    "observacao": "Com braço / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/RksVfSx9jFjAn9M8KnhW.jpg"
+   },
+   {
+    "id": 22,
+    "codigo": "31.118",
+    "imagem": "linhas-componentes/May2025/C0RDiEfVAFth3Tcj1H7Z.jpg",
+    "descricao": "Sofá 1L ",
+    "url_pinterest": null,
+    "observacao": "Com braço e com rodízios / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/C0RDiEfVAFth3Tcj1H7Z.jpg"
+   },
+   {
+    "id": 23,
+    "codigo": "31.125",
+    "imagem": "linhas-componentes/May2025/HgEbN7PcKUx9Rqauuo5p.jpg",
+    "descricao": "Banco 2L ",
+    "url_pinterest": null,
+    "observacao": "Sem encosto / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/HgEbN7PcKUx9Rqauuo5p.jpg"
+   },
+   {
+    "id": 24,
+    "codigo": "31.126",
+    "imagem": "linhas-componentes/May2025/IDsfC4dGIu1fkVZHUgK3.jpg",
+    "descricao": "Sofá 2L",
+    "url_pinterest": null,
+    "observacao": "Sem braço / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/IDsfC4dGIu1fkVZHUgK3.jpg"
+   },
+   {
+    "id": 25,
+    "codigo": "31.127",
+    "imagem": "linhas-componentes/May2025/fTmBDg4kQ9XAp0MD82V4.jpg",
+    "descricao": "Sofa 2L ",
+    "url_pinterest": null,
+    "observacao": "Com braço / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/fTmBDg4kQ9XAp0MD82V4.jpg"
+   },
+   {
+    "id": 26,
+    "codigo": "31.128",
+    "imagem": "linhas-componentes/May2025/CpP72TbDrjkgaJavgFI7.jpg",
+    "descricao": "Sofa 2L ",
+    "url_pinterest": null,
+    "observacao": "Com braço e com rodízios / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/CpP72TbDrjkgaJavgFI7.jpg"
+   },
+   {
+    "id": 27,
+    "codigo": "31.105",
+    "imagem": "linhas-componentes/May2025/kujl27zM1owREDpiP2OZ.jpg",
+    "descricao": "Puff Assento",
+    "url_pinterest": null,
+    "observacao": "Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/kujl27zM1owREDpiP2OZ.jpg"
+   },
+   {
+    "id": 28,
+    "codigo": "31.106",
+    "imagem": "linhas-componentes/May2025/xcs2c1PrySG8QuX7L1yJ.jpg",
+    "descricao": "Mesa de Ligação",
+    "url_pinterest": null,
+    "observacao": "Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/xcs2c1PrySG8QuX7L1yJ.jpg"
+   },
+   {
+    "id": 29,
+    "codigo": "31.107",
+    "imagem": "linhas-componentes/May2025/9C6MFDzuGi1GdH3c9Rmq.jpg",
+    "descricao": "Mesa Central",
+    "url_pinterest": null,
+    "observacao": "Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/9C6MFDzuGi1GdH3c9Rmq.jpg"
+   },
+   {
+    "id": 30,
+    "codigo": "31.163",
+    "imagem": "linhas-componentes/May2025/7EzS5b09j65CqTV6KkIl.jpg",
+    "descricao": "Painel com Lousa",
+    "url_pinterest": null,
+    "observacao": "1750mm / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/7EzS5b09j65CqTV6KkIl.jpg"
+   },
+   {
+    "id": 31,
+    "codigo": "31.162",
+    "imagem": "linhas-componentes/May2025/Ok6gKWUxQLMwOZ5bpmwI.jpg",
+    "descricao": "Painel",
+    "url_pinterest": null,
+    "observacao": "1450mm / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/Ok6gKWUxQLMwOZ5bpmwI.jpg"
+   },
+   {
+    "id": 32,
+    "codigo": "31.161",
+    "imagem": "linhas-componentes/May2025/DaRzt0v00lfw6wDuoIBU.jpg",
+    "descricao": "Painel",
+    "url_pinterest": null,
+    "observacao": "1200mm / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/DaRzt0v00lfw6wDuoIBU.jpg"
+   },
+   {
+    "id": 33,
+    "codigo": "31.151",
+    "imagem": "linhas-componentes/May2025/mHWUUvbzvRZmu0zDigXD.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/mHWUUvbzvRZmu0zDigXD.jpg"
+   },
+   {
+    "id": 590,
+    "codigo": "31.152",
+    "imagem": "linhas-componentes/March2026/Ux1niRdZdTP2MZKiRrMg.jpg",
+    "descricao": "Banqueta",
+    "url_pinterest": null,
+    "observacao": "650mm / Em Grani Azul Norueguês 285 e estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/Ux1niRdZdTP2MZKiRrMg.jpg"
+   },
+   {
+    "id": 650,
+    "codigo": "31.181",
+    "imagem": "linhas-componentes/May2026/COAuZn1bHbT8qYh8L99G.jpg",
+    "descricao": "Aparador",
+    "url_pinterest": null,
+    "observacao": "Estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/COAuZn1bHbT8qYh8L99G.jpg"
+   },
+   {
+    "id": 651,
+    "codigo": "31.185",
+    "imagem": "linhas-componentes/May2026/Grau9A9O8HNxkEGCZjDW.jpg",
+    "descricao": "Mesa",
+    "url_pinterest": null,
+    "observacao": "Com rodízios / Estrutura Azul 81",
+    "arquivo": "img/cavaletti/boldy/Grau9A9O8HNxkEGCZjDW.jpg"
+   },
+   {
+    "id": 652,
+    "codigo": "31.171",
+    "imagem": "linhas-componentes/May2026/WCMLBLd9RBBbmzVKOyrM.jpg",
+    "descricao": "Suporte TV",
+    "url_pinterest": null,
+    "observacao": "Padrão Vesa / Uso exclusivo Painel com Lousa 36.163 / Não acompanha parafusos de fixação da TV",
+    "arquivo": "img/cavaletti/boldy/WCMLBLd9RBBbmzVKOyrM.jpg"
+   },
+   {
+    "id": 653,
+    "codigo": "31.192",
+    "imagem": "linhas-componentes/May2026/c9H8b0Zpw2kBILCaj8Oh.jpg",
+    "descricao": "Tomada Dupla",
+    "url_pinterest": null,
+    "observacao": "(2P + T)",
+    "arquivo": "img/cavaletti/boldy/c9H8b0Zpw2kBILCaj8Oh.jpg"
+   },
+   {
+    "id": 654,
+    "codigo": "31.194",
+    "imagem": "linhas-componentes/August2026/c4QxNFTMYRynidqALBBg.jpg",
+    "descricao": "Tomada Dupla",
+    "url_pinterest": null,
+    "observacao": "1(USB-A + USB-C) +  1(2P+T)",
+    "arquivo": "img/cavaletti/boldy/c4QxNFTMYRynidqALBBg.jpg"
+   },
+   {
+    "id": 655,
+    "codigo": "31.191",
+    "imagem": "linhas-componentes/May2026/GqDcNGtv71M7wnHIKRnM.jpg",
+    "descricao": "Tomada",
+    "url_pinterest": null,
+    "observacao": "(2P + T)",
+    "arquivo": "img/cavaletti/boldy/GqDcNGtv71M7wnHIKRnM.jpg"
+   },
+   {
+    "id": 656,
+    "codigo": "31.193",
+    "imagem": "linhas-componentes/August2026/QiTGFiHOOYZr6wHY9dQa.jpg",
+    "descricao": "Tomada",
+    "url_pinterest": null,
+    "observacao": "(USB-A + USB-C)",
+    "arquivo": "img/cavaletti/boldy/QiTGFiHOOYZr6wHY9dQa.jpg"
+   }
+  ],
+  "box": [
+   {
+    "id": 41,
+    "codigo": "36.020",
+    "imagem": "linhas-componentes/May2025/UqSoJbCWV2joJThsobDN.jpg",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Fixa ou giratória / Base 4 Pés em Aço com Sapatas Articuladas Cromadas",
+    "arquivo": "img/cavaletti/box/UqSoJbCWV2joJThsobDN.jpg"
+   },
+   {
+    "id": 42,
+    "codigo": "36.105",
+    "imagem": "linhas-componentes/May2025/kLSzt4ka5eb9jlEO5FtL.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "1 Lugar / Base em Aço",
+    "arquivo": "img/cavaletti/box/kLSzt4ka5eb9jlEO5FtL.jpg"
+   },
+   {
+    "id": 43,
+    "codigo": "36.105",
+    "imagem": "linhas-componentes/May2025/d4bCTmLipWcnTkW7zk8z.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "2 Lugares / Base em Aço",
+    "arquivo": "img/cavaletti/box/d4bCTmLipWcnTkW7zk8z.jpg"
+   },
+   {
+    "id": 44,
+    "codigo": "36.105",
+    "imagem": "linhas-componentes/May2025/KClQ2CtiqFUuDEJA24lq.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "3 Lugares / Base em Aço",
+    "arquivo": "img/cavaletti/box/KClQ2CtiqFUuDEJA24lq.jpg"
+   },
+   {
+    "id": 45,
+    "codigo": "12.004",
+    "imagem": "linhas-componentes/May2025/9lYPN0EsQkJ7rSFJoXGW.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "1 Lugar / Sapatas ou Ponteiras Injetadas em Copolímero",
+    "arquivo": "img/cavaletti/box/9lYPN0EsQkJ7rSFJoXGW.jpg"
+   },
+   {
+    "id": 46,
+    "codigo": "12.004",
+    "imagem": "linhas-componentes/May2025/MNWlWjpQxyb02GgpsJs1.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "2 Lugares / Sapatas ou Ponteiras Injetadas em Copolímero",
+    "arquivo": "img/cavaletti/box/MNWlWjpQxyb02GgpsJs1.jpg"
+   },
+   {
+    "id": 47,
+    "codigo": "12.004",
+    "imagem": "linhas-componentes/May2025/1XU1iHuEr1Ss1NZJHZCf.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "3 Lugares / Sapatas ou Ponteiras Injetadas em Copolímero",
+    "arquivo": "img/cavaletti/box/1XU1iHuEr1Ss1NZJHZCf.jpg"
+   },
+   {
+    "id": 48,
+    "codigo": "12.205",
+    "imagem": "linhas-componentes/May2025/zC9YfREMzFk4QdWuf1uQ.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "1 Lugar / Estrutura Tubular em Aço",
+    "arquivo": "img/cavaletti/box/zC9YfREMzFk4QdWuf1uQ.jpg"
+   },
+   {
+    "id": 49,
+    "codigo": "12.205",
+    "imagem": "linhas-componentes/May2025/bJk9paH5hkXhzyY3YILV.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "2 Lugares / Estrutura Tubular em Aço",
+    "arquivo": "img/cavaletti/box/bJk9paH5hkXhzyY3YILV.jpg"
+   },
+   {
+    "id": 50,
+    "codigo": "12.205",
+    "imagem": "linhas-componentes/May2025/1xnrroAlLarApaXqL4cr.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "3 Lugares / Estrutura Tubular em Aço",
+    "arquivo": "img/cavaletti/box/1xnrroAlLarApaXqL4cr.jpg"
+   },
+   {
+    "id": 51,
+    "codigo": "12.105",
+    "imagem": "linhas-componentes/May2025/wf4Q2o2X61XPsWNxtjMS.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "1 Lugar / Base Alumínio",
+    "arquivo": "img/cavaletti/box/wf4Q2o2X61XPsWNxtjMS.jpg"
+   },
+   {
+    "id": 52,
+    "codigo": "12.105",
+    "imagem": "linhas-componentes/May2025/niEFfFpYXyUIXts3wWG9.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "2 Lugares / Base Alumínio",
+    "arquivo": "img/cavaletti/box/niEFfFpYXyUIXts3wWG9.jpg"
+   },
+   {
+    "id": 53,
+    "codigo": "12.105",
+    "imagem": "linhas-componentes/May2025/k1b1QLpUjpqaOLKyyxkT.jpg",
+    "descricao": "Sofá Espera",
+    "url_pinterest": null,
+    "observacao": "3 Lugares / Base Alumínio",
+    "arquivo": "img/cavaletti/box/k1b1QLpUjpqaOLKyyxkT.jpg"
+   }
+  ],
+  "c3": [
+   {
+    "id": 54,
+    "codigo": "28.001 AC",
+    "imagem": "linhas-componentes/May2025/Kq1IZJA9iMKBqluasFZK.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Alumínio / Apoio de cabeça",
+    "arquivo": "img/cavaletti/c3/Kq1IZJA9iMKBqluasFZK.jpg"
+   },
+   {
+    "id": 55,
+    "codigo": "28.001 AC",
+    "imagem": "linhas-componentes/May2025/asXEAiyLGq9zdhsbqdDJ.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Nylon / Apoio de cabeça",
+    "arquivo": "img/cavaletti/c3/asXEAiyLGq9zdhsbqdDJ.jpg"
+   },
+   {
+    "id": 56,
+    "codigo": "28.001 AC",
+    "imagem": "linhas-componentes/May2025/a834IxzlDxjdGJAzRIgv.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Aço com Capa / Apoio de cabeça",
+    "arquivo": "img/cavaletti/c3/a834IxzlDxjdGJAzRIgv.jpg"
+   },
+   {
+    "id": 57,
+    "codigo": "28.001",
+    "imagem": "linhas-componentes/May2025/5UHU3c8yw94JdpwMSXoa.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Alumínio",
+    "arquivo": "img/cavaletti/c3/5UHU3c8yw94JdpwMSXoa.jpg"
+   },
+   {
+    "id": 58,
+    "codigo": "28.001",
+    "imagem": "linhas-componentes/May2025/4yrHKUgbSxolPZR7227N.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Nylon ",
+    "arquivo": "img/cavaletti/c3/4yrHKUgbSxolPZR7227N.jpg"
+   },
+   {
+    "id": 59,
+    "codigo": "28.001",
+    "imagem": "linhas-componentes/May2025/rNJPDimGSHsnYHVVsSBQ.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 4D / Base em Aço com Capa",
+    "arquivo": "img/cavaletti/c3/rNJPDimGSHsnYHVVsSBQ.jpg"
+   }
+  ],
+  "c4": [
+   {
+    "id": 60,
+    "codigo": "29.001 AC",
+    "imagem": "linhas-componentes/May2025/jmFwd6UeoopGWdpBYoAm.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base em Alumínio / Apoio de cabeça",
+    "arquivo": "img/cavaletti/c4/jmFwd6UeoopGWdpBYoAm.jpg"
+   },
+   {
+    "id": 61,
+    "codigo": "29.001 AC",
+    "imagem": "linhas-componentes/May2025/UIrnPgsDNmYLamKj11Ei.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base em Nylon / Apoio de cabeça",
+    "arquivo": "img/cavaletti/c4/UIrnPgsDNmYLamKj11Ei.jpg"
+   },
+   {
+    "id": 62,
+    "codigo": "29.001",
+    "imagem": "linhas-componentes/May2025/pRhnXpFE7OzAh9Cd10KW.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base em Alumínio ",
+    "arquivo": "img/cavaletti/c4/pRhnXpFE7OzAh9Cd10KW.jpg"
+   },
+   {
+    "id": 63,
+    "codigo": "29.001",
+    "imagem": "linhas-componentes/May2025/FATwZgWZWubKM9Cnw5vb.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base em Nylon ",
+    "arquivo": "img/cavaletti/c4/FATwZgWZWubKM9Cnw5vb.jpg"
+   }
+  ],
+  "coletiva": [
+   {
+    "id": 64,
+    "codigo": "12.030",
+    "imagem": "linhas-componentes/May2025/yqQjfay7X9VgB7GPTcxR.jpg",
+    "descricao": "Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/yqQjfay7X9VgB7GPTcxR.jpg"
+   },
+   {
+    "id": 65,
+    "codigo": "12.020",
+    "imagem": "linhas-componentes/May2025/AV5d3IUbqKJt1i0gK419.jpg",
+    "descricao": "Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/AV5d3IUbqKJt1i0gK419.jpg"
+   },
+   {
+    "id": 66,
+    "codigo": "12.018",
+    "imagem": "linhas-componentes/May2025/UWmq9CvDqTywQ8FQ67Lw.jpg",
+    "descricao": "Poltrona Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/UWmq9CvDqTywQ8FQ67Lw.jpg"
+   },
+   {
+    "id": 67,
+    "codigo": "12.011",
+    "imagem": "linhas-componentes/May2025/NRtE9miFJYqjlEJVphn0.jpg",
+    "descricao": "Poltrona Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/NRtE9miFJYqjlEJVphn0.jpg"
+   },
+   {
+    "id": 68,
+    "codigo": "1.001",
+    "imagem": "linhas-componentes/May2025/77IIqJ1gxJ23xCX3Zgjz.jpg",
+    "descricao": "Cadeira Empilhável  ",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 10 unidades / Opcional Prancheta Escamoteável ou Removível / Opcional Carro de Transporte",
+    "arquivo": "img/cavaletti/coletiva/77IIqJ1gxJ23xCX3Zgjz.jpg"
+   },
+   {
+    "id": 69,
+    "codigo": "1.002",
+    "imagem": "linhas-componentes/May2025/lYphz0x5r5kWklgHaYvw.jpg",
+    "descricao": "Cadeira Empilhável ",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 10 unidades / Opcional Prancheta Escamoteável ou Removível / Opcional Carro de Transporte",
+    "arquivo": "img/cavaletti/coletiva/lYphz0x5r5kWklgHaYvw.jpg"
+   },
+   {
+    "id": 70,
+    "codigo": "1.003",
+    "imagem": "linhas-componentes/May2025/540q8242l57IWqP6nvqB.jpg",
+    "descricao": "Cadeira Empilhável ",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 5 unidades / Opcional Carro de Transporte",
+    "arquivo": "img/cavaletti/coletiva/540q8242l57IWqP6nvqB.jpg"
+   },
+   {
+    "id": 71,
+    "codigo": "35.013",
+    "imagem": "linhas-componentes/May2025/EDdb7QS1xCWzJUeRT5jZ.jpg",
+    "descricao": "Cadeira Empilhável ",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 3 unidades",
+    "arquivo": "img/cavaletti/coletiva/EDdb7QS1xCWzJUeRT5jZ.jpg"
+   },
+   {
+    "id": 72,
+    "codigo": "1.100",
+    "imagem": "linhas-componentes/May2025/lxYlniqVuZDkWQDCTF2b.jpg",
+    "descricao": "Carrinho para transporte",
+    "url_pinterest": null,
+    "observacao": "Disponível para os modelos 1.001, 1.002 e 1.003",
+    "arquivo": "img/cavaletti/coletiva/lxYlniqVuZDkWQDCTF2b.jpg"
+   },
+   {
+    "id": 73,
+    "codigo": "12.023",
+    "imagem": "linhas-componentes/May2025/yYmbXPg2FgXqI59odq43.jpg",
+    "descricao": "Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/yYmbXPg2FgXqI59odq43.jpg"
+   },
+   {
+    "id": 74,
+    "codigo": "12.025",
+    "imagem": "linhas-componentes/May2025/OGhjqltOsLkH99HNCUbM.jpg",
+    "descricao": "Auditório",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalados e Duplos / Opcional Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/coletiva/OGhjqltOsLkH99HNCUbM.jpg"
+   }
+  ],
+  "connect": [
+   {
+    "id": 75,
+    "codigo": "36.205",
+    "imagem": "linhas-componentes/May2025/yaXf2Hvy1WApl2hQNzXG.png",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Braço Duplo e Encosto",
+    "arquivo": "img/cavaletti/connect/yaXf2Hvy1WApl2hQNzXG.png"
+   },
+   {
+    "id": 76,
+    "codigo": "36.205",
+    "imagem": "linhas-componentes/May2025/WkSo1JI6gx9XQipbS3ok.png",
+    "descricao": "Sofá Canto",
+    "url_pinterest": null,
+    "observacao": "Braço e Encosto",
+    "arquivo": "img/cavaletti/connect/WkSo1JI6gx9XQipbS3ok.png"
+   },
+   {
+    "id": 77,
+    "codigo": "36.205",
+    "imagem": "linhas-componentes/May2025/dasCb3zilS2uDyUlvnEY.png",
+    "descricao": "Sofá Central",
+    "url_pinterest": null,
+    "observacao": "Encosto",
+    "arquivo": "img/cavaletti/connect/dasCb3zilS2uDyUlvnEY.png"
+   },
+   {
+    "id": 78,
+    "codigo": "36.205",
+    "imagem": "linhas-componentes/May2025/bDivuzeNHxhSMUS44lSM.png",
+    "descricao": "Banco",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/connect/bDivuzeNHxhSMUS44lSM.png"
+   }
+  ],
+  "domos": [
+   {
+    "id": 582,
+    "codigo": "26.110",
+    "imagem": "linhas-componentes/February2026/CJ5ljLUpCyHQmHcGT9Sd.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com ponteiras / Em Strati Chumbo Ígnea 384 e estrutura Preto Universal 101",
+    "arquivo": "img/cavaletti/domos/CJ5ljLUpCyHQmHcGT9Sd.jpg"
+   },
+   {
+    "id": 583,
+    "codigo": "26.111",
+    "imagem": "linhas-componentes/February2026/IVPMPnczERTXgGc6RQ7Y.jpg",
+    "descricao": "Ottoman",
+    "url_pinterest": null,
+    "observacao": "Apoio para os pés com ponteiras / Em Strati Chumbo Ígnea 384 e estrutura Preto Universal 101",
+    "arquivo": "img/cavaletti/domos/IVPMPnczERTXgGc6RQ7Y.jpg"
+   }
+  ],
+  "duo": [
+   {
+    "id": 79,
+    "codigo": "36.071",
+    "imagem": "linhas-componentes/May2025/ri9j0JA4OKamImMXpVsI.png",
+    "descricao": "Poltrona Reunião",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Twin com Rodízios / Opção de Altura Fixa / Opção de Relax / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/ri9j0JA4OKamImMXpVsI.png"
+   },
+   {
+    "id": 80,
+    "codigo": "36.072",
+    "imagem": "linhas-componentes/May2025/loPTwvtqFanVx6SA9Nc7.png",
+    "descricao": "Poltrona Reunião",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Twin com Sapatas / Opção de Altura Fixa / Opção de Relax / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/loPTwvtqFanVx6SA9Nc7.png"
+   },
+   {
+    "id": 81,
+    "codigo": "36.172",
+    "imagem": "linhas-componentes/May2025/SFxTTMZOBVV3Z8iEQsZk.png",
+    "descricao": "Poltrona Interlocutor",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base 4 Hastes / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/SFxTTMZOBVV3Z8iEQsZk.png"
+   },
+   {
+    "id": 82,
+    "codigo": "36.074",
+    "imagem": "linhas-componentes/May2025/2SPGU3M0krxxl8x24D9C.png",
+    "descricao": "Poltrona Interlocutor",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Piramidal / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/2SPGU3M0krxxl8x24D9C.png"
+   },
+   {
+    "id": 83,
+    "codigo": "36.174",
+    "imagem": "linhas-componentes/May2025/L0J5VdGrBdyBCajQb5I7.png",
+    "descricao": "Poltrona Interlocutor",
+    "url_pinterest": null,
+    "observacao": "Base Pé Palito / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/L0J5VdGrBdyBCajQb5I7.png"
+   },
+   {
+    "id": 84,
+    "codigo": "36.272",
+    "imagem": "linhas-componentes/May2025/ApSpGENripAqENKSJogj.png",
+    "descricao": "Poltrona Interlocutor",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Disco / Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/ApSpGENripAqENKSJogj.png"
+   },
+   {
+    "id": 85,
+    "codigo": "36.074 UE",
+    "imagem": "linhas-componentes/May2025/xRzevsJLbgFmLHv8xeZo.png",
+    "descricao": "Poltrona Interlocutor com Prancheta",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Piramidal / Prancheta Escamoteável / Em Liv Arenito 500",
+    "arquivo": "img/cavaletti/duo/xRzevsJLbgFmLHv8xeZo.png"
+   },
+   {
+    "id": 86,
+    "codigo": "36.174 UE",
+    "imagem": "linhas-componentes/May2025/3bGLPjFzyJvZtPVygwo2.png",
+    "descricao": "Poltrona Interlocutor com Prancheta",
+    "url_pinterest": null,
+    "observacao": "Base Pé Palito / Prancheta Escamoteável / Em Liv Arenito 500",
+    "arquivo": "img/cavaletti/duo/3bGLPjFzyJvZtPVygwo2.png"
+   },
+   {
+    "id": 87,
+    "codigo": "36.075 3L",
+    "imagem": "linhas-componentes/May2025/MmK4GINB2sPgdW75dYiJ.png",
+    "descricao": "Longarina 3 Lugares",
+    "url_pinterest": null,
+    "observacao": "Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/MmK4GINB2sPgdW75dYiJ.png"
+   },
+   {
+    "id": 88,
+    "codigo": "36.075 2L",
+    "imagem": "linhas-componentes/May2025/jYB8cdYOAaJ4I79Nkl4X.png",
+    "descricao": "Longarina 2 Lugares",
+    "url_pinterest": null,
+    "observacao": "Em Politex Cinza Metal 402",
+    "arquivo": "img/cavaletti/duo/jYB8cdYOAaJ4I79Nkl4X.png"
+   },
+   {
+    "id": 89,
+    "codigo": "36.075",
+    "imagem": "linhas-componentes/May2025/OLmLWaCOCfkWtfOj1uA1.png",
+    "descricao": "Banco",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/duo/OLmLWaCOCfkWtfOj1uA1.png"
+   }
+  ],
+  "essence": [
+   {
+    "id": 90,
+    "codigo": "20.501",
+    "imagem": "linhas-componentes/May2025/KGlXqnxRBeI04ZdzBYne.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços Fixos em Alumínio / Base Alumínio",
+    "arquivo": "img/cavaletti/essence/KGlXqnxRBeI04ZdzBYne.png"
+   },
+   {
+    "id": 91,
+    "codigo": "20.502",
+    "imagem": "linhas-componentes/May2025/c31HS9WiDeNjlW57ksSr.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços Fixos em Alumínio / Base Alumínio",
+    "arquivo": "img/cavaletti/essence/c31HS9WiDeNjlW57ksSr.png"
+   },
+   {
+    "id": 92,
+    "codigo": "20.506 S",
+    "imagem": "linhas-componentes/May2025/T1ppFH7RNyYnISAdaQAe.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estruturas com Rodízios Frontais / Braços Fixos em Alumínio",
+    "arquivo": "img/cavaletti/essence/T1ppFH7RNyYnISAdaQAe.png"
+   },
+   {
+    "id": 93,
+    "codigo": "20.501",
+    "imagem": "linhas-componentes/May2025/7xMiYmGmsX49l5OeWA9C.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços 4D / Base Nylon",
+    "arquivo": "img/cavaletti/essence/7xMiYmGmsX49l5OeWA9C.png"
+   },
+   {
+    "id": 94,
+    "codigo": "20.502",
+    "imagem": "linhas-componentes/May2025/6F0LC9zoODeNd4MUK2D7.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços 4D / Base Nylon",
+    "arquivo": "img/cavaletti/essence/6F0LC9zoODeNd4MUK2D7.png"
+   },
+   {
+    "id": 95,
+    "codigo": "20.506 S",
+    "imagem": "linhas-componentes/May2025/4lcokZNbDlPJZRj4u3JL.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estruturas com Rodízios Frontais / Braços 4D",
+    "arquivo": "img/cavaletti/essence/4lcokZNbDlPJZRj4u3JL.png"
+   }
+  ],
+  "flip": [
+   {
+    "id": 189,
+    "codigo": "43.103 SRE",
+    "imagem": "linhas-componentes/May2025/Pr95eHstO54QkvpJC28E.png",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto (SRE) / Braços TC / Base Nylon / Rodízios 65mm",
+    "arquivo": "img/cavaletti/flip/Pr95eHstO54QkvpJC28E.png"
+   },
+   {
+    "id": 190,
+    "codigo": "43.106 S",
+    "imagem": "linhas-componentes/May2025/dp8QTRetNOk3Yf14TWSw.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Loop",
+    "arquivo": "img/cavaletti/flip/dp8QTRetNOk3Yf14TWSw.png"
+   },
+   {
+    "id": 191,
+    "codigo": "43.106 SI",
+    "imagem": "linhas-componentes/May2025/lDXYDr0hTUMOY8RD7Bzf.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados",
+    "arquivo": "img/cavaletti/flip/lDXYDr0hTUMOY8RD7Bzf.png"
+   },
+   {
+    "id": 192,
+    "codigo": "43.106 Z",
+    "imagem": "linhas-componentes/May2025/Bds1bUktYqjFWCorBB4S.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Z / Braços Integrados",
+    "arquivo": "img/cavaletti/flip/Bds1bUktYqjFWCorBB4S.png"
+   },
+   {
+    "id": 193,
+    "codigo": "43.106 Z ROD",
+    "imagem": "linhas-componentes/May2025/RXHHoU8slzpaecIAR2Ar.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Z com rodízios 50mm / Braços Integrados",
+    "arquivo": "img/cavaletti/flip/RXHHoU8slzpaecIAR2Ar.png"
+   },
+   {
+    "id": 194,
+    "codigo": "43.122",
+    "imagem": "linhas-componentes/May2025/Ad0zwt4QwfF7H1ZDvsTh.png",
+    "descricao": "Stool",
+    "url_pinterest": null,
+    "observacao": "Encosto Fixo / Braços TC / Base Nylon com sapatas (Polaina opcional) / *Sistema Reclinador de Encosto (SRE) Opcional",
+    "arquivo": "img/cavaletti/flip/Ad0zwt4QwfF7H1ZDvsTh.png"
+   },
+   {
+    "id": 195,
+    "codigo": "43.110",
+    "imagem": "linhas-componentes/May2025/FI9XCXhYX8JVB6Esg9D2.png",
+    "descricao": "Executiva Longarina",
+    "url_pinterest": null,
+    "observacao": "Braços Loop Intercalado / Estrutura Pé Preto ou Cromado / Sapata traseira com Regulagem / *Não disponível com os Braços TC",
+    "arquivo": "img/cavaletti/flip/FI9XCXhYX8JVB6Esg9D2.png"
+   }
+  ],
+  "float": [
+   {
+    "id": 96,
+    "codigo": "23.101",
+    "imagem": "linhas-componentes/May2025/JpgGEi8RPzc4zgFwZ0aM.jpg",
+    "descricao": "Banco Lounge 1L",
+    "url_pinterest": null,
+    "observacao": "L680 x P680 x A440",
+    "arquivo": "img/cavaletti/float/JpgGEi8RPzc4zgFwZ0aM.jpg"
+   },
+   {
+    "id": 97,
+    "codigo": "23.102",
+    "imagem": "linhas-componentes/May2025/ehfUfjPjM9tBvSoXATth.jpg",
+    "descricao": "Sofá Lounge 1L com Encosto ",
+    "url_pinterest": null,
+    "observacao": "L680 x P680 x A715",
+    "arquivo": "img/cavaletti/float/ehfUfjPjM9tBvSoXATth.jpg"
+   },
+   {
+    "id": 98,
+    "codigo": "23.103",
+    "imagem": "linhas-componentes/May2025/ucQsc3FI9SCkEePw4xCy.jpg",
+    "descricao": "Sofá Lounge 1L com Canto ",
+    "url_pinterest": null,
+    "observacao": "L680 x P680 x A715",
+    "arquivo": "img/cavaletti/float/ucQsc3FI9SCkEePw4xCy.jpg"
+   },
+   {
+    "id": 99,
+    "codigo": "23.131",
+    "imagem": "linhas-componentes/May2025/jpRBhxODee2BpzlFtP4a.jpg",
+    "descricao": "Sofá Lounge 1L com Encosto e Braços ",
+    "url_pinterest": null,
+    "observacao": "L745 x P695 x A715",
+    "arquivo": "img/cavaletti/float/jpRBhxODee2BpzlFtP4a.jpg"
+   },
+   {
+    "id": 100,
+    "codigo": "23.104",
+    "imagem": "linhas-componentes/May2025/1RMpi8BxTDZYVV0kEO0u.jpg",
+    "descricao": "Banco Lounge 1L com Meia-Mesa ",
+    "url_pinterest": null,
+    "observacao": "L1020 x P680 x A440",
+    "arquivo": "img/cavaletti/float/1RMpi8BxTDZYVV0kEO0u.jpg"
+   },
+   {
+    "id": 101,
+    "codigo": "23.105",
+    "imagem": "linhas-componentes/May2025/4ghfBv0sc59TluodnIj3.jpg",
+    "descricao": "Sofá Lounge 1L com Encosto e Meia-Mesa ",
+    "url_pinterest": null,
+    "observacao": "L1020 x P680 x A715",
+    "arquivo": "img/cavaletti/float/4ghfBv0sc59TluodnIj3.jpg"
+   },
+   {
+    "id": 102,
+    "codigo": "23.106",
+    "imagem": "linhas-componentes/May2025/gblRFsik8nllmMVSU17T.jpg",
+    "descricao": "Sofá Lounge 1L com Canto e Meia-Mesa ",
+    "url_pinterest": null,
+    "observacao": "L1020 x P680 x A715",
+    "arquivo": "img/cavaletti/float/gblRFsik8nllmMVSU17T.jpg"
+   },
+   {
+    "id": 103,
+    "codigo": "23.201",
+    "imagem": "linhas-componentes/May2025/7u7wYalpBlHso8YJGDaa.jpg",
+    "descricao": "Banco Lounge 2L ",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A440",
+    "arquivo": "img/cavaletti/float/7u7wYalpBlHso8YJGDaa.jpg"
+   },
+   {
+    "id": 104,
+    "codigo": "23.202",
+    "imagem": "linhas-componentes/May2025/gDzLott9Wc4HPIVcwo3z.jpg",
+    "descricao": "Sofá Lounge 2L com Encosto ",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A715",
+    "arquivo": "img/cavaletti/float/gDzLott9Wc4HPIVcwo3z.jpg"
+   },
+   {
+    "id": 105,
+    "codigo": "23.203",
+    "imagem": "linhas-componentes/May2025/reZd8t2pDTl4MlHQzlPk.jpg",
+    "descricao": "Sofá Lounge 2L com 1 Encosto e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A715",
+    "arquivo": "img/cavaletti/float/reZd8t2pDTl4MlHQzlPk.jpg"
+   },
+   {
+    "id": 106,
+    "codigo": "23.204",
+    "imagem": "linhas-componentes/May2025/z4lchm3ElIDbK9X5KG2f.jpg",
+    "descricao": "Sofá Lounge 2L com 1 Encosto e 1 Banco ",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A715",
+    "arquivo": "img/cavaletti/float/z4lchm3ElIDbK9X5KG2f.jpg"
+   },
+   {
+    "id": 107,
+    "codigo": "23.205",
+    "imagem": "linhas-componentes/May2025/fn1WOuL8NXRRrDSXbTuu.jpg",
+    "descricao": "Sofá Lounge 2L com 1 Banco e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A715",
+    "arquivo": "img/cavaletti/float/fn1WOuL8NXRRrDSXbTuu.jpg"
+   },
+   {
+    "id": 108,
+    "codigo": "23.231",
+    "imagem": "linhas-componentes/May2025/uwpiNk1PQKVtDNoFHYGL.jpg",
+    "descricao": "Sofá Lounge 2L com Encosto e Braços ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P695 x A715",
+    "arquivo": "img/cavaletti/float/uwpiNk1PQKVtDNoFHYGL.jpg"
+   },
+   {
+    "id": 109,
+    "codigo": "23.301",
+    "imagem": "linhas-componentes/May2025/HJOYbKAhPnZL5CjZwFa5.jpg",
+    "descricao": "Banco Lounge 3L ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A440",
+    "arquivo": "img/cavaletti/float/HJOYbKAhPnZL5CjZwFa5.jpg"
+   },
+   {
+    "id": 110,
+    "codigo": "23.302",
+    "imagem": "linhas-componentes/May2025/XBG5pni1H2wUREIIq6eq.jpg",
+    "descricao": "Sofá Lounge 3L com Encosto ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/XBG5pni1H2wUREIIq6eq.jpg"
+   },
+   {
+    "id": 111,
+    "codigo": "23.303",
+    "imagem": "linhas-componentes/May2025/6YxlnF2a48cUb4OqAqJH.jpg",
+    "descricao": "Sofá Lounge 3L com 2 Encostos e 1 Banco ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/6YxlnF2a48cUb4OqAqJH.jpg"
+   },
+   {
+    "id": 112,
+    "codigo": "23.304",
+    "imagem": "linhas-componentes/May2025/03kxyJjiWaVyvaqLtQNV.jpg",
+    "descricao": "Sofá Lounge 3L com 1 Banco 1 Encosto e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/03kxyJjiWaVyvaqLtQNV.jpg"
+   },
+   {
+    "id": 113,
+    "codigo": "23.305",
+    "imagem": "linhas-componentes/May2025/UryOUjF7BgLKqvq8yBZk.jpg",
+    "descricao": "Banco Lounge 3L com 2 Bancos e 1 Mesa",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A440",
+    "arquivo": "img/cavaletti/float/UryOUjF7BgLKqvq8yBZk.jpg"
+   },
+   {
+    "id": 114,
+    "codigo": "23.306",
+    "imagem": "linhas-componentes/May2025/cied8UIVvtVOhtPFxhRP.jpg",
+    "descricao": "Sofá Lounge 3L com 1 Encosto, 1 Banco e 1 Mesa ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/cied8UIVvtVOhtPFxhRP.jpg"
+   },
+   {
+    "id": 115,
+    "codigo": "23.307",
+    "imagem": "linhas-componentes/May2025/kPvRaXiSbzuXIVKy0twh.jpg",
+    "descricao": "Sofá Lounge 3L com 2 Encostos e 1 Mesa",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/kPvRaXiSbzuXIVKy0twh.jpg"
+   },
+   {
+    "id": 116,
+    "codigo": "23.308",
+    "imagem": "linhas-componentes/May2025/UcElfkilswEwHE6ra73p.jpg",
+    "descricao": "Sofá Lounge 3L com 1 Mesa, 1 Encosto e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/UcElfkilswEwHE6ra73p.jpg"
+   },
+   {
+    "id": 117,
+    "codigo": "23.309",
+    "imagem": "linhas-componentes/May2025/YTxrhTLvSFzCZ23ScAeD.jpg",
+    "descricao": "Sofá Lounge 3L com 2 Cantos e 1 Mesa",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/YTxrhTLvSFzCZ23ScAeD.jpg"
+   },
+   {
+    "id": 118,
+    "codigo": "23.310",
+    "imagem": "linhas-componentes/May2025/uxCj1V113s8ZU3ltOjP7.jpg",
+    "descricao": "Sofá Lounge 3L com 2 Encostos e 2 Meias-Mesas ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P680 x A715",
+    "arquivo": "img/cavaletti/float/uxCj1V113s8ZU3ltOjP7.jpg"
+   },
+   {
+    "id": 119,
+    "codigo": "23.331",
+    "imagem": "linhas-componentes/May2025/u8cbqBthutoUyJCreuxi.jpg",
+    "descricao": "Sofá Lounge 3L com Encosto e Braços ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P680 x A715",
+    "arquivo": "img/cavaletti/float/u8cbqBthutoUyJCreuxi.jpg"
+   },
+   {
+    "id": 120,
+    "codigo": "23.401",
+    "imagem": "linhas-componentes/May2025/xmUcqh4GGiiWtO52CVEQ.jpg",
+    "descricao": "Banco Lounge 4L ",
+    "url_pinterest": null,
+    "observacao": "L2720 x P680 x A440",
+    "arquivo": "img/cavaletti/float/xmUcqh4GGiiWtO52CVEQ.jpg"
+   },
+   {
+    "id": 121,
+    "codigo": "23.402",
+    "imagem": "linhas-componentes/May2025/xjYTnwXZEiI2ogEoYJx6.jpg",
+    "descricao": "Sofá Lounge 4L com Encosto ",
+    "url_pinterest": null,
+    "observacao": "L2720x P680 x A715",
+    "arquivo": "img/cavaletti/float/xjYTnwXZEiI2ogEoYJx6.jpg"
+   },
+   {
+    "id": 122,
+    "codigo": "23.403",
+    "imagem": "linhas-componentes/May2025/mpjZZGGhEO9ufChTZKMu.jpg",
+    "descricao": "Banco Lounge 4L com 1 Mesa e 3 Bancos ",
+    "url_pinterest": null,
+    "observacao": "L2720 x P680 x A440",
+    "arquivo": "img/cavaletti/float/mpjZZGGhEO9ufChTZKMu.jpg"
+   },
+   {
+    "id": 123,
+    "codigo": "23.404",
+    "imagem": "linhas-componentes/May2025/o9rD9vKfIHwkWgMskJ1U.jpg",
+    "descricao": "Sofá Lounge 4L com 3 Encostos e 1 Mesa ",
+    "url_pinterest": null,
+    "observacao": "L2720 x P680 x A715",
+    "arquivo": "img/cavaletti/float/o9rD9vKfIHwkWgMskJ1U.jpg"
+   },
+   {
+    "id": 124,
+    "codigo": "23.431",
+    "imagem": "linhas-componentes/May2025/1JqbucLO3HijWbjP0KGV.jpg",
+    "descricao": "Sofá Lounge 4L com Encosto e Braços ",
+    "url_pinterest": null,
+    "observacao": "L2785 x P695 x A715",
+    "arquivo": "img/cavaletti/float/1JqbucLO3HijWbjP0KGV.jpg"
+   },
+   {
+    "id": 125,
+    "codigo": "23.701",
+    "imagem": "linhas-componentes/May2025/Ak7UiU9xcxIgsDUzfxAb.jpg",
+    "descricao": "Sofá Lounge 4L em L com 2 Bancos, 1 Encosto e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P1360 x A715",
+    "arquivo": "img/cavaletti/float/Ak7UiU9xcxIgsDUzfxAb.jpg"
+   },
+   {
+    "id": 126,
+    "codigo": "23.702",
+    "imagem": "linhas-componentes/May2025/ZQ2YYrDJiI1LgVQ6WYb0.jpg",
+    "descricao": "Sofá Lounge 6L em L com 2 Bancos, 3 Encostos e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L2720 x P 2040 x A715",
+    "arquivo": "img/cavaletti/float/ZQ2YYrDJiI1LgVQ6WYb0.jpg"
+   },
+   {
+    "id": 127,
+    "codigo": "23.703",
+    "imagem": "linhas-componentes/May2025/aqxlK2WCbLkPu2blXema.jpg",
+    "descricao": "Sofá Lounge 7L em L com 1 Mesa, 2 Bancos, 3 Encostos e 1 Canto",
+    "url_pinterest": null,
+    "observacao": "L3400 x P2040 x A715",
+    "arquivo": "img/cavaletti/float/aqxlK2WCbLkPu2blXema.jpg"
+   },
+   {
+    "id": 128,
+    "codigo": "23.704",
+    "imagem": "linhas-componentes/May2025/OYcufIE2Ojt8oLElkPyZ.jpg",
+    "descricao": "Sofá Lounge 8L em L com 2 Mesas, 2 Bancos, 3 Encostos e 1 Canto ",
+    "url_pinterest": null,
+    "observacao": "L3400 x P2720 x A715",
+    "arquivo": "img/cavaletti/float/OYcufIE2Ojt8oLElkPyZ.jpg"
+   },
+   {
+    "id": 129,
+    "codigo": "23.151",
+    "imagem": "linhas-componentes/May2025/IvJfXviPpZx3Eu7xcfWW.jpg",
+    "descricao": "Sofá Lowback 1L com Encosto, Meia-Mesa e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/IvJfXviPpZx3Eu7xcfWW.jpg"
+   },
+   {
+    "id": 130,
+    "codigo": "23.152",
+    "imagem": "linhas-componentes/May2025/smASw3eduVEN3tiJ3Y7y.jpg",
+    "descricao": "Sofá Lowback 1L com Canto, Meia-Mesa e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/smASw3eduVEN3tiJ3Y7y.jpg"
+   },
+   {
+    "id": 131,
+    "codigo": "23.153",
+    "imagem": "linhas-componentes/May2025/LJq3yXq33snZkZ6ZPjTT.jpg",
+    "descricao": "Sofá Lowback 1L com Canto, Meia-Mesa, Painéis Baixos",
+    "url_pinterest": null,
+    "observacao": " Luminária fixa / L1085 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/LJq3yXq33snZkZ6ZPjTT.jpg"
+   },
+   {
+    "id": 132,
+    "codigo": "23.251",
+    "imagem": "linhas-componentes/May2025/2oLxTzoOi5iMuzGO3mQ8.jpg",
+    "descricao": "Sofá Lowback 2L com 1 Mesa, 1 Encosto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P71 0 x A1050",
+    "arquivo": "img/cavaletti/float/2oLxTzoOi5iMuzGO3mQ8.jpg"
+   },
+   {
+    "id": 133,
+    "codigo": "23.252",
+    "imagem": "linhas-componentes/May2025/YpcICWJZ139jCv70laD8.jpg",
+    "descricao": "Sofá Lowback 2L com 1 Mesa, 1 Canto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/YpcICWJZ139jCv70laD8.jpg"
+   },
+   {
+    "id": 134,
+    "codigo": "23.253",
+    "imagem": "linhas-componentes/May2025/sS3RBHvbh8MJPetQckJp.jpg",
+    "descricao": "Sofá Lowback 2L com Encosto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/sS3RBHvbh8MJPetQckJp.jpg"
+   },
+   {
+    "id": 135,
+    "codigo": "23.254",
+    "imagem": "linhas-componentes/May2025/JDXD8iAQhKSX4LeqD0ov.jpg",
+    "descricao": "Sofá Lowback 2L com 1 Encosto, 1 Canto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L1395 P710 x A1050",
+    "arquivo": "img/cavaletti/float/JDXD8iAQhKSX4LeqD0ov.jpg"
+   },
+   {
+    "id": 136,
+    "codigo": "23.351",
+    "imagem": "linhas-componentes/May2025/41LUGJ6P4G3mBYyFGSK7.jpg",
+    "descricao": "Sofá Lowback 3L com 1 Mesa, 1 Encosto, 1 Canto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L2075 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/41LUGJ6P4G3mBYyFGSK7.jpg"
+   },
+   {
+    "id": 137,
+    "codigo": "23.352",
+    "imagem": "linhas-componentes/May2025/OqDm4yKVV9MWB3NOI3ot.jpg",
+    "descricao": "Sofá Lowback 3L com 2 Encostos, 1 Banco e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/OqDm4yKVV9MWB3NOI3ot.jpg"
+   },
+   {
+    "id": 138,
+    "codigo": "23.353",
+    "imagem": "linhas-componentes/May2025/2otMbwJ8NPjEKmQ08JEe.jpg",
+    "descricao": "Sofá Lowback 3L com 1 Encosto, 1 Banco, 1 Mesa e Painel Baixo ",
+    "url_pinterest": null,
+    "observacao": "L2040 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/2otMbwJ8NPjEKmQ08JEe.jpg"
+   },
+   {
+    "id": 139,
+    "codigo": "23.354",
+    "imagem": "linhas-componentes/May2025/dU7yy5seBpesZk2VEOrZ.jpg",
+    "descricao": "Sofá Lowback 3L com 1 Banco, 1 Encosto, 1 Mesa e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L2075 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/dU7yy5seBpesZk2VEOrZ.jpg"
+   },
+   {
+    "id": 140,
+    "codigo": "23.355",
+    "imagem": "linhas-componentes/May2025/j1TvA7oJjdjgDP5j4yeB.jpg",
+    "descricao": "Sofá Lowback 3L com 1 Banco, 1 Encosto, 1 Mesa e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "Luminária fixa / L2075 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/j1TvA7oJjdjgDP5j4yeB.jpg"
+   },
+   {
+    "id": 141,
+    "codigo": "23.356",
+    "imagem": "linhas-componentes/May2025/c5QC15qwTJ2rm8Yy6bwi.jpg",
+    "descricao": "Sofá Lowback 3L com Encosto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/c5QC15qwTJ2rm8Yy6bwi.jpg"
+   },
+   {
+    "id": 142,
+    "codigo": "23.451",
+    "imagem": "linhas-componentes/May2025/FGNnSU05fXML7yBhKDB9.jpg",
+    "descricao": "Sofá Lowback 4L com Encosto e Painéis Baixos",
+    "url_pinterest": null,
+    "observacao": "L2785 x P710 x A1050",
+    "arquivo": "img/cavaletti/float/FGNnSU05fXML7yBhKDB9.jpg"
+   },
+   {
+    "id": 143,
+    "codigo": "23.551",
+    "imagem": "linhas-componentes/May2025/qTrvo70MWwwRaQfuacw9.jpg",
+    "descricao": "Hub Reunião Lowback 4L com Encosto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P1425 x A1050",
+    "arquivo": "img/cavaletti/float/qTrvo70MWwwRaQfuacw9.jpg"
+   },
+   {
+    "id": 144,
+    "codigo": "23.552",
+    "imagem": "linhas-componentes/May2025/amoQeTSZW3BSHPEJdr7R.jpg",
+    "descricao": "Hub Reunião Lowback 4L com Encosto, Painéis Baixos",
+    "url_pinterest": null,
+    "observacao": "L2105 x P1390 x A1050 / Configuração ideal para combinar com Mesas 23.965 e 23.966",
+    "arquivo": "img/cavaletti/float/amoQeTSZW3BSHPEJdr7R.jpg"
+   },
+   {
+    "id": 145,
+    "codigo": "23.751",
+    "imagem": "linhas-componentes/May2025/tfCtJjwLa4hED64g24d7.jpg",
+    "descricao": "Sofá Lounge 4L em L com 2 Bancos, 1 Encosto, 1 Canto e Painéis Baixos ",
+    "url_pinterest": null,
+    "observacao": "L207 x P1395 x A1050",
+    "arquivo": "img/cavaletti/float/tfCtJjwLa4hED64g24d7.jpg"
+   },
+   {
+    "id": 146,
+    "codigo": "23.752",
+    "imagem": "linhas-componentes/May2025/ZfketJP6C8UfN2aVdxu0.jpg",
+    "descricao": "Sofá Lounge 6L em L com 1 Mesa, 2 Bancos, 2 encostos, 1 Canto e Painéis Baixos",
+    "url_pinterest": null,
+    "observacao": "L2755 x P2075 x A1050",
+    "arquivo": "img/cavaletti/float/ZfketJP6C8UfN2aVdxu0.jpg"
+   },
+   {
+    "id": 147,
+    "codigo": "23.171",
+    "imagem": "linhas-componentes/May2025/w0rKstqkwMyzZho7CCC3.jpg",
+    "descricao": "Sofá Highback 1L com Encosto, Meia-Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/w0rKstqkwMyzZho7CCC3.jpg"
+   },
+   {
+    "id": 148,
+    "codigo": "23.172",
+    "imagem": "linhas-componentes/May2025/PP5aB17qR5PUB57mRtxF.jpg",
+    "descricao": "Sofá Highback 1L com Encosto, Meia-Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "Luminária fixa L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/PP5aB17qR5PUB57mRtxF.jpg"
+   },
+   {
+    "id": 149,
+    "codigo": "23.173",
+    "imagem": "linhas-componentes/May2025/sSEMdXP0y7NsgK2GYHEJ.jpg",
+    "descricao": "Sofá Highback 1L com Canto, Meia-Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/sSEMdXP0y7NsgK2GYHEJ.jpg"
+   },
+   {
+    "id": 150,
+    "codigo": "23.174",
+    "imagem": "linhas-componentes/May2025/BxOc35QjBzJXdF2Odf3A.jpg",
+    "descricao": "Sofá Highback 1L com Canto, Meia-Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "Luminária fixa L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/BxOc35QjBzJXdF2Odf3A.jpg"
+   },
+   {
+    "id": 151,
+    "codigo": "23.175",
+    "imagem": "linhas-componentes/May2025/pGlI2p3O5AMK8AtRLpuE.jpg",
+    "descricao": "Sofá Highback 1L com Encosto, Nicho, Prancheta Articulada e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/pGlI2p3O5AMK8AtRLpuE.jpg"
+   },
+   {
+    "id": 152,
+    "codigo": "23.176",
+    "imagem": "linhas-componentes/May2025/8udXlHs5Y4WXGh2Ggtuu.jpg",
+    "descricao": "Sofá Highback 1L com Encosto, Nicho, Prancheta Articulada, Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "Luminária fixa Carregamento por indução / L1085 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/8udXlHs5Y4WXGh2Ggtuu.jpg"
+   },
+   {
+    "id": 153,
+    "codigo": "23.177",
+    "imagem": "linhas-componentes/May2025/vZHmRcTrDt01RKz90vsG.jpg",
+    "descricao": "Cabine Highback 1L com Encosto, Nicho Estendido, Prancheta Articulada e Painéis Altos",
+    "url_pinterest": null,
+    "observacao": "L1425 x P1085 x A1450",
+    "arquivo": "img/cavaletti/float/vZHmRcTrDt01RKz90vsG.jpg"
+   },
+   {
+    "id": 154,
+    "codigo": "23.178",
+    "imagem": "linhas-componentes/May2025/kaYOw3wRYD7zPBxSEwD5.jpg",
+    "descricao": "Cabine Highback 1L com Encosto, Nicho Estendido, Prancheta Articulada e Painéis Altos",
+    "url_pinterest": null,
+    "observacao": " Luminária Fixa Carregamento por Indução / L1425 x P1085 x A1450",
+    "arquivo": "img/cavaletti/float/kaYOw3wRYD7zPBxSEwD5.jpg"
+   },
+   {
+    "id": 155,
+    "codigo": "23.271",
+    "imagem": "linhas-componentes/May2025/eFlpmYToPOfKZFcHb3wN.jpg",
+    "descricao": "Sofá Highback 2L com 1 Encosto, 1 Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/eFlpmYToPOfKZFcHb3wN.jpg"
+   },
+   {
+    "id": 156,
+    "codigo": "23.272",
+    "imagem": "linhas-componentes/May2025/4wAvMhGYbT3BbrZDIi82.jpg",
+    "descricao": "Sofá Highback 2L com 1 Encosto, 1 Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "Luminária Fixa Carregamento por Indução / L1425 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/4wAvMhGYbT3BbrZDIi82.jpg"
+   },
+   {
+    "id": 157,
+    "codigo": "23.273",
+    "imagem": "linhas-componentes/May2025/B8wE2wtYLlQfXyWtnGLy.jpg",
+    "descricao": "Sofá Highback 2L com 1 Canto, 1 Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/B8wE2wtYLlQfXyWtnGLy.jpg"
+   },
+   {
+    "id": 158,
+    "codigo": "23.274",
+    "imagem": "linhas-componentes/May2025/N0UsogNDvO8TMR9qwq2K.jpg",
+    "descricao": "Sofá Highback 2L com 1 Canto, 1 Mesa e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "Luminária Fixa Carregamento por Indução / L1425 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/N0UsogNDvO8TMR9qwq2K.jpg"
+   },
+   {
+    "id": 159,
+    "codigo": "23.275",
+    "imagem": "linhas-componentes/May2025/jD9Fy9iKqDK2SwO3RZEA.jpg",
+    "descricao": "Sofá Highback 2L com Encosto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/jD9Fy9iKqDK2SwO3RZEA.jpg"
+   },
+   {
+    "id": 160,
+    "codigo": "23.371",
+    "imagem": "linhas-componentes/May2025/vsYlF20m3RsRafRTPf2l.jpg",
+    "descricao": "Sofá Highback 3L com Encosto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/vsYlF20m3RsRafRTPf2l.jpg"
+   },
+   {
+    "id": 161,
+    "codigo": "23.471",
+    "imagem": "linhas-componentes/May2025/VxEwEYEPlmFnOcXHbP0w.jpg",
+    "descricao": "Sofá Highback 4L com Encosto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L2785 x P710 x A1450",
+    "arquivo": "img/cavaletti/float/VxEwEYEPlmFnOcXHbP0w.jpg"
+   },
+   {
+    "id": 162,
+    "codigo": "23.571",
+    "imagem": "linhas-componentes/May2025/RbfwsK2Do71oPWLJJCva.jpg",
+    "descricao": "Hub Reunião Highback 4L com Encosto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P1390 x A1450",
+    "arquivo": "img/cavaletti/float/RbfwsK2Do71oPWLJJCva.jpg"
+   },
+   {
+    "id": 163,
+    "codigo": "23.572",
+    "imagem": "linhas-componentes/May2025/7c5TZRkZ0I6P32QXVsHe.jpg",
+    "descricao": "Hub Reunião Highback 4L com Encosto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L2105 x P1390 x A1450 / Configuração ideal para combinar com Mesas 23.965 e 23.966 ",
+    "arquivo": "img/cavaletti/float/7c5TZRkZ0I6P32QXVsHe.jpg"
+   },
+   {
+    "id": 164,
+    "codigo": "23.771",
+    "imagem": "linhas-componentes/May2025/6zswXPnBRQH1j6lpbWA2.jpg",
+    "descricao": "Sofá Highback 4L em L com 2 Bancos, 1 Encosto, 1 Canto e Painéis Altos ",
+    "url_pinterest": null,
+    "observacao": "L2075 x P1395 x A1450",
+    "arquivo": "img/cavaletti/float/6zswXPnBRQH1j6lpbWA2.jpg"
+   },
+   {
+    "id": 165,
+    "codigo": "23.191",
+    "imagem": "linhas-componentes/May2025/EGDKcxfd2AKtmcC9y4gd.jpg",
+    "descricao": "Sofá Workpod 1L com Encosto, Nicho, Prancheta Articulada e Painéis Maxi com Cobertura ",
+    "url_pinterest": null,
+    "observacao": "L1085 x P710 x A1650",
+    "arquivo": "img/cavaletti/float/EGDKcxfd2AKtmcC9y4gd.jpg"
+   },
+   {
+    "id": 166,
+    "codigo": "23.192",
+    "imagem": "linhas-componentes/May2025/HmBDGIAYsdzgiEuO1Wbr.jpg",
+    "descricao": "Sofá Workpod 1L com Encosto, Nicho, Prancheta Articulada e Painéis Maxi com Cobertura ",
+    "url_pinterest": null,
+    "observacao": "Luminária Fixa / Carregamento por Indução / L1085 x P710 x A1650",
+    "arquivo": "img/cavaletti/float/HmBDGIAYsdzgiEuO1Wbr.jpg"
+   },
+   {
+    "id": 167,
+    "codigo": "23.291",
+    "imagem": "linhas-componentes/May2025/TKxkOtKK7Mw2DEmmtuUI.jpg",
+    "descricao": "Sofá Workpod 2L com Encosto e Painéis Maxi com Cobertura ",
+    "url_pinterest": null,
+    "observacao": "L1425 x P710 x A1650",
+    "arquivo": "img/cavaletti/float/TKxkOtKK7Mw2DEmmtuUI.jpg"
+   },
+   {
+    "id": 168,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/pYNnz2Jmvw27vPuDe73U.jpg",
+    "descricao": "Sofá Curvo Interno ",
+    "url_pinterest": null,
+    "observacao": "540 x 710 x 715",
+    "arquivo": "img/cavaletti/float/pYNnz2Jmvw27vPuDe73U.jpg"
+   },
+   {
+    "id": 169,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/U88MmkWIAfEeSQKgZixk.jpg",
+    "descricao": "Sofá Curvo Externo",
+    "url_pinterest": null,
+    "observacao": "805 x 710 x 715",
+    "arquivo": "img/cavaletti/float/U88MmkWIAfEeSQKgZixk.jpg"
+   },
+   {
+    "id": 170,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/V5Ga3Y7ik5Si7qlLZScK.jpg",
+    "descricao": "Banco Curvo",
+    "url_pinterest": null,
+    "observacao": "805 x 710 x 440",
+    "arquivo": "img/cavaletti/float/V5Ga3Y7ik5Si7qlLZScK.jpg"
+   },
+   {
+    "id": 171,
+    "codigo": "23.967",
+    "imagem": "linhas-componentes/May2025/E620zDbRG1NZ3bh5Uzo7.jpg",
+    "descricao": "Mesa Curva",
+    "url_pinterest": null,
+    "observacao": "785 x 700 x 335",
+    "arquivo": "img/cavaletti/float/E620zDbRG1NZ3bh5Uzo7.jpg"
+   },
+   {
+    "id": 172,
+    "codigo": "23.961",
+    "imagem": "linhas-componentes/May2025/c3hhTJ6vokW1gLz5oQfW.jpg",
+    "descricao": "Laptable (Mesa)",
+    "url_pinterest": null,
+    "observacao": "L500 x P300 x A750",
+    "arquivo": "img/cavaletti/float/c3hhTJ6vokW1gLz5oQfW.jpg"
+   },
+   {
+    "id": 173,
+    "codigo": "23.962",
+    "imagem": "linhas-componentes/May2025/ZV4uvj5q5bE9rBEJd9En.jpg",
+    "descricao": "Mesa de Centro P ",
+    "url_pinterest": null,
+    "observacao": "L680 x P680 x A335",
+    "arquivo": "img/cavaletti/float/ZV4uvj5q5bE9rBEJd9En.jpg"
+   },
+   {
+    "id": 174,
+    "codigo": "23.963",
+    "imagem": "linhas-componentes/May2025/RipFBvexz90PmZkZB3Ck.jpg",
+    "descricao": "Mesa de Centro M ",
+    "url_pinterest": null,
+    "observacao": "L1020 x P680 x A335",
+    "arquivo": "img/cavaletti/float/RipFBvexz90PmZkZB3Ck.jpg"
+   },
+   {
+    "id": 175,
+    "codigo": "23.964",
+    "imagem": "linhas-componentes/May2025/LjCYLCRJFxG5D61xcYM9.jpg",
+    "descricao": "Mesa de Centro G",
+    "url_pinterest": null,
+    "observacao": "L1360 x P680 x A335",
+    "arquivo": "img/cavaletti/float/LjCYLCRJFxG5D61xcYM9.jpg"
+   },
+   {
+    "id": 176,
+    "codigo": "23.965",
+    "imagem": "linhas-componentes/May2025/BVTuUfa6eAf9knpUvR1K.jpg",
+    "descricao": "Mesa Pé Central ",
+    "url_pinterest": null,
+    "observacao": "L1355 x P835 x A725",
+    "arquivo": "img/cavaletti/float/BVTuUfa6eAf9knpUvR1K.jpg"
+   },
+   {
+    "id": 177,
+    "codigo": "23.966",
+    "imagem": "linhas-componentes/May2025/5dirqIyfgUlXHz8sbDm8.jpg",
+    "descricao": "Mesa Pé Central com Eletrificação ",
+    "url_pinterest": null,
+    "observacao": "01 saída 2P+T para 110/220V Extensão 2,5m /  L1355 x P835 x A725 /  Modelo ideal para combinar com Tomadas de Tampo 23.910, 23.911 ou 23.914",
+    "arquivo": "img/cavaletti/float/5dirqIyfgUlXHz8sbDm8.jpg"
+   },
+   {
+    "id": 178,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/ymNx57PGg2CTw5wgb4Ty.jpg",
+    "descricao": "Sofá Curvo 6L, Encosto Interno e Externo (2 bancos)",
+    "url_pinterest": null,
+    "observacao": "6L / 2EncEX / 2EncIN / 2Banco / L4210 x P945 x A715",
+    "arquivo": "img/cavaletti/float/ymNx57PGg2CTw5wgb4Ty.jpg"
+   },
+   {
+    "id": 179,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/eJ7Dctc3nNnoamWpk8XV.jpg",
+    "descricao": "Sofá Curvo 6L com Encosto Interno e Externo",
+    "url_pinterest": null,
+    "observacao": "6L / 4EncEX / 2EncIN / L4210 x P945 x A715",
+    "arquivo": "img/cavaletti/float/eJ7Dctc3nNnoamWpk8XV.jpg"
+   },
+   {
+    "id": 180,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/Z2paPmopV9gNDURPhGJn.jpg",
+    "descricao": "Sofá Curvo Banco 6 Lugares",
+    "url_pinterest": null,
+    "observacao": "6L / 6Banco / L4210 x P945 x A440",
+    "arquivo": "img/cavaletti/float/Z2paPmopV9gNDURPhGJn.jpg"
+   },
+   {
+    "id": 181,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/rnGd1Lrh0HTpsSLZ01DZ.jpg",
+    "descricao": "Sofá Curvo 7 Lugares com Encosto Externo e Interno (1 Banco) ",
+    "url_pinterest": null,
+    "observacao": "7L / 3EncEX / 3EncIN / 1Banco / L4680 x P1680 x A715",
+    "arquivo": "img/cavaletti/float/rnGd1Lrh0HTpsSLZ01DZ.jpg"
+   },
+   {
+    "id": 182,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/Kap7de9IzWNdj4vjqgio.jpg",
+    "descricao": "Sofá Curvo 8 Lugares Encosto Interno e Externo (2 Mesas)",
+    "url_pinterest": null,
+    "observacao": "8L / 3EncIN / 3EncEX / 2 Mesas / L4120 x P3440 x A715",
+    "arquivo": "img/cavaletti/float/Kap7de9IzWNdj4vjqgio.jpg"
+   },
+   {
+    "id": 183,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/jBB7241PWVqWfJT4e9ZQ.jpg",
+    "descricao": "Sofá Curvo 6 Lugares Encosto Externo (1Mesa)",
+    "url_pinterest": null,
+    "observacao": "EX / 6L / CEnc / 1Mesa / L4040 x P1795 x A715",
+    "arquivo": "img/cavaletti/float/jBB7241PWVqWfJT4e9ZQ.jpg"
+   },
+   {
+    "id": 184,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/JCwt9RMwMRjZmu7gCVXp.jpg",
+    "descricao": "Sofá Curvo 7 Lugares Encosto Externo (2 Bancos e 1 Mesa)",
+    "url_pinterest": null,
+    "observacao": "EX / 7L / 4Enc / 2Banco / 1Mesa / L4040 x P1795 x A715",
+    "arquivo": "img/cavaletti/float/JCwt9RMwMRjZmu7gCVXp.jpg"
+   },
+   {
+    "id": 185,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/p3zEFv217TT5MwqPUheV.jpg",
+    "descricao": "Sofá Curvo 7 Lugares Encosto Externo (2 Bancos)",
+    "url_pinterest": null,
+    "observacao": "EX / 7L / 5Enc / 2Banco / L4040 x P1795 x A715",
+    "arquivo": "img/cavaletti/float/p3zEFv217TT5MwqPUheV.jpg"
+   },
+   {
+    "id": 186,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/7LsRw5xQGBxWqLXjBvhf.jpg",
+    "descricao": "Sofá Curvo 7 Lugares Encosto Externo (1Banco)",
+    "url_pinterest": null,
+    "observacao": "EX / 7L / 6Enc /1Banco / L4680 x P1680 x A715",
+    "arquivo": "img/cavaletti/float/7LsRw5xQGBxWqLXjBvhf.jpg"
+   },
+   {
+    "id": 187,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/vV8KzUwj1EER4HVR4z9G.jpg",
+    "descricao": "Sofá Curvo 7 Lugares Encosto Interno (2 Bancos e 1 Mesa)",
+    "url_pinterest": null,
+    "observacao": "IN / 7L / 4Enc / 2Banco / 1Mesa / L4040 x P1795 x A715",
+    "arquivo": "img/cavaletti/float/vV8KzUwj1EER4HVR4z9G.jpg"
+   },
+   {
+    "id": 188,
+    "codigo": "23.801",
+    "imagem": "linhas-componentes/May2025/NL5vHwtNZO96V6L9dx2Z.jpg",
+    "descricao": "Sofá Curvo 7 Lugares Encosto Interno (1 Mesa) ",
+    "url_pinterest": null,
+    "observacao": "IN / 7L / 6Enc / 1Mesa / L4040 x P1795 x A715",
+    "arquivo": "img/cavaletti/float/NL5vHwtNZO96V6L9dx2Z.jpg"
+   },
+   {
+    "id": "componente-m4qQlKOxptqEkCUogKLK",
+    "codigo": "23.910",
+    "descricao": "Tomada Elétrica + USB para Tampo USB 2.0 + Tomada 2P+T 10A 110/220V Extensão 2,5m L135 x P60 x A60 (Box)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/m4qQlKOxptqEkCUogKLK.jpg",
+    "arquivo": "img/cavaletti/float/m4qQlKOxptqEkCUogKLK.jpg"
+   },
+   {
+    "id": "componente-hoTckCauW7k5g3GCO68U",
+    "codigo": "23.911",
+    "descricao": "Tomada Elétrica para Tampo 2 x Tomada 2P+T 10A 110/220V Extensão 2,5m L135 x P60 x A60 (Box)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/hoTckCauW7k5g3GCO68U.jpg",
+    "arquivo": "img/cavaletti/float/hoTckCauW7k5g3GCO68U.jpg"
+   },
+   {
+    "id": "componente-QAnjhxaYOGvWdECoQSe2",
+    "codigo": "23.912",
+    "descricao": "Tomada Elétrica + USB para Assento USB 2.0 + Tomada 2P+T 10A 110/220V Extensão 2,5m L135 x P60 x A60 (Box)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/QAnjhxaYOGvWdECoQSe2.jpg",
+    "arquivo": "img/cavaletti/float/QAnjhxaYOGvWdECoQSe2.jpg"
+   },
+   {
+    "id": "componente-mqIBdCUrLEGS1poFggSW",
+    "codigo": "23.913",
+    "descricao": "Tomada Elétrica para Assento 2 x Tomada 2P+T 10A 110/220V Extensão 2,5m L135 x P60 x A60 (Box)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/mqIBdCUrLEGS1poFggSW.jpg",
+    "arquivo": "img/cavaletti/float/mqIBdCUrLEGS1poFggSW.jpg"
+   },
+   {
+    "id": "componente-jMJ1ZcTEQWcPMOePzBWK",
+    "codigo": "23.914",
+    "descricao": "Tomada Elétrica + HDMI para Tampo Saída HDMI + Tomada 2P+T 10A 110/220V Extensão 2,5m L135 x P60 x A60 (Box)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/jMJ1ZcTEQWcPMOePzBWK.jpg",
+    "arquivo": "img/cavaletti/float/jMJ1ZcTEQWcPMOePzBWK.jpg"
+   },
+   {
+    "id": "componente-PZtLHfmSClLNd5ZhqYva",
+    "codigo": "23.951",
+    "descricao": "Mesa de Encaixe Para uso entre estofados L300 x P350 x A60",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/PZtLHfmSClLNd5ZhqYva.jpg",
+    "arquivo": "img/cavaletti/float/PZtLHfmSClLNd5ZhqYva.jpg"
+   },
+   {
+    "id": "componente-9wbIYJ10M2xYQsHnlP69",
+    "codigo": "23.952",
+    "descricao": "Mesa Lateral em Balanço Para fi xação na lateral no assento (fi xação por parafusos) L200 x P680 x A30",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/9wbIYJ10M2xYQsHnlP69.jpg",
+    "arquivo": "img/cavaletti/float/9wbIYJ10M2xYQsHnlP69.jpg"
+   },
+   {
+    "id": "componente-BZA1GkDzRyFOKQTjTxVq",
+    "codigo": "23.953",
+    "descricao": "Mesa de Ligação Reta Para fi xação entre assentos (fi xação por parafusos) L200 x P680 x A30",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/BZA1GkDzRyFOKQTjTxVq.jpg",
+    "arquivo": "img/cavaletti/float/BZA1GkDzRyFOKQTjTxVq.jpg"
+   },
+   {
+    "id": "componente-YcW6iKrEvpvq5JKpalvv",
+    "codigo": "23.954",
+    "descricao": "Mesa de Ligação 30° Para união de 2 ou mais confi gurações entre si. L700 x P700 x A30",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/YcW6iKrEvpvq5JKpalvv.jpg",
+    "arquivo": "img/cavaletti/float/YcW6iKrEvpvq5JKpalvv.jpg"
+   },
+   {
+    "id": "componente-ZUxJw0q81ISSupsuzFOv",
+    "codigo": "23.955",
+    "descricao": "Mesa de Ligação 45° Para união de 2 ou mais confi gurações entre si. L700 x P700 x A30",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/ZUxJw0q81ISSupsuzFOv.jpg",
+    "arquivo": "img/cavaletti/float/ZUxJw0q81ISSupsuzFOv.jpg"
+   },
+   {
+    "id": "componente-H99mhWrYTjCWfi1bRVEi",
+    "codigo": "23.956",
+    "descricao": "Conector Para união lateral entre duas ou mais confi gurações independentes entre si L400 x P50 x A5",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/H99mhWrYTjCWfi1bRVEi.jpg",
+    "arquivo": "img/cavaletti/float/H99mhWrYTjCWfi1bRVEi.jpg"
+   },
+   {
+    "id": "componente-eRhxeweHYayy5Y1k0KaJ",
+    "codigo": "23.901",
+    "descricao": "Arandela (Foco Articulado 180° ; 110/220; Extensão 2,5m; L80 x P140 x A215)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/eRhxeweHYayy5Y1k0KaJ.jpg",
+    "arquivo": "img/cavaletti/float/eRhxeweHYayy5Y1k0KaJ.jpg"
+   },
+   {
+    "id": "componente-hLkn8ULBaiRiZWnflMlG",
+    "codigo": "23.902",
+    "descricao": "Cabide (L80 x P85 x A210)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/hLkn8ULBaiRiZWnflMlG.jpg",
+    "arquivo": "img/cavaletti/float/hLkn8ULBaiRiZWnflMlG.jpg"
+   },
+   {
+    "id": "componente-hl4avaiuKjA3aklwQtTy",
+    "codigo": "23.904",
+    "descricao": "Extensão de Encosto (L680 x P110 x A200. Nota: a cor do revestimento segue sempre a cor do módulo estofado.)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/hl4avaiuKjA3aklwQtTy.jpg",
+    "arquivo": "img/cavaletti/float/hl4avaiuKjA3aklwQtTy.jpg"
+   },
+   {
+    "id": "componente-tuPUyYKkUIuDnvTdnRHQ",
+    "codigo": "23.906",
+    "descricao": "Grade para organização de Cabos (Fixação sob o assento, L500 x P300 x A50)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/tuPUyYKkUIuDnvTdnRHQ.jpg",
+    "arquivo": "img/cavaletti/float/tuPUyYKkUIuDnvTdnRHQ.jpg"
+   },
+   {
+    "id": "componente-PrtFXOF99KMdKDYDwhNO",
+    "codigo": "23.903",
+    "descricao": "Prateleira (L300 x P185 x A650 , Item para uso somente nos modelos Highback)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/PrtFXOF99KMdKDYDwhNO.jpg",
+    "arquivo": "img/cavaletti/float/PrtFXOF99KMdKDYDwhNO.jpg"
+   },
+   {
+    "id": "componente-xjKcFzRhd64hCecAmGdw",
+    "codigo": "23.905",
+    "descricao": "Suporte para TV (L450 x P80 x A480)",
+    "observacao": "Ilustração oficial Cavaletti",
+    "imagem": "produto-componente/June2025/xjKcFzRhd64hCecAmGdw.jpg",
+    "arquivo": "img/cavaletti/float/xjKcFzRhd64hCecAmGdw.jpg"
+   }
+  ],
+  "fun": [
+   {
+    "id": 196,
+    "codigo": "14.020",
+    "imagem": "linhas-componentes/May2026/LaQsmwgJkngf2oRrNhBu.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 735mm / Assento em madeira envernizada e estrutura Telha 84",
+    "arquivo": "img/cavaletti/fun/LaQsmwgJkngf2oRrNhBu.jpg"
+   },
+   {
+    "id": 197,
+    "codigo": "14.020",
+    "imagem": "linhas-componentes/May2026/1ZhulMRUAecxEawhHwEz.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 765mm / Assento estofado em CEC-Stilo Verde 315 e Estrutura Areia 83",
+    "arquivo": "img/cavaletti/fun/1ZhulMRUAecxEawhHwEz.jpg"
+   },
+   {
+    "id": 198,
+    "codigo": "14.015",
+    "imagem": "linhas-componentes/May2026/evzKiILpC7p5BBT9epUK.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 700mm com encosto / *Opcional com estrutura de 500mm / Assento em CEC - Stilo Azul 314 com estrutura Azul 81",
+    "arquivo": "img/cavaletti/fun/evzKiILpC7p5BBT9epUK.jpg"
+   },
+   {
+    "id": 199,
+    "codigo": "14.015",
+    "imagem": "linhas-componentes/May2026/qGZDlAjTII8mcNVbYKgD.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 700mm sem encosto / *Opcional com estrutura de  500mm / Assento em Vinil Verde Oliva 191 e estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/qGZDlAjTII8mcNVbYKgD.jpg"
+   },
+   {
+    "id": 200,
+    "codigo": "14.016",
+    "imagem": "linhas-componentes/May2026/23Bzi7AplgSWT3xNqbeC.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 730mm com encosto / Assento em CEC - Stilo Fendi 194 com estrutura Areia 83",
+    "arquivo": "img/cavaletti/fun/23Bzi7AplgSWT3xNqbeC.jpg"
+   },
+   {
+    "id": 201,
+    "codigo": "14.016",
+    "imagem": "linhas-componentes/May2026/fjpqfaAkGvMdP2DktSaH.jpg",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 730mm sem encosto / Assento em CEC - Stilo Cinza 175 com estrutura Preto Universal 101",
+    "arquivo": "img/cavaletti/fun/fjpqfaAkGvMdP2DktSaH.jpg"
+   },
+   {
+    "id": 609,
+    "codigo": "14.070",
+    "imagem": "linhas-componentes/May2026/WwM2akMM6POJ3AjyarWu.jpg",
+    "descricao": "Banqueta Baixa",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 620mm / Assento em madeira envernizada e estrutura Telha 84",
+    "arquivo": "img/cavaletti/fun/WwM2akMM6POJ3AjyarWu.jpg"
+   },
+   {
+    "id": 610,
+    "codigo": "14.070",
+    "imagem": "linhas-componentes/May2026/KM9syiKnt2whB1VX2ZhN.jpg",
+    "descricao": "Banqueta Baixa",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 650mm / Assento estofado em CEC-Stilo Verde 315 e Estrutura Areia 83",
+    "arquivo": "img/cavaletti/fun/KM9syiKnt2whB1VX2ZhN.jpg"
+   },
+   {
+    "id": 611,
+    "codigo": "14.065",
+    "imagem": "linhas-componentes/May2026/K3c1KTrGMKliUNb4aanl.jpg",
+    "descricao": "Banqueta Baixa",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 650mm com encosto / Assento em CEC - Stilo Azul 314 com estrutura Azul 81 ",
+    "arquivo": "img/cavaletti/fun/K3c1KTrGMKliUNb4aanl.jpg"
+   },
+   {
+    "id": 612,
+    "codigo": "14.065",
+    "imagem": "linhas-componentes/May2026/Spb5aZuRjqZpQYzkFL3I.jpg",
+    "descricao": "Banqueta Baixa",
+    "url_pinterest": null,
+    "observacao": "Estrutura de 650mm / Assento em Vinil Verde Oliva 191 e estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/Spb5aZuRjqZpQYzkFL3I.jpg"
+   },
+   {
+    "id": 613,
+    "codigo": "36.016",
+    "imagem": "linhas-componentes/May2026/SCvg4sH7MvWWWMbNWSVY.jpg",
+    "descricao": "Banco Giratório",
+    "url_pinterest": null,
+    "observacao": "Base em Alumínio *Disponível apenas para base disco / Assento em CEC - Stilo Vinho 233 com base em alumínio",
+    "arquivo": "img/cavaletti/fun/SCvg4sH7MvWWWMbNWSVY.jpg"
+   },
+   {
+    "id": 614,
+    "codigo": "36.030",
+    "imagem": "linhas-componentes/May2026/WSl9aVjMYGs84koA2zOm.jpg",
+    "descricao": "Puff Quadrado",
+    "url_pinterest": null,
+    "observacao": "450mm / Em Liv Safira 512",
+    "arquivo": "img/cavaletti/fun/WSl9aVjMYGs84koA2zOm.jpg"
+   },
+   {
+    "id": 616,
+    "codigo": "36.675",
+    "imagem": "linhas-componentes/May2026/cDmSiffWdouOd0MVNZiG.jpg",
+    "descricao": "Puff Hexagonal Regular Alto",
+    "url_pinterest": null,
+    "observacao": " 750mm / Em Haven Campo 556",
+    "arquivo": "img/cavaletti/fun/cDmSiffWdouOd0MVNZiG.jpg"
+   },
+   {
+    "id": 617,
+    "codigo": "36.645",
+    "imagem": "linhas-componentes/May2026/FENMPETQqwUVmSIgUTts.jpg",
+    "descricao": "Puff Hexagonal Regular Médio",
+    "url_pinterest": null,
+    "observacao": "450mm / Em Haven Campo 556",
+    "arquivo": "img/cavaletti/fun/FENMPETQqwUVmSIgUTts.jpg"
+   },
+   {
+    "id": 618,
+    "codigo": "36.635",
+    "imagem": "linhas-componentes/May2026/UUHRwM0gNOL7svWRqypx.jpg",
+    "descricao": "Puff Hexagonal Regular Baixo",
+    "url_pinterest": null,
+    "observacao": "350mm / Em Haven Campo 556",
+    "arquivo": "img/cavaletti/fun/UUHRwM0gNOL7svWRqypx.jpg"
+   },
+   {
+    "id": 624,
+    "codigo": "36.302",
+    "imagem": "linhas-componentes/May2026/839ew1RpCJpJu6TQm1T8.jpg",
+    "descricao": "Puff Soft Air",
+    "url_pinterest": null,
+    "observacao": "L850 x P950 x A700 / Em Grid Azul Infinito 354 / *Exceto Vinil e CEC-Stilo",
+    "arquivo": "img/cavaletti/fun/839ew1RpCJpJu6TQm1T8.jpg"
+   },
+   {
+    "id": 625,
+    "codigo": "25.101",
+    "imagem": "linhas-componentes/May2026/yqARbE8uWtFgC3ugipWS.jpg",
+    "descricao": "Mesa Tampo Quadrado ",
+    "url_pinterest": null,
+    "observacao": "Tampo melamínico / Base metálica / Mesa em tampo Itapuã 46 com estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/yqARbE8uWtFgC3ugipWS.jpg"
+   },
+   {
+    "id": 626,
+    "codigo": "25.102",
+    "imagem": "linhas-componentes/May2026/OCogLF4DOjorJYRHqOK4.jpg",
+    "descricao": "Mesa Tampo Redondo ",
+    "url_pinterest": null,
+    "observacao": "Tampo melamínico / Base metálica / Mesa em tampo Itapuã 46 com estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/OCogLF4DOjorJYRHqOK4.jpg"
+   },
+   {
+    "id": 627,
+    "codigo": "39.801",
+    "imagem": "linhas-componentes/May2026/oJc63iscB9HoZkWdvASb.jpg",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Tampo melamínico / Base metálica / Mesa em tampo Itapuã 46 com estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/oJc63iscB9HoZkWdvASb.jpg"
+   },
+   {
+    "id": 628,
+    "codigo": "39.802",
+    "imagem": "linhas-componentes/May2026/nDkBvJOPcnKe1ynNFze8.jpg",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Tampo melamínico / Base metálica / Mesa em tampo Itapuã 46 com estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/nDkBvJOPcnKe1ynNFze8.jpg"
+   },
+   {
+    "id": 629,
+    "codigo": "39.803",
+    "imagem": "linhas-componentes/May2026/5YbRNqZeCQJWA1O1ydRM.jpg",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Tampo melamínico / Base metálica / Mesa em tampo Itapuã 46 com estrutura Branco 79",
+    "arquivo": "img/cavaletti/fun/5YbRNqZeCQJWA1O1ydRM.jpg"
+   }
+  ],
+  "go": [
+   {
+    "id": 213,
+    "codigo": "34.003",
+    "imagem": "linhas-componentes/May2025/lYxOleXNY821TLcFy50Z.png",
+    "descricao": "Giratória Basic",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Braços opcionais / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/go/lYxOleXNY821TLcFy50Z.png"
+   },
+   {
+    "id": 214,
+    "codigo": "34.003",
+    "imagem": "linhas-componentes/May2025/yUxA1x0DWUUZlesP99FU.png",
+    "descricao": "Giratória Soft",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Braços opcionais / Assento estofado / Base de 5 hastes / Rodízios 50mm ",
+    "arquivo": "img/cavaletti/go/yUxA1x0DWUUZlesP99FU.png"
+   },
+   {
+    "id": 215,
+    "codigo": "34.003",
+    "imagem": "linhas-componentes/May2025/Hm8juifjcDK1gA6YUESz.png",
+    "descricao": "Giratória Complete",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Braços opcionais / Assento e encosto estofados",
+    "arquivo": "img/cavaletti/go/Hm8juifjcDK1gA6YUESz.png"
+   },
+   {
+    "id": 216,
+    "codigo": "34.006",
+    "imagem": "linhas-componentes/May2025/1EnquvHdZahqfFnAco5w.png",
+    "descricao": "Aproximação Basic",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais",
+    "arquivo": "img/cavaletti/go/1EnquvHdZahqfFnAco5w.png"
+   },
+   {
+    "id": 217,
+    "codigo": "34.006",
+    "imagem": "linhas-componentes/May2025/lpjRE7fFU473QHa2Kh4h.png",
+    "descricao": "Aproximação Soft",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais / Assento estofado",
+    "arquivo": "img/cavaletti/go/lpjRE7fFU473QHa2Kh4h.png"
+   },
+   {
+    "id": 218,
+    "codigo": "34.006",
+    "imagem": "linhas-componentes/May2025/Zq35I1IJ1NDJ5a44UgE5.png",
+    "descricao": " Aproximação Complete ",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais / Assento e encosto estofados",
+    "arquivo": "img/cavaletti/go/Zq35I1IJ1NDJ5a44UgE5.png"
+   },
+   {
+    "id": 219,
+    "codigo": "34.020",
+    "imagem": "linhas-componentes/May2025/uya8eRpz435OmGeqSoE9.png",
+    "descricao": "Banqueta Alta Basic ",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais",
+    "arquivo": "img/cavaletti/go/uya8eRpz435OmGeqSoE9.png"
+   },
+   {
+    "id": 220,
+    "codigo": "34.020",
+    "imagem": "linhas-componentes/May2025/025dQBtWdFXcMTrW0Tt6.png",
+    "descricao": "Banqueta Alta Soft",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais / Assento estofado",
+    "arquivo": "img/cavaletti/go/025dQBtWdFXcMTrW0Tt6.png"
+   },
+   {
+    "id": 221,
+    "codigo": "34.020",
+    "imagem": "linhas-componentes/May2025/CDrmBtvYbUVDJtxLG62Z.png",
+    "descricao": "Banqueta Alta Complete",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais / Assento e encosto estofados",
+    "arquivo": "img/cavaletti/go/CDrmBtvYbUVDJtxLG62Z.png"
+   },
+   {
+    "id": 594,
+    "codigo": "34.070",
+    "imagem": "linhas-componentes/March2026/zFmbkj7420VHQZawCRG7.jpg",
+    "descricao": "Banqueta Basic",
+    "url_pinterest": null,
+    "observacao": "650mm / Braços opcionais",
+    "arquivo": "img/cavaletti/go/zFmbkj7420VHQZawCRG7.jpg"
+   },
+   {
+    "id": 595,
+    "codigo": "34.070",
+    "imagem": "linhas-componentes/March2026/ejNtdxc4vAHeIJvqGdMu.jpg",
+    "descricao": "Banqueta Soft",
+    "url_pinterest": null,
+    "observacao": "650mm / Braços opcionais / Assento estofado",
+    "arquivo": "img/cavaletti/go/ejNtdxc4vAHeIJvqGdMu.jpg"
+   },
+   {
+    "id": 596,
+    "codigo": "34.070",
+    "imagem": "linhas-componentes/March2026/gLEhqUjFizRiww5xcjnh.jpg",
+    "descricao": "Banqueta Complete",
+    "url_pinterest": null,
+    "observacao": "650mm / Braços opcionais / Assento e encosto estofados",
+    "arquivo": "img/cavaletti/go/gLEhqUjFizRiww5xcjnh.jpg"
+   },
+   {
+    "id": 643,
+    "codigo": "34.006 P",
+    "imagem": "linhas-componentes/May2026/Gj7oH0HyW51QPTdnlavs.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Pés Palito / Braços opcionais",
+    "arquivo": "img/cavaletti/go/Gj7oH0HyW51QPTdnlavs.jpg"
+   },
+   {
+    "id": 644,
+    "codigo": "34.006 P ROD",
+    "imagem": "linhas-componentes/May2026/4UJONozZggiD1cSURDc1.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Pés Palito com rodízios / Braços opcionais",
+    "arquivo": "img/cavaletti/go/4UJONozZggiD1cSURDc1.jpg"
+   },
+   {
+    "id": 645,
+    "codigo": "34.006",
+    "imagem": "linhas-componentes/May2026/xXDsWQAv83ZpTljTgzyu.jpg",
+    "descricao": "Prancheta",
+    "url_pinterest": null,
+    "observacao": "Opções Fixa (U), Removível (UR) e Escamoteável (UE)",
+    "arquivo": "img/cavaletti/go/xXDsWQAv83ZpTljTgzyu.jpg"
+   },
+   {
+    "id": 646,
+    "codigo": "34.003",
+    "imagem": "linhas-componentes/August2026/pPbeohHWKlhW8mKfACqx.jpg",
+    "descricao": "Basic com Prancheta 360°",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm ",
+    "arquivo": "img/cavaletti/go/pPbeohHWKlhW8mKfACqx.jpg"
+   },
+   {
+    "id": 647,
+    "codigo": "34.010",
+    "imagem": "linhas-componentes/May2026/7JkLbHzWFze24JFLCTBr.jpg",
+    "descricao": "Longarina",
+    "url_pinterest": null,
+    "observacao": "Braços opcionais disponível com 2, 3, 4 ou 5 lugares",
+    "arquivo": "img/cavaletti/go/7JkLbHzWFze24JFLCTBr.jpg"
+   },
+   {
+    "id": 648,
+    "codigo": "",
+    "imagem": "linhas-componentes/May2026/G8dGyrVOLaJHqfAKYr4e.jpg",
+    "descricao": "Carrinho de Transporte",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/go/G8dGyrVOLaJHqfAKYr4e.jpg"
+   },
+   {
+    "id": 649,
+    "codigo": "",
+    "imagem": "linhas-componentes/May2026/aIapBM8IXgcWlLOiA59S.jpg",
+    "descricao": "Mesa Lounge",
+    "url_pinterest": null,
+    "observacao": "800mm larg. x 800mm prof. x 725mm alt.",
+    "arquivo": "img/cavaletti/go/aIapBM8IXgcWlLOiA59S.jpg"
+   }
+  ],
+  "idea": [
+   {
+    "id": 229,
+    "codigo": "40.101",
+    "imagem": "linhas-componentes/May2025/5b9EIpxbCXvMMztrBVlH.png",
+    "descricao": "Giratória Alta",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Base Alumínio",
+    "arquivo": "img/cavaletti/idea/5b9EIpxbCXvMMztrBVlH.png"
+   },
+   {
+    "id": 230,
+    "codigo": "40.102",
+    "imagem": "linhas-componentes/May2025/yaocM8TEb1oyDRDAeA6L.png",
+    "descricao": "Giratória Média",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Base Alumínio",
+    "arquivo": "img/cavaletti/idea/yaocM8TEb1oyDRDAeA6L.png"
+   },
+   {
+    "id": 231,
+    "codigo": "40.106 SI",
+    "imagem": "linhas-componentes/May2025/qX4PfqATjmNgu1Ez4C4D.png",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços integrados",
+    "arquivo": "img/cavaletti/idea/qX4PfqATjmNgu1Ez4C4D.png"
+   },
+   {
+    "id": 232,
+    "codigo": "40.202",
+    "imagem": "linhas-componentes/May2025/V7QwWmIyJ3IKEtiiSPnN.png",
+    "descricao": "Giratória Média",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Base Nylon",
+    "arquivo": "img/cavaletti/idea/V7QwWmIyJ3IKEtiiSPnN.png"
+   },
+   {
+    "id": 233,
+    "codigo": "40.202 SR",
+    "imagem": "linhas-componentes/May2025/SFgJXYpFlQSAX3bKXYuC.png",
+    "descricao": "Giratória Média",
+    "url_pinterest": null,
+    "observacao": "Plataforma Giratória / Base Nylon",
+    "arquivo": "img/cavaletti/idea/SFgJXYpFlQSAX3bKXYuC.png"
+   },
+   {
+    "id": 234,
+    "codigo": "40.206 SI",
+    "imagem": "linhas-componentes/May2025/QzF7d6GW2r1IKptxympj.png",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços integrados",
+    "arquivo": "img/cavaletti/idea/QzF7d6GW2r1IKptxympj.png"
+   },
+   {
+    "id": 235,
+    "codigo": "40.122",
+    "imagem": "linhas-componentes/May2025/Hpqc589MFwFTnCDjMEJT.png",
+    "descricao": "Stool",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura/ Braços ID/ Base Nylon com esfera metálica inserida na estrutura",
+    "arquivo": "img/cavaletti/idea/Hpqc589MFwFTnCDjMEJT.png"
+   }
+  ],
+  "inaut": [
+   {
+    "id": 598,
+    "codigo": "52.006",
+    "imagem": "linhas-componentes/March2026/Em7yjxnqH4duydpDVUAn.jpg",
+    "descricao": "Assento",
+    "url_pinterest": null,
+    "observacao": "Assento Bege Duna (479)",
+    "arquivo": "img/cavaletti/inaut/Em7yjxnqH4duydpDVUAn.jpg"
+   },
+   {
+    "id": 599,
+    "codigo": "52.106",
+    "imagem": "linhas-componentes/March2026/7ZfqgwKdhig7dM5OpmJw.jpg",
+    "descricao": "Base",
+    "url_pinterest": null,
+    "observacao": "Base Bege Dakar (480)",
+    "arquivo": "img/cavaletti/inaut/7ZfqgwKdhig7dM5OpmJw.jpg"
+   },
+   {
+    "id": 600,
+    "codigo": "52.006",
+    "imagem": "linhas-componentes/March2026/ALe8279CsVsc2EKgPuAD.jpg",
+    "descricao": "Assento",
+    "url_pinterest": null,
+    "observacao": "Assento Branco Pérola (481)",
+    "arquivo": "img/cavaletti/inaut/ALe8279CsVsc2EKgPuAD.jpg"
+   },
+   {
+    "id": 601,
+    "codigo": "52.106",
+    "imagem": "linhas-componentes/March2026/dO1HM4BHPOqGYMeoKKM8.jpg",
+    "descricao": "Base",
+    "url_pinterest": null,
+    "observacao": "Base Branco Bruma (482)",
+    "arquivo": "img/cavaletti/inaut/dO1HM4BHPOqGYMeoKKM8.jpg"
+   },
+   {
+    "id": 602,
+    "codigo": "52.006",
+    "imagem": "linhas-componentes/March2026/huvn63l02U8twruz4031.jpg",
+    "descricao": "Assento",
+    "url_pinterest": null,
+    "observacao": "Assento Cinza Horizonte (483)",
+    "arquivo": "img/cavaletti/inaut/huvn63l02U8twruz4031.jpg"
+   },
+   {
+    "id": 603,
+    "codigo": "52.106",
+    "imagem": "linhas-componentes/March2026/sO9bMHeaeg3ZPT8sLN9P.jpg",
+    "descricao": "Base",
+    "url_pinterest": null,
+    "observacao": "Base Cinza Espaço (484)",
+    "arquivo": "img/cavaletti/inaut/sO9bMHeaeg3ZPT8sLN9P.jpg"
+   },
+   {
+    "id": 604,
+    "codigo": "52.006",
+    "imagem": "linhas-componentes/March2026/sa2VbokWSXuXBNAkAxL9.jpg",
+    "descricao": "Assento",
+    "url_pinterest": null,
+    "observacao": "Assento Verde Menta (485)",
+    "arquivo": "img/cavaletti/inaut/sa2VbokWSXuXBNAkAxL9.jpg"
+   },
+   {
+    "id": 605,
+    "codigo": "52.106",
+    "imagem": "linhas-componentes/March2026/A5qaSHEdSXeVkQD4WXcu.jpg",
+    "descricao": "Base",
+    "url_pinterest": null,
+    "observacao": "Base Verde Respiro (486)",
+    "arquivo": "img/cavaletti/inaut/A5qaSHEdSXeVkQD4WXcu.jpg"
+   },
+   {
+    "id": 606,
+    "codigo": "52.006",
+    "imagem": "linhas-componentes/March2026/G4tXvuASQLEDaCC8ZQfd.jpg",
+    "descricao": "Assento",
+    "url_pinterest": null,
+    "observacao": "Assento Vermelho Floral (487)",
+    "arquivo": "img/cavaletti/inaut/G4tXvuASQLEDaCC8ZQfd.jpg"
+   },
+   {
+    "id": 607,
+    "codigo": "52.106",
+    "imagem": "linhas-componentes/March2026/FOmI89AwWrFG7jmUCpF7.jpg",
+    "descricao": "Base",
+    "url_pinterest": null,
+    "observacao": "Base Vermelho Pulso (488)",
+    "arquivo": "img/cavaletti/inaut/FOmI89AwWrFG7jmUCpF7.jpg"
+   },
+   {
+    "id": 608,
+    "codigo": "52.006 + 52.106",
+    "imagem": "linhas-componentes/March2026/eI9NMJVf5fMYiCRlXztX.jpg",
+    "descricao": "Conjunto ",
+    "url_pinterest": null,
+    "observacao": "Imagem ilustrativa do conjunto assento/base, destinada à visualização das dimensões do produto montado.",
+    "arquivo": "img/cavaletti/inaut/eI9NMJVf5fMYiCRlXztX.jpg"
+   }
+  ],
+  "joy": [
+   {
+    "id": 236,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/i1GglvqKHMLbujeWlEzt.png",
+    "descricao": "Branco Off",
+    "url_pinterest": null,
+    "observacao": "Plásticos Branco Off 44 / Base Branco Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/i1GglvqKHMLbujeWlEzt.png"
+   },
+   {
+    "id": 237,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/lrbvaux7yWw1sboS3yNS.png",
+    "descricao": "Cinza",
+    "url_pinterest": null,
+    "observacao": "Plásticos Cinza 41 / Base Prata / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/lrbvaux7yWw1sboS3yNS.png"
+   },
+   {
+    "id": 238,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/2hE6UxfQqYUEAtv4d95y.png",
+    "descricao": "Grafite",
+    "url_pinterest": null,
+    "observacao": "Plástico Grafite 45 / Base Grafite Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/2hE6UxfQqYUEAtv4d95y.png"
+   },
+   {
+    "id": 239,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/NZRLV92u8JSSQjLdiC4h.png",
+    "descricao": "Preto",
+    "url_pinterest": null,
+    "observacao": "Plásticos Preto 06 / Base Preto Universal / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/NZRLV92u8JSSQjLdiC4h.png"
+   },
+   {
+    "id": 240,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/LdRNxIruqW7f7S8CnMej.png",
+    "descricao": "Azul",
+    "url_pinterest": null,
+    "observacao": "Plásticos Azul Noite 32 / Base Azul Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/LdRNxIruqW7f7S8CnMej.png"
+   },
+   {
+    "id": 241,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/YWqTb6sGSGCtkiZBP9OW.png",
+    "descricao": "Oliva",
+    "url_pinterest": null,
+    "observacao": "Plásticos Oliva 76 / Base Oliva Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/YWqTb6sGSGCtkiZBP9OW.png"
+   },
+   {
+    "id": 242,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/2xTHBqOem1UNizhSUnPJ.png",
+    "descricao": "Areia",
+    "url_pinterest": null,
+    "observacao": "Plásticos Areia 77 / Base Areia Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/2xTHBqOem1UNizhSUnPJ.png"
+   },
+   {
+    "id": 243,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/h2RGQSNM51xsysecPNBK.png",
+    "descricao": "Telha",
+    "url_pinterest": null,
+    "observacao": "Plásticos Telha 78 / Base Telha Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/h2RGQSNM51xsysecPNBK.png"
+   },
+   {
+    "id": 244,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/i1MDV9cP0dTKC0l894Rc.png",
+    "descricao": "Amarelo",
+    "url_pinterest": null,
+    "observacao": "Plásticos Amarelo 16 / Base Amarelo Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/i1MDV9cP0dTKC0l894Rc.png"
+   },
+   {
+    "id": 245,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/WLhbzS0nyzBU9Z5yXUN8.png",
+    "descricao": "Vermelho",
+    "url_pinterest": null,
+    "observacao": "Plásticos Vermelho Apple 43 / Base Vermelho Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/WLhbzS0nyzBU9Z5yXUN8.png"
+   },
+   {
+    "id": 246,
+    "codigo": "41.008",
+    "imagem": "linhas-componentes/May2025/ytWFhW6xomBpbQ9BUzFj.jpg",
+    "descricao": "Areia e Rosa",
+    "url_pinterest": null,
+    "observacao": "Plásticos Areia 77 / Base Rosa Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/ytWFhW6xomBpbQ9BUzFj.jpg"
+   },
+   {
+    "id": 248,
+    "codigo": "41.020",
+    "imagem": "linhas-componentes/May2025/yxMyPGn0v3azMt6HZnqT.jpg",
+    "descricao": "Oliva",
+    "url_pinterest": null,
+    "observacao": "Plásticos Oliva 76 / Base Oliva Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/yxMyPGn0v3azMt6HZnqT.jpg"
+   },
+   {
+    "id": 597,
+    "codigo": "41.070",
+    "imagem": "linhas-componentes/March2026/gJR7LEoJz9aAat14JcmM.jpg",
+    "descricao": "Oliva",
+    "url_pinterest": null,
+    "observacao": "650mm / Plásticos Oliva 76 / Base Oliva Ultrafosco / Opção de Base Cromada",
+    "arquivo": "img/cavaletti/joy/gJR7LEoJz9aAat14JcmM.jpg"
+   },
+   {
+    "id": 664,
+    "codigo": "41.020 | 41.070",
+    "imagem": "linhas-componentes/May2026/Nb3dkwSL0QpVMAbOeSDp.jpg",
+    "descricao": "Empilhamento 41.020 e 41.070",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 05 unidades",
+    "arquivo": "img/cavaletti/joy/Nb3dkwSL0QpVMAbOeSDp.jpg"
+   },
+   {
+    "id": 665,
+    "codigo": "Carrinho",
+    "imagem": "linhas-componentes/May2026/zY4aue8zCT4xRkjoaxiM.jpg",
+    "descricao": "Carrinho",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 10 unidades",
+    "arquivo": "img/cavaletti/joy/zY4aue8zCT4xRkjoaxiM.jpg"
+   }
+  ],
+  "leef": [
+   {
+    "id": 250,
+    "codigo": "45.101",
+    "imagem": "linhas-componentes/August2025/TfxuQNQGkcXpNmSAXlVR.jpg",
+    "descricao": "Giratória Operativa",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços 4D-CA / Base Twin (Alumínio) / Couro Natural Preto com costura Cobre 700",
+    "arquivo": "img/cavaletti/leef/TfxuQNQGkcXpNmSAXlVR.jpg"
+   },
+   {
+    "id": 251,
+    "codigo": "45.101",
+    "imagem": "linhas-componentes/August2025/HKTd1whjvZsA0569PSsU.jpg",
+    "descricao": "Giratória Operativa ",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços 3D / Base Twin (Alumínio) / Couro Natural Preto com costura Cobre 700",
+    "arquivo": "img/cavaletti/leef/HKTd1whjvZsA0569PSsU.jpg"
+   },
+   {
+    "id": 252,
+    "codigo": "45.101",
+    "imagem": "linhas-componentes/August2025/KV2ZpsdnqfXglxviKZ4V.jpg",
+    "descricao": "Giratória Operativa ",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços 4D-CA / Base Up (Nylon) / Couro Natural Preto com costura Cobre 700",
+    "arquivo": "img/cavaletti/leef/KV2ZpsdnqfXglxviKZ4V.jpg"
+   }
+  ],
+  "mais": [
+   {
+    "id": 253,
+    "codigo": "37.001",
+    "imagem": "linhas-componentes/May2025/tQ5c5dGiXV0tzfZlpmrL.png",
+    "descricao": "Giratória Alta",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Alumínio",
+    "arquivo": "img/cavaletti/mais/tQ5c5dGiXV0tzfZlpmrL.png"
+   },
+   {
+    "id": 254,
+    "codigo": "37.001",
+    "imagem": "linhas-componentes/May2025/1HYNYy3cGdayxIIoqJVl.png",
+    "descricao": "Giratória Alta",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Nylon  ",
+    "arquivo": "img/cavaletti/mais/1HYNYy3cGdayxIIoqJVl.png"
+   },
+   {
+    "id": 255,
+    "codigo": "37.002",
+    "imagem": "linhas-componentes/May2025/OPCV2dv3zsw6QilYDiE6.png",
+    "descricao": "Giratória Média",
+    "url_pinterest": null,
+    "observacao": "Syncron /  Braço Sl New PU / Base Nylon",
+    "arquivo": "img/cavaletti/mais/OPCV2dv3zsw6QilYDiE6.png"
+   },
+   {
+    "id": 256,
+    "codigo": "37.006",
+    "imagem": "linhas-componentes/May2025/e4jbPytByKXZUNzqM8LJ.png",
+    "descricao": "Aproximação Média",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados",
+    "arquivo": "img/cavaletti/mais/e4jbPytByKXZUNzqM8LJ.png"
+   }
+  ],
+  "match": [
+   {
+    "id": 257,
+    "codigo": "46.006",
+    "imagem": "linhas-componentes/May2025/NrE8hrUw1r9Jxm3dmIEW.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Pé Palito / Empilhamento: Máximo 6 unid. / No Carrinho: Máximo 15 unid.",
+    "arquivo": "img/cavaletti/match/NrE8hrUw1r9Jxm3dmIEW.jpg"
+   },
+   {
+    "id": 258,
+    "codigo": "46.066",
+    "imagem": "linhas-componentes/May2025/6d9zJhGr7lRAelCuYFGw.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Pé Palito",
+    "arquivo": "img/cavaletti/match/6d9zJhGr7lRAelCuYFGw.jpg"
+   },
+   {
+    "id": 259,
+    "codigo": "46.076",
+    "imagem": "linhas-componentes/May2025/1E8X8TdQWsFziUes1dRM.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada  / Sobre-Assento Estofado / Pé Palito",
+    "arquivo": "img/cavaletti/match/1E8X8TdQWsFziUes1dRM.jpg"
+   },
+   {
+    "id": 260,
+    "codigo": "46.906",
+    "imagem": "linhas-componentes/May2025/4bhlIwKe1rzBz579KLnM.jpg",
+    "descricao": "Cadeira Fixa Palito com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Braços Fixos / Pé Palito / Empilhamento: Máximo 4 unid. / No Carrinho: Máximo 5 unid.",
+    "arquivo": "img/cavaletti/match/4bhlIwKe1rzBz579KLnM.jpg"
+   },
+   {
+    "id": 261,
+    "codigo": "46.966",
+    "imagem": "linhas-componentes/May2025/iucJpBifmGzxLcuvFBqS.jpg",
+    "descricao": "Cadeira Fixa Palito com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Braços Fixos / Pé Palito",
+    "arquivo": "img/cavaletti/match/iucJpBifmGzxLcuvFBqS.jpg"
+   },
+   {
+    "id": 262,
+    "codigo": "46.976",
+    "imagem": "linhas-componentes/May2025/q2ab9JmA5CeWy6lDQ9D3.jpg",
+    "descricao": "Cadeira Fixa Palito com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Braços Fixos / Pé Palito",
+    "arquivo": "img/cavaletti/match/q2ab9JmA5CeWy6lDQ9D3.jpg"
+   },
+   {
+    "id": 263,
+    "codigo": "46.007",
+    "imagem": "linhas-componentes/May2025/LoN4f1WyAsngWijG7vZG.jpg",
+    "descricao": "Cadeira Fixa Arco",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Estrutura Arco / Empilhamento: máximo 6 unid. / No carrinho: máximo 10 unid.",
+    "arquivo": "img/cavaletti/match/LoN4f1WyAsngWijG7vZG.jpg"
+   },
+   {
+    "id": 264,
+    "codigo": "46.067",
+    "imagem": "linhas-componentes/May2025/mO33jvNCJB6VOajp09wp.jpg",
+    "descricao": "Cadeira Fixa Arco",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Estrutura Arco",
+    "arquivo": "img/cavaletti/match/mO33jvNCJB6VOajp09wp.jpg"
+   },
+   {
+    "id": 265,
+    "codigo": "46.077",
+    "imagem": "linhas-componentes/May2025/bPSgkw3QqMkrIxCtP8hR.jpg",
+    "descricao": "Cadeira Fixa Arco",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Estrutura Arco",
+    "arquivo": "img/cavaletti/match/bPSgkw3QqMkrIxCtP8hR.jpg"
+   },
+   {
+    "id": 266,
+    "codigo": "46.907",
+    "imagem": "linhas-componentes/May2025/aDSBsviq1OMKlcqvBpx3.jpg",
+    "descricao": "Cadeira  Fixa Arco, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Estrutura Arco / Braços / Empilhamento: máximo 6 unid. / No carrinho: máximo 10 unid.",
+    "arquivo": "img/cavaletti/match/aDSBsviq1OMKlcqvBpx3.jpg"
+   },
+   {
+    "id": 267,
+    "codigo": "46.967",
+    "imagem": "linhas-componentes/May2025/9pK0mkJ2CJXR2jW64Lj1.jpg",
+    "descricao": "Cadeira  Fixa Arco, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Estrutura Arco / Braços",
+    "arquivo": "img/cavaletti/match/9pK0mkJ2CJXR2jW64Lj1.jpg"
+   },
+   {
+    "id": 268,
+    "codigo": "46.977",
+    "imagem": "linhas-componentes/May2025/97P3zhv0RvGEuQKHN0bL.jpg",
+    "descricao": "Cadeira  Fixa Arco, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Estrutura Arco / Braços",
+    "arquivo": "img/cavaletti/match/97P3zhv0RvGEuQKHN0bL.jpg"
+   },
+   {
+    "id": 269,
+    "codigo": "46.005",
+    "imagem": "linhas-componentes/May2025/vvXybTVdyoo4oAG3vbLS.jpg",
+    "descricao": "Cadeira Fixa C",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Estrutura C / Empilhamento: máximo 6 unid.",
+    "arquivo": "img/cavaletti/match/vvXybTVdyoo4oAG3vbLS.jpg"
+   },
+   {
+    "id": 270,
+    "codigo": "46.065",
+    "imagem": "linhas-componentes/May2025/XguqjIKQCjx0pUoFrl81.jpg",
+    "descricao": "Cadeira Fixa C",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Estrutura C",
+    "arquivo": "img/cavaletti/match/XguqjIKQCjx0pUoFrl81.jpg"
+   },
+   {
+    "id": 271,
+    "codigo": "46.075",
+    "imagem": "linhas-componentes/May2025/iIb1pwio6ulwMDZ5vvsB.jpg",
+    "descricao": "Cadeira Fixa C",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Estrutura C",
+    "arquivo": "img/cavaletti/match/iIb1pwio6ulwMDZ5vvsB.jpg"
+   },
+   {
+    "id": 272,
+    "codigo": "46.406",
+    "imagem": "linhas-componentes/May2025/834fZ44ShxKg936lOEYf.jpg",
+    "descricao": "Cadeira Fixa Pé Palito com Braço, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Pé palito e braços em madeira envernizada",
+    "arquivo": "img/cavaletti/match/834fZ44ShxKg936lOEYf.jpg"
+   },
+   {
+    "id": 273,
+    "codigo": "46.466",
+    "imagem": "linhas-componentes/May2025/paZyreIJexDCh5OqMCxe.jpg",
+    "descricao": "Cadeira Fixa Pé Palito com Braço, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Pé palito e braços em madeira envernizada",
+    "arquivo": "img/cavaletti/match/paZyreIJexDCh5OqMCxe.jpg"
+   },
+   {
+    "id": 274,
+    "codigo": "46.476",
+    "imagem": "linhas-componentes/May2025/oFuOSpsTQdvRcuyTvPrt.jpg",
+    "descricao": "Cadeira Fixa Pé Palito com Braço, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Pé palito e braços em madeira envernizada",
+    "arquivo": "img/cavaletti/match/oFuOSpsTQdvRcuyTvPrt.jpg"
+   },
+   {
+    "id": 275,
+    "codigo": "46.206",
+    "imagem": "linhas-componentes/May2025/gFlMGVmKgrTDtDSBlT65.jpg",
+    "descricao": "Cadeira Fixa Pé Piramidal, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Pé piramidal em madeira envernizada",
+    "arquivo": "img/cavaletti/match/gFlMGVmKgrTDtDSBlT65.jpg"
+   },
+   {
+    "id": 276,
+    "codigo": "46.266",
+    "imagem": "linhas-componentes/May2025/aFI4Xa3FUrCHGmD3yUMu.jpg",
+    "descricao": "Cadeira Fixa Pé Piramidal, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Pé piramidal em madeira envernizada",
+    "arquivo": "img/cavaletti/match/aFI4Xa3FUrCHGmD3yUMu.jpg"
+   },
+   {
+    "id": 277,
+    "codigo": "46.276",
+    "imagem": "linhas-componentes/May2025/ibo4xqIE2VU82QtaUCHG.jpg",
+    "descricao": "Cadeira Fixa Pé Piramidal, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento Estofado / Pé piramidal em madeira envernizada",
+    "arquivo": "img/cavaletti/match/ibo4xqIE2VU82QtaUCHG.jpg"
+   },
+   {
+    "id": 278,
+    "codigo": "46.306",
+    "imagem": "linhas-componentes/May2025/AHnmxQIRlk94VKMhqYR2.jpg",
+    "descricao": "Cadeira Fixa Pé Palito, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Pé palito em madeira envernizada",
+    "arquivo": "img/cavaletti/match/AHnmxQIRlk94VKMhqYR2.jpg"
+   },
+   {
+    "id": 279,
+    "codigo": "46.366",
+    "imagem": "linhas-componentes/May2025/1EWiDtYi9z6zZqEe6ao2.jpg",
+    "descricao": "Cadeira Fixa Pé Palito, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Pé palito em madeira envernizada",
+    "arquivo": "img/cavaletti/match/1EWiDtYi9z6zZqEe6ao2.jpg"
+   },
+   {
+    "id": 280,
+    "codigo": "46.376",
+    "imagem": "linhas-componentes/May2025/dqyz6iFp19m8U370SWYf.jpg",
+    "descricao": "Cadeira Fixa Pé Palito, Madeira Envernizada",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Pé palito em madeira envernizada",
+    "arquivo": "img/cavaletti/match/dqyz6iFp19m8U370SWYf.jpg"
+   },
+   {
+    "id": 281,
+    "codigo": "46.003",
+    "imagem": "linhas-componentes/May2025/hsvZObzmksdomW2zlHK8.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/hsvZObzmksdomW2zlHK8.jpg"
+   },
+   {
+    "id": 282,
+    "codigo": "46.063",
+    "imagem": "linhas-componentes/May2025/AzipFMJ9abgt6B7Ilv1G.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/AzipFMJ9abgt6B7Ilv1G.jpg"
+   },
+   {
+    "id": 283,
+    "codigo": "46.073",
+    "imagem": "linhas-componentes/May2025/l2Ac5Nb6iFYrC9AaRASW.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/l2Ac5Nb6iFYrC9AaRASW.jpg"
+   },
+   {
+    "id": 284,
+    "codigo": "46.903",
+    "imagem": "linhas-componentes/May2025/1LJ9pL3CmnA1cDj9y130.jpg",
+    "descricao": "Cadeira Giratória, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/1LJ9pL3CmnA1cDj9y130.jpg"
+   },
+   {
+    "id": 285,
+    "codigo": "46.963",
+    "imagem": "linhas-componentes/May2025/PwQ6QGdhqoNhNvPdYGhS.jpg",
+    "descricao": "Cadeira Giratória, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/PwQ6QGdhqoNhNvPdYGhS.jpg"
+   },
+   {
+    "id": 286,
+    "codigo": "46.973",
+    "imagem": "linhas-componentes/May2025/ZFV3Pw0W8MD1r9kZyS1w.jpg",
+    "descricao": "Cadeira Giratória, com Braço",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Regulagem de altura base à gás / Base de 5 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/ZFV3Pw0W8MD1r9kZyS1w.jpg"
+   },
+   {
+    "id": 287,
+    "codigo": "46.022",
+    "imagem": "linhas-componentes/May2025/XQSOG7QxEBVH8fpTq7iz.jpg",
+    "descricao": "Banqueta Base Disco",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Base Disco",
+    "arquivo": "img/cavaletti/match/XQSOG7QxEBVH8fpTq7iz.jpg"
+   },
+   {
+    "id": 288,
+    "codigo": "46.062",
+    "imagem": "linhas-componentes/May2025/rWphE1nmFHKAzikcE9PD.jpg",
+    "descricao": "Banqueta Base Disco",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Base Disco",
+    "arquivo": "img/cavaletti/match/rWphE1nmFHKAzikcE9PD.jpg"
+   },
+   {
+    "id": 289,
+    "codigo": "46.072",
+    "imagem": "linhas-componentes/May2025/3SyyMQdURUTITurCkEBY.jpg",
+    "descricao": "Banqueta Base Disco",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Base Disco",
+    "arquivo": "img/cavaletti/match/3SyyMQdURUTITurCkEBY.jpg"
+   },
+   {
+    "id": 290,
+    "codigo": "46.020",
+    "imagem": "linhas-componentes/May2025/klT87ARlX6JVszmf6Trg.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/klT87ARlX6JVszmf6Trg.jpg"
+   },
+   {
+    "id": 291,
+    "codigo": "46.060",
+    "imagem": "linhas-componentes/May2025/TEjObm6Af1SlSHSNIb4Q.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/TEjObm6Af1SlSHSNIb4Q.jpg"
+   },
+   {
+    "id": 292,
+    "codigo": "46.070",
+    "imagem": "linhas-componentes/May2025/fbcIRIa2GamUTcCxJjra.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/fbcIRIa2GamUTcCxJjra.jpg"
+   },
+   {
+    "id": 591,
+    "codigo": "46.025",
+    "imagem": "linhas-componentes/March2026/sh1QBvT3Ac7WYzvSxjPA.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "650mm / Concha Plástica / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/sh1QBvT3Ac7WYzvSxjPA.jpg"
+   },
+   {
+    "id": 592,
+    "codigo": "46.085",
+    "imagem": "linhas-componentes/March2026/tluiQpTsMmGB1qa69R4g.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "650mm / Concha Plástica / Sobre-Assento Estofado / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/tluiQpTsMmGB1qa69R4g.jpg"
+   },
+   {
+    "id": 593,
+    "codigo": "46.095",
+    "imagem": "linhas-componentes/March2026/q3MeDYVylKj64rj8jpIH.jpg",
+    "descricao": "Banqueta Palito",
+    "url_pinterest": null,
+    "observacao": "650mm / Concha Estofada / Sobre-Assento estofado / Estrutura alta Pé Palito",
+    "arquivo": "img/cavaletti/match/q3MeDYVylKj64rj8jpIH.jpg"
+   },
+   {
+    "id": 657,
+    "codigo": "46.103",
+    "imagem": "linhas-componentes/July2026/khAcjcp9FgJt9IPYUy3D.jpg",
+    "descricao": "Cadeira Giratória, com Prancheta 360°",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/khAcjcp9FgJt9IPYUy3D.jpg"
+   },
+   {
+    "id": 658,
+    "codigo": "46.163",
+    "imagem": "linhas-componentes/July2026/KnSCNT7d3Pj2O8QC23B0.jpg",
+    "descricao": "Cadeira Giratória, com Prancheta 360°",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/KnSCNT7d3Pj2O8QC23B0.jpg"
+   },
+   {
+    "id": 659,
+    "codigo": "46.173",
+    "imagem": "linhas-componentes/July2026/Ib6ExKgfFWrSQQKT20RD.jpg",
+    "descricao": "Cadeira Giratória, com Prancheta 360°",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/Ib6ExKgfFWrSQQKT20RD.jpg"
+   },
+   {
+    "id": 660,
+    "codigo": "46.106",
+    "imagem": "linhas-componentes/May2026/3PNzMkhwjvaHBXGS7ODD.jpg",
+    "descricao": "Cadeira Palito com Rodízio, com Grade e Prancheta",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/3PNzMkhwjvaHBXGS7ODD.jpg"
+   },
+   {
+    "id": 661,
+    "codigo": "46.166",
+    "imagem": "linhas-componentes/May2026/xLCsqwmpPXaMPlsKkO21.jpg",
+    "descricao": "Cadeira Palito com Rodízio, com Grade e Prancheta",
+    "url_pinterest": null,
+    "observacao": "Concha Plástica / Sobre-Assento Estofado / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/xLCsqwmpPXaMPlsKkO21.jpg"
+   },
+   {
+    "id": 662,
+    "codigo": "46.176",
+    "imagem": "linhas-componentes/May2026/zJOmIbFGAPGxEWOXPk2V.jpg",
+    "descricao": "Cadeira Palito com Rodízio, com Grade e Prancheta",
+    "url_pinterest": null,
+    "observacao": "Concha Estofada / Sobre-Assento estofado / Porta livros / Base de 4 hastes / Rodízios 50mm",
+    "arquivo": "img/cavaletti/match/zJOmIbFGAPGxEWOXPk2V.jpg"
+   },
+   {
+    "id": 663,
+    "codigo": "46.177",
+    "imagem": "linhas-componentes/May2026/KATJhbn4u3JWMf9dWlaY.jpg",
+    "descricao": "Carrinho de Transporte",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo verificar em cada produto",
+    "arquivo": "img/cavaletti/match/KATJhbn4u3JWMf9dWlaY.jpg"
+   }
+  ],
+  "moov": [
+   {
+    "id": 300,
+    "codigo": "17101",
+    "imagem": "linhas-componentes/May2025/uHwHuCJUiH8gohekKMto.png",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Encosto em tela / Estrutura preta / Braço MC /  Base UP",
+    "arquivo": "img/cavaletti/moov/uHwHuCJUiH8gohekKMto.png"
+   },
+   {
+    "id": 301,
+    "codigo": "17201",
+    "imagem": "linhas-componentes/May2025/8yqiasBePNRdetjiwxWU.png",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Encosto em polímero de engenharia / Estrutura preta / Braço MC /  Base UP",
+    "arquivo": "img/cavaletti/moov/8yqiasBePNRdetjiwxWU.png"
+   },
+   {
+    "id": 302,
+    "codigo": "17301",
+    "imagem": "linhas-componentes/May2025/yidXWLdypu0gqCv9ZTcD.png",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Encosto em polímero de engenharia com sobrecapa / Estrutura preta / Braço MC /  Base UP",
+    "arquivo": "img/cavaletti/moov/yidXWLdypu0gqCv9ZTcD.png"
+   }
+  ],
+  "newnet-soft": [
+   {
+    "id": 303,
+    "codigo": "16.001 AC",
+    "imagem": "linhas-componentes/May2025/L9yG7SVTtjlbLFtnSmbL.jpg",
+    "descricao": "Presidente Giratória ",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Alumínio / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/L9yG7SVTtjlbLFtnSmbL.jpg"
+   },
+   {
+    "id": 304,
+    "codigo": "16.001",
+    "imagem": "linhas-componentes/May2025/sj4krzpCEKf62Poh5HY6.jpg",
+    "descricao": "Presidente Giratória ",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Estampada / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/sj4krzpCEKf62Poh5HY6.jpg"
+   },
+   {
+    "id": 305,
+    "codigo": "16.002",
+    "imagem": "linhas-componentes/May2025/xWjOZ9Fu4fzWxxHTPRX7.jpg",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Nylon / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/xWjOZ9Fu4fzWxxHTPRX7.jpg"
+   },
+   {
+    "id": 306,
+    "codigo": "16.003 SRE",
+    "imagem": "linhas-componentes/May2025/WYGWDsIoy0BcX7h7RIsV.jpg",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador do Encosto / Braço SL / Base Nylon / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/WYGWDsIoy0BcX7h7RIsV.jpg"
+   },
+   {
+    "id": 307,
+    "codigo": "16.006 S",
+    "imagem": "linhas-componentes/May2025/ZX0o6hs5C2gYeuptW6nQ.jpg",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços integrados / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/ZX0o6hs5C2gYeuptW6nQ.jpg"
+   },
+   {
+    "id": 308,
+    "codigo": "16.010",
+    "imagem": "linhas-componentes/May2025/Z7L7s2oWlxEz276VyNhU.jpg",
+    "descricao": "Longarina Executiva",
+    "url_pinterest": null,
+    "observacao": "L2048 Fixo / Braço Loop Intercalado / Sapata traseira com regulagem / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/Z7L7s2oWlxEz276VyNhU.jpg"
+   },
+   {
+    "id": 309,
+    "codigo": "16.010",
+    "imagem": "linhas-componentes/May2025/DqUdymYvyDh8U2NJqI1j.jpg",
+    "descricao": "Longarina Executiva",
+    "url_pinterest": null,
+    "observacao": "L2048 Fixo / Sapata traseira com regulagem / Poliéster Grafite 257",
+    "arquivo": "img/cavaletti/newnet-soft/DqUdymYvyDh8U2NJqI1j.jpg"
+   },
+   {
+    "id": 310,
+    "codigo": "16.501 AC",
+    "imagem": "linhas-componentes/May2025/NfLmFgOUet4GKt3kzkCl.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Alumínio / CEC - Stilo Bege 080",
+    "arquivo": "img/cavaletti/newnet-soft/NfLmFgOUet4GKt3kzkCl.jpg"
+   },
+   {
+    "id": 311,
+    "codigo": "16.501",
+    "imagem": "linhas-componentes/May2025/KXr83bxBl1M9DKaBU4bO.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço 3D / Base Estampada / CEC - Stilo Bege 080",
+    "arquivo": "img/cavaletti/newnet-soft/KXr83bxBl1M9DKaBU4bO.jpg"
+   },
+   {
+    "id": 312,
+    "codigo": "16.503 SRE",
+    "imagem": "linhas-componentes/May2025/G3GFghPeCIB9A3uPqTSf.jpg",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto / Braço SL New PU / Base Estampada / CEC - Stilo Bege 080",
+    "arquivo": "img/cavaletti/newnet-soft/G3GFghPeCIB9A3uPqTSf.jpg"
+   },
+   {
+    "id": 313,
+    "codigo": "16.506 S",
+    "imagem": "linhas-componentes/May2025/JZ90spN3W5LZRHP3ZJp1.jpg",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Integrados / CEC - Stilo Bege 080",
+    "arquivo": "img/cavaletti/newnet-soft/JZ90spN3W5LZRHP3ZJp1.jpg"
+   }
+  ],
+  "nuna": [
+   {
+    "id": 570,
+    "codigo": "51.003 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/Kwc7s2hEvdKRRPxVXsrX.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Base Viva 50 Nylon / Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/Kwc7s2hEvdKRRPxVXsrX.jpg"
+   },
+   {
+    "id": 571,
+    "codigo": "51.006 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/PLpaJE1M41tT8Cx4hl1O.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/PLpaJE1M41tT8Cx4hl1O.jpg"
+   },
+   {
+    "id": 572,
+    "codigo": "51.106 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/p6gpVbofthzoPhzTEvWU.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Porta livro / Prancheta dobrável com regulagem de profundidade / Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/p6gpVbofthzoPhzTEvWU.jpg"
+   },
+   {
+    "id": 573,
+    "codigo": "51.107 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/CuPfrrKMoLQSMTPVMCy7.jpg",
+    "descricao": "Cadeira ZI Rod.",
+    "url_pinterest": null,
+    "observacao": "Executiva Aproximação / Assento Rebatível / Braços Integrados / Estrutura Z com rodízios 50mm / Prancheta Escamoteável / Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/CuPfrrKMoLQSMTPVMCy7.jpg"
+   },
+   {
+    "id": 574,
+    "codigo": "51.903 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/t2TQjf797Wprg1fdOc5h.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Braços Integrados / Regulagem de altura base à gás / Base Viva 50 Nylon / Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/t2TQjf797Wprg1fdOc5h.jpg"
+   },
+   {
+    "id": 575,
+    "codigo": "51.906 | Encosto Plástico",
+    "imagem": "linhas-componentes/February2026/h2M171M19mqRguyPQN5M.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Braços Integrados / Encosto Plástico Grafite 45, frame do encosto Preto, assento Grid Azul Infinito 354 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/h2M171M19mqRguyPQN5M.jpg"
+   },
+   {
+    "id": 576,
+    "codigo": "51.063 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/f1SgGYxhLDYfxo5eDAj0.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Regulagem de altura base à gás / Base Viva 50 Nylon / Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/f1SgGYxhLDYfxo5eDAj0.jpg"
+   },
+   {
+    "id": 577,
+    "codigo": "51.066 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/vdDNqpfihVMHFKnvS13c.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/vdDNqpfihVMHFKnvS13c.jpg"
+   },
+   {
+    "id": 578,
+    "codigo": "51.166 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/XEbg9IivwSp80XjPtMoD.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Porta livro / Prancheta dobrável com regulagem de profundidade / Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/XEbg9IivwSp80XjPtMoD.jpg"
+   },
+   {
+    "id": 579,
+    "codigo": "51.167 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/jeCuZDEpe6MbERfze6Jw.jpg",
+    "descricao": "Cadeira ZI Rod.",
+    "url_pinterest": null,
+    "observacao": "Executiva Aproximação / Assento Rebatível / Braços Integrados / Estrutura Z com rodízios 50mm / Prancheta Escamoteável / Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/jeCuZDEpe6MbERfze6Jw.jpg"
+   },
+   {
+    "id": 580,
+    "codigo": "51.963 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/Rc97yvu50fPYMXfsmNi5.jpg",
+    "descricao": "Cadeira Giratória",
+    "url_pinterest": null,
+    "observacao": "Braços Integrados / Regulagem de altura base à gás / Base Viva 50 Nylon / Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/Rc97yvu50fPYMXfsmNi5.jpg"
+   },
+   {
+    "id": 581,
+    "codigo": "51.966 | Encosto Tela",
+    "imagem": "linhas-componentes/February2026/peqasPGmFxXkcKu3Uwg7.jpg",
+    "descricao": "Cadeira Fixa Palito",
+    "url_pinterest": null,
+    "observacao": "Braços Integrados / Encosto Tela V2 Branco Metal 307, frame do encosto Preto, assento Grid Bege Marfim 360 e estrutura Grafite Ultrafosco 80",
+    "arquivo": "img/cavaletti/nuna/peqasPGmFxXkcKu3Uwg7.jpg"
+   }
+  ],
+  "pibou": [
+   {
+    "id": 314,
+    "codigo": "48.352",
+    "imagem": "linhas-componentes/May2025/62RIUvicUaE7dfo34Vgk.jpg",
+    "descricao": "Puff Arredondado 350 ",
+    "url_pinterest": null,
+    "observacao": "L800 x A350 x P800",
+    "arquivo": "img/cavaletti/pibou/62RIUvicUaE7dfo34Vgk.jpg"
+   },
+   {
+    "id": 315,
+    "codigo": "48.452",
+    "imagem": "linhas-componentes/May2025/lZoCpeXNpyH9Zpg9HfE3.jpg",
+    "descricao": "Puff Arredondado 450",
+    "url_pinterest": null,
+    "observacao": "L800 x A450 x P810",
+    "arquivo": "img/cavaletti/pibou/lZoCpeXNpyH9Zpg9HfE3.jpg"
+   },
+   {
+    "id": 316,
+    "codigo": "48.752",
+    "imagem": "linhas-componentes/May2025/F7c78HnrjnHbouqOciMv.jpg",
+    "descricao": "Puff Arredondado 750 ",
+    "url_pinterest": null,
+    "observacao": "L800 x A750 x P795",
+    "arquivo": "img/cavaletti/pibou/F7c78HnrjnHbouqOciMv.jpg"
+   },
+   {
+    "id": 317,
+    "codigo": "48.351",
+    "imagem": "linhas-componentes/May2025/0bHgrLnJoPDLgdAKkkdf.jpg",
+    "descricao": "Puff Quadrado 350 ",
+    "url_pinterest": null,
+    "observacao": "L585 x A350 x P560",
+    "arquivo": "img/cavaletti/pibou/0bHgrLnJoPDLgdAKkkdf.jpg"
+   },
+   {
+    "id": 318,
+    "codigo": "48.451",
+    "imagem": "linhas-componentes/May2025/9i828zLZ80t6A4qcaY1j.jpg",
+    "descricao": "Puff Quadrado 450 ",
+    "url_pinterest": null,
+    "observacao": "L565 x A450 x P570",
+    "arquivo": "img/cavaletti/pibou/9i828zLZ80t6A4qcaY1j.jpg"
+   },
+   {
+    "id": 319,
+    "codigo": "48.751",
+    "imagem": "linhas-componentes/May2025/zSFrlXtBaeY24etzv3zm.jpg",
+    "descricao": "Puff Quadrado 750 ",
+    "url_pinterest": null,
+    "observacao": "L715 x A750 x P720",
+    "arquivo": "img/cavaletti/pibou/zSFrlXtBaeY24etzv3zm.jpg"
+   }
+  ],
+  "prime-e-master": [
+   {
+    "id": 320,
+    "codigo": "20.201",
+    "imagem": "linhas-componentes/May2025/JXrfxnXhnsf0YXHnAvtJ.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron Excêntrico / Braços Articuláveis / Base Alumínio",
+    "arquivo": "img/cavaletti/prime-e-master/JXrfxnXhnsf0YXHnAvtJ.png"
+   },
+   {
+    "id": 321,
+    "codigo": "20.202",
+    "imagem": "linhas-componentes/May2025/I2S56zTNzH3MIe9BLF7q.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron Excêntrico / Braços Articuláveis / Base Alumínio",
+    "arquivo": "img/cavaletti/prime-e-master/I2S56zTNzH3MIe9BLF7q.png"
+   },
+   {
+    "id": 322,
+    "codigo": "20.206 S",
+    "imagem": "linhas-componentes/May2025/ZmczRHp0Gaarc2heT1Th.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Articuláveis",
+    "arquivo": "img/cavaletti/prime-e-master/ZmczRHp0Gaarc2heT1Th.png"
+   },
+   {
+    "id": 323,
+    "codigo": "20.101",
+    "imagem": "linhas-componentes/September2026/DzcrAsq6IImLoam8rLgx.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braços Fixos / Base Estampada",
+    "arquivo": "img/cavaletti/prime-e-master/DzcrAsq6IImLoam8rLgx.jpg"
+   },
+   {
+    "id": 324,
+    "codigo": "20.102",
+    "imagem": "linhas-componentes/September2026/3UWfbWcht0j9H3h0hbAH.jpg",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braços Fixos / Base Estampada",
+    "arquivo": "img/cavaletti/prime-e-master/3UWfbWcht0j9H3h0hbAH.jpg"
+   },
+   {
+    "id": 325,
+    "codigo": "20.103",
+    "imagem": "linhas-componentes/September2026/5JNWUidv4k9mM1iSeJ7k.jpg",
+    "descricao": "Diretor Giratória Extra",
+    "url_pinterest": null,
+    "observacao": "Relax / Braços Fixos /Base Estampada / Extra 140 kg",
+    "arquivo": "img/cavaletti/prime-e-master/5JNWUidv4k9mM1iSeJ7k.jpg"
+   },
+   {
+    "id": 326,
+    "codigo": "20.106 S",
+    "imagem": "linhas-componentes/May2025/ZAqP8OWQLT087k4DvMzb.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Fixos",
+    "arquivo": "img/cavaletti/prime-e-master/ZAqP8OWQLT087k4DvMzb.png"
+   },
+   {
+    "id": 327,
+    "codigo": "20.001",
+    "imagem": "linhas-componentes/September2026/DXBTykUgTf4NzyTaNuos.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braços Fixos / Base Alumínio",
+    "arquivo": "img/cavaletti/prime-e-master/DXBTykUgTf4NzyTaNuos.jpg"
+   },
+   {
+    "id": 328,
+    "codigo": "20.002",
+    "imagem": "linhas-componentes/September2026/QlPJfMsfuEtaE52yabGd.jpg",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braços Fixos / Base Estampada",
+    "arquivo": "img/cavaletti/prime-e-master/QlPJfMsfuEtaE52yabGd.jpg"
+   },
+   {
+    "id": 329,
+    "codigo": "20.006 S",
+    "imagem": "linhas-componentes/May2025/uZ49bruC8ebNgSBJdkUN.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Braços Fixos / Estrutura Balanço (S)",
+    "arquivo": "img/cavaletti/prime-e-master/uZ49bruC8ebNgSBJdkUN.png"
+   }
+  ],
+  "pro": [
+   {
+    "id": 330,
+    "codigo": "38.001 L AC",
+    "imagem": "linhas-componentes/May2025/5HjjMZp3EOIYH8uabDkN.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço SL / Base Alumínio",
+    "arquivo": "img/cavaletti/pro/5HjjMZp3EOIYH8uabDkN.png"
+   },
+   {
+    "id": 331,
+    "codigo": "38.001 L AC",
+    "imagem": "linhas-componentes/May2025/9cYXBZVy1uWz8e7tC81y.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/pro/9cYXBZVy1uWz8e7tC81y.png"
+   },
+   {
+    "id": 332,
+    "codigo": "38.001 L",
+    "imagem": "linhas-componentes/May2025/ILypLpdZLUbSRZsSawy0.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço SL New PU / Base Aço com Capa",
+    "arquivo": "img/cavaletti/pro/ILypLpdZLUbSRZsSawy0.png"
+   },
+   {
+    "id": 333,
+    "codigo": "38.001 SRE",
+    "imagem": "linhas-componentes/May2025/Ol5ZNlUY5QEqu13wUENy.png",
+    "descricao": "Operacional Alta",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador do Encosto / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/pro/Ol5ZNlUY5QEqu13wUENy.png"
+   },
+   {
+    "id": 334,
+    "codigo": "38.003 SRE",
+    "imagem": "linhas-componentes/May2025/yvoCHHIVm26h7xQ1FVx4.png",
+    "descricao": "Operacional Média",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador do Encosto / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/pro/yvoCHHIVm26h7xQ1FVx4.png"
+   },
+   {
+    "id": 335,
+    "codigo": "38.022 SRE",
+    "imagem": "linhas-componentes/May2025/XDsKk8Gf8ATRzPEUmfNU.png",
+    "descricao": "Stool Média",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador do Encosto / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/pro/XDsKk8Gf8ATRzPEUmfNU.png"
+   },
+   {
+    "id": 336,
+    "codigo": "38.006 SI",
+    "imagem": "linhas-componentes/May2025/iYLTq4d69QXUuq3vXBRt.png",
+    "descricao": "Aproximação Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados",
+    "arquivo": "img/cavaletti/pro/iYLTq4d69QXUuq3vXBRt.png"
+   },
+   {
+    "id": 337,
+    "codigo": "38.006 S",
+    "imagem": "linhas-componentes/May2025/jjPpZoODa9jhQ7ESAhmo.png",
+    "descricao": "Aproximação Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura S",
+    "arquivo": "img/cavaletti/pro/jjPpZoODa9jhQ7ESAhmo.png"
+   },
+   {
+    "id": 338,
+    "codigo": "38.007 SI",
+    "imagem": "linhas-componentes/May2025/fsYuIDjbPvShONWIx81N.png",
+    "descricao": "Aproximação Média",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados",
+    "arquivo": "img/cavaletti/pro/fsYuIDjbPvShONWIx81N.png"
+   },
+   {
+    "id": 339,
+    "codigo": "38.007 S",
+    "imagem": "linhas-componentes/May2025/MwTGafJpLKGSSXrnPxb8.png",
+    "descricao": "Aproximação Média",
+    "url_pinterest": null,
+    "observacao": "Estrutura S",
+    "arquivo": "img/cavaletti/pro/MwTGafJpLKGSSXrnPxb8.png"
+   },
+   {
+    "id": 340,
+    "codigo": "38.010",
+    "imagem": "linhas-componentes/May2025/Csksdw0sQSNMr66cw2XU.png",
+    "descricao": "Longarina Média",
+    "url_pinterest": null,
+    "observacao": "Sapata traseira com regulagem",
+    "arquivo": "img/cavaletti/pro/Csksdw0sQSNMr66cw2XU.png"
+   },
+   {
+    "id": 341,
+    "codigo": "38.010",
+    "imagem": "linhas-componentes/May2025/APdFb97BXdCEVQfFjTXr.png",
+    "descricao": "Longarina Média",
+    "url_pinterest": null,
+    "observacao": "Braços Intercalado Americano / Sapata traseira com regulagem",
+    "arquivo": "img/cavaletti/pro/APdFb97BXdCEVQfFjTXr.png"
+   }
+  ],
+  "raya": [
+   {
+    "id": 342,
+    "codigo": "36.306",
+    "imagem": "linhas-componentes/May2025/c3CZHNhUEUhiFdy3b12T.jpg",
+    "descricao": "Poltrona Azul Mediterrâneo",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com sapatas",
+    "arquivo": "img/cavaletti/raya/c3CZHNhUEUhiFdy3b12T.jpg"
+   },
+   {
+    "id": 343,
+    "codigo": "36306",
+    "imagem": "linhas-componentes/May2025/TtyrskVb9SiczbenHbFm.jpg",
+    "descricao": "Poltrona Cinza Neblina",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com sapatas",
+    "arquivo": "img/cavaletti/raya/TtyrskVb9SiczbenHbFm.jpg"
+   },
+   {
+    "id": 344,
+    "codigo": "36.306",
+    "imagem": "linhas-componentes/May2025/usXTevdQt9s00PXwIzAP.jpg",
+    "descricao": "Poltrona Vermelho Coral",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com sapatas",
+    "arquivo": "img/cavaletti/raya/usXTevdQt9s00PXwIzAP.jpg"
+   },
+   {
+    "id": 345,
+    "codigo": "36.306",
+    "imagem": "linhas-componentes/May2025/rrUUZbZE1MiSkxOQnePo.jpg",
+    "descricao": "Poltrona Nude Pérola",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com sapatas",
+    "arquivo": "img/cavaletti/raya/rrUUZbZE1MiSkxOQnePo.jpg"
+   },
+   {
+    "id": 346,
+    "codigo": "36.306",
+    "imagem": "linhas-componentes/May2025/GvJk6kwvPpRy4EvGtzNB.jpg",
+    "descricao": "Poltrona Preto Abissal",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com sapatas",
+    "arquivo": "img/cavaletti/raya/GvJk6kwvPpRy4EvGtzNB.jpg"
+   },
+   {
+    "id": 347,
+    "codigo": "36.311",
+    "imagem": "linhas-componentes/May2025/IiVV0WgVznwYob4W4iHr.jpg",
+    "descricao": "Ottoman",
+    "url_pinterest": null,
+    "observacao": "Apoio para os pés com sapatas",
+    "arquivo": "img/cavaletti/raya/IiVV0WgVznwYob4W4iHr.jpg"
+   }
+  ],
+  "rimeva": [
+   {
+    "id": 482,
+    "codigo": "26.506",
+    "imagem": "linhas-componentes/August2025/ahtVqbBeLRJjoCfP8PaZ.jpg",
+    "descricao": "Poltrona Individual",
+    "url_pinterest": null,
+    "observacao": "Em Grani Bege Duna 283 e Madeira Ebanizada",
+    "arquivo": "img/cavaletti/rimeva/ahtVqbBeLRJjoCfP8PaZ.jpg"
+   },
+   {
+    "id": 483,
+    "codigo": "26.510",
+    "imagem": "linhas-componentes/August2025/NwoH1jvwR5fPzVJ0vH7M.jpg",
+    "descricao": "Longarina 2L",
+    "url_pinterest": null,
+    "observacao": "Em Grani Bege Duna 283 e Madeira Ebanizada",
+    "arquivo": "img/cavaletti/rimeva/NwoH1jvwR5fPzVJ0vH7M.jpg"
+   },
+   {
+    "id": 484,
+    "codigo": "26.510",
+    "imagem": "linhas-componentes/August2025/BGZcm3xr28pKKDNG7CnG.jpg",
+    "descricao": "Longarina 3L",
+    "url_pinterest": null,
+    "observacao": "Em Grani Bege Duna 283 e Madeira Ebanizada",
+    "arquivo": "img/cavaletti/rimeva/BGZcm3xr28pKKDNG7CnG.jpg"
+   },
+   {
+    "id": 485,
+    "codigo": "26.503",
+    "imagem": "linhas-componentes/August2025/yHw05PYIpxDqqlh0Hq7M.jpg",
+    "descricao": "Poltrona Obeso*",
+    "url_pinterest": null,
+    "observacao": "Em Grani Bege Duna 283 e Madeira Ebanizada / *Poltrona em conformidade com a NBR 9050",
+    "arquivo": "img/cavaletti/rimeva/yHw05PYIpxDqqlh0Hq7M.jpg"
+   },
+   {
+    "id": 486,
+    "codigo": "26.581",
+    "imagem": "linhas-componentes/August2025/irhDHbtZrnUy6luNJxGt.jpg",
+    "descricao": " Mesa Rimeva",
+    "url_pinterest": null,
+    "observacao": "Madeira Ebanizada",
+    "arquivo": "img/cavaletti/rimeva/irhDHbtZrnUy6luNJxGt.jpg"
+   }
+  ],
+  "slim": [
+   {
+    "id": 348,
+    "codigo": "18.001",
+    "imagem": "linhas-componentes/May2025/ins7eFqMxKFwwLoUjPhj.jpg",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço SL / Base Alumínio",
+    "arquivo": "img/cavaletti/slim/ins7eFqMxKFwwLoUjPhj.jpg"
+   },
+   {
+    "id": 349,
+    "codigo": "18.002",
+    "imagem": "linhas-componentes/May2025/GsQvVlTVbD40ytKIM4d2.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braço SL / Base Estampada",
+    "arquivo": "img/cavaletti/slim/GsQvVlTVbD40ytKIM4d2.png"
+   },
+   {
+    "id": 350,
+    "codigo": "18.004 SRE",
+    "imagem": "linhas-componentes/March2026/WUF1fOSpuZPZm5oAPN8k.jpg",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto / Braço SL / Base Nylon",
+    "arquivo": "img/cavaletti/slim/WUF1fOSpuZPZm5oAPN8k.jpg"
+   },
+   {
+    "id": 351,
+    "codigo": "18.006 Z ROD",
+    "imagem": "linhas-componentes/May2025/3ADUFQKpqArHpqLjBcLt.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Z com Rodízios / Braços Integrados",
+    "arquivo": "img/cavaletti/slim/3ADUFQKpqArHpqLjBcLt.png"
+   },
+   {
+    "id": 352,
+    "codigo": "18.006 Z",
+    "imagem": "linhas-componentes/May2025/0HylOOOq22xMtBO7DiNT.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Z / Braços Integrados",
+    "arquivo": "img/cavaletti/slim/0HylOOOq22xMtBO7DiNT.png"
+   },
+   {
+    "id": 353,
+    "codigo": "18.006 P",
+    "imagem": "linhas-componentes/May2025/akm7mTEuAjdizf459HqF.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura P / Braços Integrados",
+    "arquivo": "img/cavaletti/slim/akm7mTEuAjdizf459HqF.png"
+   },
+   {
+    "id": 354,
+    "codigo": "18.006 S",
+    "imagem": "linhas-componentes/May2025/4I1G2alJZiZnrSu6IiGV.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Integrados",
+    "arquivo": "img/cavaletti/slim/4I1G2alJZiZnrSu6IiGV.png"
+   },
+   {
+    "id": 355,
+    "codigo": "18.007 S",
+    "imagem": "linhas-componentes/May2025/XAd4xt79Z8MlTlFKkjdT.jpg",
+    "descricao": "Secretária Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braços Integrados",
+    "arquivo": "img/cavaletti/slim/XAd4xt79Z8MlTlFKkjdT.jpg"
+   },
+   {
+    "id": 356,
+    "codigo": "18.010",
+    "imagem": "linhas-componentes/May2025/IQHfS8XuvRE8TCTRRKR2.jpg",
+    "descricao": "Diretor Longarina",
+    "url_pinterest": null,
+    "observacao": "Braço Z Intercalado / Opcional sem braços / Sapata traseira com regulagem",
+    "arquivo": "img/cavaletti/slim/IQHfS8XuvRE8TCTRRKR2.jpg"
+   }
+  ],
+  "solo": [
+   {
+    "id": 357,
+    "codigo": "36.101",
+    "imagem": "linhas-componentes/May2025/vL4oBOeBs8BbxAv6hd0b.png",
+    "descricao": "Poltrona Giratória",
+    "url_pinterest": null,
+    "observacao": "Base em Alumínio polido",
+    "arquivo": "img/cavaletti/solo/vL4oBOeBs8BbxAv6hd0b.png"
+   },
+   {
+    "id": 358,
+    "codigo": "36.102",
+    "imagem": "linhas-componentes/May2025/pGYyJPE3CVzygiyaZC5z.png",
+    "descricao": "Ottoman Giratório",
+    "url_pinterest": null,
+    "observacao": "Base em Alumínio polido",
+    "arquivo": "img/cavaletti/solo/pGYyJPE3CVzygiyaZC5z.png"
+   },
+   {
+    "id": 359,
+    "codigo": "36.111",
+    "imagem": "linhas-componentes/May2025/DXSL4XELIo94ag3vXIcF.png",
+    "descricao": "Poltrona Fixa",
+    "url_pinterest": null,
+    "observacao": "Base Frame",
+    "arquivo": "img/cavaletti/solo/DXSL4XELIo94ag3vXIcF.png"
+   },
+   {
+    "id": 360,
+    "codigo": "36.112",
+    "imagem": "linhas-componentes/May2025/2hiti6fIoJXp993jPEA4.png",
+    "descricao": "Ottoman Fixo",
+    "url_pinterest": null,
+    "observacao": "Base Frame",
+    "arquivo": "img/cavaletti/solo/2hiti6fIoJXp993jPEA4.png"
+   },
+   {
+    "id": 361,
+    "codigo": "36.113",
+    "imagem": "linhas-componentes/May2025/jAHQRPegF8eGmVYj1AIC.png",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Base Frame / 490mm larg. x 475mm prof. x 350mm alt.",
+    "arquivo": "img/cavaletti/solo/jAHQRPegF8eGmVYj1AIC.png"
+   },
+   {
+    "id": 362,
+    "codigo": "36.114",
+    "imagem": "linhas-componentes/May2025/HMQ3tgZHslJpnSNDflue.png",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Base Frame / 490mm larg. x 475mm prof. x 450mm alt.",
+    "arquivo": "img/cavaletti/solo/HMQ3tgZHslJpnSNDflue.png"
+   },
+   {
+    "id": 363,
+    "codigo": "36.115",
+    "imagem": "linhas-componentes/May2025/jGUF0vxr2a2u939AldqM.png",
+    "descricao": "Mesa Lateral",
+    "url_pinterest": null,
+    "observacao": "Base Frame / 490mm larg. x 475mm prof. x 550mm alt.",
+    "arquivo": "img/cavaletti/solo/jGUF0vxr2a2u939AldqM.png"
+   }
+  ],
+  "spero": [
+   {
+    "id": 558,
+    "codigo": "49.101",
+    "imagem": "linhas-componentes/February2026/aueq4foDdZPC2u1j6e00.jpg",
+    "descricao": "Banco 1L",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/aueq4foDdZPC2u1j6e00.jpg"
+   },
+   {
+    "id": 559,
+    "codigo": "49.102",
+    "imagem": "linhas-componentes/February2026/y4JoUmcsA1KqXT5i9kXj.jpg",
+    "descricao": "Sofá Central 1L",
+    "url_pinterest": null,
+    "observacao": "Encosto / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/y4JoUmcsA1KqXT5i9kXj.jpg"
+   },
+   {
+    "id": 560,
+    "codigo": "49.103",
+    "imagem": "linhas-componentes/February2026/NpLkCAZBSec7nYqBXYQG.jpg",
+    "descricao": "Sofá Canto 1L",
+    "url_pinterest": null,
+    "observacao": "Braço e Encosto / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/NpLkCAZBSec7nYqBXYQG.jpg"
+   },
+   {
+    "id": 561,
+    "codigo": "49.104",
+    "imagem": "linhas-componentes/February2026/twig3X7NuhTaoaS2N1WQ.jpg",
+    "descricao": "Sofá Curvo Externo 1L",
+    "url_pinterest": null,
+    "observacao": "Encosto / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/twig3X7NuhTaoaS2N1WQ.jpg"
+   },
+   {
+    "id": 562,
+    "codigo": "49.105",
+    "imagem": "linhas-componentes/February2026/SbahesJzzc0do3XLXzcZ.jpg",
+    "descricao": "Sofá Curvo Interno 1L",
+    "url_pinterest": null,
+    "observacao": "Encosto / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/SbahesJzzc0do3XLXzcZ.jpg"
+   },
+   {
+    "id": 563,
+    "codigo": "49.106",
+    "imagem": "linhas-componentes/February2026/lJgR2bCu9ARAVMh6p1FR.jpg",
+    "descricao": "Banco Curvo 1L",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/lJgR2bCu9ARAVMh6p1FR.jpg"
+   },
+   {
+    "id": 564,
+    "codigo": "49.107",
+    "imagem": "linhas-componentes/February2026/plCCsYq1fjJC4V04RBzV.jpg",
+    "descricao": "Banco 2L",
+    "url_pinterest": null,
+    "observacao": "Módulo ponta / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/plCCsYq1fjJC4V04RBzV.jpg"
+   },
+   {
+    "id": 565,
+    "codigo": "49.201",
+    "imagem": "linhas-componentes/February2026/HtebHjT8SVLM1VY1X6Vy.jpg",
+    "descricao": "Banco 2L",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/HtebHjT8SVLM1VY1X6Vy.jpg"
+   },
+   {
+    "id": 566,
+    "codigo": "49.202",
+    "imagem": "linhas-componentes/February2026/OeuDbg3sftdiEO2bxRw9.jpg",
+    "descricao": "Sofá Central 2L",
+    "url_pinterest": null,
+    "observacao": "Encosto / Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/OeuDbg3sftdiEO2bxRw9.jpg"
+   },
+   {
+    "id": 567,
+    "codigo": "49.203",
+    "imagem": "linhas-componentes/February2026/OhfqtYbkZwQSZ9L9yR6p.jpg",
+    "descricao": "Sofá Canto 2L",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/OhfqtYbkZwQSZ9L9yR6p.jpg"
+   },
+   {
+    "id": 568,
+    "codigo": "49.204",
+    "imagem": "linhas-componentes/February2026/N6rGdQTqSSpbhFOSLgBG.jpg",
+    "descricao": "Sofá Central e Banco",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/N6rGdQTqSSpbhFOSLgBG.jpg"
+   },
+   {
+    "id": 569,
+    "codigo": "49.205",
+    "imagem": "linhas-componentes/February2026/NtdWePmnQTj8HPEmRKts.jpg",
+    "descricao": "Sofá Central e Canto",
+    "url_pinterest": null,
+    "observacao": "Em Grid Rosa Camélia 351 e estrutura Cinza Brilhante 12",
+    "arquivo": "img/cavaletti/spero/NtdWePmnQTj8HPEmRKts.jpg"
+   }
+  ],
+  "spin": [
+   {
+    "id": 364,
+    "codigo": "36.812",
+    "imagem": "linhas-componentes/May2025/8kktAkEStTVDgXlEhsD1.png",
+    "descricao": "Conjunto High-Back ",
+    "url_pinterest": null,
+    "observacao": "1200mm / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/8kktAkEStTVDgXlEhsD1.png"
+   },
+   {
+    "id": 365,
+    "codigo": "36.813",
+    "imagem": "linhas-componentes/May2025/xVL2X2rP4cyFFIHHLlic.png",
+    "descricao": "Módulo Reto ",
+    "url_pinterest": null,
+    "observacao": "1300mm / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/xVL2X2rP4cyFFIHHLlic.png"
+   },
+   {
+    "id": 366,
+    "codigo": "36.865",
+    "imagem": "linhas-componentes/May2025/AKPGOo6gX9FFLWTup4UC.png",
+    "descricao": "Módulo Reto",
+    "url_pinterest": null,
+    "observacao": " 650mm / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/AKPGOo6gX9FFLWTup4UC.png"
+   },
+   {
+    "id": 367,
+    "codigo": "36.805",
+    "imagem": "linhas-componentes/May2025/DJlamNzrebqvSebpzHP6.png",
+    "descricao": "Módulo Mesa",
+    "url_pinterest": null,
+    "observacao": "Tampo somente em Melamínico Branco / Conexão USB opcional / 655mm larg. x 315mm prof. x 430mm alt.",
+    "arquivo": "img/cavaletti/spin/DJlamNzrebqvSebpzHP6.png"
+   },
+   {
+    "id": 368,
+    "codigo": "36.845 IN",
+    "imagem": "linhas-componentes/May2025/lYZsFW764bagMsRUbDo0.png",
+    "descricao": "Módulo Curvo Encosto",
+    "url_pinterest": null,
+    "observacao": "Interno 45º",
+    "arquivo": "img/cavaletti/spin/lYZsFW764bagMsRUbDo0.png"
+   },
+   {
+    "id": 369,
+    "codigo": "36.890 IN",
+    "imagem": "linhas-componentes/May2025/6o2Y1djCUwYaFcV59iGb.png",
+    "descricao": "Módulo Curvo Encosto",
+    "url_pinterest": null,
+    "observacao": "Interno 90º / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/6o2Y1djCUwYaFcV59iGb.png"
+   },
+   {
+    "id": 370,
+    "codigo": "36.818",
+    "imagem": "linhas-componentes/May2025/euPo165exdoXQwaWoXSL.png",
+    "descricao": "Módulo Ponta Encosto",
+    "url_pinterest": null,
+    "observacao": "Encosto Interno 180º / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/euPo165exdoXQwaWoXSL.png"
+   },
+   {
+    "id": 371,
+    "codigo": "36.845 EX",
+    "imagem": "linhas-componentes/May2025/rYDKYEowCJI3a3Zs34XF.png",
+    "descricao": "Módulo Curvo Encosto",
+    "url_pinterest": null,
+    "observacao": "Externo 45º",
+    "arquivo": "img/cavaletti/spin/rYDKYEowCJI3a3Zs34XF.png"
+   },
+   {
+    "id": 372,
+    "codigo": "36.890 EX",
+    "imagem": "linhas-componentes/May2025/lW2EArec6n6ECiu5ntB1.png",
+    "descricao": "Módulo Curvo Encosto",
+    "url_pinterest": null,
+    "observacao": "Externo 90º / Conexão USB opcional",
+    "arquivo": "img/cavaletti/spin/lW2EArec6n6ECiu5ntB1.png"
+   },
+   {
+    "id": 374,
+    "codigo": "38.030",
+    "imagem": "linhas-componentes/May2025/LWOPtC32SBl27jKF10Xx.png",
+    "descricao": "Puff Redondo",
+    "url_pinterest": null,
+    "observacao": "Alça em couro",
+    "arquivo": "img/cavaletti/spin/LWOPtC32SBl27jKF10Xx.png"
+   },
+   {
+    "id": 375,
+    "codigo": "38.035",
+    "imagem": "linhas-componentes/May2025/w5M5FDcx4mOarkcW9hmr.png",
+    "descricao": "Puff Redondo Ginga",
+    "url_pinterest": null,
+    "observacao": "Alça em couro",
+    "arquivo": "img/cavaletti/spin/w5M5FDcx4mOarkcW9hmr.png"
+   },
+   {
+    "id": 376,
+    "codigo": "36.812",
+    "imagem": "linhas-componentes/May2025/iTbRlOraYtF2uXXYARy6.jpeg",
+    "descricao": "Módulo Reto sem Encosto",
+    "url_pinterest": null,
+    "observacao": "1200mm",
+    "arquivo": "img/cavaletti/spin/iTbRlOraYtF2uXXYARy6.jpeg"
+   },
+   {
+    "id": 377,
+    "codigo": "36.812",
+    "imagem": "linhas-componentes/May2025/N3NfJko4vkZoCvkTqNbU.jpeg",
+    "descricao": "Módulo Reto Transição Lado",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/spin/N3NfJko4vkZoCvkTqNbU.jpeg"
+   },
+   {
+    "id": 378,
+    "codigo": "36.812",
+    "imagem": "linhas-componentes/May2025/qyZcyVOd058MjeL7stM2.jpeg",
+    "descricao": "Módulo Reto Transição LD",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/spin/qyZcyVOd058MjeL7stM2.jpeg"
+   },
+   {
+    "id": 379,
+    "codigo": "36.812",
+    "imagem": "linhas-componentes/May2025/jTxjUjQd8C2NFLRzv848.jpeg",
+    "descricao": "Módulo Reto Transição LE",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/spin/jTxjUjQd8C2NFLRzv848.jpeg"
+   },
+   {
+    "id": 380,
+    "codigo": "36.824",
+    "imagem": "linhas-componentes/August2025/7X8jZX9cxHQnpCXWhfsH.jpg",
+    "descricao": "Banqueta Giratória",
+    "url_pinterest": null,
+    "observacao": "445mm larg. x 425mm prof. x 705mm alt.",
+    "arquivo": "img/cavaletti/spin/7X8jZX9cxHQnpCXWhfsH.jpg"
+   },
+   {
+    "id": 381,
+    "codigo": "36.814",
+    "imagem": "linhas-componentes/August2025/TYufUBWc6JChp0RLeZNi.jpg",
+    "descricao": "Banqueta Spin 705 mm",
+    "url_pinterest": null,
+    "observacao": "445mm larg. x 335mm prof. x 705mm alt.",
+    "arquivo": "img/cavaletti/spin/TYufUBWc6JChp0RLeZNi.jpg"
+   },
+   {
+    "id": 382,
+    "codigo": "36.802",
+    "imagem": "linhas-componentes/August2025/0S67LfX4htu2m1YtxuIt.jpg",
+    "descricao": "Banqueta Spin 455mm",
+    "url_pinterest": null,
+    "observacao": "355mm larg. x 345mm prof. x 455mm alt.",
+    "arquivo": "img/cavaletti/spin/0S67LfX4htu2m1YtxuIt.jpg"
+   },
+   {
+    "id": 383,
+    "codigo": "36.801",
+    "imagem": "linhas-componentes/May2025/DTzgkFZsonT37aNMTenS.png",
+    "descricao": "Aparador Spin",
+    "url_pinterest": null,
+    "observacao": "Tampo somente em Melamínico Branco / 1230mm larg. x 425mm prof. x 1035mm alt.",
+    "arquivo": "img/cavaletti/spin/DTzgkFZsonT37aNMTenS.png"
+   },
+   {
+    "id": 384,
+    "codigo": "36.803",
+    "imagem": "linhas-componentes/May2025/CbSsjJTcUULiaUM3FXln.png",
+    "descricao": "Mesa Spin",
+    "url_pinterest": null,
+    "observacao": "Tampo somente em Melamínico Branco / 505mm larg. x 385mm prof. x 675mm alt.",
+    "arquivo": "img/cavaletti/spin/CbSsjJTcUULiaUM3FXln.png"
+   },
+   {
+    "id": 385,
+    "codigo": "36.805",
+    "imagem": "linhas-componentes/May2025/CueWgq7ngjD8kpcBOP5j.png",
+    "descricao": "Mesa Redonda 1200mm",
+    "url_pinterest": null,
+    "observacao": "1200mm larg. x 1200mm prof. x 725mm alt.",
+    "arquivo": "img/cavaletti/spin/CueWgq7ngjD8kpcBOP5j.png"
+   },
+   {
+    "id": 386,
+    "codigo": "36.805",
+    "imagem": "linhas-componentes/May2025/l42E6EpoUtylrTwBFYrM.png",
+    "descricao": "Mesa Quadrada 750 x 750mm",
+    "url_pinterest": null,
+    "observacao": "750mm larg. x 750mm prof. x 725mm alt.",
+    "arquivo": "img/cavaletti/spin/l42E6EpoUtylrTwBFYrM.png"
+   },
+   {
+    "id": 387,
+    "codigo": "11.801 4L",
+    "imagem": "linhas-componentes/May2025/Q7hXO1KsBYVoGRESzKMs.png",
+    "descricao": "Mesa Retangular",
+    "url_pinterest": null,
+    "observacao": "Conexão USB/ Elétrica opcional / 1300mm larg. x 600mm prof. x 725mm alt.",
+    "arquivo": "img/cavaletti/spin/Q7hXO1KsBYVoGRESzKMs.png"
+   },
+   {
+    "id": 531,
+    "codigo": "36.845",
+    "imagem": "linhas-componentes/November2025/kHhrZDmPqMmLRVP7wyVD.jpeg",
+    "descricao": "Curvo IN Fechamento EX",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/spin/kHhrZDmPqMmLRVP7wyVD.jpeg"
+   }
+  ],
+  "spot": [
+   {
+    "id": 388,
+    "codigo": "36.060",
+    "imagem": "linhas-componentes/May2025/WBVqmgXqLzKef9KjwVUl.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Alumínio 4 hastes / Concha em madeira com estofamento",
+    "arquivo": "img/cavaletti/spot/WBVqmgXqLzKef9KjwVUl.png"
+   },
+   {
+    "id": 389,
+    "codigo": "36.010",
+    "imagem": "linhas-componentes/May2025/hVzGQv7lNVcRQHQFI6xT.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Alumínio Disco",
+    "arquivo": "img/cavaletti/spot/hVzGQv7lNVcRQHQFI6xT.png"
+   },
+   {
+    "id": 390,
+    "codigo": "36.010",
+    "imagem": "linhas-componentes/May2025/Wh7TfBLdi8Y8xkmEXFV9.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Fixa ou Giratória / Base 4 Pés",
+    "arquivo": "img/cavaletti/spot/Wh7TfBLdi8Y8xkmEXFV9.png"
+   },
+   {
+    "id": 391,
+    "codigo": "36.040",
+    "imagem": "linhas-componentes/May2025/x1w463CG0r2YfbGMJdXn.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Estrutura Arco",
+    "arquivo": "img/cavaletti/spot/x1w463CG0r2YfbGMJdXn.png"
+   },
+   {
+    "id": 392,
+    "codigo": "36.050",
+    "imagem": "linhas-componentes/May2025/pcR9MmMIDQ8oDMacyxYv.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Fixa ou Giratória",
+    "arquivo": "img/cavaletti/spot/pcR9MmMIDQ8oDMacyxYv.png"
+   },
+   {
+    "id": 393,
+    "codigo": "36.060",
+    "imagem": "linhas-componentes/May2025/7HqOPt6evR8Ib3DaAyk4.png",
+    "descricao": "Poltrona Espera",
+    "url_pinterest": null,
+    "observacao": "Giratória / Base Alumínio 4 hastes / Concha Estofada",
+    "arquivo": "img/cavaletti/spot/7HqOPt6evR8Ib3DaAyk4.png"
+   }
+  ],
+  "start": [
+   {
+    "id": 394,
+    "codigo": "4.001",
+    "imagem": "linhas-componentes/May2025/TnmUYZeIOKhz8n13ACa0.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start/TnmUYZeIOKhz8n13ACa0.png"
+   },
+   {
+    "id": 395,
+    "codigo": "4.002",
+    "imagem": "linhas-componentes/May2025/fOTiNRZKXb45bVMrGak9.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start/fOTiNRZKXb45bVMrGak9.png"
+   },
+   {
+    "id": 396,
+    "codigo": "4.003",
+    "imagem": "linhas-componentes/September2026/VnLShu8q5nJmyqKhUzWV.jpg",
+    "descricao": "Diretor Giratória Extra",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL com Regulagem Lateral / Base Estampada / 140kg",
+    "arquivo": "img/cavaletti/start/VnLShu8q5nJmyqKhUzWV.jpg"
+   },
+   {
+    "id": 397,
+    "codigo": "4.006 S",
+    "imagem": "linhas-componentes/May2025/qQWikUPKbuGKSkfYY6SF.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braço Americano",
+    "arquivo": "img/cavaletti/start/qQWikUPKbuGKSkfYY6SF.png"
+   },
+   {
+    "id": 398,
+    "codigo": "4.006 PUE",
+    "imagem": "linhas-componentes/May2025/QVpTJU1ioGM4S1aAvRSV.png",
+    "descricao": "Diretor Universitária",
+    "url_pinterest": null,
+    "observacao": "Prancheta Escamoteável / Braço Americano",
+    "arquivo": "img/cavaletti/start/QVpTJU1ioGM4S1aAvRSV.png"
+   },
+   {
+    "id": 399,
+    "codigo": "4.103",
+    "imagem": "linhas-componentes/May2025/tVGuYesmeMT8bBlsTu0a.png",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema de Reclinação do Encosto / Braço SL New PU / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start/tVGuYesmeMT8bBlsTu0a.png"
+   },
+   {
+    "id": 400,
+    "codigo": "4107 S",
+    "imagem": "linhas-componentes/May2025/IsmTUjfY8JRgNkJJXSnD.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S",
+    "arquivo": "img/cavaletti/start/IsmTUjfY8JRgNkJJXSnD.png"
+   },
+   {
+    "id": 401,
+    "codigo": "4.123",
+    "imagem": "linhas-componentes/May2025/k7MA9Hq82wMHQWHHaNw8.png",
+    "descricao": "Executiva Stool",
+    "url_pinterest": null,
+    "observacao": "Sistema de Reclinação do Encosto / Braço SL New PU / Base em Aço com Capa e Aro ",
+    "arquivo": "img/cavaletti/start/k7MA9Hq82wMHQWHHaNw8.png"
+   },
+   {
+    "id": 402,
+    "codigo": "4.004",
+    "imagem": "linhas-componentes/May2025/1gb0AyrNpllV11oLZtYZ.png",
+    "descricao": "Secretária Giratória",
+    "url_pinterest": null,
+    "observacao": "L2048 com Regulagem / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start/1gb0AyrNpllV11oLZtYZ.png"
+   },
+   {
+    "id": 403,
+    "codigo": "4.034",
+    "imagem": "linhas-componentes/May2025/v0tJjKluQnHYhtzemfOW.png",
+    "descricao": "Secretária Giratória",
+    "url_pinterest": null,
+    "observacao": "SRE / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start/v0tJjKluQnHYhtzemfOW.png"
+   },
+   {
+    "id": 404,
+    "codigo": "4.008 A",
+    "imagem": "linhas-componentes/May2025/y1deBnhdiSqrGX9hzdOV.png",
+    "descricao": "Secretária Aproximação",
+    "url_pinterest": null,
+    "observacao": "L2048 Fixo / Estrutura Arco",
+    "arquivo": "img/cavaletti/start/y1deBnhdiSqrGX9hzdOV.png"
+   },
+   {
+    "id": 405,
+    "codigo": "4.022",
+    "imagem": "linhas-componentes/May2025/U3exiEMcqKdMX58BbmuI.png",
+    "descricao": "Secretária Stool",
+    "url_pinterest": null,
+    "observacao": "L2048 com Regulagem / Base em Aço com Capa e Aro ",
+    "arquivo": "img/cavaletti/start/U3exiEMcqKdMX58BbmuI.png"
+   },
+   {
+    "id": 406,
+    "codigo": "4.005",
+    "imagem": "linhas-componentes/May2025/rSYXGyScjbagynZuzai0.png",
+    "descricao": "Diretor Longarina",
+    "url_pinterest": null,
+    "observacao": "Braço Americano Duplo",
+    "arquivo": "img/cavaletti/start/rSYXGyScjbagynZuzai0.png"
+   },
+   {
+    "id": 407,
+    "codigo": "4.110",
+    "imagem": "linhas-componentes/May2025/87hVW5PIhXsRZ31weTbO.png",
+    "descricao": "Executiva Longarina",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/start/87hVW5PIhXsRZ31weTbO.png"
+   },
+   {
+    "id": 408,
+    "codigo": "4.005 U",
+    "imagem": "linhas-componentes/May2025/sWVRAeNNcfsz4wpP61G9.png",
+    "descricao": "Diretor Longarina ",
+    "url_pinterest": null,
+    "observacao": "Braço Americano Duplo / Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/start/sWVRAeNNcfsz4wpP61G9.png"
+   },
+   {
+    "id": 409,
+    "codigo": "4.110 U",
+    "imagem": "linhas-componentes/May2025/OFZMvpBnYEWrUgPTWrp7.png",
+    "descricao": " Executiva Longarina ",
+    "url_pinterest": null,
+    "observacao": "Braço Americano Duplo / Prancheta Escamoteável",
+    "arquivo": "img/cavaletti/start/OFZMvpBnYEWrUgPTWrp7.png"
+   },
+   {
+    "id": 410,
+    "codigo": "4.009",
+    "imagem": "linhas-componentes/May2025/4d3WhD57Yb4qhNUY2DAy.png",
+    "descricao": "Secretária Longarina",
+    "url_pinterest": null,
+    "observacao": "L2048 Fixo",
+    "arquivo": "img/cavaletti/start/4d3WhD57Yb4qhNUY2DAy.png"
+   }
+  ],
+  "start-plus": [
+   {
+    "id": 411,
+    "codigo": "3.001",
+    "imagem": "linhas-componentes/May2025/DRteS3sv0nOKpzZa2Hvb.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/DRteS3sv0nOKpzZa2Hvb.png"
+   },
+   {
+    "id": 412,
+    "codigo": "3.002",
+    "imagem": "linhas-componentes/May2025/Hx1DvzLo4LsAWq6Bh4wO.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/Hx1DvzLo4LsAWq6Bh4wO.png"
+   },
+   {
+    "id": 413,
+    "codigo": "3.006 S",
+    "imagem": "linhas-componentes/May2025/r8LEoWGP2LWcVnzwxrv6.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S / Braço Americano",
+    "arquivo": "img/cavaletti/start-plus/r8LEoWGP2LWcVnzwxrv6.png"
+   },
+   {
+    "id": 414,
+    "codigo": "3.004 SRE",
+    "imagem": "linhas-componentes/May2025/54Rt1RdnKw5RmHwCRozB.png",
+    "descricao": "Secretária Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto / Braço SL New PU / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/54Rt1RdnKw5RmHwCRozB.png"
+   },
+   {
+    "id": 415,
+    "codigo": "3.008 S",
+    "imagem": "linhas-componentes/May2025/7AiYVIwFMeG7JZ5XAV1H.png",
+    "descricao": "Secretária Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S",
+    "arquivo": "img/cavaletti/start-plus/7AiYVIwFMeG7JZ5XAV1H.png"
+   },
+   {
+    "id": 416,
+    "codigo": "3.022",
+    "imagem": "linhas-componentes/May2025/YXdmzJaX542N8fc9gbiq.png",
+    "descricao": "Secretária Stool",
+    "url_pinterest": null,
+    "observacao": "L2048 com Regulagem / Base em Aço com Capa e Aro ",
+    "arquivo": "img/cavaletti/start-plus/YXdmzJaX542N8fc9gbiq.png"
+   },
+   {
+    "id": 417,
+    "codigo": "3.005",
+    "imagem": "linhas-componentes/May2025/GMPWbiLY7pNpzFxvXOPd.png",
+    "descricao": "Diretor Longarina",
+    "url_pinterest": null,
+    "observacao": "Braço Americano Duplo",
+    "arquivo": "img/cavaletti/start-plus/GMPWbiLY7pNpzFxvXOPd.png"
+   },
+   {
+    "id": 418,
+    "codigo": "3.009",
+    "imagem": "linhas-componentes/May2025/GIAFePENr96Aqik337gW.png",
+    "descricao": "Secretária Longarina",
+    "url_pinterest": null,
+    "observacao": "L2048 fixo",
+    "arquivo": "img/cavaletti/start-plus/GIAFePENr96Aqik337gW.png"
+   },
+   {
+    "id": 419,
+    "codigo": "6.001",
+    "imagem": "linhas-componentes/May2025/UQTEhtTLOaVG77Y64Dne.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/UQTEhtTLOaVG77Y64Dne.png"
+   },
+   {
+    "id": 420,
+    "codigo": "6.002",
+    "imagem": "linhas-componentes/May2025/sLXh2BlP2tIKHHxt2VlK.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Relax / Braço SL / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/sLXh2BlP2tIKHHxt2VlK.png"
+   },
+   {
+    "id": 421,
+    "codigo": "6.006 S",
+    "imagem": "linhas-componentes/May2025/LAIlLgBU4Q1YkIY7Pc7H.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S /Braço Americano",
+    "arquivo": "img/cavaletti/start-plus/LAIlLgBU4Q1YkIY7Pc7H.png"
+   },
+   {
+    "id": 422,
+    "codigo": "6.104 SRE",
+    "imagem": "linhas-componentes/May2025/xpAnBLTs0HenityGwWCt.png",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto / Braço SL New PU / Base Aço com Capa",
+    "arquivo": "img/cavaletti/start-plus/xpAnBLTs0HenityGwWCt.png"
+   }
+  ],
+  "stay": [
+   {
+    "id": 423,
+    "codigo": "33.106 P",
+    "imagem": "linhas-componentes/May2025/cB8n00Fw2Z0YH6NB38CX.png",
+    "descricao": "Aproximação Empilhável",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito / Braços integrados / Empilhamento máximo: 04 unidades / Opção de assento estofado",
+    "arquivo": "img/cavaletti/stay/cB8n00Fw2Z0YH6NB38CX.png"
+   },
+   {
+    "id": 424,
+    "codigo": "33.107 A",
+    "imagem": "linhas-componentes/May2025/xqb5o2hHbXMSVU0hi2NU.png",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Arco / Braços integrados / Opção de assento estofado",
+    "arquivo": "img/cavaletti/stay/xqb5o2hHbXMSVU0hi2NU.png"
+   },
+   {
+    "id": 425,
+    "codigo": "33.108",
+    "imagem": "linhas-componentes/May2025/rAHbwzggMOWG7vPPBPTj.png",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Braços integrados / Opcional estofado",
+    "arquivo": "img/cavaletti/stay/rAHbwzggMOWG7vPPBPTj.png"
+   },
+   {
+    "id": 426,
+    "codigo": "33.104",
+    "imagem": "linhas-componentes/May2025/jDJdAcueMMdeFhoJcvJg.png",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Braços integrados / Opcional estofado",
+    "arquivo": "img/cavaletti/stay/jDJdAcueMMdeFhoJcvJg.png"
+   },
+   {
+    "id": 427,
+    "codigo": "33.206",
+    "imagem": "linhas-componentes/September2026/vbT4632HtUY0RqKT2xBR.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Pés de madeira envernizados / Opcional estofado",
+    "arquivo": "img/cavaletti/stay/vbT4632HtUY0RqKT2xBR.jpg"
+   },
+   {
+    "id": 428,
+    "codigo": "33.120",
+    "imagem": "linhas-componentes/May2025/KWcV5CU65XK5dzIP3ruP.png",
+    "descricao": "Banqueta Alta",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito / Braços integrados / Opcional estofado",
+    "arquivo": "img/cavaletti/stay/KWcV5CU65XK5dzIP3ruP.png"
+   },
+   {
+    "id": 429,
+    "codigo": "33.110",
+    "imagem": "linhas-componentes/May2025/cToMKmTsvVywaGQKcCuc.png",
+    "descricao": "Longarina",
+    "url_pinterest": null,
+    "observacao": "Braços integrados / Opcional estofado",
+    "arquivo": "img/cavaletti/stay/cToMKmTsvVywaGQKcCuc.png"
+   }
+  ],
+  "stilo": [
+   {
+    "id": 430,
+    "codigo": "8.203 SRE",
+    "imagem": "linhas-componentes/May2025/kq9kHd9o79qMkjjdE661.png",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Sistema Reclinador de Encosto / Braço SL New PU / Base em Aço com Capa",
+    "arquivo": "img/cavaletti/stilo/kq9kHd9o79qMkjjdE661.png"
+   },
+   {
+    "id": 431,
+    "codigo": "8.203",
+    "imagem": "linhas-componentes/May2025/v7LJ8jGJ9os2aG92PCyP.png",
+    "descricao": "Executiva Giratória",
+    "url_pinterest": null,
+    "observacao": "Flange / Braço SL New PU / Suporte de Encosto L2048  / Base em Aço com Capa",
+    "arquivo": "img/cavaletti/stilo/v7LJ8jGJ9os2aG92PCyP.png"
+   },
+   {
+    "id": 432,
+    "codigo": "8.207 S",
+    "imagem": "linhas-componentes/May2025/DE8WF0V31V5gu4f56smO.png",
+    "descricao": "Executiva Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura S",
+    "arquivo": "img/cavaletti/stilo/DE8WF0V31V5gu4f56smO.png"
+   },
+   {
+    "id": 433,
+    "codigo": "8.223",
+    "imagem": "linhas-componentes/May2025/vPkbZRhg8PSOlmztfvia.png",
+    "descricao": "Executiva Stool",
+    "url_pinterest": null,
+    "observacao": "Suporte do Encosto L2048 / Base em Aço com Capa e Aro",
+    "arquivo": "img/cavaletti/stilo/vPkbZRhg8PSOlmztfvia.png"
+   },
+   {
+    "id": 434,
+    "codigo": "8.210",
+    "imagem": "linhas-componentes/May2025/l6RLQOcUDIfO5WvHnxUJ.png",
+    "descricao": "Executiva Longarina",
+    "url_pinterest": null,
+    "observacao": "L2048 Fixo",
+    "arquivo": "img/cavaletti/stilo/l6RLQOcUDIfO5WvHnxUJ.png"
+   }
+  ],
+  "stretch": [
+   {
+    "id": 435,
+    "codigo": "36.906",
+    "imagem": "linhas-componentes/May2025/UqYMOXQxFIKxu7sDzSBW.png",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Base 4 pés com ponteiras em madeira natural",
+    "arquivo": "img/cavaletti/stretch/UqYMOXQxFIKxu7sDzSBW.png"
+   },
+   {
+    "id": 436,
+    "codigo": "36.906",
+    "imagem": "linhas-componentes/May2025/lyGegAmw4XAfyOMEwQoO.png",
+    "descricao": "Poltrona Esqui",
+    "url_pinterest": null,
+    "observacao": "Base esqui em madeira laminada de Tauari envernizado.",
+    "arquivo": "img/cavaletti/stretch/lyGegAmw4XAfyOMEwQoO.png"
+   },
+   {
+    "id": 437,
+    "codigo": "36.914",
+    "imagem": "linhas-componentes/May2025/H95k1zJPO9gAUlcHAt01.png",
+    "descricao": "Ottoman",
+    "url_pinterest": null,
+    "observacao": "Apoio para os pés / Ponteiras em madeira natural",
+    "arquivo": "img/cavaletti/stretch/H95k1zJPO9gAUlcHAt01.png"
+   },
+   {
+    "id": 438,
+    "codigo": "36.901",
+    "imagem": "linhas-componentes/May2025/TrZUvHwMLh9FI0v9E1EX.png",
+    "descricao": "Mesa lateral",
+    "url_pinterest": null,
+    "observacao": "Tampo em Tauari envernizado /Ponteiras em madeira natural / 730mm larg. x 730mm prof. x 405mm alt.",
+    "arquivo": "img/cavaletti/stretch/TrZUvHwMLh9FI0v9E1EX.png"
+   }
+  ],
+  "talk": [
+   {
+    "id": 439,
+    "codigo": "36.505",
+    "imagem": "linhas-componentes/May2025/mSyoxEp1znQ1oQuU9Xdq.jpg",
+    "descricao": "Poltrona",
+    "url_pinterest": null,
+    "observacao": "Braço Duplo e Encosto",
+    "arquivo": "img/cavaletti/talk/mSyoxEp1znQ1oQuU9Xdq.jpg"
+   },
+   {
+    "id": 440,
+    "codigo": "36.505",
+    "imagem": "linhas-componentes/May2025/umUBE5AZ6C6WDhVcADwx.jpg",
+    "descricao": "Sofá Canto",
+    "url_pinterest": null,
+    "observacao": "Braço e Encosto",
+    "arquivo": "img/cavaletti/talk/umUBE5AZ6C6WDhVcADwx.jpg"
+   },
+   {
+    "id": 441,
+    "codigo": "36.505",
+    "imagem": "linhas-componentes/May2025/VkRbc4Qr2zJJbNTAJmDi.jpg",
+    "descricao": "Sofá Central",
+    "url_pinterest": null,
+    "observacao": "Encosto",
+    "arquivo": "img/cavaletti/talk/VkRbc4Qr2zJJbNTAJmDi.jpg"
+   },
+   {
+    "id": 442,
+    "codigo": "36.505",
+    "imagem": "linhas-componentes/May2025/4rySlvEGBZIpItkcilFL.jpg",
+    "descricao": "Banco",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/talk/4rySlvEGBZIpItkcilFL.jpg"
+   },
+   {
+    "id": 443,
+    "codigo": "36.555",
+    "imagem": "linhas-componentes/May2025/JBE1RNFLfjJuzkYNGDNs.jpg",
+    "descricao": "HB Duplo",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/talk/JBE1RNFLfjJuzkYNGDNs.jpg"
+   },
+   {
+    "id": 444,
+    "codigo": "36.575",
+    "imagem": "linhas-componentes/May2025/clDTe6UW4mlndN4y5kOy.jpg",
+    "descricao": "HB Face-to-Face",
+    "url_pinterest": null,
+    "observacao": "Mesa Interna | Box Eletrificado (opcional)",
+    "arquivo": "img/cavaletti/talk/clDTe6UW4mlndN4y5kOy.jpg"
+   },
+   {
+    "id": 445,
+    "codigo": "36.565",
+    "imagem": "linhas-componentes/August2026/mO8A6QNjKGm5ua4LlQm0.jpg",
+    "descricao": "HB Reunião",
+    "url_pinterest": null,
+    "observacao": "Mesa Interna | Box Eletrificado (opcional)",
+    "arquivo": "img/cavaletti/talk/mO8A6QNjKGm5ua4LlQm0.jpg"
+   },
+   {
+    "id": 446,
+    "codigo": "11.801",
+    "imagem": "linhas-componentes/May2025/dGtFJH7pte7v3EwlgKUp.jpg",
+    "descricao": "Mesa Talk",
+    "url_pinterest": null,
+    "observacao": "465mm larg. x 495mm prof. x 680mm alt.",
+    "arquivo": "img/cavaletti/talk/dGtFJH7pte7v3EwlgKUp.jpg"
+   },
+   {
+    "id": 532,
+    "codigo": "36.505",
+    "imagem": "linhas-componentes/November2025/hkeh5DHpW5GEwXjX9Pcw.jpg",
+    "descricao": "Mesa Talk",
+    "url_pinterest": null,
+    "observacao": "710mm larg. x 710mm prof. x 350mm alt.",
+    "arquivo": "img/cavaletti/talk/hkeh5DHpW5GEwXjX9Pcw.jpg"
+   }
+  ],
+  "velo": [
+   {
+    "id": 448,
+    "codigo": "42.101 AC",
+    "imagem": "linhas-componentes/May2025/RjAKh48x8hQbIuB9NoPA.jpg",
+    "descricao": "Giratória Operativa",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Base Alumínio / Apoio Lombar /Apoio de Cabeça / Capa Acolchoada",
+    "arquivo": "img/cavaletti/velo/RjAKh48x8hQbIuB9NoPA.jpg"
+   },
+   {
+    "id": 449,
+    "codigo": "42.101 AC",
+    "imagem": "linhas-componentes/May2025/Vk9QTxgieWz9Mn8eQ2kQ.jpg",
+    "descricao": "Giratória Operativa",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Base Nylon / Apoio Lombar / Apoio de Cabeça",
+    "arquivo": "img/cavaletti/velo/Vk9QTxgieWz9Mn8eQ2kQ.jpg"
+   },
+   {
+    "id": 450,
+    "codigo": "42.101",
+    "imagem": "linhas-componentes/May2025/0FJ1WZeOdBULh1ysDH6e.jpg",
+    "descricao": "Giratória Operativa",
+    "url_pinterest": null,
+    "observacao": "Syncron RP / Braços ID / Apoio Lombar / Base Nylon",
+    "arquivo": "img/cavaletti/velo/0FJ1WZeOdBULh1ysDH6e.jpg"
+   },
+   {
+    "id": 451,
+    "codigo": "42.101 SR",
+    "imagem": "linhas-componentes/May2025/TrLwsnxeSh52enl1YVxF.jpg",
+    "descricao": "Giratória Reunião",
+    "url_pinterest": null,
+    "observacao": "Plataforma Giratória / Base Nylon",
+    "arquivo": "img/cavaletti/velo/TrLwsnxeSh52enl1YVxF.jpg"
+   },
+   {
+    "id": 452,
+    "codigo": "42.106 ROD",
+    "imagem": "linhas-componentes/May2025/hVn030aW8gtegcd0VVUi.jpg",
+    "descricao": "Aproximação Giratória",
+    "url_pinterest": null,
+    "observacao": "Estrutura P / Braços Integrados",
+    "arquivo": "img/cavaletti/velo/hVn030aW8gtegcd0VVUi.jpg"
+   },
+   {
+    "id": 453,
+    "codigo": "42.106 SI",
+    "imagem": "linhas-componentes/May2025/w7BmWMpvJPepGhLNAhEE.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI / Braços Integrados",
+    "arquivo": "img/cavaletti/velo/w7BmWMpvJPepGhLNAhEE.jpg"
+   }
+  ],
+  "viva": [
+   {
+    "id": 454,
+    "codigo": "35.008 P",
+    "imagem": "linhas-componentes/May2025/gYlng33BRkPiWqhxdkEP.jpg",
+    "descricao": "Aproximação Empilhável",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito",
+    "arquivo": "img/cavaletti/viva/gYlng33BRkPiWqhxdkEP.jpg"
+   },
+   {
+    "id": 455,
+    "codigo": "35.008 P",
+    "imagem": "linhas-componentes/May2025/OcbpGogJ7RDodg7IIXbg.jpg",
+    "descricao": "Aproximação Empilhável",
+    "url_pinterest": null,
+    "observacao": "Empilhamento máximo: 10 unidades",
+    "arquivo": "img/cavaletti/viva/OcbpGogJ7RDodg7IIXbg.jpg"
+   },
+   {
+    "id": 456,
+    "codigo": "35.007 P",
+    "imagem": "linhas-componentes/May2025/uyUuaRr9yMHnBpGn07qH.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito",
+    "arquivo": "img/cavaletti/viva/uyUuaRr9yMHnBpGn07qH.jpg"
+   },
+   {
+    "id": 457,
+    "codigo": "35.007 SE",
+    "imagem": "linhas-componentes/May2025/nS9yL57T17cwEUJgirkE.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura Balanço / Assento estofado / Disponível com assento plástico sem estofamento",
+    "arquivo": "img/cavaletti/viva/nS9yL57T17cwEUJgirkE.jpg"
+   },
+   {
+    "id": 458,
+    "codigo": "35.008 A",
+    "imagem": "linhas-componentes/May2025/DmCcwKzmQL9bOPJf5Ios.jpg",
+    "descricao": "Aproximação Empilhável",
+    "url_pinterest": null,
+    "observacao": "Estrutura Arco / Empilhamento máximo: 05 unidades",
+    "arquivo": "img/cavaletti/viva/DmCcwKzmQL9bOPJf5Ios.jpg"
+   },
+   {
+    "id": 459,
+    "codigo": "35.004",
+    "imagem": "linhas-componentes/May2025/h5WczMArEn38lHvLESV7.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Braço Z / Base Viva / Mecanismo Flange",
+    "arquivo": "img/cavaletti/viva/h5WczMArEn38lHvLESV7.jpg"
+   },
+   {
+    "id": 460,
+    "codigo": "35.004 SL",
+    "imagem": "linhas-componentes/May2025/0bbOZwgfPbc0XR00zmxS.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Braço SL / Base de Aço com capa / Mecanismo Flange",
+    "arquivo": "img/cavaletti/viva/0bbOZwgfPbc0XR00zmxS.jpg"
+   },
+   {
+    "id": 461,
+    "codigo": "35.004",
+    "imagem": "linhas-componentes/May2025/Ga2tycn3Hm70blMS7V9z.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Base de Viva / Prancheta 360°/ Mecanisno Flange",
+    "arquivo": "img/cavaletti/viva/Ga2tycn3Hm70blMS7V9z.jpg"
+   },
+   {
+    "id": 462,
+    "codigo": "35.007 Z",
+    "imagem": "linhas-componentes/May2025/7gDrIcUOELKdvzQTa91S.jpg",
+    "descricao": "Aproximação",
+    "url_pinterest": null,
+    "observacao": "Braços integrados / Estrutura Z",
+    "arquivo": "img/cavaletti/viva/7gDrIcUOELKdvzQTa91S.jpg"
+   },
+   {
+    "id": 463,
+    "codigo": "35.007 Z ROD",
+    "imagem": "linhas-componentes/May2025/aCsXqtTQhqtlIbRsv9MF.jpg",
+    "descricao": "Aproximação com rodízios",
+    "url_pinterest": null,
+    "observacao": "Braços integrados / Estrutura Z",
+    "arquivo": "img/cavaletti/viva/aCsXqtTQhqtlIbRsv9MF.jpg"
+   },
+   {
+    "id": 464,
+    "codigo": "35.010",
+    "imagem": "linhas-componentes/May2025/xOodVdaHwRU5k78q9RAp.jpg",
+    "descricao": "Longarina",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/viva/xOodVdaHwRU5k78q9RAp.jpg"
+   },
+   {
+    "id": 465,
+    "codigo": "35.008 PU",
+    "imagem": "linhas-componentes/May2025/etTJ8CoIKHzo6jfJ2q9x.jpg",
+    "descricao": "Universitária",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito com grade / Prancheta removível",
+    "arquivo": "img/cavaletti/viva/etTJ8CoIKHzo6jfJ2q9x.jpg"
+   },
+   {
+    "id": 466,
+    "codigo": "35.008 PUE",
+    "imagem": "linhas-componentes/May2025/cFfMtFzlJ8h5DZginJNG.jpg",
+    "descricao": "Universitária",
+    "url_pinterest": null,
+    "observacao": "Estrutura Palito com grade / Prancheta escamoteável",
+    "arquivo": "img/cavaletti/viva/cFfMtFzlJ8h5DZginJNG.jpg"
+   },
+   {
+    "id": 467,
+    "codigo": "Modelo 35.007 Z",
+    "imagem": "linhas-componentes/May2025/TOd2f326rG4E3B6ZnApe.jpg",
+    "descricao": "Mecanismo de União",
+    "url_pinterest": null,
+    "observacao": "",
+    "arquivo": "img/cavaletti/viva/TOd2f326rG4E3B6ZnApe.jpg"
+   }
+  ],
+  "way": [
+   {
+    "id": 468,
+    "codigo": "19.001 L",
+    "imagem": "linhas-componentes/May2025/shRuMDMsSnXrWi0piJjk.png",
+    "descricao": "Presidente Giratória L",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base Alumínio / Apoio de cabeça",
+    "arquivo": "img/cavaletti/way/shRuMDMsSnXrWi0piJjk.png"
+   },
+   {
+    "id": 469,
+    "codigo": "19.001",
+    "imagem": "linhas-componentes/May2025/QsZddWC24HaNkBJ9tA2s.png",
+    "descricao": "Presidente Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços SL New PU / Base Alumínio",
+    "arquivo": "img/cavaletti/way/QsZddWC24HaNkBJ9tA2s.png"
+   },
+   {
+    "id": 470,
+    "codigo": "19.002",
+    "imagem": "linhas-componentes/May2025/LD7zbRCL2iylYMfhYmHB.png",
+    "descricao": "Diretor Giratória",
+    "url_pinterest": null,
+    "observacao": "Syncron / Braços 3D / Base Alumínio",
+    "arquivo": "img/cavaletti/way/LD7zbRCL2iylYMfhYmHB.png"
+   },
+   {
+    "id": 471,
+    "codigo": "19.006 SI",
+    "imagem": "linhas-componentes/May2025/lCSZBGKvD60PHClKCFJz.png",
+    "descricao": "Diretor Aproximação",
+    "url_pinterest": null,
+    "observacao": "Estrutura SI /Braços integrados",
+    "arquivo": "img/cavaletti/way/lCSZBGKvD60PHClKCFJz.png"
+   }
+  ],
+  "way-gamer": [
+   {
+    "id": 472,
+    "codigo": "19.900",
+    "imagem": "linhas-componentes/May2025/kImdiQcI67l4DdW6Zx2J.png",
+    "descricao": "Giratória ",
+    "url_pinterest": null,
+    "observacao": "Azul / Syncron / Braços 4D-CA / Base Nylon",
+    "arquivo": "img/cavaletti/way-gamer/kImdiQcI67l4DdW6Zx2J.png"
+   },
+   {
+    "id": 473,
+    "codigo": "19.900",
+    "imagem": "linhas-componentes/May2025/YQYpF4sx13wlItgdZW4i.png",
+    "descricao": "Giratória ",
+    "url_pinterest": null,
+    "observacao": "Vermelha / Syncron / Braços 4D-CA / Base Nylon",
+    "arquivo": "img/cavaletti/way-gamer/YQYpF4sx13wlItgdZW4i.png"
+   },
+   {
+    "id": 474,
+    "codigo": "19.900",
+    "imagem": "linhas-componentes/May2025/4GXvNGdeFhx8SMTvT792.png",
+    "descricao": "Giratória ",
+    "url_pinterest": null,
+    "observacao": "Cinza / Syncron / Braços 4D-CA / Base Nylon",
+    "arquivo": "img/cavaletti/way-gamer/4GXvNGdeFhx8SMTvT792.png"
+   },
+   {
+    "id": 475,
+    "codigo": "19.900",
+    "imagem": "linhas-componentes/May2025/qkW2LApKlVuat2l11yjj.png",
+    "descricao": "Giratória ",
+    "url_pinterest": null,
+    "observacao": "Black / Syncron / Braços 4D-CA / Base Nylon",
+    "arquivo": "img/cavaletti/way-gamer/qkW2LApKlVuat2l11yjj.png"
+   }
+  ],
+  "yon": [
+   {
+    "id": 476,
+    "codigo": "47.301",
+    "imagem": "linhas-componentes/May2025/wJF365T3wuBsva4QrJc6.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Tela Velo Grafite (308) / Syncron / Braços MC / Base UP/ Vermelho Aurora / Assento Grid Cinza Névoa (352)",
+    "arquivo": "img/cavaletti/yon/wJF365T3wuBsva4QrJc6.jpg"
+   },
+   {
+    "id": 477,
+    "codigo": "47.301",
+    "imagem": "linhas-componentes/May2025/SfiglukCuXdCvvrsi8m2.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Tela Velo Grafite (308) / Syncron / Braços MC / Base UP / Azul Profundo / Assento Grid Cinza Névoa (352)",
+    "arquivo": "img/cavaletti/yon/SfiglukCuXdCvvrsi8m2.jpg"
+   },
+   {
+    "id": 478,
+    "codigo": "47.301",
+    "imagem": "linhas-componentes/May2025/HQTSVpvPh68a6ZeCslLC.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Tela Velo Grafite (308) / Syncron/ Braços SL / Base Nylon Preta / Assento Grid Amarelo Siciliano (356)",
+    "arquivo": "img/cavaletti/yon/HQTSVpvPh68a6ZeCslLC.jpg"
+   },
+   {
+    "id": 479,
+    "codigo": "47.301 AC",
+    "imagem": "linhas-componentes/May2025/5L2qMERzMlSo03ceA1Te.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Tela Velo Grafite (308) / Syncron / Braços MC/ Base Nylon / Assento Grid Amarelo Siciliano (356)/ Apoio de cabeça",
+    "arquivo": "img/cavaletti/yon/5L2qMERzMlSo03ceA1Te.jpg"
+   },
+   {
+    "id": 480,
+    "codigo": "47.101",
+    "imagem": "linhas-componentes/May2025/oUgEcFF2uQi3uG1fE6F1.jpg",
+    "descricao": "Giratória",
+    "url_pinterest": null,
+    "observacao": "Tela New Net Cinza (165) / SRY / Braços SL New PP/ Base Aço com capa / Assento Grid Amarelo Siciliano (356)",
+    "arquivo": "img/cavaletti/yon/oUgEcFF2uQi3uG1fE6F1.jpg"
+   },
+   {
+    "id": 481,
+    "codigo": "47.306 SI",
+    "imagem": "linhas-componentes/May2025/QSn31iK1u4pQUGQJ6k4O.jpg",
+    "descricao": " Aproximação",
+    "url_pinterest": null,
+    "observacao": "Tela Velo Grafite (308) / Braços S Integrados / Base Fixa Preta / Assento Grid Amarelo Siciliano (356)",
+    "arquivo": "img/cavaletti/yon/QSn31iK1u4pQUGQJ6k4O.jpg"
+   }
+  ]
+ }
+}

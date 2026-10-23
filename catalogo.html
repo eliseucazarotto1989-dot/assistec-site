@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Cavaletti - Assistec</title>
-    <link rel="icon" type="image/png" href="logo-assistec.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     (55) 3798-1003
                 </a>
-                <a href="https://wa.me/5537981003" target="_blank">
+                <a href="https://wa.me/555537981003" target="_blank">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                     WhatsApp
                 </a>
@@ -39,7 +39,7 @@
                 <span></span><span></span><span></span>
             </button>
             <a href="index.html" class="gp-logo">
-                <img src="logo-assistec.svg" alt="Assistec">
+                <img src="logo-assistec.png" alt="Assistec">
             </a>
             <div class="gp-search-bar">
                 <input type="text" placeholder="O que você procura?" id="headerSearch">
@@ -212,7 +212,7 @@
         <div class="container">
             <div class="gp-footer-grid">
                 <div class="gp-footer-col">
-                    <img src="logo-assistec.svg" alt="Assistec" class="gp-footer-logo">
+                    <img src="logo-assistec-branco.png" alt="Assistec" class="gp-footer-logo">
                     <p class="gp-footer-desc">Assistência técnica em informática, venda de equipamentos e revenda autorizada Cavaletti em Santa Rosa-RS.</p>
                     <div class="gp-footer-socials">
                         <a href="https://www.instagram.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -227,7 +227,7 @@
                 </div>
                 <div class="gp-footer-col">
                     <h4>Atendimento</h4>
-                    <a href="https://wa.me/5537981003" target="_blank">WhatsApp</a>
+                    <a href="https://wa.me/555537981003" target="_blank">WhatsApp</a>
                     <a href="mailto:contato@assistecrb.net">E-mail</a>
                     <a href="tel:+555537981003">(55) 3798-1003</a>
                 </div>
@@ -290,56 +290,8 @@
             const res = await fetch('catalog-data.json');
             const data = await res.json();
             allProducts = data.products;
-
-            // Mesclar overrides do Supabase (edições do admin)
-            try {
-                const ovRes = await fetch('https://lhnlwlelabgdgdhozhpe.supabase.co/rest/v1/product_overrides?select=*', {
-                    headers: { 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxobmx3bGVsYWJnZGdkaG96aHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzNTc1NDUsImV4cCI6MjA4ODkzMzU0NX0.K0IWRdkpFyY_zbIzoBNSgJK8wPUO_DqEUam7U35lDC0' }
-                });
-                if (ovRes.ok) {
-                    const overrides = await ovRes.json();
-                    const overrideMap = {};
-                    for (const o of overrides) overrideMap[o.product_id] = o;
-                    for (const p of allProducts) {
-                        const ov = overrideMap[p.id];
-                        if (ov) {
-                            if (ov.name) p.name = ov.name;
-                            if (ov.image) p.image = ov.image;
-                            if (ov.category) p.category = ov.category;
-                        }
-                    }
-                }
-            } catch (e) { /* Supabase offline - usa dados base */ }
-
-            // Carregar overrides do localStorage (fallback)
-            try {
-                const localOverrides = JSON.parse(localStorage.getItem('product_overrides') || '{}');
-                for (const p of allProducts) {
-                    const ov = localOverrides[p.id];
-                    if (ov) {
-                        if (ov.name) p.name = ov.name;
-                        if (ov.image) p.image = ov.image;
-                        if (ov.category) p.category = ov.category;
-                    }
-                }
-            } catch (e) {}
-
-            // Remover produtos excluídos pelo admin
-            try {
-                const removedProducts = JSON.parse(localStorage.getItem('removed_products') || '[]');
-                if (removedProducts.length > 0) {
-                    const removedSet = new Set(removedProducts);
-                    allProducts = allProducts.filter(p => !removedSet.has(p.id));
-                }
-            } catch (e) {}
-
-            // Adicionar produtos customizados (criados pelo admin)
-            try {
-                const customProducts = JSON.parse(localStorage.getItem('custom_products') || '[]');
-                for (const cp of customProducts) {
-                    allProducts.unshift(cp);
-                }
-            } catch (e) {}
+            // catálogo oficial: produtos e cores vêm só do arquivo gerado do Montador
+            CavalettiFabrics.setData(data.revestimentos);
 
             init();
         } catch (err) {
@@ -411,6 +363,7 @@
                     p.name.toLowerCase().includes(q) ||
                     p.line.toLowerCase().includes(q) ||
                     (p.code && p.code.toLowerCase().includes(q)) ||
+                    (p.variacoes || []).some(v => (v.codigo || '').toLowerCase().includes(q) || v.descricao.toLowerCase().includes(q)) ||
                     p.type.toLowerCase().includes(q) ||
                     p.category.toLowerCase().includes(q)
                 );
@@ -448,8 +401,8 @@
             }
 
             grid.innerHTML = pageProducts.map(p => {
-                const hasFab = CavalettiFabrics.hasFabrics(p.category);
-                const mats = CavalettiFabrics.getMaterialsForCategory(p.category);
+                const hasFab = CavalettiFabrics.hasFabrics(p);
+                const mats = CavalettiFabrics.getMaterialsForProduct(p);
                 const defaultMat = mats.length > 0 ? mats[0] : null;
                 const colors = defaultMat ? CavalettiFabrics.getColorsForMaterial(defaultMat) : [];
                 const isFav = Favorites.isFavorite(p.id);
@@ -462,13 +415,13 @@
                             <svg viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                         </button>
                         <a href="produto.html?id=${encodeURIComponent(p.id)}">
-                            <img src="${p.image}" alt="${esc(p.name)}" loading="lazy" onerror="this.src='${fallbackImg}'" style="cursor:pointer">
+                            <img src="${p.image || fallbackImg}" alt="${esc(p.name)}" loading="lazy" onerror="this.src='${fallbackImg}'" style="cursor:pointer">
                         </a>
                     </div>
                     <div class="product-card-body">
                         <span class="product-brand">Cavaletti</span>
                         <h3>${esc(p.name)}</h3>
-                        <span class="product-sku">${p.code ? 'SKU: ' + esc(p.code) : 'Linha ' + esc(p.line)}</span>
+                        <span class="product-sku">${p.code ? 'Modelo ' + esc(p.code) + ' · ' : ''}Linha ${esc(p.line)}</span>
                         ${hasFab ? `
                         <div class="product-customization">
                             <div class="custom-row">

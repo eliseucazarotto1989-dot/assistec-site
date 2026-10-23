@@ -1,67 +1,44 @@
 (function () {
+    // Revestimentos e cores vêm do catálogo oficial (catalog-data.json, gerado do Montador de Pedidos).
+    // Cada página chama CavalettiFabrics.setData(data.revestimentos) depois de carregar o catálogo.
+    const slug = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     window.CavalettiFabrics = {
-        materials: [
-            { id: 'vinil', name: 'Vinil' },
-            { id: 'poliester', name: 'Poliéster' },
-            { id: 'couro-sintetico', name: 'Couro Sintético' },
-            { id: 'tela', name: 'Tela (Mesh)' }
-        ],
+        materials: [],
+        colors: [],
 
-        colors: [
-            { id: 'preto', name: 'Preto', hex: '#1a1a1a', materials: ['vinil', 'poliester', 'couro-sintetico', 'tela'] },
-            { id: 'cinza-escuro', name: 'Cinza Escuro', hex: '#4a4a4a', materials: ['vinil', 'poliester', 'tela'] },
-            { id: 'cinza-claro', name: 'Cinza Claro', hex: '#9e9e9e', materials: ['vinil', 'poliester'] },
-            { id: 'branco', name: 'Branco', hex: '#f5f5f5', materials: ['vinil', 'poliester'] },
-            { id: 'azul-marinho', name: 'Azul Marinho', hex: '#1a237e', materials: ['vinil', 'poliester', 'tela'] },
-            { id: 'azul-royal', name: 'Azul Royal', hex: '#1565c0', materials: ['poliester', 'tela'] },
-            { id: 'verde', name: 'Verde', hex: '#2e7d32', materials: ['vinil', 'poliester'] },
-            { id: 'verde-oliva', name: 'Verde Oliva', hex: '#6d7c3a', materials: ['vinil'] },
-            { id: 'vermelho', name: 'Vermelho', hex: '#c62828', materials: ['vinil', 'poliester', 'tela'] },
-            { id: 'bordo', name: 'Bordô', hex: '#6a1b3d', materials: ['vinil', 'poliester'] },
-            { id: 'terracota', name: 'Terracota', hex: '#bf5b3f', materials: ['vinil'] },
-            { id: 'marrom', name: 'Marrom', hex: '#5d4037', materials: ['vinil', 'couro-sintetico', 'tela'] },
-            { id: 'caramelo', name: 'Caramelo', hex: '#bf8040', materials: ['vinil', 'couro-sintetico'] },
-            { id: 'bege', name: 'Bege', hex: '#d7ccc8', materials: ['vinil', 'poliester', 'couro-sintetico'] },
-            { id: 'laranja', name: 'Laranja', hex: '#e65100', materials: ['poliester'] },
-            { id: 'amarelo', name: 'Amarelo', hex: '#f9a825', materials: ['poliester'] },
-            { id: 'azul-claro', name: 'Azul Claro', hex: '#42a5f5', materials: ['poliester'] }
-        ],
-
-        // Quais categorias suportam revestimento
-        categoryMaterials: {
-            'Cadeiras Presidente': ['vinil', 'poliester', 'couro-sintetico', 'tela'],
-            'Cadeiras Executiva': ['vinil', 'poliester', 'couro-sintetico', 'tela'],
-            'Cadeiras Diretor': ['vinil', 'poliester', 'couro-sintetico', 'tela'],
-            'Cadeiras Operacional': ['vinil', 'poliester', 'tela'],
-            'Cadeiras Giratória': ['vinil', 'poliester', 'tela'],
-            'Cadeiras de Aproximação': ['vinil', 'poliester'],
-            'Cadeiras Fixas': ['vinil', 'poliester'],
-            'Cadeiras Plásticas': [],
-            'Poltronas': ['vinil', 'poliester', 'couro-sintetico'],
-            'Poltronas de Espera': ['vinil', 'poliester', 'couro-sintetico'],
-            'Poltronas Auditório': ['vinil', 'poliester'],
-            'Sofás e Lounges': ['vinil', 'poliester', 'couro-sintetico'],
-            'Banquetas e Mochos': ['vinil', 'poliester'],
-            'Longarinas': ['vinil', 'poliester'],
-            'Mesas': [],
-            'Complementos': [],
-            'Gamer Way': ['vinil', 'poliester']
+        setData(rev) {
+            this.materials = [];
+            this.colors = [];
+            Object.entries(rev || {}).forEach(([nome, cores]) => {
+                const mid = slug(nome);
+                this.materials.push({ id: mid, name: nome });
+                cores.forEach(c => this.colors.push({
+                    id: mid + '-' + slug(c.codigo || c.nome),
+                    name: c.nome + (c.codigo ? ' (' + c.codigo + ')' : ''),
+                    hex: c.hex, materials: [mid]
+                }));
+            });
         },
 
-        getMaterialsForCategory(category) {
-            const mats = this.categoryMaterials[category];
-            if (mats !== undefined) return mats;
-            return ['vinil', 'poliester'];
+        // revestimento do assento/estofado; sem ele, a tela ou a lâmina do encosto
+        getMaterialsForProduct(p) {
+            if (!p || typeof p !== 'object') return [];
+            const lista = (p.revestimentos && p.revestimentos.length) ? p.revestimentos : (p.telas || []);
+            return lista.map(slug);
+        },
+
+        // tela ou lâmina do encosto, quando o produto também tem revestimento de assento
+        getEncostoForProduct(p) {
+            return (p && p.revestimentos && p.revestimentos.length ? (p.telas || []) : []).map(slug);
         },
 
         getColorsForMaterial(materialId) {
-            if (!materialId) return this.colors;
+            if (!materialId) return [];
             return this.colors.filter(c => c.materials.includes(materialId));
         },
 
-        hasFabrics(category) {
-            const mats = this.getMaterialsForCategory(category);
-            return mats.length > 0;
+        hasFabrics(p) {
+            return this.getMaterialsForProduct(p).length > 0;
         }
     };
 
@@ -104,7 +81,7 @@
     // === Lista de Orçamento Multi-Produto ===
     window.QuoteList = {
         KEY: 'assistec_quote_list',
-        WHATSAPP: '5537981003',
+        WHATSAPP: '555537981003',
 
         getAll() {
             try { return JSON.parse(localStorage.getItem(this.KEY)) || []; }
@@ -114,7 +91,8 @@
         add(item) {
             const list = this.getAll();
             // Não duplicar mesmo produto+material+cor
-            const exists = list.find(i => i.id === item.id && i.material === item.material && i.color === item.color);
+            const chave = i => [i.id, i.config, i.estrutura, i.material, i.color, i.encosto, i.encostoCor].join('|');
+            const exists = list.find(i => chave(i) === chave(item));
             if (!exists) {
                 list.push(item);
                 localStorage.setItem(this.KEY, JSON.stringify(list));
@@ -155,9 +133,12 @@
             items.forEach((item, i) => {
                 lines.push(`*${i + 1}. ${item.name}*`);
                 lines.push(`   Linha: ${item.line}`);
+                if (item.config) lines.push(`   Configuração: ${item.config}`);
                 if (item.code) lines.push(`   Código: ${item.code}`);
+                if (item.estrutura) lines.push(`   Estrutura: ${item.estrutura}`);
                 if (item.material) lines.push(`   Revestimento: ${item.material}`);
                 if (item.color) lines.push(`   Cor: ${item.color}`);
+                if (item.encosto) lines.push(`   Encosto: ${item.encosto}${item.encostoCor ? ' - ' + item.encostoCor : ''}`);
                 lines.push('');
             });
             lines.push('Gostaria de receber um orçamento para estes produtos.');

@@ -1,48 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <!-- Globe with orbital arrows - Assistec Informática original logo (blue) -->
+  <g transform="translate(2, 2) scale(0.95)">
+    <!-- Globe sphere outline -->
+    <circle cx="38" cy="38" r="30" stroke="#0072C6" stroke-width="2.5" fill="none"/>
 
-  <!-- Globe icon - faithful recreation -->
-  <g transform="translate(6, 4)">
-    <!-- Globe main circle -->
-    <ellipse cx="36" cy="36" rx="28" ry="30" stroke="white" stroke-width="2.8" fill="none"/>
-
-    <!-- Vertical meridian (curved for 3D effect) -->
-    <ellipse cx="30" cy="36" rx="12" ry="30" stroke="white" stroke-width="1.8" fill="none"/>
+    <!-- Vertical meridian (3D curve) -->
+    <ellipse cx="32" cy="38" rx="13" ry="30" stroke="#0072C6" stroke-width="1.6" fill="none"/>
 
     <!-- Horizontal equator -->
-    <path d="M8,36 Q36,30 64,36" stroke="white" stroke-width="1.6" fill="none"/>
+    <path d="M8,38 Q38,32 68,38" stroke="#0072C6" stroke-width="1.4" fill="none"/>
 
     <!-- Upper latitude -->
-    <path d="M12,22 Q36,17 60,22" stroke="white" stroke-width="1.1" fill="none" opacity="0.5"/>
+    <path d="M14,24 Q38,19 62,24" stroke="#0072C6" stroke-width="1" fill="none" opacity="0.4"/>
 
     <!-- Lower latitude -->
-    <path d="M12,50 Q36,45 60,50" stroke="white" stroke-width="1.1" fill="none" opacity="0.5"/>
+    <path d="M14,52 Q38,47 62,52" stroke="#0072C6" stroke-width="1" fill="none" opacity="0.4"/>
 
-    <!-- Shadow crescent on left -->
-    <path d="M14,10 Q6,36 14,62" stroke="white" stroke-width="1.2" fill="none" opacity="0.3"/>
+    <!-- Top orbital arrow -->
+    <path d="M18,12 C28,2 52,0 66,14" stroke="#0072C6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="66,14 58,6 60,16" fill="#0072C6"/>
 
-    <!-- Top-right arrow (flowing curve going right) -->
-    <path d="M40,8 C48,6 56,8 62,14 L60,10 L66,16 L58,16 L56,12 C52,8 46,6 40,8 Z" fill="white" opacity="0.95"/>
-    <!-- Arrow head extension -->
-    <path d="M58,4 L68,14 L62,16 L54,8 Z" fill="white" opacity="0.95"/>
+    <!-- Middle orbital arrow -->
+    <path d="M24,30 C36,22 56,22 68,32" stroke="#0072C6" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <polygon points="68,32 60,24 62,34" fill="#0072C6"/>
 
-    <!-- Bottom-left arrow (flowing curve going left) -->
-    <path d="M32,64 C24,66 16,64 10,58 L12,62 L6,56 L14,56 L16,60 C20,64 26,66 32,64 Z" fill="white" opacity="0.75"/>
-    <!-- Arrow head extension -->
-    <path d="M14,68 L4,58 L10,56 L18,64 Z" fill="white" opacity="0.75"/>
+    <!-- Bottom orbital arrow -->
+    <path d="M58,64 C48,74 24,76 10,62" stroke="#0072C6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="10,62 18,70 16,60" fill="#0072C6"/>
   </g>
 
-  <!-- ASSISTEC text - small caps (A and I taller) -->
-  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" fill="white" letter-spacing="0.5">
-    <tspan x="82" y="38" font-size="38">A</tspan><tspan font-size="29">SSISTEC</tspan>
-  </text>
+  <!-- ASSISTEC text -->
+  <text x="88" y="40" font-family="'Arial Black', 'Impact', 'Helvetica Neue', sans-serif" font-size="40" font-weight="900" fill="#0072C6" letter-spacing="1.5">ASSISTEC</text>
 
-  <!-- INFORMÁTICA text - small caps -->
-  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" fill="white" letter-spacing="1.5">
-    <tspan x="84" y="62" font-size="28">I</tspan><tspan font-size="21">NFORMÁTICA</tspan>
-  </text>
+  <!-- INFORMÁTICA text -->
+  <text x="90" y="64" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="24" font-weight="700" fill="#0072C6" letter-spacing="3">INFORMÁTICA</text>
 </svg>

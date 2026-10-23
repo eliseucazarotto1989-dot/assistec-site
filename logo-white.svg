@@ -1,29 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
-  <!-- Icon: Globe with tech circuit/arrows -->
-  <g transform="translate(8, 8)">
-    <!-- Outer circle -->
-    <circle cx="32" cy="32" r="30" stroke="white" stroke-width="2.5" fill="none"/>
-    <!-- Globe lines -->
-    <ellipse cx="32" cy="32" rx="16" ry="30" stroke="white" stroke-width="1.5" fill="none"/>
-    <line x1="2" y1="32" x2="62" y2="32" stroke="white" stroke-width="1.5"/>
-    <ellipse cx="32" cy="20" rx="24" ry="4" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
-    <ellipse cx="32" cy="44" rx="24" ry="4" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
-    <!-- Arrow 1 (right) -->
-    <g transform="translate(48, 18)">
-      <path d="M0 8 L12 0 L12 5 L20 5 L20 11 L12 11 L12 16 Z" fill="#f59e0b"/>
-    </g>
-    <!-- Arrow 2 (left bottom) -->
-    <g transform="translate(-4, 38)">
-      <path d="M20 8 L8 0 L8 5 L0 5 L0 11 L8 11 L8 16 Z" fill="rgba(255,255,255,0.5)"/>
-    </g>
-    <!-- Center dot -->
-    <circle cx="32" cy="32" r="4" fill="white"/>
-    <circle cx="32" cy="32" r="2" fill="#0f172a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <!-- Globe with orbital arrows - Assistec Informática original logo (white version for dark bg) -->
+  <g transform="translate(2, 2) scale(0.95)">
+    <!-- Globe sphere outline -->
+    <circle cx="38" cy="38" r="30" stroke="white" stroke-width="2.5" fill="none"/>
+
+    <!-- Vertical meridian (3D curve) -->
+    <ellipse cx="32" cy="38" rx="13" ry="30" stroke="white" stroke-width="1.6" fill="none"/>
+
+    <!-- Horizontal equator -->
+    <path d="M8,38 Q38,32 68,38" stroke="white" stroke-width="1.4" fill="none"/>
+
+    <!-- Upper latitude -->
+    <path d="M14,24 Q38,19 62,24" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
+
+    <!-- Lower latitude -->
+    <path d="M14,52 Q38,47 62,52" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
+
+    <!-- Top orbital arrow -->
+    <path d="M18,12 C28,2 52,0 66,14" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="66,14 58,6 60,16" fill="white"/>
+
+    <!-- Middle orbital arrow -->
+    <path d="M24,30 C36,22 56,22 68,32" stroke="white" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <polygon points="68,32 60,24 62,34" fill="white"/>
+
+    <!-- Bottom orbital arrow -->
+    <path d="M58,64 C48,74 24,76 10,62" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="10,62 18,70 16,60" fill="white"/>
   </g>
-  <!-- Text: ASSISTEC -->
-  <text x="82" y="42" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32" font-weight="900" letter-spacing="2" fill="white">ASSISTEC</text>
-  <!-- Text: INFORMATICA -->
-  <text x="83" y="62" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" letter-spacing="4" fill="rgba(255,255,255,0.6)">INFORM&#xC1;TICA</text>
-  <!-- Accent line -->
-  <rect x="82" y="46" width="50" height="2.5" rx="1.25" fill="#f59e0b"/>
+
+  <!-- ASSISTEC text -->
+  <text x="88" y="40" font-family="'Arial Black', 'Impact', 'Helvetica Neue', sans-serif" font-size="40" font-weight="900" fill="white" letter-spacing="1.5">ASSISTEC</text>
+
+  <!-- INFORMÁTICA text -->
+  <text x="90" y="64" font-family="'Arial', 'Helvetica Neue', sans-serif" font-size="24" font-weight="700" fill="white" letter-spacing="3">INFORMÁTICA</text>
 </svg>

@@ -33,8 +33,15 @@ URL: www.assistecrb.net
 ### Dados
 | Arquivo | O que e |
 |---------|---------|
-| `catalog-data.json` | Lista completa de produtos do catalogo (nome, preco, categoria, etc.) |
-| `product-images.json` | Imagens dos produtos em base64/URLs |
+| `catalog-data.json` | Produtos por modelo, revestimentos e cores. GERADO do catalogo oficial (Montador de Pedidos): nao editar a mao |
+| `product-images.json` | Galeria de fotos de cada produto. GERADO junto |
+| `ferramentas/gerar_catalogo.py` | Gera os dois arquivos acima a partir do Montador (so le o montador; nunca leva precos) |
+| `ferramentas/conferir_site.py` | Confere se o site esta coerente com o catalogo e sem precos |
+
+### Catalogo fiel (regra)
+O catalogo oficial e o Montador de Pedidos (pasta `CAVALETTI CATALOGO NOVO`). O site nunca e editado produto a produto:
+quando o catalogo mudar, rode `python ferramentas/gerar_catalogo.py` e depois `python ferramentas/conferir_site.py`.
+A Cavaletti nao permite precos no site: nenhum valor e publicado.
 
 ### Imagens
 | Arquivo | O que e |
@@ -60,7 +67,6 @@ Voce pode pedir alteracoes assim:
 
 ### Produtos
 - "Adiciona um novo produto no catalogo"
-- "Muda o preco do produto X"
 - "Remove um produto do catalogo"
 
 ### Estrutura

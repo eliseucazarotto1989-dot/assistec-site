@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto - Assistec Cavaletti</title>
-    <link rel="icon" type="image/png" href="logo-assistec.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     (55) 3798-1003
                 </a>
-                <a href="https://wa.me/5537981003" target="_blank">
+                <a href="https://wa.me/555537981003" target="_blank">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                     WhatsApp
                 </a>
@@ -39,7 +39,7 @@
                 <span></span><span></span><span></span>
             </button>
             <a href="index.html" class="gp-logo">
-                <img src="logo-assistec.svg" alt="Assistec">
+                <img src="logo-assistec.png" alt="Assistec">
             </a>
             <div class="gp-search-bar">
                 <input type="text" placeholder="O que você procura?" id="headerSearch">
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="gp-footer-grid">
                 <div class="gp-footer-col">
-                    <img src="logo-assistec.svg" alt="Assistec" class="gp-footer-logo">
+                    <img src="logo-assistec-branco.png" alt="Assistec" class="gp-footer-logo">
                     <p class="gp-footer-desc">Assistência técnica em informática, venda de equipamentos e revenda autorizada Cavaletti em Rodeio Bonito/RS.</p>
                     <div class="gp-footer-socials">
                         <a href="https://www.instagram.com/assistecrb/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="gp-footer-col">
                     <h4>Atendimento</h4>
-                    <a href="https://wa.me/5537981003" target="_blank">WhatsApp</a>
+                    <a href="https://wa.me/555537981003" target="_blank">WhatsApp</a>
                     <a href="mailto:assistecrb@assistecrb.net">E-mail</a>
                     <a href="tel:+555537981003">(55) 3798-1003</a>
                 </div>
@@ -192,9 +192,73 @@
     let currentProduct = null;
     let selectedMaterial = '';
     let selectedColor = '';
+    let selectedVar = -1;       // configuração escolhida (índice em product.variacoes)
+    let selectedEstrutura = '';
+    let selectedEncosto = '';
+    let selectedEncostoColor = '';
+
+    function nomeMaterial(id) { const m = CavalettiFabrics.materials.find(x => x.id === id); return m ? m.name : ''; }
+    function nomeCor(id) { const c = CavalettiFabrics.colors.find(x => x.id === id); return c ? c.name : ''; }
+
+    function selectVariacao(idx) {
+        selectedVar = parseInt(idx, 10);
+        const v = currentProduct && currentProduct.variacoes[selectedVar];
+        const box = document.getElementById('varCodigo');
+        if (box) box.textContent = v ? (v.codigo ? 'Código Cavaletti: ' + v.codigo : 'Sem código na tabela') : '';
+        if (v && v.estruturas.length === 1) selectEstrutura(v.estruturas[0]);
+    }
+
+    function selectEstrutura(st) {
+        selectedEstrutura = st;
+        document.querySelectorAll('.config-estrutura-btn').forEach(b => b.classList.toggle('active', b.dataset.st === st));
+    }
+
+    function selectEncosto(matId) {
+        selectedEncosto = matId;
+        selectedEncostoColor = '';
+        document.querySelectorAll('.config-encosto-btn').forEach(b => b.classList.toggle('active', b.dataset.mat === matId));
+        renderEncostoColors();
+    }
+
+    function selectEncostoColor(colorId) {
+        selectedEncostoColor = colorId;
+        renderEncostoColors();
+    }
+
+    function renderEncostoColors() {
+        const box = document.getElementById('encostoColors');
+        if (!box) return;
+        box.innerHTML = CavalettiFabrics.getColorsForMaterial(selectedEncosto).map(c => `
+            <button class="config-swatch${c.id === selectedEncostoColor ? ' active' : ''}" style="background:${c.hex};" title="${esc(c.name)}" onclick="selectEncostoColor('${c.id}')">
+                ${c.id === selectedEncostoColor ? '<svg class="config-swatch-check" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+            </button>`).join('');
+        const nome = document.getElementById('encostoColorName');
+        if (nome) nome.textContent = selectedEncostoColor ? nomeCor(selectedEncostoColor) : 'Selecione uma cor';
+    }
+
+    // resumo da escolha do cliente, usado no WhatsApp e na lista de orçamento
+    function escolha() {
+        const v = currentProduct.variacoes[selectedVar];
+        return {
+            config: v ? v.descricao : '',
+            codigo: v && v.codigo ? v.codigo : '',
+            estrutura: selectedEstrutura,
+            material: nomeMaterial(selectedMaterial),
+            color: nomeCor(selectedColor),
+            encosto: nomeMaterial(selectedEncosto),
+            encostoCor: nomeCor(selectedEncostoColor)
+        };
+    }
+
+    function legendaDa(src) {
+        const f = ((currentProduct && currentProduct.fotos) || []).find(x => x.src === src);
+        return f ? f.legenda : '';
+    }
 
     function selectGalleryImage(src, btn) {
         document.getElementById('mainImage').src = src;
+        const leg = document.getElementById('fotoLegenda');
+        if (leg) leg.textContent = legendaDa(src);
         document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
         if (btn) btn.classList.add('active');
     }
@@ -244,8 +308,7 @@
         const el = document.getElementById('colorNameDisplay');
         if (!el) return;
         if (selectedColor) {
-            const c = CavalettiFabrics.colors.find(x => x.id === selectedColor);
-            el.textContent = c ? c.name : '';
+            el.textContent = nomeCor(selectedColor);
         } else {
             el.textContent = 'Selecione uma cor';
         }
@@ -263,16 +326,13 @@
 
     function addProductToQuote() {
         if (!currentProduct) return;
-        const matObj = CavalettiFabrics.materials.find(m => m.id === selectedMaterial);
-        const colObj = CavalettiFabrics.colors.find(c => c.id === selectedColor);
-        const added = QuoteList.add({
+        const e = escolha();
+        const added = QuoteList.add(Object.assign({
             id: currentProduct.id,
             name: currentProduct.name,
             line: currentProduct.line,
-            code: currentProduct.code || '',
-            material: matObj ? matObj.name : '',
-            color: colObj ? colObj.name : ''
-        });
+            image: currentProduct.image
+        }, e, { code: e.codigo || currentProduct.code || '' }));
         if (added) {
             toggleQuotePanel();
         } else {
@@ -282,20 +342,23 @@
 
     function requestWhatsApp() {
         if (!currentProduct) return;
-        const matObj = CavalettiFabrics.materials.find(m => m.id === selectedMaterial);
-        const colObj = CavalettiFabrics.colors.find(c => c.id === selectedColor);
+        const e = escolha();
         const lines = [
             `*Solicitação de Orçamento - Assistec*`,
             ``,
             `*Produto:* ${currentProduct.name}`,
             `*Linha:* ${currentProduct.line}`
         ];
-        if (currentProduct.code) lines.push(`*Código:* ${currentProduct.code}`);
-        if (matObj) lines.push(`*Revestimento:* ${matObj.name}`);
-        if (colObj) lines.push(`*Cor:* ${colObj.name}`);
+        if (currentProduct.code) lines.push(`*Modelo:* ${currentProduct.code}`);
+        if (e.config) lines.push(`*Configuração:* ${e.config}`);
+        if (e.codigo) lines.push(`*Código Cavaletti:* ${e.codigo}`);
+        if (e.estrutura) lines.push(`*Estrutura:* ${e.estrutura}`);
+        if (e.material) lines.push(`*Revestimento:* ${e.material}`);
+        if (e.color) lines.push(`*Cor:* ${e.color}`);
+        if (e.encosto) lines.push(`*Encosto:* ${e.encosto}${e.encostoCor ? ' - ' + e.encostoCor : ''}`);
         lines.push('', 'Gostaria de receber um orçamento para este produto.');
         const encoded = encodeURIComponent(lines.join('\n'));
-        window.open(`https://wa.me/5537981003?text=${encoded}`, '_blank');
+        window.open(`https://wa.me/555537981003?text=${encoded}`, '_blank');
     }
 
     function shareWhatsApp() {
@@ -330,68 +393,22 @@
             const res = await fetch('catalog-data.json');
             const data = await res.json();
             let allProds = data.products;
-
-            // Adicionar produtos customizados
-            try {
-                const custom = JSON.parse(localStorage.getItem('custom_products') || '[]');
-                for (const cp of custom) allProds.unshift(cp);
-            } catch(e) {}
-
-            // Aplicar overrides do localStorage
-            try {
-                const overrides = JSON.parse(localStorage.getItem('product_overrides') || '{}');
-                for (const p of allProds) {
-                    const ov = overrides[p.id];
-                    if (ov) {
-                        if (ov.name) p.name = ov.name;
-                        if (ov.image) p.image = ov.image;
-                    }
-                }
-            } catch(e) {}
+            // catálogo oficial: produtos e cores vêm só do arquivo gerado do Montador
+            CavalettiFabrics.setData(data.revestimentos);
 
             const product = allProds.find(p => p.id === productId);
 
             if (!product) { showError('Produto não encontrado.'); return; }
 
-            // Mesclar overrides do Supabase + imagens extras
+            // Galeria de fotos (product-images.json, gerado junto com o catálogo)
             let extraImages = [];
-            const _sbKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxobmx3bGVsYWJnZGdkaG96aHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzNTc1NDUsImV4cCI6MjA4ODkzMzU0NX0.K0IWRdkpFyY_zbIzoBNSgJK8wPUO_DqEUam7U35lDC0';
-            const _sbUrl = 'https://lhnlwlelabgdgdhozhpe.supabase.co/rest/v1';
-
-            // 1. Supabase overrides (nome, imagem principal)
-            try {
-                const ovRes = await fetch(`${_sbUrl}/product_overrides?select=*&product_id=eq.${encodeURIComponent(product.id)}`, { headers: { 'apikey': _sbKey } });
-                if (ovRes.ok) {
-                    const ovData = await ovRes.json();
-                    if (ovData.length > 0) {
-                        if (ovData[0].name) product.name = ovData[0].name;
-                        if (ovData[0].image) product.image = ovData[0].image;
-                    }
-                }
-            } catch (e) { /* Supabase offline */ }
-
-            // 2. Imagens extras: tentar product-images.json local primeiro
             try {
                 const localRes = await fetch('product-images.json');
                 if (localRes.ok) {
                     const allImages = await localRes.json();
-                    if (allImages[product.id] && allImages[product.id].length > 0) {
-                        extraImages = allImages[product.id].map((url, i) => ({
-                            image_url: url, sort_order: i
-                        }));
-                    }
+                    extraImages = (allImages[product.id] || []).map((url, i) => ({ image_url: url, sort_order: i }));
                 }
-            } catch (e) { /* Arquivo não existe ainda */ }
-
-            // 3. Fallback: Supabase product_images (quando tabela existir)
-            if (extraImages.length === 0) {
-                try {
-                    const imgRes = await fetch(`${_sbUrl}/product_images?select=*&product_id=eq.${encodeURIComponent(product.id)}&order=sort_order`, { headers: { 'apikey': _sbKey } });
-                    if (imgRes.ok) {
-                        extraImages = await imgRes.json();
-                    }
-                } catch (e) { /* Supabase offline */ }
-            }
+            } catch (e) { /* sem galeria */ }
 
             product._extraImages = extraImages;
             currentProduct = product;
@@ -414,9 +431,16 @@
             document.title = `${product.name} - Assistec Cavaletti`;
             document.getElementById('breadcrumbProduct').textContent = product.name;
 
-            const cavalettiUrl = `https://www.cavaletti.com.br/produtos/${product.lineSlug}`;
-            const hasFabric = CavalettiFabrics.hasFabrics(product.category);
-            const materials = hasFabric ? CavalettiFabrics.getMaterialsForCategory(product.category) : [];
+            const cavalettiUrl = product.lineSlug ? `https://www.cavaletti.com.br/produtos/${product.lineSlug}` : 'https://www.cavaletti.com.br/produtos';
+            const hasFabric = CavalettiFabrics.hasFabrics(product);
+            const materials = hasFabric ? CavalettiFabrics.getMaterialsForProduct(product) : [];
+            const encostos = CavalettiFabrics.getEncostoForProduct(product);
+            const variacoes = product.variacoes || [];
+            const estruturas = product.estruturas || [];
+            selectedVar = variacoes.length === 1 ? 0 : -1;
+            selectedEstrutura = estruturas.length === 1 ? estruturas[0] : '';
+            selectedEncosto = encostos.length === 1 ? encostos[0] : '';
+            selectedEncostoColor = '';
             const isFav = Favorites.isFavorite(product.id);
 
             // Default material
@@ -439,16 +463,17 @@
                                 <button class="product-favorite ${isFav ? 'active' : ''}" id="productFavBtn" onclick="toggleProductFav('${product.id}')">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                                 </button>
-                                <img src="${product.image}" alt="${esc(product.name)}" id="mainImage"
+                                <img src="${product.image || 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f3f4f6%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22 dy=%22.3em%22%3ESem foto oficial%3C/text%3E%3C/svg%3E'}" alt="${esc(product.name)}" id="mainImage"
                                      onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f3f4f6%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22 dy=%22.3em%22%3ESem Imagem%3C/text%3E%3C/svg%3E'">
                             </div>
+                            <div id="fotoLegenda" style="font-size:12px;color:#6b7280;margin:8px 4px 0;min-height:16px;">${esc(legendaDa(product.image))}</div>
                             <div class="gallery-thumbs">
-                                <button class="gallery-thumb active" onclick="selectGalleryImage('${product.image}', this)">
+                                ${product.image ? `<button class="gallery-thumb active" onclick="selectGalleryImage('${product.image}', this)">
                                     <img src="${product.image}" alt="Thumb 1"
                                          onerror="this.parentElement.style.display='none'">
-                                </button>
+                                </button>` : ''}
                                 ${(product._extraImages || []).map((img, i) => `
-                                <button class="gallery-thumb" onclick="selectGalleryImage('${img.image_url}', this)">
+                                <button class="gallery-thumb" title="${esc(legendaDa(img.image_url))}" onclick="selectGalleryImage('${img.image_url}', this)">
                                     <img src="${img.image_url}" alt="Foto ${i + 2}"
                                          onerror="this.parentElement.style.display='none'">
                                 </button>`).join('')}
@@ -470,7 +495,7 @@
                                 </div>
                                 ${product.code ? `
                                 <div class="meta-item">
-                                    <span class="meta-label">Código</span>
+                                    <span class="meta-label">Modelo</span>
                                     <span class="meta-value">${esc(product.code)}</span>
                                 </div>` : ''}
                                 <div class="meta-item">
@@ -483,9 +508,26 @@
                                 </div>
                             </div>
 
-                            ${hasFabric ? `
-                            <!-- Configurator -->
+                            <!-- Configurador: só o que o catálogo oficial permite para esta linha -->
                             <div class="product-configurator">
+                                ${variacoes.length > 1 ? `
+                                <div class="config-section">
+                                    <label>CONFIGURAÇÃO (${variacoes.length} opções)</label>
+                                    <select id="varSelect" onchange="selectVariacao(this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;">
+                                        <option value="-1">Escolha a configuração</option>
+                                        ${variacoes.map((v, i) => `<option value="${i}">${esc(v.descricao)}${v.codigo ? ' — ' + esc(v.codigo) : ''}</option>`).join('')}
+                                    </select>
+                                    <div class="config-color-name" id="varCodigo"></div>
+                                </div>` : (variacoes[0] && variacoes[0].codigo ? `
+                                <div class="config-section"><label>CÓDIGO CAVALETTI</label><div class="config-color-name">${esc(variacoes[0].codigo)}</div></div>` : '')}
+                                ${estruturas.length > 1 ? `
+                                <div class="config-section">
+                                    <label>ESTRUTURA</label>
+                                    <div class="config-material-btns">
+                                        ${estruturas.map(st => `<button class="config-material-btn config-estrutura-btn" data-st="${esc(st)}" onclick="selectEstrutura('${esc(st)}')">${esc(st)}</button>`).join('')}
+                                    </div>
+                                </div>` : ''}
+                                ${hasFabric ? `
                                 <div class="config-section">
                                     <label>REVESTIMENTO</label>
                                     <div class="config-material-btns">
@@ -504,7 +546,17 @@
                                     </div>
                                     <div class="config-color-name" id="colorNameDisplay">Selecione uma cor</div>
                                 </div>
-                            </div>` : ''}
+                                ` : ''}
+                                ${encostos.length ? `
+                                <div class="config-section">
+                                    <label>ENCOSTO</label>
+                                    <div class="config-material-btns">
+                                        ${encostos.map(m => `<button class="config-material-btn config-encosto-btn${m === selectedEncosto ? ' active' : ''}" data-mat="${m}" onclick="selectEncosto('${m}')">${esc(nomeMaterial(m))}</button>`).join('')}
+                                    </div>
+                                    <div class="config-colors" id="encostoColors"></div>
+                                    <div class="config-color-name" id="encostoColorName">Selecione uma cor</div>
+                                </div>` : ''}
+                            </div>
 
                             <!-- Actions -->
                             <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px;">
@@ -559,7 +611,7 @@
                                         <li><strong>Categoria:</strong> ${esc(product.category)}</li>
                                         <li><strong>Tipo:</strong> ${esc(product.type)}</li>
                                         <li><strong>Linha:</strong> ${esc(product.line)}</li>
-                                        ${product.code ? `<li><strong>Código:</strong> ${esc(product.code)}</li>` : ''}
+                                        ${product.code ? `<li><strong>Modelo:</strong> ${esc(product.code)}</li>` : ''}
                                         <li><strong>Garantia:</strong> Garantia Cavaletti</li>
                                         <li><strong>Fabricante:</strong> Cavaletti</li>
                                     </ul>
@@ -658,6 +710,8 @@
                 </div>` : ''}
             `;
 
+            renderEncostoColors();
+
             // Tabs
             document.querySelectorAll('.product-tab').forEach(tab => {
                 tab.addEventListener('click', () => {
@@ -673,7 +727,7 @@
             return `
                 <a href="produto.html?id=${encodeURIComponent(p.id)}" class="related-card">
                     <div class="related-card-img">
-                        <img src="${p.image}" alt="${esc(p.name)}" loading="lazy"
+                        <img src="${p.image || 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f3f4f6%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22 dy=%22.3em%22%3ESem foto oficial%3C/text%3E%3C/svg%3E'}" alt="${esc(p.name)}" loading="lazy"
                              onerror="this.style.display='none'">
                     </div>
                     <div class="related-card-body">
