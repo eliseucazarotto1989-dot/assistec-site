@@ -78,7 +78,7 @@
         const t = document.getElementById('toast');
         t.innerHTML = `${p.image ? `<img src="${esc(p.image)}" alt="">` : ''}
             <div><b>${qtd}× ${esc(titulo(p))}</b><small>adicionado em “${esc(amb.nome)}”</small></div>
-            <a href="projeto.html">Ver projeto</a>`;
+            <a href="projeto.html">Ver pedido</a>`;
         t.classList.add('mostra');
         document.body.classList.add('tem-toast');
         clearTimeout(toastTimer);
@@ -111,7 +111,7 @@
     function grade(lista) {
         return `<div class="grade">${lista.map(p => `
             <a class="card" href="${urlProduto(p.id)}">
-                <div class="card-foto">${imgOu(p)}<span class="add" aria-hidden="true">+ Projeto</span></div>
+                <div class="card-foto">${imgOu(p)}<span class="add" aria-hidden="true">+ Pedido</span></div>
                 <div class="card-txt"><small>${esc(p.line)}</small><h3>${esc(titulo(p))}</h3><span>Modelo ${esc(p.code || '—')} · ${plural(p.variacoes.length, 'configuração', 'configurações')}</span></div>
             </a>`).join('')}</div>`;
     }
@@ -144,7 +144,6 @@
     // ---------- página inicial ----------
     function telaInicio() {
         const dest = DESTAQUES.map(id => porId[id]).filter(p => p && p.image);
-        const totalConfs = P.reduce((t, p) => t + p.variacoes.length, 0);
         const ambs = AMBIENTES.map(capaAmbiente);
         const cols = COLECOES_HOME.map(n => linhas.find(l => l.nome === n)).filter(Boolean);
         const ex = ['yon-47301', 'match-46206', 'raya-36306'].map(id => porId[id]).filter(Boolean);
@@ -155,7 +154,7 @@
                 <div class="surge">
                     <span class="rotulo">Revenda autorizada Cavaletti · Rodeio Bonito/RS</span>
                     <h1 class="display">Ambientes que <em>trabalham</em> com você.</h1>
-                    <p class="lead">Mais de ${Math.floor(P.length / 100) * 100} modelos de cadeiras, sofás e mesas Cavaletti. Monte o projeto de cada sala e receba o orçamento pelo WhatsApp — sem compromisso.</p>
+                    <p class="lead">Mais de ${Math.floor(P.length / 100) * 100} modelos de cadeiras, sofás e mesas Cavaletti. Monte o pedido de cada sala e receba o orçamento pelo WhatsApp — sem compromisso.</p>
                     <div class="hero-acoes">
                         <a href="catalogo.html" class="btn btn-marinho">Explorar coleções ${seta}</a>
                         <a href="catalogo.html?ver=ambientes" class="btn btn-contorno">Escolher por ambiente</a>
@@ -172,20 +171,13 @@
             </div>
         </section>
 
-        <section class="faixa">
-            <div class="wrap">
-                <div class="item"><strong>${P.length}</strong><span>modelos<br>Cavaletti</span></div>
-                <div class="item"><strong>${linhas.length}</strong><span>linhas<br>no showroom</span></div>
-                <div class="item"><strong>${totalConfs.toLocaleString('pt-BR')}</strong><span>configurações<br>com código oficial</span></div>
-                <div class="item"><strong>1</strong><span>mensagem para<br>orçar o projeto todo</span></div>
-            </div>
-        </section>
+        ${placar()}
 
         <section class="secao" id="ambientes">
             <div class="wrap">
                 <div class="secao-cab surge">
                     <div><span class="rotulo">Por ambiente</span><h2 class="display">Comece pelo espaço, não pelo catálogo.</h2></div>
-                    <p>Escolha o ambiente e veja só o que faz sentido para ele. Depois é só montar o projeto sala por sala.</p>
+                    <p>Escolha o ambiente e veja só o que faz sentido para ele. Depois é só montar o pedido sala por sala.</p>
                 </div>
                 <div class="ambientes">${ambs.map(cartaoAmbiente).join('')}</div>
             </div>
@@ -212,21 +204,21 @@
         <section class="secao fundo-marinho">
             <div class="wrap">
                 <div class="secao-cab surge">
-                    <div><span class="rotulo claro">Orçamento como projeto</span><h2 class="display">Monte a sala. A gente orça o todo.</h2></div>
+                    <div><span class="rotulo claro">Pedido por ambiente</span><h2 class="display">Monte a sala. A gente orça o todo.</h2></div>
                     <p>Em vez de pedir item por item, você organiza o pedido por ambiente — do jeito que vai ser usado.</p>
                 </div>
                 <div class="passos surge">
                     <div class="passo"><div class="num">01</div><h3>Escolha e configure</h3><p>Estrutura, revestimento e cor de cada modelo, com o código oficial Cavaletti.</p></div>
                     <div class="passo"><div class="num">02</div><h3>Separe por ambiente</h3><p>“Recepção”, “Sala de reunião”, “Diretoria”… com a quantidade de cada um.</p></div>
-                    <div class="passo"><div class="num">03</div><h3>Envie com um toque</h3><p>O projeto chega organizado no nosso WhatsApp, ou vira um PDF para você compartilhar.</p></div>
+                    <div class="passo"><div class="num">03</div><h3>Envie com um toque</h3><p>O pedido chega organizado no nosso WhatsApp, ou vira um PDF para você compartilhar.</p></div>
                 </div>
                 <div class="exemplo-projeto">
                     <div class="surge">
                         <p style="font-size:20px;color:rgba(255,255,255,.8);max-width:26em">Assim o seu pedido chega até nós: claro para você aprovar na empresa, completo para a gente orçar sem idas e vindas.</p>
-                        <div class="hero-acoes"><a href="catalogo.html?ver=ambientes" class="btn btn-claro">Começar meu projeto ${seta}</a></div>
+                        <div class="hero-acoes"><a href="catalogo.html?ver=ambientes" class="btn btn-claro">Montar meu pedido ${seta}</a></div>
                     </div>
-                    <div class="cartao surge" aria-label="Exemplo de projeto">
-                        <span class="rotulo">Exemplo de projeto</span>
+                    <div class="cartao surge" aria-label="Exemplo de pedido">
+                        <span class="rotulo">Exemplo de pedido</span>
                         <div class="amb-nome" style="margin-top:16px">Sala de reunião</div>
                         ${ex[0] ? `<div class="linha-item"><img src="${esc(ex[0].image)}" alt=""><div><b>${esc(titulo(ex[0]))}</b><span>Estrutura Preta · Grid Cinza</span></div><span class="qtd">8×</span></div>` : ''}
                         ${ex[1] ? `<div class="linha-item"><img src="${esc(ex[1].image)}" alt=""><div><b>${esc(titulo(ex[1]))}</b><span>Concha plástica</span></div><span class="qtd">4×</span></div>` : ''}
@@ -268,6 +260,30 @@
         </section>`;
         iniciaHero(dest);
         if (location.hash) setTimeout(() => document.querySelector(location.hash)?.scrollIntoView(), 50);
+    }
+
+    // Letreiro tipo placa de estádio. Fatos tirados do site oficial da Cavaletti
+    // (institucional: A Cavaletti, Nossa história, Certificações, Sustentabilidade — out/2026).
+    function placar() {
+        const frases = [
+            `<b>${P.length}</b> modelos Cavaletti`,
+            'Desde <b>1974</b> fazendo cadeiras',
+            'Qualidade certificada <b>ISO 9001</b>',
+            'Testadas em <b>laboratório próprio</b> de ensaios mecânicos',
+            'Resistência e durabilidade: diretrizes da <b>ABNT NBR 13962</b>',
+            'Ergonomia segundo a <b>NR 17</b>',
+            'Pintura com <b>processo certificado</b>',
+            'Madeira com certificação <b>FSC®</b> e <b>PEFC</b>',
+            '<b>40%</b> da energia da fábrica é solar',
+            'Fábrica de <b>108 mil m²</b> em Erechim/RS',
+            'Uma das principais marcas da <b>América Latina</b>',
+            '“Fazer bem feito, <b>sempre</b>.”',
+        ];
+        const grupo = frases.map(f => `<span class="placar-item">${f}</span><span class="seta" aria-hidden="true"></span>`).join('');
+        const texto = frases.map(f => f.replace(/<[^>]+>/g, '')).join('. ');
+        return `<section class="placar" aria-label="${esc(texto)}">
+            <div class="placar-trilho" aria-hidden="true"><div class="placar-grupo">${grupo}</div><div class="placar-grupo">${grupo}</div></div>
+        </section>`;
     }
 
     const cartaoAmbiente = a => `<a class="amb surge" href="${urlAmbiente(a.id)}">
@@ -376,7 +392,7 @@
                             <datalist id="ambLista">${[...new Set([...ambsProj, 'Recepção', 'Sala de reunião', 'Diretoria', 'Escritório', 'Auditório', 'Copa'])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
                         </label>
                         <div class="adicionar-linha">
-                            <button class="btn btn-marinho btn-bloco" id="btnAdd">Adicionar ao projeto ${seta}</button>
+                            <button class="btn btn-marinho btn-bloco" id="btnAdd">Adicionar ao pedido ${seta}</button>
                             <div class="qtd-box"><button type="button" data-q="-1" aria-label="Menos">−</button><input id="qtd" type="number" min="1" value="1" aria-label="Quantidade"><button type="button" data-q="1" aria-label="Mais">+</button></div>
                         </div>
                         <p class="nota" id="falta"></p>
@@ -476,7 +492,7 @@
         if (!total) {
             app.innerHTML = `<div class="wrap vazio">
                 <img class="simb" src="img/marca/assistec-simbolo-azul.svg" alt="">
-                <h1 class="display" style="font-size:clamp(30px,4vw,48px);margin-bottom:12px">Seu projeto está vazio.</h1>
+                <h1 class="display" style="font-size:clamp(30px,4vw,48px);margin-bottom:12px">Seu pedido está vazio.</h1>
                 <p>Escolha os modelos, configure e separe por ambiente. Depois é só enviar.</p>
                 <a href="catalogo.html?ver=ambientes" class="btn btn-marinho">Começar pelos ambientes ${seta}</a></div>`;
             return;
@@ -485,8 +501,8 @@
         app.innerHTML = `
         <section class="cab-pagina"><div class="wrap">
             <img class="so-impressao" src="img/marca/assistec-horizontal-cor.svg" alt="Assistec Informática" style="height:48px;margin-bottom:12px">
-            <nav class="migalha"><a href="index.html">Início</a>/<span>Meu projeto</span></nav>
-            <h1 class="display">Meu projeto</h1>
+            <nav class="migalha"><a href="index.html">Início</a>/<span>Monte seu pedido</span></nav>
+            <h1 class="display">Monte seu pedido</h1>
             <div class="sub"><span>${plural(ambs.length, 'ambiente', 'ambientes')} · ${plural(total, 'peça', 'peças')}</span><span class="so-impressao">Gerado em ${hoje} · assistecrb.net · (55) 3798-1003</span></div>
         </div></section>
         <div class="wrap"><div class="projeto">
@@ -516,8 +532,8 @@
                 <label class="campo"><span>Cidade</span><input data-cli="cidade" value="${esc(pr.cliente.cidade)}" autocomplete="address-level2"></label>
                 <label class="campo"><span>Observações</span><textarea data-cli="obs">${esc(pr.cliente.obs)}</textarea></label>
                 <button class="btn btn-whats btn-bloco" id="enviar">Enviar pelo WhatsApp</button>
-                <button class="btn btn-contorno btn-bloco" id="pdf">Baixar PDF do projeto</button>
-                <button class="remover" id="limpar" style="justify-self:center">Limpar projeto</button>
+                <button class="btn btn-contorno btn-bloco" id="pdf">Baixar PDF do pedido</button>
+                <button class="remover" id="limpar" style="justify-self:center">Limpar pedido</button>
                 <p class="nota">A Cavaletti não permite preços no site: a Assistec responde com o orçamento completo.</p>
             </aside>
         </div></div>`;
@@ -544,12 +560,12 @@
         });
         document.getElementById('pdf').addEventListener('click', () => window.print());
         document.getElementById('limpar').addEventListener('click', () => {
-            if (confirm('Apagar todos os itens do projeto?')) { Projeto.salvar(Projeto.novo()); telaProjeto(); }
+            if (confirm('Apagar todos os itens do pedido?')) { Projeto.salvar(Projeto.novo()); telaProjeto(); }
         });
     }
 
     function mensagem(pr) {
-        const c = pr.cliente, l = ['*Projeto para orçamento — Assistec*'];
+        const c = pr.cliente, l = ['*Pedido para orçamento — Assistec*'];
         if (c.nome || c.empresa) l.push([c.nome, c.empresa].filter(Boolean).join(' · '));
         if (c.cidade) l.push(c.cidade);
         pr.ambientes.filter(a => a.itens.length).forEach(a => {

@@ -396,7 +396,8 @@ input, select, textarea { font: inherit; color: inherit; }
 .js .surge { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
 .js .surge.visivel { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition: none !important; animation: none !important; }
+  *, *::before, *::after { transition: none !important; }
+  *:not(.placar-trilho), *::before, *::after { animation: none !important; }
   .js .surge { opacity: 1; transform: none; }
 }
 
@@ -518,3 +519,30 @@ input, select, textarea { font: inherit; color: inherit; }
 .whats-flutuante:hover { transform: scale(1.06); }
 body.tem-toast .whats-flutuante { opacity: 0; pointer-events: none; }
 @media print { .whats-flutuante, .aviso-cookies, .busca-topo { display: none !important; } }
+
+/* ---------- Letreiro tipo placa de estádio (página inicial) ---------- */
+.placar {
+  position: relative; overflow: hidden; background: var(--marinho); color: #fff;
+  border-top: 3px solid var(--azul); border-bottom: 3px solid var(--azul);
+  box-shadow: inset 0 0 40px rgba(0, 180, 240, .12);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.placar::after {   /* textura de LED */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1.5px); background-size: 4px 4px;
+}
+.placar-trilho { display: flex; width: max-content; animation: placar 70s linear infinite; }
+.placar:hover .placar-trilho { animation-play-state: paused; }
+.placar-grupo { display: flex; align-items: center; flex-shrink: 0; }
+.placar-item {
+  padding: 24px 34px; white-space: nowrap; text-transform: uppercase;
+  font-size: clamp(18px, 2.3vw, 30px); font-weight: 600; font-stretch: 112%; letter-spacing: .04em;
+  text-shadow: 0 0 14px rgba(0, 180, 240, .25);
+}
+.placar-item b { color: var(--ciano); font-weight: 750; }
+.placar .seta { color: var(--ciano); font-size: clamp(14px, 1.6vw, 20px); opacity: .9; }
+@keyframes placar { to { transform: translateX(-50%); } }
+@media (max-width: 860px) { .placar-item { padding: 18px 22px; } .placar-trilho { animation-duration: 55s; } }
+/* com "reduzir animações" ligado no aparelho o letreiro continua, bem mais lento (e para ao passar o mouse) */
+@media (prefers-reduced-motion: reduce) { .placar-trilho { animation-duration: 160s; } }
