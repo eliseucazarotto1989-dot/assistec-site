@@ -86,7 +86,8 @@ def nome_comum(descs, mod):
     return expande(' '.join(nome))
 
 
-RE_MODELO = re.compile(r'(?<![\d,.])(\d{2}\.\d{3}|\d{4,5})(?![\d,]|\.\d)')
+# nº do modelo (36.635 ou 36635); medidas como "1200mm", "1200 x 700" ou "x 1015" não contam
+RE_MODELO = re.compile(r'(?<![\d,.])(?<!x )(?<!x)(\d{2}\.\d{3}|\d{4,5})(?![\d,]|\.\d|\s*mm|\s*x\s*\d)')
 
 
 def modelo_de(desc):
@@ -183,6 +184,9 @@ def main():
             revest[nome] = [{'nome': c[0], 'codigo': c[1] or '', 'hex': c[2]} for c in cores]
         return nome
 
+    cav = json.load(open(os.path.join(SITE, 'ferramentas', 'cavaletti', 'configuracoes.json'), encoding='utf-8'))['linhas']
+    modelos_cavaletti = {x.replace('.', '') for its in cav.values() for it in its for x in re.findall(r'\d{1,2}\.?\d{3}', it['codigo'])}
+
     produtos = collections.OrderedDict()
     fora_lista = []
     for it in I:
@@ -195,6 +199,8 @@ def main():
             fora_lista.append(f"{f['nome']}: {desc[:70]}")
             continue
         mod = modelo_de(desc)
+        if not mod and re.match(r'[MD]\d{5}', cod or '') and cod[1:6] in modelos_cavaletti:
+            mod = cod[1:6]       # descrição sem o nº (ex.: puffs da Fun/Spin): o código Cavaletti começa por ele
         chave = (f['id'], mod or norm(nome_modelo(desc)))
         if chave not in produtos:
             produtos[chave] = {'f': f, 'mod': mod, 'nome': nome_modelo(desc), 'subs': [], 'var': collections.OrderedDict(),
@@ -259,8 +265,7 @@ def main():
                 P['telas'].append(nm)
 
     # ---------- fotos: só as originais do site da Cavaletti (ferramentas/baixar_fotos_cavaletti.py) ----------
-    cav = json.load(open(os.path.join(SITE, 'ferramentas', 'cavaletti', 'configuracoes.json'), encoding='utf-8'))['linhas']
-    cav_mod = collections.defaultdict(list)          # nº do modelo -> [(linha no site Cavaletti, configuração)]
+    cav_mod =collections.defaultdict(list)          # nº do modelo -> [(linha no site Cavaletti, configuração)]
     for cslug, its in cav.items():
         for it in its:
             for m in dict.fromkeys(x.replace('.', '') for x in re.findall(r'\d{1,2}\.?\d{3}', it['codigo'])):

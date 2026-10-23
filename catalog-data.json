@@ -2,11 +2,11 @@
  "meta": {
   "fonte": "Montador de Pedidos Cavaletti (catálogo oficial ajustado)",
   "montadorMd5": "34e19337da8d744bfa7b112ede0e1aa5",
-  "geradoEm": "2026-10-23T16:22:37",
-  "totalProducts": 435,
+  "geradoEm": "2026-10-23T16:37:26",
+  "totalProducts": 426,
   "totalLines": 46,
   "categories": {
-   "Sofás e Lounges": 83,
+   "Sofás e Lounges": 77,
    "Longarinas": 65,
    "Cadeiras Fixas": 42,
    "Cadeiras Giratória": 35,
@@ -16,9 +16,9 @@
    "Poltronas": 23,
    "Cadeiras Presidente": 22,
    "Cadeiras Executiva": 18,
-   "Complementos": 14,
    "Cadeiras Diretor": 13,
    "Poltronas Auditório": 11,
+   "Complementos": 11,
    "Cadeiras Operacional": 10,
    "Poltronas de Espera": 7
   },
@@ -10256,6 +10256,45 @@
    ]
   },
   {
+   "id": "fun-36030",
+   "code": "36.030",
+   "name": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
+   "line": "Fun",
+   "lineSlug": "fun",
+   "category": "Sofás e Lounges",
+   "type": "Sofá",
+   "image": "img/cavaletti/fun/WSl9aVjMYGs84koA2zOm.jpg",
+   "fotos": [
+    {
+     "src": "img/cavaletti/fun/WSl9aVjMYGs84koA2zOm.jpg",
+     "legenda": "36.030 · Puff Quadrado · 450mm / Em Liv Safira 512"
+    }
+   ],
+   "estruturas": [],
+   "revestimentos": [
+    "Vinil",
+    "CEC-Stilo",
+    "Grid",
+    "Politex",
+    "Liv",
+    "Grani",
+    "Haven"
+   ],
+   "telas": [],
+   "variacoes": [
+    {
+     "descricao": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
+     "codigo": "M3603000000001",
+     "estruturas": []
+    },
+    {
+     "descricao": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm",
+     "codigo": "M3603000000002",
+     "estruturas": []
+    }
+   ]
+  },
+  {
    "id": "fun-36302",
    "code": "36.302",
    "name": "Puff Soft Air 36302 - Linha Fun",
@@ -10286,7 +10325,7 @@
   {
    "id": "fun-36635",
    "code": "36.635",
-   "name": "Puff 36635 Hexagonal Regular Baixo - Linha Fun",
+   "name": "Puff 36635 - Linha Fun",
    "line": "Fun",
    "lineSlug": "fun",
    "category": "Sofás e Lounges",
@@ -10314,13 +10353,23 @@
      "descricao": "Puff 36635 Hexagonal Regular Baixo - Altura 350mm x Profundidade 815mm x Largura 719mm",
      "codigo": "M3663500000001",
      "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm",
+     "codigo": "M3663500000002",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm",
+     "codigo": "M3663500000003",
+     "estruturas": []
     }
    ]
   },
   {
    "id": "fun-36645",
    "code": "36.645",
-   "name": "Puff 36645 Hexagonal Regular Médio - Linha Fun",
+   "name": "Puff 36645 - Linha Fun",
    "line": "Fun",
    "lineSlug": "fun",
    "category": "Sofás e Lounges",
@@ -10347,6 +10396,16 @@
     {
      "descricao": "Puff 36645 Hexagonal Regular Médio - Altura 450mm x Profundidade 815mm x Largura 719mm",
      "codigo": "M3664500000001",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1015mm x Largura 892mm",
+     "codigo": "M3664500000002",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1215mm x Largura 1065mm",
+     "codigo": "M3664500000003",
      "estruturas": []
     }
    ]
@@ -18213,9 +18272,48 @@
    ]
   },
   {
+   "id": "spin-36030",
+   "code": "36.030",
+   "name": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm - Linha Spin",
+   "line": "Spin",
+   "lineSlug": "spin",
+   "category": "Sofás e Lounges",
+   "type": "Sofá",
+   "image": "img/cavaletti/fun/WSl9aVjMYGs84koA2zOm.jpg",
+   "fotos": [
+    {
+     "src": "img/cavaletti/fun/WSl9aVjMYGs84koA2zOm.jpg",
+     "legenda": "36.030 · Puff Quadrado · 450mm / Em Liv Safira 512"
+    }
+   ],
+   "estruturas": [],
+   "revestimentos": [
+    "Vinil",
+    "CEC-Stilo",
+    "Grid",
+    "Politex",
+    "Liv",
+    "Grani",
+    "Haven"
+   ],
+   "telas": [],
+   "variacoes": [
+    {
+     "descricao": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
+     "codigo": "M3603000000001",
+     "estruturas": []
+    },
+    {
+     "descricao": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm",
+     "codigo": "M3603000000002",
+     "estruturas": []
+    }
+   ]
+  },
+  {
    "id": "spin-36635",
    "code": "36.635",
-   "name": "Puff 36635 Hexagonal Regular Baixo - Linha Spin",
+   "name": "Puff 36635 - Linha Spin",
    "line": "Spin",
    "lineSlug": "spin",
    "category": "Sofás e Lounges",
@@ -18243,13 +18341,23 @@
      "descricao": "Puff 36635 Hexagonal Regular Baixo - Altura 350mm x Profundidade 815mm x Largura 719mm",
      "codigo": "M3663500000001",
      "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm",
+     "codigo": "M3663500000002",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm",
+     "codigo": "M3663500000003",
+     "estruturas": []
     }
    ]
   },
   {
    "id": "spin-36645",
    "code": "36.645",
-   "name": "Puff 36645 Hexagonal Regular Médio - Linha Spin",
+   "name": "Puff 36645 - Linha Spin",
    "line": "Spin",
    "lineSlug": "spin",
    "category": "Sofás e Lounges",
@@ -18276,6 +18384,16 @@
     {
      "descricao": "Puff 36645 Hexagonal Regular Médio - Altura 450mm x Profundidade 815mm x Largura 719mm",
      "codigo": "M3664500000001",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1015mm x Largura 892mm",
+     "codigo": "M3664500000002",
+     "estruturas": []
+    },
+    {
+     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1215mm x Largura 1065mm",
+     "codigo": "M3664500000003",
      "estruturas": []
     }
    ]
@@ -18530,6 +18648,11 @@
      "estruturas": []
     },
     {
+     "descricao": "Módulo Assento Reto s/ Encosto 1200mm - Altura 430mm x Profundidade 650mm x Largura 1200mm",
+     "codigo": "M3681200000009",
+     "estruturas": []
+    },
+    {
      "descricao": "Sofá 36812 Spin Reto Transição Lado - Altura 820mm x Profundidade 650mm x Largura 1200mm",
      "codigo": "M3681200000012",
      "estruturas": []
@@ -18584,6 +18707,11 @@
      "estruturas": []
     },
     {
+     "descricao": "Módulo Assento Reto s/ Encosto 1300mm - Altura 430mm x Profundidade 650mm x Largura 1300mm",
+     "codigo": "M3681300000013",
+     "estruturas": []
+    },
+    {
      "descricao": "Conjunto High-Back 36813 - Altura 1360mm x Profundidade 690mm x Largura 1380mm",
      "codigo": "D3681300000017",
      "estruturas": []
@@ -18624,6 +18752,11 @@
     {
      "descricao": "Sofá 36814 - 1400mm - Altura 820mm x Profundidade 650mm x Largura 1400mm",
      "codigo": "M3681400000001",
+     "estruturas": []
+    },
+    {
+     "descricao": "Módulo Assento Reto s/ Encosto 1400mm - Altura 430mm x Profundidade 650mm x Largura 1400mm",
+     "codigo": "M3681400000027",
      "estruturas": []
     },
     {
@@ -24270,9 +24403,9 @@
    ]
   },
   {
-   "id": "flip-1200",
-   "code": "1.200",
-   "name": "Mesa Work - Tampo Melamínico Tamanho 1200 x 700 mm - Linha Flip",
+   "id": "flip-mesa-work-tampo-melaminico-tamanho-1200-",
+   "code": "",
+   "name": "Mesa Work - Tampo Melamínico Tamanho 1200 x 700 mm - Altura 720mm - Estrutura Grafite - Linha Flip",
    "line": "Flip",
    "lineSlug": "flip",
    "category": "Mesas",
@@ -24312,74 +24445,6 @@
      "estruturas": [
       "Colorida"
      ]
-    }
-   ]
-  },
-  {
-   "id": "fun-1015",
-   "code": "1.015",
-   "name": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm",
-   "line": "Fun",
-   "lineSlug": "fun",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm",
-     "codigo": "M3663500000002",
-     "estruturas": []
-    },
-    {
-     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1015mm x Largura 892mm",
-     "codigo": "M3664500000002",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "fun-1215",
-   "code": "1.215",
-   "name": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm",
-   "line": "Fun",
-   "lineSlug": "fun",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm",
-     "codigo": "M3663500000003",
-     "estruturas": []
-    },
-    {
-     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1215mm x Largura 1065mm",
-     "codigo": "M3664500000003",
-     "estruturas": []
     }
    ]
   },
@@ -24466,64 +24531,6 @@
     {
      "descricao": "Puff 36475 Hexagonal Alto - Altura 750mm x Profundidade 607mm x Largura 494mm",
      "codigo": "M3647500000001",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "fun-sofa-puff-c-rodizio-altura-505mm-x-profu",
-   "code": "",
-   "name": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm",
-   "line": "Fun",
-   "lineSlug": "fun",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm",
-     "codigo": "M3603000000002",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "fun-sofa-puff-c-sapata-altura-455mm-x-profun",
-   "code": "",
-   "name": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
-   "line": "Fun",
-   "lineSlug": "fun",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
-     "codigo": "M3603000000001",
      "estruturas": []
     }
    ]
@@ -24814,161 +24821,6 @@
    ]
   },
   {
-   "id": "spin-1015",
-   "code": "1.015",
-   "name": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1015mm x Largura 892mm",
-     "codigo": "M3663500000002",
-     "estruturas": []
-    },
-    {
-     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1015mm x Largura 892mm",
-     "codigo": "M3664500000002",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-1200",
-   "code": "1.200",
-   "name": "Módulo Assento Reto s/ Encosto 1200mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Complementos",
-   "type": "Complemento",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Módulo Assento Reto s/ Encosto 1200mm - Altura 430mm x Profundidade 650mm x Largura 1200mm",
-     "codigo": "M3681200000009",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-1215",
-   "code": "1.215",
-   "name": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Puff Hexagonal Regular Baixo - Altura 350mm x Profundidade 1215mm x Largura 1065mm",
-     "codigo": "M3663500000003",
-     "estruturas": []
-    },
-    {
-     "descricao": "Puff Hexagonal Regular Médio - Altura 450mm x Profundidade 1215mm x Largura 1065mm",
-     "codigo": "M3664500000003",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-1300",
-   "code": "1.300",
-   "name": "Módulo Assento Reto s/ Encosto 1300mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Complementos",
-   "type": "Complemento",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Módulo Assento Reto s/ Encosto 1300mm - Altura 430mm x Profundidade 650mm x Largura 1300mm",
-     "codigo": "M3681300000013",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-1400",
-   "code": "1.400",
-   "name": "Módulo Assento Reto s/ Encosto 1400mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Complementos",
-   "type": "Complemento",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Módulo Assento Reto s/ Encosto 1400mm - Altura 430mm x Profundidade 650mm x Largura 1400mm",
-     "codigo": "M3681400000027",
-     "estruturas": []
-    }
-   ]
-  },
-  {
    "id": "spin-36350",
    "code": "36.350",
    "name": "Puff 36350 Hexagonal Baixo - Linha Spin",
@@ -25051,64 +24903,6 @@
     {
      "descricao": "Puff 36475 Hexagonal Alto - Altura 750mm x Profundidade 607mm x Largura 494mm",
      "codigo": "M3647500000001",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-sofa-puff-c-rodizio-altura-505mm-x-profu",
-   "code": "",
-   "name": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Sofá Puff c/ Rodízio - Altura 505mm x Profundidade 425mm x Largura 425mm",
-     "codigo": "M3603000000002",
-     "estruturas": []
-    }
-   ]
-  },
-  {
-   "id": "spin-sofa-puff-c-sapata-altura-455mm-x-profun",
-   "code": "",
-   "name": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm - Linha Spin",
-   "line": "Spin",
-   "lineSlug": "spin",
-   "category": "Sofás e Lounges",
-   "type": "Sofá",
-   "image": "",
-   "fotos": [],
-   "estruturas": [],
-   "revestimentos": [
-    "Vinil",
-    "CEC-Stilo",
-    "Grid",
-    "Politex",
-    "Liv",
-    "Grani",
-    "Haven"
-   ],
-   "telas": [],
-   "variacoes": [
-    {
-     "descricao": "Sofá Puff c/ Sapata - Altura 455mm x Profundidade 425mm x Largura 425mm",
-     "codigo": "M3603000000001",
      "estruturas": []
     }
    ]
