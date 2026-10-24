@@ -46,7 +46,7 @@ A Cavaletti nao permite precos no site: nenhum valor e publicado.
 
 ### Area restrita da equipe (assistecrb.net/equipe)
 O Montador de Pedidos (tem a tabela de custo) fica em `equipe/index.html` **criptografado** com a senha da equipe
-(PBKDF2-SHA256 600 mil iteracoes + AES-256-GCM; abre no navegador com WebCrypto). Nunca commitar o montador aberto.
+(PBKDF2-SHA256 1 milhao de iteracoes; senha minima 8 caracteres com letras e numeros + AES-256-GCM; abre no navegador com WebCrypto). Nunca commitar o montador aberto.
 Para publicar/atualizar: dois cliques em `CAVALETTI CATALOGO NOVO/PUBLICAR MONTADOR NA AREA RESTRITA.bat`
 (roda `ferramentas/area_restrita.mjs`, pede a senha, gera o arquivo e publica so ele; recusa se o site local estiver diferente do que esta no ar).
 Trocar a senha = rodar de novo com a senha nova. Sem link no menu do site.

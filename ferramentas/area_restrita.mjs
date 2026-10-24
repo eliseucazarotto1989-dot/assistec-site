@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 const SITE = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MONTADOR = resolve(SITE, '..', 'CAVALETTI CATALOGO NOVO', 'Montador de Pedidos Cavaletti.html');
-const ITERACOES = 600000;
+const ITERACOES = 1000000;   // deixa cada tentativa de adivinhar a senha bem lenta
 
 const args = process.argv.slice(2);
 const opt = k => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : null; };
@@ -39,12 +39,13 @@ async function main() {
     let senha = opt('--senha-env') ? process.env[opt('--senha-env')] : null;
     if (!senha) {
         console.log('\nÁREA RESTRITA DA EQUIPE — assistecrb.net/equipe');
-        console.log('Escolha a senha da equipe (mínimo 12 caracteres, misture letras, números e símbolos).\n');
+        console.log('Escolha a senha da equipe: mínimo 8 caracteres, com letras E números (um símbolo deixa mais forte).\n');
         senha = await perguntaOculta('Senha: ');
         const conf = await perguntaOculta('Repita a senha: ');
         if (senha !== conf) throw new Error('As senhas não são iguais. Nada foi publicado.');
     }
-    if (senha.length < 12) throw new Error('Senha curta demais (mínimo 12 caracteres). Nada foi publicado.');
+    if (senha.length < 8) throw new Error('Senha curta demais (mínimo 8 caracteres). Nada foi publicado.');
+    if (!/[a-zA-Zà-úÀ-Ú]/.test(senha) || !/\d/.test(senha)) throw new Error('A senha precisa ter letras e números. Nada foi publicado.');
 
     const html = readFileSync(entrada);
     const sal = randomBytes(16), iv = randomBytes(12);
