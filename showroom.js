@@ -3,6 +3,10 @@
    Cada página diz qual tela é em <body data-pagina="inicio|catalogo|produto|projeto|texto">. */
 (() => {
     const WHATS = '555537981003';
+    // Banco de dados do site (Supabase). A chave é a pública: o visitante só consegue ENVIAR pedidos,
+    // quem lê é a equipe, no Montador (regras em ferramentas/pedidos_site.sql).
+    const SB_URL = 'https://lhnlwlelabgdgdhozhpe.supabase.co';
+    const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxobmx3bGVsYWJnZGdkaG96aHBlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzNTc1NDUsImV4cCI6MjA4ODkzMzU0NX0.K0IWRdkpFyY_zbIzoBNSgJK8wPUO_DqEUam7U35lDC0';
     const CHAVE = 'assistecProjeto';
     const pagina = document.body.dataset.pagina;
     const app = document.getElementById('app');
@@ -50,8 +54,14 @@
 
     // ---------- projeto (fica guardado neste navegador) ----------
     const Projeto = {
-        novo: () => ({ cliente: { nome: '', empresa: '', cidade: '', obs: '' }, ambientes: [] }),
-        ler() { try { return JSON.parse(localStorage.getItem(CHAVE)) || this.novo(); } catch { return this.novo(); } },
+        novo: () => ({ cliente: { nome: '', telefone: '' }, ambientes: [] }),
+        ler() {
+            try {
+                const pr = JSON.parse(localStorage.getItem(CHAVE)) || this.novo();
+                pr.cliente = { nome: pr.cliente?.nome || '', telefone: pr.cliente?.telefone || '' };   // só nome e telefone
+                return pr;
+            } catch { return this.novo(); }
+        },
         salvar(pr) { try { localStorage.setItem(CHAVE, JSON.stringify(pr)); } catch { } atualizaConta(); },
         total: pr => pr.ambientes.reduce((t, a) => t + a.itens.reduce((s, i) => s + i.qtd, 0), 0),
         adicionar(nomeAmb, pid, qtd, conf) {
@@ -421,12 +431,15 @@
         const chaveCor = c => c.codigo + c.nome;
         const rotRev = n => String(n || '').replace(/^Lâmina do encosto .*/, 'Lâmina');
         const corDe = (rev, k) => { const c = cores(rev).find(c => chaveCor(c) === k); return c ? nomeCor(c) : ''; };
+        const codCor = (rev, k) => { const c = cores(rev).find(c => chaveCor(c) === k); return c ? (c.codigo || c.nome) : ''; };
 
         function escolha() {
             const v = st.v >= 0 ? p.variacoes[st.v] : null;
             return {
                 descricao: v ? v.descricao : '', codigo: v ? v.codigo : '', estrutura: st.estrutura,
                 revest: rotRev(st.revest), cor: corDe(st.revest, st.cor), encosto: rotRev(st.encosto), encostoCor: corDe(st.encosto, st.encostoCor),
+                // nomes e códigos exatos, para o pedido abrir montado no Montador
+                revK: st.revest, corC: codCor(st.revest, st.cor), encK: st.encosto, encCorC: codCor(st.encosto, st.encostoCor),
             };
         }
 
@@ -532,10 +545,9 @@
                 <h2 style="font-size:22px;font-weight:600">Enviar para orçamento</h2>
                 <div class="tot"><span>Ambientes</span><b>${ambs.length}</b></div>
                 <div class="tot"><span>Peças</span><b>${total}</b></div>
-                <label class="campo"><span>Seu nome</span><input data-cli="nome" value="${esc(pr.cliente.nome)}" autocomplete="name"></label>
-                <label class="campo"><span>Empresa</span><input data-cli="empresa" value="${esc(pr.cliente.empresa)}" autocomplete="organization"></label>
-                <label class="campo"><span>Cidade</span><input data-cli="cidade" value="${esc(pr.cliente.cidade)}" autocomplete="address-level2"></label>
-                <label class="campo"><span>Observações</span><textarea data-cli="obs">${esc(pr.cliente.obs)}</textarea></label>
+                <label class="campo"><span>Seu nome</span><input data-cli="nome" value="${esc(pr.cliente.nome)}" autocomplete="name" maxlength="80" required></label>
+                <label class="campo"><span>Telefone / WhatsApp</span><input data-cli="telefone" value="${esc(pr.cliente.telefone)}" autocomplete="tel" inputmode="tel" placeholder="(55) 99999-9999" maxlength="20" required></label>
+                <p class="nota" id="faltaCli" role="alert"></p>
                 <button class="btn btn-whats btn-bloco" id="enviar">Enviar pelo WhatsApp</button>
                 <button class="btn btn-contorno btn-bloco" id="pdf">Baixar PDF do pedido</button>
                 <button class="remover" id="limpar" style="justify-self:center">Limpar pedido</button>
@@ -561,7 +573,16 @@
             const pr = Projeto.ler(); pr.cliente[i.dataset.cli] = i.value; Projeto.salvar(pr);
         }));
         document.getElementById('enviar').addEventListener('click', () => {
-            window.open(`https://wa.me/${WHATS}?text=${encodeURIComponent(mensagem(Projeto.ler()))}`, '_blank', 'noopener');
+            const pr = Projeto.ler(), fone = soDigitos(pr.cliente.telefone), falta = document.getElementById('faltaCli');
+            const nome = pr.cliente.nome.trim();
+            if (nome.length < 2 || !fone) {
+                falta.textContent = nome.length < 2 ? 'Escreva o seu nome para enviarmos o orçamento.' : 'Confira o telefone, com DDD. Ex.: (55) 99999-9999.';
+                app.querySelector(`[data-cli="${nome.length < 2 ? 'nome' : 'telefone'}"]`).focus();
+                return;
+            }
+            falta.textContent = '';
+            const codigo = registraPedido(pr, nome, fone);
+            window.open(`https://wa.me/${WHATS}?text=${encodeURIComponent(mensagem(Projeto.ler(), codigo))}`, '_blank', 'noopener');
         });
         document.getElementById('pdf').addEventListener('click', () => window.print());
         document.getElementById('limpar').addEventListener('click', () => {
@@ -569,10 +590,39 @@
         });
     }
 
-    function mensagem(pr) {
-        const c = pr.cliente, l = ['*Pedido para orçamento — Assistec*'];
-        if (c.nome || c.empresa) l.push([c.nome, c.empresa].filter(Boolean).join(' · '));
-        if (c.cidade) l.push(c.cidade);
+    // telefone com DDD (10 ou 11 dígitos), sem o 55 do país; vazio se não parecer um telefone
+    function soDigitos(t) {
+        let d = String(t || '').replace(/\D/g, '').replace(/^0+/, '');
+        if (/^55\d{10,11}$/.test(d)) d = d.slice(2);
+        return /^\d{10,11}$/.test(d) ? d : '';
+    }
+
+    // Grava o pedido no banco de dados para a equipe abrir no Montador. O WhatsApp abre de qualquer jeito:
+    // se a gravação falhar, a mensagem continua chegando. O mesmo pedido reenviado não é gravado duas vezes.
+    function registraPedido(pr, nome, fone) {
+        const itens = [];
+        pr.ambientes.filter(a => a.itens.length).forEach(a => a.itens.forEach(it => {
+            const p = porId[it.pid]; if (!p) return;
+            itens.push({ amb: a.nome, pid: p.id, modelo: p.code, linha: p.line, nome: titulo(p), qtd: it.qtd, ...it.conf });
+        }));
+        const assinatura = JSON.stringify([nome, fone, itens]);
+        if (pr.enviado && pr.enviado.assinatura === assinatura) return pr.enviado.codigo;
+        const sorteio = crypto.getRandomValues(new Uint32Array(2));
+        const codigo = (sorteio[0].toString(36) + sorteio[1].toString(36)).toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 7).padEnd(6, '0');
+        pr.enviado = { codigo, assinatura }; Projeto.salvar(pr);
+        try {
+            fetch(SB_URL + '/rest/v1/pedidos_site', {
+                method: 'POST', keepalive: true,
+                headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+                body: JSON.stringify({ codigo, nome: nome.slice(0, 80), telefone: fone, itens, pecas: Projeto.total(pr) }),
+            }).catch(() => { });
+        } catch { }
+        return codigo;
+    }
+
+    function mensagem(pr, codigo) {
+        const c = pr.cliente, l = ['*Pedido para orçamento — Assistec*' + (codigo ? ` (nº ${codigo})` : '')];
+        if (c.nome || c.telefone) l.push([c.nome, c.telefone].filter(Boolean).join(' · '));
         pr.ambientes.filter(a => a.itens.length).forEach(a => {
             l.push('', `*${a.nome.toUpperCase()}*`);
             a.itens.forEach(it => {
@@ -582,7 +632,6 @@
                 const r = resumoConf(it.conf); if (r) l.push('   ' + r);
             });
         });
-        if (c.obs) l.push('', '*Observações:* ' + c.obs);
         l.push('', `Total: ${Projeto.total(pr)} peças · enviado pelo site assistecrb.net`);
         return l.join('\n');
     }

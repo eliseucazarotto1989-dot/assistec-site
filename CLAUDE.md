@@ -12,7 +12,7 @@ URL: www.assistecrb.net
 | `index.html` | Pagina inicial (showroom): destaques, ambientes, colecoes, orcamento como projeto, informatica |
 | `catalogo.html` | Colecoes e busca. `?linha=yon`, `?ambiente=trabalho`, `?ver=ambientes`, `?q=47301`, `&cat=` filtra categoria |
 | `produto.html` | Modelo Cavaletti (`?id=`): fotos, configurador (configuracao, estrutura, revestimento, cor, encosto) e "Adicionar ao projeto" |
-| `projeto.html` | Projeto de orcamento por ambiente (guardado no navegador): envia pelo WhatsApp ou gera PDF |
+| `projeto.html` | Projeto de orcamento por ambiente (guardado no navegador): pede so nome e telefone, envia pelo WhatsApp (e grava em `pedidos_site` para o Montador) ou gera PDF |
 | `login.html` | Pagina de login/cadastro de usuarios |
 | `admin.html` | Painel administrativo (gerenciamento de produtos) |
 | `tecnico.html` | Painel tecnico interno (base de conhecimento para tecnicos) |
@@ -38,6 +38,12 @@ URL: www.assistecrb.net
 | `product-images.json` | Galeria de fotos de cada produto. GERADO junto |
 | `ferramentas/gerar_catalogo.py` | Gera os dois arquivos acima a partir do Montador (so le o montador; nunca leva precos) |
 | `ferramentas/conferir_site.py` | Confere se o site esta coerente com o catalogo e sem precos |
+| `ferramentas/pedidos_site.sql` | Tabela `pedidos_site` no Supabase (rodar uma vez no SQL Editor): o site so envia; so conta admin le, no Montador (aba "Pedidos") |
+
+### Pedidos do site -> Montador
+Ao tocar em "Enviar pelo WhatsApp", o site grava nome, telefone e itens (com `codigo`, `descricao`, `revK`/`corC`, `encK`/`encCorC`) em `pedidos_site`.
+No Montador, aba "Pedidos": a equipe entra com a conta admin do site, clica em "Montar pedido" e o pedido abre com o nome do cliente (`linhaDoSite`).
+O Montador guarda varios pedidos (um por cliente) no navegador (`pcPedidos`). Nunca pedir mais dados pessoais no site alem de nome e telefone.
 
 ### Catalogo fiel (regra)
 O catalogo oficial e o Montador de Pedidos (pasta `CAVALETTI CATALOGO NOVO`). O site nunca e editado produto a produto:
