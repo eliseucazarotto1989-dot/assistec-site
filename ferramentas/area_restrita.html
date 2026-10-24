@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <title>Área restrita · Assistec</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <style>
+        @font-face { font-family: "Saira"; src: url("../fonts/Saira-VF.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+        * { box-sizing: border-box; margin: 0; }
+        body { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: #0A1F44;
+               font-family: "Saira", "Segoe UI", system-ui, sans-serif; color: #0A1F44; }
+        .caixa { width: 100%; max-width: 420px; background: #fff; border-radius: 22px; padding: 36px 32px; box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+        .caixa img { height: 52px; width: auto; display: block; margin-bottom: 26px; }
+        .rotulo { font-size: 12px; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; color: #0057D9; }
+        h1 { font-size: 30px; font-weight: 650; letter-spacing: -.02em; margin: 8px 0 10px; }
+        p { color: #4A5568; font-size: 15px; line-height: 1.5; }
+        label { display: block; font-size: 14px; font-weight: 500; margin: 24px 0 6px; }
+        input[type=password] { width: 100%; height: 52px; border-radius: 14px; border: 1.5px solid #D8E0EC; padding: 0 16px; font: inherit; font-size: 17px; }
+        input[type=password]:focus { outline: none; border-color: #0057D9; box-shadow: 0 0 0 4px rgba(0,87,217,.12); }
+        .lembrar { display: flex; gap: 10px; align-items: center; margin: 14px 0 22px; font-size: 14px; color: #4A5568; font-weight: 400; }
+        button { width: 100%; height: 52px; border: 0; border-radius: 999px; background: #0A1F44; color: #fff; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; }
+        button:hover { background: #0057D9; }
+        button[disabled] { opacity: .6; cursor: wait; }
+        .erro { color: #B91C1C; font-size: 14px; min-height: 20px; margin-top: 12px; }
+        .rodape { margin-top: 22px; font-size: 13px; color: #4A5568; display: flex; justify-content: space-between; gap: 12px; }
+        .rodape a { color: #0057D9; }
+    </style>
+</head>
+<body>
+    <main class="caixa">
+        <img src="../img/marca/assistec-horizontal-cor-recorte.svg" alt="Assistec Informática" width="171" height="52">
+        <span class="rotulo">Área restrita</span>
+        <h1>Montador de Pedidos</h1>
+        <p>Uso interno da equipe Assistec. Digite a senha da equipe para abrir.</p>
+        <form id="form" autocomplete="on">
+            <input type="text" name="username" value="equipe-assistec" autocomplete="username" hidden>
+            <label for="senha">Senha da equipe</label>
+            <input type="password" id="senha" autocomplete="current-password" required autofocus>
+            <label class="lembrar"><input type="checkbox" id="lembrar"> Lembrar neste aparelho</label>
+            <button id="entrar">Entrar</button>
+            <div class="erro" id="erro" role="alert"></div>
+        </form>
+        <div class="rodape"><a href="../index.html">← Voltar ao site</a><a href="#" id="esquecer">Esquecer este aparelho</a></div>
+    </main>
+
+    <!-- Conteúdo criptografado (AES-256-GCM, chave PBKDF2-SHA256). Gerado em __GERADO__ por ferramentas/area_restrita.mjs. -->
+    <script id="cofre" type="application/json">{"sal":"__SAL__","iv":"__IV__","iter":__ITER__,"dados":"__DADOS__"}</script>
+    <script>
+    (() => {
+        const C = JSON.parse(document.getElementById('cofre').textContent);
+        const CHAVE_LOCAL = 'equipeChave:' + C.sal;
+        const b64 = s => Uint8Array.from(atob(s), ch => ch.charCodeAt(0));
+        const erro = document.getElementById('erro'), botao = document.getElementById('entrar');
+
+        async function chaveDaSenha(senha, lembrar) {
+            const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(senha), 'PBKDF2', false, ['deriveKey']);
+            return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(C.sal), iterations: C.iter, hash: 'SHA-256' },
+                base, { name: 'AES-GCM', length: 256 }, lembrar, ['decrypt']);
+        }
+
+        async function abrir(chave) {
+            const zip = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(C.iv) }, chave, b64(C.dados));
+            const html = await new Response(new Blob([zip]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+            document.open(); document.write(html); document.close();
+        }
+
+        document.getElementById('form').addEventListener('submit', async e => {
+            e.preventDefault();
+            erro.textContent = ''; botao.disabled = true; botao.textContent = 'Abrindo…';
+            const lembrar = document.getElementById('lembrar').checked;
+            try {
+                const chave = await chaveDaSenha(document.getElementById('senha').value, lembrar);
+                await abrir(chave).catch(() => { throw new Error('senha'); });
+                if (lembrar) {
+                    try { localStorage.setItem(CHAVE_LOCAL, btoa(String.fromCharCode(...new Uint8Array(await crypto.subtle.exportKey('raw', chave))))); } catch { }
+                }
+            } catch (x) {
+                erro.textContent = x.message === 'senha' ? 'Senha incorreta.' : 'Este navegador não conseguiu abrir o montador. Atualize o navegador.';
+                botao.disabled = false; botao.textContent = 'Entrar';
+            }
+        });
+
+        document.getElementById('esquecer').addEventListener('click', e => {
+            e.preventDefault();
+            try { Object.keys(localStorage).filter(k => k.startsWith('equipeChave:')).forEach(k => localStorage.removeItem(k)); } catch { }
+            erro.textContent = 'Pronto: este aparelho vai pedir a senha de novo.';
+        });
+
+        // aparelho lembrado: abre direto (se a senha mudou, a chave antiga não serve e é apagada)
+        let guardada = null;
+        try { guardada = localStorage.getItem(CHAVE_LOCAL); Object.keys(localStorage).filter(k => k.startsWith('equipeChave:') && k !== CHAVE_LOCAL).forEach(k => localStorage.removeItem(k)); } catch { }
+        if (guardada) {
+            crypto.subtle.importKey('raw', b64(guardada), 'AES-GCM', false, ['decrypt'])
+                .then(abrir)
+                .catch(() => { try { localStorage.removeItem(CHAVE_LOCAL); } catch { } });
+        }
+    })();
+    </script>
+</body>
+</html>
