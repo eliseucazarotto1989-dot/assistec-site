@@ -598,7 +598,8 @@
     }
 
     // Grava o pedido no banco de dados para a equipe abrir no Montador. O WhatsApp abre de qualquer jeito:
-    // se a gravação falhar, a mensagem continua chegando. O mesmo pedido reenviado não é gravado duas vezes.
+    // se a gravação falhar, a mensagem continua chegando. Toque duplo (mesmo pedido em até 2 minutos) não grava duas vezes;
+    // depois disso o mesmo pedido é gravado de novo (pode ter sido apagado ou atendido no Montador).
     function registraPedido(pr, nome, fone) {
         const itens = [];
         pr.ambientes.filter(a => a.itens.length).forEach(a => a.itens.forEach(it => {
@@ -606,10 +607,10 @@
             itens.push({ amb: a.nome, pid: p.id, modelo: p.code, linha: p.line, nome: titulo(p), qtd: it.qtd, ...it.conf });
         }));
         const assinatura = JSON.stringify([nome, fone, itens]);
-        if (pr.enviado && pr.enviado.assinatura === assinatura) return pr.enviado.codigo;
+        if (pr.enviado && pr.enviado.assinatura === assinatura && Date.now() - (pr.enviado.em || 0) < 120000) return pr.enviado.codigo;
         const sorteio = crypto.getRandomValues(new Uint32Array(2));
         const codigo = (sorteio[0].toString(36) + sorteio[1].toString(36)).toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 7).padEnd(6, '0');
-        pr.enviado = { codigo, assinatura }; Projeto.salvar(pr);
+        pr.enviado = { codigo, assinatura, em: Date.now() }; Projeto.salvar(pr);
         try {
             fetch(SB_URL + '/rest/v1/pedidos_site', {
                 method: 'POST', keepalive: true,
