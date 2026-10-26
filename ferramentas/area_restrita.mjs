@@ -1,4 +1,4 @@
-// Área restrita da equipe (assistecrb.net/equipe): publica o Montador de Pedidos TRANCADO com senha.
+// Área restrita da equipe (assistecrb.net/pedidos): publica o Montador de Pedidos TRANCADO com senha.
 //
 // O repositório do site é público, então o montador (que tem a tabela de custo) nunca vai aberto:
 // o arquivo é compactado e criptografado (PBKDF2-SHA256 + AES-256-GCM) com a senha da equipe.
@@ -25,7 +25,8 @@ const ITERACOES = 1000000;   // deixa cada tentativa de adivinhar a senha bem le
 const args = process.argv.slice(2);
 const opt = k => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : null; };
 const entrada = opt('--entrada') || MONTADOR;
-const saida = opt('--saida') || join(SITE, 'equipe', 'index.html');
+const saida = opt('--saida') || join(SITE, 'pedidos', 'index.html');
+const ANTIGO = join(SITE, 'equipe', 'index.html');   // endereço usado até 26/10/2026
 const teste = !!opt('--saida');
 
 function perguntaOculta(texto) {
@@ -45,7 +46,7 @@ function git(...a) { return execFileSync('git', ['-C', SITE, ...a], { encoding: 
 async function main() {
     let senha = opt('--senha-env') ? process.env[opt('--senha-env')] : null;
     if (!senha) {
-        console.log('\nÁREA RESTRITA DA EQUIPE — assistecrb.net/equipe');
+        console.log('\nÁREA RESTRITA DA EQUIPE — assistecrb.net/pedidos');
         console.log('Escolha a senha da equipe: mínimo 8 caracteres, com letras E números (um símbolo deixa mais forte).\n');
         senha = await perguntaOculta('Senha: ');
         const conf = await perguntaOculta('Repita a senha: ');
@@ -103,12 +104,17 @@ async function main() {
     if (naoPublicado !== '0' || atrasado !== '0') {
         throw new Error('O site no PC está diferente do que está no ar. O arquivo foi gerado, mas NÃO publicado: peça para publicar.');
     }
-    git('add', 'equipe/index.html');
+    // endereço antigo (assistecrb.net/equipe): vira só um redirecionamento, sem o montador
+    writeFileSync(ANTIGO, '<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="robots" content="noindex">'
+        + '<meta http-equiv="refresh" content="0; url=../pedidos/"><title>Área restrita · Assistec</title></head>'
+        + '<body><p>A área restrita mudou para <a href="../pedidos/">assistecrb.net/pedidos</a>.</p></body></html>\n');
+    const arquivos = ['pedidos/index.html', 'equipe/index.html'];
+    git('add', ...arquivos);
     if (!git('diff', '--cached', '--name-only')) { console.log('Nada mudou desde a última publicação.'); return; }
-    git('commit', '-q', '-m', 'Área restrita: montador atualizado (criptografado)', '--', 'equipe/index.html');
+    git('commit', '-q', '-m', 'Área restrita: montador atualizado (criptografado)', '--', ...arquivos);
     git('push', '-q', 'origin', 'HEAD:main');
     try { git('branch', '-f', 'main', 'HEAD'); } catch { /* main é o ramo atual */ }
-    console.log('\nPublicado! Em 1 ou 2 minutos estará em https://assistecrb.net/equipe/');
+    console.log('\nPublicado! Em 1 ou 2 minutos estará em https://assistecrb.net/pedidos/');
 }
 
 main().catch(e => { console.error('\nERRO: ' + e.message); process.exitCode = 1; });

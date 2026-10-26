@@ -42,7 +42,7 @@ URL: www.assistecrb.net
 
 ### Pedidos do site -> Montador
 Ao tocar em "Enviar pelo WhatsApp", o site grava nome, telefone e itens (com `codigo`, `descricao`, `revK`/`corC`, `encK`/`encCorC`) em `pedidos_site`.
-No Montador, aba "Pedidos": a equipe entra com a conta admin do site, clica em "Montar pedido" e o pedido abre com o nome do cliente (`linhaDoSite`).
+No Montador, aba "Pedidos Site": a equipe entra com a conta admin do site, clica em "Montar pedido" e o pedido abre com o nome do cliente (`linhaDoSite`).
 O Montador guarda varios pedidos (um por cliente) no navegador (`pcPedidos`). Nunca pedir mais dados pessoais no site alem de nome e telefone.
 
 ### Catalogo fiel (regra)
@@ -50,8 +50,8 @@ O catalogo oficial e o Montador de Pedidos (pasta `CAVALETTI CATALOGO NOVO`). O 
 quando o catalogo mudar, rode `python ferramentas/gerar_catalogo.py` e depois `python ferramentas/conferir_site.py`.
 A Cavaletti nao permite precos no site: nenhum valor e publicado.
 
-### Area restrita da equipe (assistecrb.net/equipe)
-O Montador de Pedidos (tem a tabela de custo) fica em `equipe/index.html` **criptografado** com a senha da equipe
+### Area restrita da equipe (assistecrb.net/pedidos; o antigo /equipe so redireciona)
+O Montador de Pedidos (tem a tabela de custo) fica em `pedidos/index.html` **criptografado** com a senha da equipe
 (PBKDF2-SHA256 1 milhao de iteracoes; senha minima 8 caracteres com letras e numeros + AES-256-GCM; abre no navegador com WebCrypto). Nunca commitar o montador aberto.
 Para publicar/atualizar: dois cliques em `CAVALETTI CATALOGO NOVO/PUBLICAR MONTADOR NA AREA RESTRITA.bat`
 (roda `ferramentas/area_restrita.mjs`, pede a senha, gera o arquivo e publica so ele; recusa se o site local estiver diferente do que esta no ar).
