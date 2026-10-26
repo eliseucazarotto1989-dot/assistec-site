@@ -8,7 +8,7 @@
 //     node ferramentas/area_restrita.mjs
 // Opções de teste (não publicam): --entrada <arquivo> --saida <arquivo> --senha-env <VARIAVEL>
 import { createInterface } from 'node:readline';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { randomBytes, pbkdf2Sync, createCipheriv } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
@@ -17,6 +17,9 @@ import { fileURLToPath } from 'node:url';
 
 const SITE = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MONTADOR = resolve(SITE, '..', 'CAVALETTI CATALOGO NOVO', 'Montador de Pedidos Cavaletti.html');
+// Conta do Supabase que lê os pedidos do site. Fica só neste PC (fora do repositório) e só entra
+// na versão TRANCADA, para o montador da área restrita abrir os pedidos sem pedir outra senha.
+const CONTA_ARQ = resolve(SITE, '..', 'CAVALETTI CATALOGO NOVO', 'conta-pedidos-site.json');
 const ITERACOES = 1000000;   // deixa cada tentativa de adivinhar a senha bem lenta
 
 const args = process.argv.slice(2);
@@ -33,6 +36,10 @@ function perguntaOculta(texto) {
     });
 }
 
+function perguntaVisivel(texto) {
+    return new Promise(res => { const rl = createInterface({ input: process.stdin, output: process.stdout }); rl.question(texto, v => { rl.close(); res(v); }); });
+}
+
 function git(...a) { return execFileSync('git', ['-C', SITE, ...a], { encoding: 'utf8' }).trim(); }
 
 async function main() {
@@ -47,7 +54,32 @@ async function main() {
     if (senha.length < 8) throw new Error('Senha curta demais (mínimo 8 caracteres). Nada foi publicado.');
     if (!/[a-zA-Zà-úÀ-Ú]/.test(senha) || !/\d/.test(senha)) throw new Error('A senha precisa ter letras e números. Nada foi publicado.');
 
-    const html = readFileSync(entrada);
+    let html = readFileSync(entrada);
+    {
+        let conta = null;
+        if (teste) {
+            if (opt('--conta')) conta = JSON.parse(readFileSync(opt('--conta'), 'utf8'));   // só para testar
+        } else if (existsSync(CONTA_ARQ)) {
+            conta = JSON.parse(readFileSync(CONTA_ARQ, 'utf8'));
+            console.log(`Conta dos pedidos do site: ${conta.email} (para trocar, apague o arquivo conta-pedidos-site.json).`);
+        } else {
+            console.log('\nConta dos pedidos do site (a de administrador no Supabase). Enter vazio para pular.');
+            const email = (await perguntaVisivel('E-mail da conta: ')).trim();
+            if (email) {
+                const s = await perguntaOculta('Senha dessa conta: ');
+                conta = { email, senha: s };
+                writeFileSync(CONTA_ARQ, JSON.stringify(conta));
+                console.log('Conta guardada neste PC.');
+            }
+        }
+        if (conta) {
+            const js = `<script>window.PEDIDOS_CONTA=${JSON.stringify(conta).replace(/</g, '\\u003c')};</script>`;
+            const t = html.toString('utf8');
+            const i = t.search(/<head[^>]*>/i);
+            const fim = i < 0 ? 0 : i + t.slice(i).match(/<head[^>]*>/i)[0].length;
+            html = Buffer.from(t.slice(0, fim) + js + t.slice(fim), 'utf8');
+        }
+    }
     const sal = randomBytes(16), iv = randomBytes(12);
     const chave = pbkdf2Sync(senha, sal, ITERACOES, 32, 'sha256');
     const c = createCipheriv('aes-256-gcm', chave, iv);
